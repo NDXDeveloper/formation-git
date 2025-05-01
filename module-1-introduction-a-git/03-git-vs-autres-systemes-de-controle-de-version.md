@@ -1,5 +1,7 @@
 # 1.3. Git vs autres systèmes de contrôle de version
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 Pour mieux comprendre les avantages de Git, comparons-le aux autres systèmes de contrôle de version. Cette comparaison vous aidera à saisir pourquoi Git est devenu si populaire et quelles sont ses forces particulières.
 
 ## Les principales familles de systèmes de contrôle de version
@@ -191,3 +193,5 @@ Dans ce tutoriel, nous adoptons une approche qui vise à surmonter ces défis :
 Notre objectif est que vous vous sentiez à l'aise avec Git, même si vous débutez complètement dans le domaine de la gestion de versions.
 
 Dans la prochaine section, nous passerons aux aspects pratiques en vous montrant comment installer Git sur votre système d'exploitation.
+
+⏭️ [Installation de Git (Windows, macOS, Linux)](/module-1-introduction-a-git/04-installation-de-git.md)

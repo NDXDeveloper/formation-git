@@ -1,5 +1,7 @@
 # 1.2. Histoire de Git et son importance
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 ## Les origines de Git : une naissance dans la nécessité
 
 L'histoire de Git commence par un problème concret dans un des projets les plus importants du monde open source : le noyau Linux.
@@ -73,3 +75,5 @@ Comprendre l'histoire de Git vous aide à mieux saisir :
 3. **Son importance dans votre carrière** : La maîtrise de Git est devenue une compétence fondamentale pour tout développeur, presque aussi essentielle que la connaissance d'un langage de programmation.
 
 Dans la section suivante, nous comparerons Git à d'autres systèmes de contrôle de version pour mieux comprendre ce qui le rend spécial.
+
+⏭️ [Git vs autres systèmes de contrôle de version](/module-1-introduction-a-git/03-git-vs-autres-systemes-de-controle-de-version.md)

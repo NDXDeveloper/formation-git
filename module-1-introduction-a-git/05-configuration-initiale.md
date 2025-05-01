@@ -1,5 +1,7 @@
 # 1.5. Configuration initiale (git config)
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 Après avoir installé Git sur votre ordinateur, vous devez effectuer quelques configurations initiales avant de l'utiliser. Cette étape est importante car Git a besoin de savoir qui vous êtes pour enregistrer correctement l'auteur de chaque modification.
 
 Rassurez-vous, la configuration de base est simple et ne prend que quelques minutes !
@@ -188,3 +190,5 @@ git config --global init.defaultBranch main
 ## Prochaines étapes
 
 Félicitations ! Git est maintenant installé et configuré sur votre système. Dans la prochaine section, nous allons créer notre premier projet Git et apprendre les commandes de base pour commencer à suivre des modifications.
+
+⏭️ [Premier projet Git : création d'un dépôt local](/module-1-introduction-a-git/06-premier-projet-git.md)

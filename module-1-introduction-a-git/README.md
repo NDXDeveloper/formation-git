@@ -1,5 +1,7 @@
 # Module 1 : Introduction à Git
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 Bienvenue dans ce premier module de notre formation complète sur Git !
 
 ## Aperçu du module
@@ -39,3 +41,5 @@ Le module est divisé en six sections, couvrant progressivement tous les aspects
 Chaque section comprend des explications claires, des exemples concrets et, lorsque c'est pertinent, des exercices pratiques pour consolider vos apprentissages.
 
 Prêt à plonger dans le monde de Git ? Commençons !
+
+⏭️ [Qu'est-ce que Git ?](/module-1-introduction-a-git/01-quest-ce-que-git.md)

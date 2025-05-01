@@ -1,5 +1,7 @@
 # 1.6. Premier projet Git : création d'un dépôt local
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 Maintenant que Git est installé et configuré sur votre ordinateur, il est temps de créer votre premier projet Git ! Dans cette section, nous allons vous guider pas à pas pour créer un dépôt local et commencer à suivre vos fichiers.
 
 ## Qu'est-ce qu'un dépôt Git ?
@@ -305,3 +307,5 @@ Pour vous entraîner, essayez de :
 Dans cette section, vous avez appris à créer votre premier dépôt Git et à enregistrer des modifications dans l'historique. Vous connaissez maintenant les bases pour commencer à utiliser Git dans vos projets personnels.
 
 Dans le prochain module, nous explorerons plus en détail les concepts fondamentaux de Git, notamment les trois états de Git et comment explorer l'historique des modifications.
+
+⏭️ [Module 2 : Concepts fondamentaux](/module-2-concepts-fondamentaux/README.md.md)

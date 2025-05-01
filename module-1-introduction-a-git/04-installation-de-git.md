@@ -1,5 +1,7 @@
 # 1.4. Installation de Git (Windows, macOS, Linux)
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 Avant de pouvoir utiliser Git, vous devez l'installer sur votre ordinateur. Ce processus est assez simple, quelle que soit votre plateforme. Dans cette section, nous vous guiderons étape par étape à travers l'installation de Git sur les systèmes d'exploitation les plus courants.
 
 ## Installation sur Windows
@@ -194,3 +196,5 @@ Si vous rencontrez des problèmes pour vous connecter à des dépôts distants v
 ## Prochaines étapes
 
 Maintenant que Git est installé sur votre système, vous êtes prêt à passer à la configuration initiale. Dans la prochaine section, nous verrons comment configurer Git avec vos informations personnelles et vos préférences.
+
+⏭️ [Configuration initiale (git config)](/module-1-introduction-a-git/05-configuration-initiale.md)

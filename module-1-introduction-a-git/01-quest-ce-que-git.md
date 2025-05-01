@@ -1,5 +1,7 @@
 # 1.1. Qu'est-ce que Git ?
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 ## Définition simple
 
 **Git** est un système de contrôle de version qui vous permet de suivre les modifications apportées à vos fichiers au fil du temps. Imaginez Git comme un "magnétoscope" pour votre code ou vos documents : il enregistre l'état de vos fichiers à différents moments, vous permettant de revenir en arrière si nécessaire.
@@ -62,3 +64,5 @@ Sans Git, vous auriez peut-être créé des copies multiples de votre document (
 ## Dans la section suivante...
 
 Maintenant que vous comprenez ce qu'est Git et pourquoi il est si utile, nous allons explorer son histoire et comprendre pourquoi il est devenu l'outil de référence pour la gestion de versions.
+
+⏭️ [Histoire de Git et son importance](/module-1-introduction-a-git/02-histoire-de-git-et-son-importance.md)
