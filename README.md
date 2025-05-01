@@ -102,7 +102,7 @@ Ce projet est sous licence Creative Commons Attribution 4.0 International (CC BY
 
 - **Nicolas DEOUX**
 - Email : [NDXDev@gmail.com](mailto:NDXDev@gmail.com)
-- LinkedIn : [https://www.linkedin.com/in/nicolas-deoux](https://www.linkedin.com/in/nicolas-deoux)
+- LinkedIn : [https://www.linkedin.com/in/nicolas-deoux-ab295980/](https://www.linkedin.com/in/nicolas-deoux-ab295980/)
 - GitHub : [https://github.com/NDXDeveloper](https://github.com/NDXDeveloper)
 
 ---
