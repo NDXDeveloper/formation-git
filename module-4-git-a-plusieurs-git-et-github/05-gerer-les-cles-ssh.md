@@ -1,5 +1,7 @@
 # 4.5. Gérer les clés SSH
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 ## Qu'est-ce que SSH et pourquoi l'utiliser ?
 
 **SSH** (Secure Shell) est un protocole sécurisé qui permet de se connecter à des services distants, comme GitHub, sans avoir à saisir votre nom d'utilisateur et mot de passe à chaque fois.
@@ -218,3 +220,5 @@ Pour maintenir la sécurité de vos clés SSH :
 ---
 
 Dans la prochaine section, nous verrons comment contribuer à des projets existants via les forks et les pull requests (PR), les mécanismes fondamentaux de la collaboration sur GitHub.
+
+⏭️ [Fork et Pull Request (PR)](/module-4-git-a-plusieurs-git-et-github/06-fork-et-pull-request.md)

@@ -1,5 +1,7 @@
 # 7.2. Intégration Git dans les IDE
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 Les Environnements de Développement Intégrés (IDE) modernes offrent généralement une intégration native avec Git, vous permettant de gérer votre code source sans quitter votre espace de travail. Cette intégration rend le développement plus fluide et plus efficace.
 
 ## Avantages de l'intégration Git dans les IDE
@@ -123,3 +125,5 @@ Microsoft Visual Studio offre également une intégration Git native.
 ---
 
 L'intégration de Git dans votre IDE vous fait gagner du temps et simplifie votre workflow quotidien. Bien que les interfaces diffèrent entre les IDE, les concepts de base restent les mêmes. N'hésitez pas à explorer toutes les fonctionnalités Git offertes par votre IDE - vous découvrirez probablement des outils qui rendront votre travail avec Git encore plus efficace.
+
+⏭️ [Intégration continue (CI) et Git](/module-7-outils-graphiques-et-integration/03-integration-continue-ci-et-git.md)

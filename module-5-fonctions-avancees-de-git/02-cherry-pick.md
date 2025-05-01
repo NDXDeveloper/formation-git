@@ -1,5 +1,7 @@
 # 5.2. Cherry-pick : sélectionner des commits spécifiques
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 ## Qu'est-ce que le Cherry-pick ?
 
 Imaginez un panier de cerises. Au lieu de prendre tout le panier, vous choisissez uniquement les plus belles cerises, une par une. C'est exactement ce que fait `git cherry-pick` : il vous permet de sélectionner des commits spécifiques provenant de n'importe quelle branche et de les appliquer à votre branche actuelle.
@@ -175,3 +177,5 @@ Vous travaillez sur un projet où différentes équipes développent des fonctio
 `git cherry-pick` est un outil puissant qui vous permet d'appliquer sélectivement des modifications d'une branche à une autre. C'est comme si vous aviez un super pouvoir pour extraire précisément ce dont vous avez besoin, quand vous en avez besoin.
 
 Utilisez-le judicieusement et vous aurez une flexibilité incroyable pour gérer votre code et corriger des problèmes sans perturber le flux de développement normal.
+
+⏭️ [Reflog et récupération de commits](/module-5-fonctions-avancees-de-git/03-reflog-et-recuperation-de-commits.md)

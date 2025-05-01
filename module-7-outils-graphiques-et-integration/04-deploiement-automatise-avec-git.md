@@ -1,5 +1,7 @@
 # 7.4. Déploiement automatisé avec Git
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 Le déploiement automatisé (ou déploiement continu) est une extension naturelle de l'intégration continue. Il permet de publier automatiquement votre application sur un serveur ou un environnement de production après validation des tests. Ce processus, souvent appelé CD (Continuous Deployment/Delivery), simplifie grandement la mise en ligne de vos projets.
 
 ## Qu'est-ce que le déploiement automatisé ?
@@ -227,3 +229,5 @@ Le code passe par les tests automatiques, mais le déploiement nécessite une va
 ---
 
 Le déploiement automatisé avec Git peut sembler complexe au début, mais il simplifie énormément le processus de mise en ligne de vos projets. Commencez avec des outils simples comme GitHub Pages avant de passer à des solutions plus avancées. Avec le temps, vous apprécierez de ne plus avoir à vous soucier du processus de déploiement et de pouvoir vous concentrer sur le développement de votre application.
+
+⏭️ [Module 8 : Cas pratiques et exercices](/module-8-cas-pratiques-et-exercices/README.md)

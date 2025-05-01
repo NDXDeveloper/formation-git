@@ -1,5 +1,7 @@
 # 7.1. Utilisation de Git avec des GUI (Sourcetree, GitKraken, VSCode, etc.)
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 Les interfaces graphiques (GUI - Graphical User Interface) pour Git vous permettent de visualiser et de gérer vos dépôts sans avoir à mémoriser toutes les commandes. Elles sont particulièrement utiles pour les débutants ou pour visualiser des historiques complexes.
 
 ## Pourquoi utiliser une interface graphique ?
@@ -124,3 +126,5 @@ Le choix d'une interface graphique dépend de plusieurs facteurs :
 ---
 
 En utilisant ces interfaces graphiques, vous découvrirez probablement que certaines tâches Git deviennent beaucoup plus intuitives. Cependant, gardez à l'esprit que comprendre les concepts sous-jacents reste essentiel pour résoudre des problèmes complexes ou des situations inhabituelles.
+
+⏭️ [Intégration Git dans les IDE](/module-7-outils-graphiques-et-integration/02-integration-git-dans-les-ide.md)

@@ -1,5 +1,7 @@
 # 3.6. Rebasage : git rebase
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 Le rebasage (ou "rebase" en anglais) est une alternative à la fusion pour intégrer les changements d'une branche à une autre. Bien que plus complexe à première vue, cette technique permet de maintenir un historique plus propre et linéaire.
 
 ## Qu'est-ce que le rebasage ?
@@ -201,3 +203,5 @@ Voici un exercice pour vous familiariser avec le rebasage :
 En maîtrisant à la fois les techniques de fusion et de rebasage, vous pourrez choisir la stratégie la plus adaptée à chaque situation, ce qui vous permettra de maintenir un historique Git propre et compréhensible.
 
 Dans le prochain module, nous explorerons comment travailler avec des dépôts distants et collaborer avec d'autres développeurs.
+
+⏭️ [Module 4 : Git à plusieurs – Git et GitHub](/module-4-git-a-plusieurs-git-et-github/README.md)

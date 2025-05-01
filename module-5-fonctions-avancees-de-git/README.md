@@ -1,5 +1,7 @@
 # Module 5 : Fonctions avancées de Git
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 ## Introduction
 
 Bienvenue dans ce cinquième module de notre formation complète sur Git ! Jusqu'à présent, vous avez découvert les bases de Git, comment travailler avec des branches et comment collaborer avec d'autres développeurs via GitHub.
@@ -40,3 +42,5 @@ Rassurez-vous : nous allons explorer ces concepts étape par étape, avec des ex
 À la fin de ce module, vous aurez ajouté de nouveaux outils puissants à votre arsenal Git, qui vous aideront à travailler plus efficacement sur vos projets.
 
 Commençons maintenant par explorer notre première fonctionnalité avancée...
+
+⏭️ [Stash : mettre de côté temporairement (git stash)](/module-5-fonctions-avancees-de-git/01-stash-git-stash.md)

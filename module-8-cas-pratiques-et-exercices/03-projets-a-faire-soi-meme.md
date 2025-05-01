@@ -1,5 +1,7 @@
 # 8.3. Projets à faire soi-même
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 Après avoir exploré les scénarios courants et participé aux ateliers guidés, il est temps de mettre en pratique vos compétences Git de manière autonome. Cette section vous propose plusieurs projets personnels de difficulté croissante que vous pouvez réaliser par vous-même pour renforcer votre maîtrise de Git.
 
 ## Pourquoi faire des projets personnels ?
@@ -203,3 +205,5 @@ Si vous avez besoin d'inspiration pour vos projets :
 ---
 
 Ces projets personnels sont conçus pour vous aider à renforcer et approfondir vos compétences Git de manière autonome. Rappelez-vous que la maîtrise vient avec la pratique régulière. Dans la prochaine section, vous pourrez tester vos connaissances avec un quiz de fin de module.
+
+⏭️ [Quiz de fin de module](/module-8-cas-pratiques-et-exercices/04-quiz-de-fin-de-module.md)

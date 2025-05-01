@@ -1,5 +1,7 @@
 # Module 8 : Cas pratiques et exercices
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 ## Introduction
 
 Bienvenue dans ce dernier module de notre formation Git ! Après avoir exploré les concepts théoriques et les commandes essentielles de Git, il est temps de mettre en pratique toutes ces connaissances dans des situations réelles.
@@ -42,3 +44,5 @@ Notre conseil principal : **n'ayez pas peur de faire des erreurs**. C'est souven
 Prenez le temps de pratiquer chaque exercice. La répétition est la clé pour maîtriser Git et développer de bons réflexes.
 
 Prêt à relever le défi ? Commençons par explorer les scénarios courants auxquels vous pourriez être confrontés dans votre utilisation quotidienne de Git.
+
+⏭️ [Scénarios courants (erreurs, conflits, historique modifié)](/module-8-cas-pratiques-et-exercices/01-scenarios-courants.md)

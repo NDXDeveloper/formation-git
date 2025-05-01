@@ -1,5 +1,7 @@
 # Module 4 : Git à plusieurs – Git et GitHub
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 Jusqu'à présent, nous avons principalement travaillé avec Git de façon locale, sur notre propre ordinateur. C'est déjà très utile pour suivre l'évolution de vos projets personnels, mais l'une des plus grandes forces de Git est de permettre la **collaboration** entre plusieurs développeurs.
 
 Dans ce module, nous allons explorer comment Git peut être utilisé à plusieurs et comment les plateformes comme GitHub, GitLab ou Bitbucket facilitent cette collaboration.
@@ -30,3 +32,5 @@ Prêt à découvrir comment collaborer avec Git et GitHub ? Commençons par comp
 ---
 
 *Dans les prochaines sections, nous explorerons en détail les concepts de dépôts distants, l'utilisation de GitHub, et toutes les commandes nécessaires pour collaborer efficacement avec d'autres développeurs.*
+
+⏭️ [Qu'est-ce qu'un dépôt distant ?](/module-4-git-a-plusieurs-git-et-github/01-quest-ce-quun-depot-distant.md)

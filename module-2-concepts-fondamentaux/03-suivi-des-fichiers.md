@@ -1,5 +1,7 @@
 # 2.3. Suivi des fichiers : git status, git add, git commit
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 Dans cette section, nous allons approfondir les trois commandes essentielles que vous utiliserez quotidiennement pour suivre vos fichiers avec Git : `git status`, `git add` et `git commit`. Ces commandes constituent le cœur de votre workflow Git, et les maîtriser vous permettra de travailler efficacement.
 
 ## Le trio incontournable : status, add, commit
@@ -358,3 +360,5 @@ Thumbs.db
 Les commandes `git status`, `git add` et `git commit` sont les trois piliers du workflow quotidien avec Git. En maîtrisant ces commandes et leurs options, vous pouvez suivre efficacement les modifications de vos fichiers et construire un historique clair et organisé de votre projet.
 
 Dans la prochaine section, nous verrons comment explorer cet historique à l'aide des commandes `git log`, `git show` et `git diff`.
+
+⏭️ [Exploration du log : git log, git show, git diff](/module-2-concepts-fondamentaux/04-exploration-du-log.md)

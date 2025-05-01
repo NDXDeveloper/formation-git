@@ -1,5 +1,7 @@
 # 3.2. Créer, lister, supprimer des branches
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 Maintenant que vous comprenez ce qu'est une branche, voyons comment les manipuler concrètement. Ces opérations font partie des tâches quotidiennes lorsque vous travaillez avec Git.
 
 ## Lister les branches existantes
@@ -121,3 +123,5 @@ Voici un petit exercice pour vous familiariser avec la gestion des branches :
 Cet exercice vous permettra de visualiser comment les branches maintiennent des environnements de travail séparés.
 
 Dans la prochaine section, nous verrons comment naviguer entre les branches avec `git checkout` et `git switch`.
+
+⏭️ [git checkout et git switch](/module-3-travailler-avec-les-branches/03-git-checkout-et-git-switch.md)

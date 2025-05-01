@@ -1,5 +1,7 @@
 # 4.4. Pousser et tirer des changements (git push, git pull, git fetch)
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 Maintenant que vous savez cloner un dépôt, voyons comment synchroniser votre travail avec le dépôt distant. Cette synchronisation se fait dans deux directions :
 - **Vers le dépôt distant** : pousser vos modifications
 - **Depuis le dépôt distant** : récupérer les modifications des autres
@@ -196,3 +198,5 @@ Maîtriser ces trois commandes est essentiel pour collaborer efficacement avec d
 ---
 
 Dans la prochaine section, nous verrons comment configurer et utiliser les clés SSH pour une connexion plus sécurisée et plus pratique avec GitHub.
+
+⏭️ [Gérer les clés SSH](/module-4-git-a-plusieurs-git-et-github/05-gerer-les-cles-ssh.md)

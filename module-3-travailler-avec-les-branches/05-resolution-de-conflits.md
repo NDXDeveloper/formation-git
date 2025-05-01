@@ -1,5 +1,7 @@
 # 3.5. Résolution de conflits
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 Lorsque vous fusionnez des branches qui ont modifié les mêmes parties des mêmes fichiers, Git ne peut pas déterminer automatiquement quelle version conserver. C'est ce qu'on appelle un **conflit de fusion**. N'ayez pas peur : c'est une situation normale dans le développement collaboratif !
 
 ## Pourquoi les conflits se produisent-ils ?
@@ -171,3 +173,5 @@ Ce processus vous aidera à comprendre comment les conflits se produisent et com
 N'oubliez pas : les conflits ne sont pas un problème, mais une opportunité de décider consciemment quelle version du code est la meilleure !
 
 Dans la prochaine section, nous explorerons le rebasage (git rebase), une alternative à la fusion pour intégrer des modifications.
+
+⏭️ [Rebasage : git rebase](/module-3-travailler-avec-les-branches/06-rebasage-git-rebase.md)

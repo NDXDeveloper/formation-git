@@ -1,5 +1,7 @@
 # 8.4. Quiz de fin de module
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 Félicitations pour être arrivé jusqu'à la fin de cette formation Git ! Pour consolider vos connaissances et vérifier votre compréhension, voici un quiz couvrant les concepts clés que nous avons explorés tout au long de cette formation, avec un accent particulier sur les cas pratiques et la résolution de problèmes.
 
 ## Comment utiliser ce quiz
@@ -223,3 +225,5 @@ Félicitations pour avoir terminé cette formation Git ! Vous disposez maintenan
 Prenez quelques instants pour répondre à cette question ouverte : *"Comment Git a-t-il changé ou va-t-il changer votre façon de travailler sur vos projets ?"*
 
 Votre réponse vous aidera à réfléchir sur l'impact concret de Git dans votre workflow et à identifier comment l'utiliser au mieux à l'avenir.
+
+⏭️ Retour à la [Table des matières](/SOMMAIRE.md)

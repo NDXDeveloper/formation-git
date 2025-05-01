@@ -1,5 +1,7 @@
 # 8.1. Scénarios courants (erreurs, conflits, historique modifié)
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 Dans cette section, nous allons aborder les situations problématiques les plus fréquentes que vous rencontrerez probablement durant votre utilisation de Git. Pour chaque scénario, nous verrons comment diagnostiquer le problème et les solutions pour y remédier.
 
 ## Erreurs courantes et leur résolution
@@ -206,3 +208,5 @@ En pratiquant ces situations dans un environnement contrôlé, vous serez mieux 
 ---
 
 Dans la prochaine section, nous aborderons des ateliers guidés qui simulent un travail d'équipe sur un projet Git.
+
+⏭️ [Ateliers guidés : projet en équipe](/module-8-cas-pratiques-et-exercices/02-ateliers-guides-projet-en-equipe.md)

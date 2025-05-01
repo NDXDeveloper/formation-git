@@ -1,5 +1,7 @@
 # 4.1. Qu'est-ce qu'un dépôt distant ?
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 ## Définition simple
 
 Un **dépôt distant** (*remote repository* en anglais) est simplement une copie de votre projet Git qui est hébergée sur Internet ou sur un réseau, plutôt que sur votre ordinateur local. Pensez-y comme à une "sauvegarde en ligne" de votre projet, mais avec beaucoup plus de fonctionnalités !
@@ -65,3 +67,5 @@ Git propose plusieurs commandes pour communiquer avec les dépôts distants :
 - La communication entre votre dépôt local et le dépôt distant se fait via des commandes Git spécifiques.
 
 Dans la prochaine section, nous allons découvrir GitHub, la plateforme la plus populaire pour héberger des dépôts distants, et voir comment y créer votre premier dépôt.
+
+⏭️ [Introduction à GitHub (ou GitLab, Bitbucket)](/module-4-git-a-plusieurs-git-et-github/02-introduction-a-github.md)

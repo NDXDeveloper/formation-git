@@ -1,5 +1,7 @@
 # Module 7 : Outils graphiques et intégration
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 ## Introduction
 
 Jusqu'à présent, nous avons principalement travaillé avec Git en ligne de commande, ce qui est excellent pour comprendre les mécanismes fondamentaux. Cependant, dans un environnement de travail quotidien, de nombreux développeurs préfèrent utiliser des interfaces graphiques et des intégrations qui simplifient l'utilisation de Git.
@@ -39,3 +41,5 @@ Dans les sections suivantes, nous explorerons divers outils graphiques, l'intég
 ---
 
 *Note : Même si les outils graphiques sont très pratiques, nous vous recommandons de conserver une bonne compréhension des commandes Git de base. Cela vous permettra de résoudre des problèmes complexes lorsque les interfaces graphiques atteignent leurs limites.*
+
+⏭️ [Utilisation de Git avec des GUI (Sourcetree, GitKraken, VSCode, etc.)](/module-7-outils-graphiques-et-integration/01-utilisation-de-git-avec-des-gui.md)

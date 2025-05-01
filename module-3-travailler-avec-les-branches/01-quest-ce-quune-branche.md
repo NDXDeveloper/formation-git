@@ -1,5 +1,7 @@
 # 3.1. Qu'est-ce qu'une branche ?
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 ## Définition simple
 
 Une **branche** dans Git peut être vue comme une ligne de développement indépendante au sein de votre projet. Imaginez que votre projet est un arbre : le tronc principal représente votre branche principale (généralement appelée `main` ou `master`), et les branches sont des chemins alternatifs qui partent de ce tronc.
@@ -50,3 +52,5 @@ Les branches sont utiles pour :
 Une branche est comme un univers parallèle de votre projet où vous pouvez travailler librement sans affecter la version principale. C'est l'un des concepts les plus puissants de Git, car il permet de maintenir plusieurs versions du code simultanément et de les fusionner quand elles sont prêtes.
 
 Dans la prochaine section, nous verrons comment créer et gérer concrètement ces branches !
+
+⏭️ [Créer, lister, supprimer des branches](/module-3-travailler-avec-les-branches/02-creer-lister-supprimer-des-branches.md)

@@ -1,5 +1,7 @@
 # 5.4. Tagging et releases
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 ## Marquer les moments importants de votre projet
 
 Imaginez que vous développez une application et que vous venez de terminer une version stable que vous souhaitez publier. Comment indiquer clairement ce point spécifique dans l'historique de votre projet ? Comment retrouver facilement cette version particulière parmi des centaines de commits ?
@@ -248,3 +250,5 @@ Vous avez corrigé un bug critique sur la branche principale, mais vous devez au
 Les tags Git sont un moyen simple mais puissant de marquer des points importants dans l'historique de votre projet. Ils facilitent la navigation dans l'historique, le déploiement de versions et la communication sur l'évolution de votre logiciel.
 
 Combinés avec de bonnes pratiques de release, les tags transforment votre historique Git en une chronologie claire du développement de votre projet, ce qui est inestimable tant pour les développeurs que pour les utilisateurs.
+
+⏭️ [Submodules](/module-5-fonctions-avancees-de-git/05-submodules.md)

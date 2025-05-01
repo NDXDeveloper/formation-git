@@ -1,5 +1,7 @@
 # 8.2. Ateliers guidés : projet en équipe
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 Dans cette section, nous allons simuler un projet collaboratif pour vous permettre de mettre en pratique les compétences Git que vous avez acquises tout au long de cette formation. Ces ateliers guidés vous placeront dans des situations réelles de travail en équipe, similaires à celles que vous rencontrerez dans votre vie professionnelle.
 
 ## Préparation de l'environnement
@@ -493,3 +495,5 @@ Ces ateliers vous ont permis de vivre une expérience proche de celle d'une vér
 ---
 
 Dans la prochaine section, nous explorerons des projets personnels que vous pourrez réaliser par vous-même pour continuer à développer vos compétences Git.
+
+⏭️ [Projets à faire soi-même](/module-8-cas-pratiques-et-exercices/03-projets-a-faire-soi-meme.md)

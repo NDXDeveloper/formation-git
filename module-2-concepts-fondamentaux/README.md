@@ -1,5 +1,7 @@
 # Module 2 : Concepts fondamentaux
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 Bienvenue dans le deuxième module de notre formation Git ! Maintenant que vous avez installé et configuré Git, et que vous avez créé votre premier dépôt, il est temps d'approfondir les concepts fondamentaux qui font de Git un outil si puissant.
 
 ## Aperçu du module
@@ -53,3 +55,5 @@ Une façon utile de penser à Git est de l'imaginer comme une machine à voyager
 Cette métaphore nous aidera à comprendre les concepts plus abstraits de Git au fur et à mesure que nous avancerons.
 
 Prêt à plonger dans les concepts fondamentaux de Git ? Commençons !
+
+⏭️ [Les 3 états de Git : Working Directory, Staging Area, Repository](/module-2-concepts-fondamentaux/01-les-3-etats-de-git.md)

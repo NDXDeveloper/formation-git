@@ -1,5 +1,7 @@
 # 3.4. Fusion de branches (git merge)
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 Une fois que vous avez développé et testé une fonctionnalité sur une branche séparée, vous voudrez intégrer ces changements dans votre branche principale. Cette opération s'appelle une **fusion** (ou "merge" en anglais). Voyons comment cela fonctionne.
 
 ## Comprendre la fusion
@@ -160,3 +162,5 @@ Essayons une fusion dans un petit exercice :
 Cela devrait vous montrer un graphe de l'historique avec votre fusion.
 
 Dans la prochaine section, nous verrons comment gérer les conflits qui peuvent survenir lors d'une fusion.
+
+⏭️ [Résolution de conflits](/module-3-travailler-avec-les-branches/05-resolution-de-conflits.md)

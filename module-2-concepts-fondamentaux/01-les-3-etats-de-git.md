@@ -1,5 +1,7 @@
 # 2.1. Les 3 états de Git : Working Directory, Staging Area, Repository
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 L'un des concepts les plus importants pour comprendre Git est celui des trois états dans lesquels vos fichiers peuvent se trouver. Comprendre ces états vous aidera à mieux visualiser ce qui se passe lorsque vous utilisez les commandes Git.
 
 ## Les trois états en bref
@@ -200,3 +202,5 @@ Comprendre les trois états de Git est fondamental pour utiliser cet outil effic
 Cette architecture en trois étapes est l'un des aspects les plus puissants de Git, car elle vous donne un contrôle précis sur ce que vous enregistrez et quand vous l'enregistrez.
 
 Dans la prochaine section, nous explorerons plus en détail le dossier `.git` et l'architecture interne qui permet à Git de fonctionner comme il le fait.
+
+⏭️ [Les fichiers .git et l'architecture interne](/module-2-concepts-fondamentaux/02-les-fichiers-git-et-architecture-interne.md)

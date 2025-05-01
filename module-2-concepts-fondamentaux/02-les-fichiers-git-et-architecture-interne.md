@@ -1,5 +1,7 @@
 # 2.2. Les fichiers .git et l'architecture interne
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 Vous avez peut-être remarqué qu'un dossier mystérieux nommé `.git` apparaît à la racine de votre projet lorsque vous initialisez un dépôt Git. Ce dossier est au cœur du fonctionnement de Git et contient toute la magie qui permet à Git de suivre vos fichiers.
 
 Dans cette section, nous allons explorer ce qui se cache à l'intérieur de ce dossier pour mieux comprendre comment Git fonctionne en coulisses. Ne vous inquiétez pas, nous garderons les explications simples et accessibles !
@@ -195,3 +197,5 @@ Le dossier `.git` est le cœur et l'âme de Git. Il contient tout l'historique d
 Bien que vous n'ayez pas besoin de comprendre tous les détails pour utiliser Git efficacement, avoir une idée générale de son fonctionnement interne peut vous aider à mieux comprendre les commandes que vous utilisez au quotidien.
 
 Dans la prochaine section, nous allons nous concentrer sur les commandes pratiques pour suivre vos fichiers avec Git : `git status`, `git add`, et `git commit`.
+
+⏭️ [Suivi des fichiers : git status, git add, git commit](/module-2-concepts-fondamentaux/03-suivi-des-fichiers.md)

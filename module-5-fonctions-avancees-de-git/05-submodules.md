@@ -1,5 +1,7 @@
 # 5.5. Submodules
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 ## Gérer des projets dans votre projet
 
 Imaginez que vous développez une application web et que vous utilisez une bibliothèque externe pour gérer l'interface utilisateur. Vous souhaitez inclure cette bibliothèque dans votre projet, mais vous voulez aussi pouvoir :
@@ -235,3 +237,5 @@ Les submodules peuvent parfois être compliqués. Voici quelques alternatives :
 Les submodules Git sont un outil puissant pour intégrer des projets externes tout en gardant leur indépendance. Ils offrent une grande flexibilité pour la gestion de projets modulaires et le partage de code entre différents dépôts.
 
 Bien qu'ils puissent sembler complexes au premier abord, une fois que vous avez compris leur fonctionnement et évité les pièges courants, les submodules deviennent un atout précieux dans votre boîte à outils Git, particulièrement pour les projets de grande envergure ou nécessitant une organisation modulaire.
+
+⏭️ [Hooks Git (pré-commit, post-merge, etc.)](/module-5-fonctions-avancees-de-git/06-hooks-git.md)

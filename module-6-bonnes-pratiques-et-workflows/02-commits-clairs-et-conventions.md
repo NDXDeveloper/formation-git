@@ -1,5 +1,7 @@
 # 6.2. Commits clairs et convention de messages
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 ## Pourquoi les messages de commit sont importants
 
 Un bon message de commit est comme une note explicative que vous laissez à votre futur vous et à vos collègues. Imaginez que vous revenez sur un projet après plusieurs mois ou que vous devez comprendre pourquoi un changement a été fait par un collègue : des messages de commit clairs sont essentiels pour comprendre l'historique du projet.
@@ -175,3 +177,5 @@ git cz
 - Référencez les **issues** concernées
 
 En suivant ces bonnes pratiques, vous créerez un historique Git propre, exploitable et professionnel qui facilitera le travail de toute l'équipe !
+
+⏭️ [Workflows collaboratifs (Git Flow, GitHub Flow)](/module-6-bonnes-pratiques-et-workflows/03-workflows-collaboratifs.md)

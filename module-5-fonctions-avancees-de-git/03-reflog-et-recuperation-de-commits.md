@@ -1,5 +1,7 @@
 # 5.3. Reflog et récupération de commits
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 ## Le filet de sécurité de Git
 
 Vous est-il déjà arrivé de supprimer accidentellement du code important ? Ou peut-être avez-vous fait une erreur lors d'un rebase ou d'un reset ? Bonne nouvelle : Git garde presque toujours une trace de ce que vous faites et offre un moyen de récupérer vos données !
@@ -206,3 +208,5 @@ Le reflog est comme une machine à remonter le temps pour votre dépôt Git. Il 
 - Explorer l'historique complet de vos actions dans Git
 
 C'est un outil extrêmement puissant qui peut vous sauver dans des situations qui sembleraient autrement désespérées. Rappelez-vous : avec Git, presque rien n'est jamais vraiment perdu - il suffit de savoir où chercher !
+
+⏭️ [Tagging et releases](/module-5-fonctions-avancees-de-git/04-tagging-et-releases.md)

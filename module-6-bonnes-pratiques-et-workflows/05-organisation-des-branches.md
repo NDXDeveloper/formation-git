@@ -1,5 +1,7 @@
 # 6.5. Organisation des branches (main, dev, feature/, hotfix/)
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 ## Pourquoi organiser ses branches ?
 
 Imaginez un projet Git comme un grand arbre avec différentes branches qui poussent dans toutes les directions. Sans organisation, cela devient rapidement un enchevêtrement difficile à gérer. Une bonne organisation des branches vous permet de :
@@ -350,3 +352,5 @@ Une bonne organisation des branches est le fondement d'une collaboration efficac
 Commencez simple, puis adaptez progressivement votre structure selon les besoins de votre projet. L'essentiel est que toute l'équipe comprenne et respecte les conventions établies.
 
 N'oubliez pas : les branches sont des outils flexibles, et leur organisation doit servir votre workflow, pas l'inverse. Adaptez ces recommandations à vos besoins spécifiques !
+
+⏭️ [Module 7 : Outils graphiques et intégration](/module-7-outils-graphiques-et-integration/README.md)

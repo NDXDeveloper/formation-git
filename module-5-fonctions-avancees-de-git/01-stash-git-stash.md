@@ -1,5 +1,7 @@
 # 5.1. Stash : mettre de côté temporairement (git stash)
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 ## Le problème : interrompre son travail
 
 Imaginez cette situation : vous travaillez sur une nouvelle fonctionnalité et votre code est en plein chantier. Soudain, on vous demande de corriger un bug urgent sur la branche principale. Que faire de vos modifications non terminées ? Vous ne voulez pas les committer car elles ne sont pas prêtes, mais vous devez changer de branche pour résoudre le bug.
@@ -176,3 +178,5 @@ git stash show -p stash@{0}
 `git stash` est un outil formidable pour mettre temporairement de côté votre travail sans créer de commits inachevés. C'est parfait pour les interruptions dans votre flux de travail, pour garder votre historique de commits propre, et pour déplacer des modifications entre les branches.
 
 Maintenant que vous maîtrisez `git stash`, vous pouvez travailler de manière plus flexible et réagir rapidement aux changements de priorités sans perdre votre travail en cours !
+
+⏭️ [Cherry-pick](/module-5-fonctions-avancees-de-git/02-cherry-pick.md)

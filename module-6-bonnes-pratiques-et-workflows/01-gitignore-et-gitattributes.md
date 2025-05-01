@@ -1,5 +1,7 @@
 # 6.1. .gitignore et .gitattributes
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 ## Le fichier .gitignore : gardez votre dépôt propre
 
 ### Qu'est-ce que .gitignore ?
@@ -179,3 +181,5 @@ database.xml merge=ours # Garde notre version en cas de conflit
 Ces deux fichiers sont essentiels pour maintenir un dépôt propre et assurer une collaboration fluide, particulièrement dans les équipes travaillant sur différents systèmes d'exploitation.
 
 N'hésitez pas à les configurer dès le début de vos projets pour éviter des problèmes futurs !
+
+⏭️ [Commits clairs et convention de messages](/module-6-bonnes-pratiques-et-workflows/02-commits-clairs-et-conventions.md)

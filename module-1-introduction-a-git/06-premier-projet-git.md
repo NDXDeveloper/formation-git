@@ -308,4 +308,4 @@ Dans cette section, vous avez appris à créer votre premier dépôt Git et à e
 
 Dans le prochain module, nous explorerons plus en détail les concepts fondamentaux de Git, notamment les trois états de Git et comment explorer l'historique des modifications.
 
-⏭️ [Module 2 : Concepts fondamentaux](/module-2-concepts-fondamentaux/README.md.md)
+⏭️ [Module 2 : Concepts fondamentaux](/module-2-concepts-fondamentaux/README.md)

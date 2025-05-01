@@ -1,5 +1,7 @@
 # 4.2. Introduction à GitHub (ou GitLab, Bitbucket)
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 ## Qu'est-ce que GitHub ?
 
 **GitHub** est une plateforme web qui héberge des dépôts Git et ajoute de nombreuses fonctionnalités pour faciliter la collaboration entre développeurs. Lancée en 2008, elle est devenue le "réseau social des développeurs" avec plus de 100 millions d'utilisateurs et 400 millions de dépôts.
@@ -91,3 +93,5 @@ Maintenant que vous connaissez GitHub, nous allons apprendre à :
 - Tirer des modifications depuis GitHub
 
 Dans la section suivante, nous verrons comment cloner un dépôt existant depuis GitHub vers votre ordinateur.
+
+⏭️ [Cloner un dépôt (git clone)](/module-4-git-a-plusieurs-git-et-github/03-cloner-un-depot.md)

@@ -1,5 +1,7 @@
 # 3.3. git checkout et git switch
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 Une fois que vous avez créé vos branches, vous aurez besoin de naviguer entre elles. Dans Git, il existe deux commandes principales pour cette tâche : `git checkout` et `git switch`. Voyons comment les utiliser et leurs différences.
 
 ## La commande `git checkout`
@@ -146,3 +148,5 @@ Essayons ces commandes dans un petit exercice :
    ```
 
 Dans la prochaine section, nous verrons comment fusionner les changements d'une branche vers une autre avec `git merge`.
+
+⏭️ [Fusion de branches (git merge)](/module-3-travailler-avec-les-branches/04-fusion-de-branches.md)

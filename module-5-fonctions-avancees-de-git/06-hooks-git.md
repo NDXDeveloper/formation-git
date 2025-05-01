@@ -1,5 +1,7 @@
 # 5.6. Hooks Git (pré-commit, post-merge, etc.)
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 ## Automatiser Git : les scripts qui s'exécutent à des moments clés
 
 Avez-vous déjà souhaité que Git puisse :
@@ -260,3 +262,5 @@ Les hooks Git sont des outils puissants qui vous permettent d'automatiser des t�
 - Automatiser des tâches répétitives
 
 Bien qu'ils puissent sembler un peu techniques au début, les hooks sont relativement faciles à mettre en place et peuvent vous faire gagner beaucoup de temps à long terme. Commencez par des hooks simples, puis évoluez vers des solutions plus complexes à mesure que vous devenez plus à l'aise avec leur fonctionnement.
+
+⏭️ [Module 6 : Bonnes pratiques et workflows](/module-6-bonnes-pratiques-et-workflows/README.md)

@@ -1,5 +1,7 @@
 # 6.4. Revue de code avec Pull Requests
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 ## Qu'est-ce qu'une Pull Request ?
 
 Une **Pull Request** (PR), également appelée **Merge Request** sur GitLab, est une fonctionnalité des plateformes comme GitHub, GitLab et Bitbucket qui permet de **proposer des modifications** à un projet avant de les intégrer à la branche principale.
@@ -262,3 +264,5 @@ Les Pull Requests sont bien plus qu'un simple mécanisme de fusion de code. Elle
 En prenant l'habitude d'utiliser des Pull Requests, même pour des projets personnels ou des petites équipes, vous adoptez une discipline qui améliore significativement la qualité de votre code et votre expérience de développement collaborative.
 
 N'oubliez pas : la revue de code est une compétence qui s'apprend et s'améliore avec la pratique. Plus vous participez à des PR (comme auteur ou comme reviewer), plus vous deviendrez efficace !
+
+⏭️ [Organisation des branches (main, dev, feature/, hotfix/)](/module-6-bonnes-pratiques-et-workflows/05-organisation-des-branches.md)

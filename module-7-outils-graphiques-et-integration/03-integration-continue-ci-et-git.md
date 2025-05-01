@@ -1,5 +1,7 @@
 # 7.3. Intégration continue (CI) et Git
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 L'intégration continue (CI) est une pratique de développement qui consiste à automatiser les tests et les vérifications de code chaque fois que des modifications sont envoyées à votre dépôt Git. Cette section vous introduira aux concepts de base de la CI et à son intégration avec Git.
 
 ## Qu'est-ce que l'intégration continue ?
@@ -212,3 +214,5 @@ git push
 ---
 
 L'intégration continue peut sembler intimidante au début, mais elle devient rapidement un allié précieux dans votre processus de développement. Commencez avec une configuration simple et ajoutez progressivement des fonctionnalités à mesure que vous vous familiarisez avec le concept. Avec le temps, vous ne pourrez plus vous passer de ce filet de sécurité automatisé!
+
+⏭️ [Déploiement automatisé avec Git](/module-7-outils-graphiques-et-integration/04-deploiement-automatise-avec-git.md)

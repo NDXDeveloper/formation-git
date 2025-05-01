@@ -1,5 +1,7 @@
 # 2.4. Exploration du log : git log, git show, git diff
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 L'un des grands avantages de Git est qu'il conserve l'historique complet de votre projet. Pour tirer pleinement parti de cette fonctionnalité, vous devez savoir comment explorer cet historique. Dans cette section, nous allons découvrir trois commandes essentielles qui vous permettront de voyager dans le temps à travers votre projet : `git log`, `git show` et `git diff`.
 
 ## Pourquoi explorer l'historique ?
@@ -370,3 +372,5 @@ En maîtrisant ces commandes, vous pouvez :
 - Voir ce qui a changé entre deux points dans le temps
 
 Dans le prochain module, nous explorerons le concept de branches dans Git, qui vous permettra de travailler sur différentes fonctionnalités en parallèle.
+
+⏭️ [Module 3 : Travailler avec les branches](/module-3-travailler-avec-les-branches/README.md)

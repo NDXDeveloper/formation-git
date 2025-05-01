@@ -1,5 +1,7 @@
 # 4.6. Fork et Pull Request (PR)
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 ## Introduction aux contributions sur GitHub
 
 Jusqu'à présent, nous avons vu comment travailler avec vos propres dépôts. Mais comment contribuer à des projets qui ne vous appartiennent pas ? C'est là qu'interviennent les concepts de **Fork** et de **Pull Request** (PR).
@@ -207,3 +209,5 @@ Pour faire une nouvelle contribution après une PR acceptée :
 Félicitations ! Vous connaissez maintenant les bases de la collaboration sur GitHub. Ces compétences sont essentielles pour participer à des projets open source ou travailler en équipe sur des projets de développement.
 
 Dans le prochain module, nous explorerons des fonctions plus avancées de Git qui vous aideront à travailler encore plus efficacement.
+
+⏭️ [Module 5 : Fonctions avancées de Git](/module-5-fonctions-avancees-de-git/README.md)

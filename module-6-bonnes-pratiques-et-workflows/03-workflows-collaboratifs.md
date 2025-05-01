@@ -1,5 +1,7 @@
 # 6.3. Workflows collaboratifs (Git Flow, GitHub Flow)
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 ## Qu'est-ce qu'un workflow Git ?
 
 Un workflow Git est une **recommandation sur la façon d'utiliser Git** pour accomplir un travail de manière cohérente et productive. C'est comme une "recette" qui définit comment :
@@ -242,3 +244,5 @@ Quelle que soit votre choix, l'important est que votre équipe :
 3. **L'adapte** à ses besoins spécifiques
 
 N'hésitez pas à commencer simple, puis à évoluer vers plus de complexité au fur et à mesure que votre projet et votre équipe grandissent !
+
+⏭️ [Revue de code avec Pull Requests](/module-6-bonnes-pratiques-et-workflows/04-revue-de-code-avec-pr.md)

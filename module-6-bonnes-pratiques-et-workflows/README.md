@@ -1,5 +1,7 @@
 # Module 6 : Bonnes pratiques et workflows
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 Bienvenue dans ce module consacré aux bonnes pratiques et workflows Git !
 
 ## Introduction
@@ -31,3 +33,5 @@ Dans ce module, nous allons explorer :
 Que vous travailliez seul ou au sein d'une grande équipe, ces pratiques vous aideront à établir une structure de développement solide et à éviter de nombreux problèmes courants.
 
 Commençons par explorer comment bien configurer votre projet avec `.gitignore` et `.gitattributes`...
+
+⏭️ [.gitignore et .gitattributes](/module-6-bonnes-pratiques-et-workflows/01-gitignore-et-gitattributes.md)

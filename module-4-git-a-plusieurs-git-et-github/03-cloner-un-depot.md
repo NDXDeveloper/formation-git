@@ -1,5 +1,7 @@
 # 4.3. Cloner un dépôt (git clone)
 
+🔝 Retour à la [Table des matières](/SOMMAIRE.md)
+
 ## Qu'est-ce que le clonage ?
 
 **Cloner** un dépôt, c'est créer une copie complète d'un projet Git existant sur votre ordinateur. Cette copie inclut :
@@ -138,3 +140,5 @@ Cela ne télécharge que le commit le plus récent, ce qui est beaucoup plus rap
 ---
 
 Dans la prochaine section, nous apprendrons comment pousser vos modifications locales vers GitHub et récupérer les changements des autres contributeurs.
+
+⏭️ [Pousser et tirer des changements (git push, git pull, git fetch)](/module-4-git-a-plusieurs-git-et-github/04-pousser-et-tirer-des-changements.md)
