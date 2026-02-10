@@ -468,8 +468,8 @@ Pour des détails non bloquants :
 N'oubliez pas de souligner ce qui est bien fait !
 
 ```markdown
-✨ Excellente gestion des erreurs ! C'est très clair.
-👍 Bonne idée d'extraire cette logique dans une fonction séparée.
+✨ Excellente gestion des erreurs ! C'est très clair.  
+👍 Bonne idée d'extraire cette logique dans une fonction séparée.  
 🎉 Les tests sont vraiment complets, bravo !
 ```
 
@@ -790,13 +790,13 @@ Si les changements sont importants, demandez au reviewer de revoir.
 **Pour `main`** :
 
 ```yaml
-✅ Require a pull request before merging
-   ✅ Require approvals: 2
-   ✅ Dismiss stale reviews when new commits are pushed
+✅ Require a pull request before merging  
+   ✅ Require approvals: 2  
+   ✅ Dismiss stale reviews when new commits are pushed  
    ✅ Require review from Code Owners
 
-✅ Require status checks to pass before merging
-   ✅ Require branches to be up to date before merging
+✅ Require status checks to pass before merging  
+   ✅ Require branches to be up to date before merging  
    ☑️ Status checks: tests, lint, build
 
 ✅ Require conversation resolution before merging
@@ -811,7 +811,7 @@ Si les changements sont importants, demandez au reviewer de revoir.
 **Pour `develop`** :
 
 ```yaml
-✅ Require a pull request before merging
+✅ Require a pull request before merging  
    ✅ Require approvals: 1
 
 ✅ Require status checks to pass before merging
