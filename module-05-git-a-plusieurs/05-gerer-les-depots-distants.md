@@ -45,7 +45,7 @@ git remote -v
 
 L'option `-v` (verbose) affiche les URLs complètes :
 ```
-origin  https://github.com/utilisateur/projet.git (fetch)
+origin  https://github.com/utilisateur/projet.git (fetch)  
 origin  https://github.com/utilisateur/projet.git (push)
 ```
 
@@ -91,11 +91,11 @@ git remote -v
 
 Résultat :
 ```
-origin    https://github.com/vous/projet.git (fetch)
-origin    https://github.com/vous/projet.git (push)
-gitlab    https://gitlab.com/vous/projet.git (fetch)
-gitlab    https://gitlab.com/vous/projet.git (push)
-upstream  https://github.com/projet-original/projet.git (fetch)
+origin    https://github.com/vous/projet.git (fetch)  
+origin    https://github.com/vous/projet.git (push)  
+gitlab    https://gitlab.com/vous/projet.git (fetch)  
+gitlab    https://gitlab.com/vous/projet.git (push)  
+upstream  https://github.com/projet-original/projet.git (fetch)  
 upstream  https://github.com/projet-original/projet.git (push)
 ```
 
@@ -111,7 +111,7 @@ Utilisé dans le contexte de fork. C'est le dépôt original que vous avez fork�
 
 **Exemples de workflow avec fork :**
 ```
-upstream = projet original (lecture seule pour vous)
+upstream = projet original (lecture seule pour vous)  
 origin = votre fork (lecture et écriture)
 ```
 
@@ -165,7 +165,7 @@ git remote rename <ancien-nom> <nouveau-nom>
 
 **Exemple :**
 ```bash
-git remote rename origin github
+git remote rename origin github  
 git remote rename gitlab primary
 ```
 
@@ -275,7 +275,7 @@ git remote set-url --push origin git@github.com:utilisateur/projet.git
 
 Vous pouvez cloner (fetch) depuis un dépôt public en HTTPS, mais pousser (push) vers votre fork en SSH :
 ```bash
-git remote add origin https://github.com/projet-public/code.git
+git remote add origin https://github.com/projet-public/code.git  
 git remote set-url --push origin git@github.com:votre-fork/code.git
 ```
 
@@ -289,7 +289,7 @@ Vous voulez contribuer à un projet populaire :
 # 1. Forker le projet sur GitHub (via l'interface)
 
 # 2. Cloner votre fork
-git clone https://github.com/vous/projet.git
+git clone https://github.com/vous/projet.git  
 cd projet
 
 # 3. Ajouter le dépôt original comme upstream
@@ -340,7 +340,7 @@ git remote add github https://github.com/vous/projet.git
 git remote add gitlab https://gitlab.entreprise.com/vous/projet.git
 
 # Pousser vers les deux
-git push github main
+git push github main  
 git push gitlab main
 
 # Ou créer un alias pour pousser partout (voir section alias)
@@ -376,7 +376,7 @@ Vous essayez d'ajouter un distant qui existe déjà. Solutions :
 
 ```bash
 # Soit supprimer puis rajouter
-git remote remove origin
+git remote remove origin  
 git remote add origin <nouvelle-url>
 
 # Soit changer l'URL directement
@@ -447,14 +447,14 @@ origin -> Dépôt principal de l'équipe
 
 **Pour contribuer à l'open source :**
 ```
-origin   -> Votre fork
+origin   -> Votre fork  
 upstream -> Projet original
 ```
 
 **Pour un projet déployé :**
 ```
-origin     -> GitHub (code source)
-production -> Serveur de production
+origin     -> GitHub (code source)  
+production -> Serveur de production  
 staging    -> Serveur de test
 ```
 
@@ -464,7 +464,7 @@ staging    -> Serveur de test
 
 Utilisez des noms qui reflètent leur rôle :
 ```bash
-git remote add github-perso https://...
+git remote add github-perso https://...  
 git remote add github-travail https://...
 ```
 

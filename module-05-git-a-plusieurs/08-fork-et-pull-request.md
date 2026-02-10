@@ -106,7 +106,7 @@ Sur GitHub, cliquez sur "Fork". Vous avez maintenant :
 #### Étape 2 : Cloner votre fork localement
 
 ```bash
-git clone https://github.com/votre-nom/projet.git
+git clone https://github.com/votre-nom/projet.git  
 cd projet
 ```
 
@@ -125,9 +125,9 @@ git remote -v
 
 Vous devriez voir :
 ```
-origin    https://github.com/votre-nom/projet.git (fetch)
-origin    https://github.com/votre-nom/projet.git (push)
-upstream  https://github.com/auteur-original/projet.git (fetch)
+origin    https://github.com/votre-nom/projet.git (fetch)  
+origin    https://github.com/votre-nom/projet.git (push)  
+upstream  https://github.com/auteur-original/projet.git (fetch)  
 upstream  https://github.com/auteur-original/projet.git (push)
 ```
 
@@ -150,11 +150,11 @@ Travaillez normalement :
 nano src/login.js
 
 # Ajouter et committer
-git add src/login.js
+git add src/login.js  
 git commit -m "Fix: Correction du bug de connexion"
 
 # Continuer si nécessaire
-git add .
+git add .  
 git commit -m "Add: Tests pour le fix"
 ```
 
@@ -215,15 +215,15 @@ Discussion entre vous et les mainteneurs du projet
 
 ❌ **Mauvais :**
 ```
-Fix bug
-Update code
+Fix bug  
+Update code  
 Changes
 ```
 
 ✅ **Bons :**
 ```
-Fix: Correction de la fuite mémoire dans le composant UserList
-Add: Ajout de la validation email côté serveur
+Fix: Correction de la fuite mémoire dans le composant UserList  
+Add: Ajout de la validation email côté serveur  
 Update: Migration vers React 18
 ```
 
@@ -260,15 +260,15 @@ Chaque commit doit être logique et isolé :
 
 ❌ **Mauvais :**
 ```
-git commit -m "fix"
-git commit -m "wip"
+git commit -m "fix"  
+git commit -m "wip"  
 git commit -m "more changes"
 ```
 
 ✅ **Bons :**
 ```
-git commit -m "Fix: Correction validation email"
-git commit -m "Test: Ajout tests validation email"
+git commit -m "Fix: Correction validation email"  
+git commit -m "Test: Ajout tests validation email"  
 git commit -m "Docs: Mise à jour documentation API"
 ```
 
@@ -294,8 +294,8 @@ Vous répondez aux commentaires et faites des ajustements :
 
 ```bash
 # Faire les modifications demandées
-git add fichier-modifié.js
-git commit -m "Review: Prise en compte des commentaires"
+git add fichier-modifié.js  
+git commit -m "Review: Prise en compte des commentaires"  
 git push origin fix-bug-login
 ```
 
@@ -358,8 +358,8 @@ Merci pour la review ! Vous avez raison, je vais simplifier cette fonction.
 **Faites les changements**
 ```bash
 # Modifier le code
-git add .
-git commit -m "Review: Simplification de la fonction validate()"
+git add .  
+git commit -m "Review: Simplification de la fonction validate()"  
 git push origin fix-bug-login
 ```
 
@@ -448,9 +448,9 @@ Une fois votre PR fusionnée :
 
 **1. Synchronisez votre fork**
 ```bash
-git checkout main
-git fetch upstream
-git merge upstream/main
+git checkout main  
+git fetch upstream  
+git merge upstream/main  
 git push origin main
 ```
 
@@ -480,13 +480,13 @@ Si le projet original a évolué pendant votre travail, des conflits peuvent sur
 git fetch upstream
 
 # Rebaser votre branche sur upstream/main
-git checkout fix-bug-login
+git checkout fix-bug-login  
 git rebase upstream/main
 
 # Résoudre les conflits
 # (éditer les fichiers marqués en conflit)
 
-git add fichier-résolu.js
+git add fichier-résolu.js  
 git rebase --continue
 
 # Pousser avec force
@@ -557,8 +557,8 @@ Avant de contribuer, explorez le projet pour comprendre son architecture et ses 
 **GitHub CLI**
 Créer des PR depuis le terminal :
 ```bash
-gh pr create --title "Fix bug" --body "Description"
-gh pr list
+gh pr create --title "Fix bug" --body "Description"  
+gh pr list  
 gh pr view 123
 ```
 
@@ -575,7 +575,7 @@ La plupart des IDE ont des extensions Git avancées pour gérer les PR.
 # 1. Forker sur GitHub (via l'interface web)
 
 # 2. Cloner votre fork
-git clone https://github.com/votre-nom/projet.git
+git clone https://github.com/votre-nom/projet.git  
 cd projet
 
 # 3. Ajouter upstream
@@ -586,7 +586,7 @@ git checkout -b ma-contribution
 
 # 5. Faire vos modifications
 # ... éditer des fichiers ...
-git add .
+git add .  
 git commit -m "Description des changements"
 
 # 6. Pousser vers votre fork
@@ -595,15 +595,15 @@ git push origin ma-contribution
 # 7. Créer la Pull Request sur GitHub
 
 # 8. Répondre aux reviews et ajuster
-git add .
-git commit -m "Review: Ajustements demandés"
+git add .  
+git commit -m "Review: Ajustements demandés"  
 git push origin ma-contribution
 
 # 9. Une fois fusionnée, nettoyer
-git checkout main
-git pull upstream main
-git push origin main
-git branch -d ma-contribution
+git checkout main  
+git pull upstream main  
+git push origin main  
+git branch -d ma-contribution  
 git push origin --delete ma-contribution
 ```
 

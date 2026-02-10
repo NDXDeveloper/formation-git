@@ -60,11 +60,11 @@ Après un fetch, vos branches distantes sont à jour, mais pas vos branches loca
 
 ```bash
 # Avant fetch
-Branche locale : main (commit A)
+Branche locale : main (commit A)  
 Branche distante : origin/main (commit A)
 
 # Après fetch (si quelqu'un a poussé le commit B)
-Branche locale : main (commit A) <- vous êtes ici
+Branche locale : main (commit A) <- vous êtes ici  
 Branche distante : origin/main (commit B) <- nouveauté téléchargée
 ```
 
@@ -85,8 +85,8 @@ git diff main origin/main
 **Vérifier avant de fusionner**
 Vous voulez voir ce que les autres ont fait avant d'intégrer leurs changements :
 ```bash
-git fetch
-git log origin/main  # Examiner les nouveaux commits
+git fetch  
+git log origin/main  # Examiner les nouveaux commits  
 git diff main origin/main  # Voir les changements
 # Si tout va bien, alors fusionner
 git merge origin/main
@@ -95,14 +95,14 @@ git merge origin/main
 **Récupérer des informations sur les branches**
 Quelqu'un a créé une nouvelle branche distante :
 ```bash
-git fetch
+git fetch  
 git branch -r  # Voir toutes les branches distantes
 ```
 
 **Travailler avec plusieurs distants**
 Vous voulez récupérer depuis plusieurs sources :
 ```bash
-git fetch origin
+git fetch origin  
 git fetch upstream
 ```
 
@@ -142,7 +142,7 @@ git pull origin main
 ```bash
 git pull
 # équivaut à
-git fetch
+git fetch  
 git merge origin/main
 ```
 
@@ -151,11 +151,11 @@ Git récupère les commits distants et les fusionne immédiatement dans votre br
 #### Exemple visuel
 
 ```
-Avant pull :
-Local:    A---B---C (main)
+Avant pull :  
+Local:    A---B---C (main)  
 Distant:  A---B---C---D---E (origin/main)
 
-Après pull :
+Après pull :  
 Local:    A---B---C-------M (main)
                    \     /
 Distant:            D---E (origin/main)
@@ -194,18 +194,18 @@ git pull --rebase
 
 Cela équivaut à :
 ```bash
-git fetch
+git fetch  
 git rebase origin/main
 ```
 
 Le résultat est un historique linéaire sans commit de fusion :
 
 ```
-Avant pull --rebase :
-Local:    A---B---C---F (main, vos commits)
+Avant pull --rebase :  
+Local:    A---B---C---F (main, vos commits)  
 Distant:  A---B---C---D---E (origin/main)
 
-Après pull --rebase :
+Après pull --rebase :  
 Local:    A---B---C---D---E---F' (main)
 ```
 
@@ -214,7 +214,7 @@ Vos commits (F) sont rejoués après les commits distants, donnant un historique
 #### Configurer pull pour utiliser rebase par défaut
 
 ```bash
-git config pull.rebase true  # Pour ce dépôt
+git config pull.rebase true  # Pour ce dépôt  
 git config --global pull.rebase true  # Pour tous vos dépôts
 ```
 
@@ -244,12 +244,12 @@ Quand vous exécutez `git push`, Git :
 4. Met à jour la branche distante
 
 ```
-Avant push :
-Local:    A---B---C---D (main)
+Avant push :  
+Local:    A---B---C---D (main)  
 Distant:  A---B---C (origin/main)
 
-Après push :
-Local:    A---B---C---D (main)
+Après push :  
+Local:    A---B---C---D (main)  
 Distant:  A---B---C---D (origin/main)
 ```
 
@@ -258,8 +258,8 @@ Distant:  A---B---C---D (origin/main)
 **Après chaque série de commits**
 Vous avez terminé une fonctionnalité :
 ```bash
-git add .
-git commit -m "Ajout de la fonctionnalité X"
+git add .  
+git commit -m "Ajout de la fonctionnalité X"  
 git push
 ```
 
@@ -353,7 +353,7 @@ git diff main origin/main
 git merge origin/main
 
 # 5. Travailler et commiter
-git add .
+git add .  
 git commit -m "Votre message"
 
 # 6. Envoyer vos commits
@@ -367,7 +367,7 @@ git push origin main
 git pull
 
 # 2. Travailler et commiter
-git add .
+git add .  
 git commit -m "Votre message"
 
 # 3. Envoyer
@@ -453,7 +453,7 @@ git pull --rebase  # Rebase vos commits
 
 **Solution :**
 ```bash
-git pull  # D'abord récupérer
+git pull  # D'abord récupérer  
 git push  # Puis pousser
 ```
 
@@ -476,15 +476,15 @@ Cette situation arrive si vous avez initialisé le dépôt local et créé le di
 
 Commiter d'abord :
 ```bash
-git add .
-git commit -m "WIP: travail en cours"
+git add .  
+git commit -m "WIP: travail en cours"  
 git pull
 ```
 
 Ou mettre de côté temporairement :
 ```bash
-git stash
-git pull
+git stash  
+git pull  
 git stash pop
 ```
 
@@ -545,8 +545,8 @@ git push
 
 Ne pullez jamais avec des modifications non commitées :
 ```bash
-git add .
-git commit -m "Message"
+git add .  
+git commit -m "Message"  
 git pull
 ```
 
@@ -567,8 +567,8 @@ git push -u origin ma-fonctionnalite
 
 Quand vous n'êtes pas sûr :
 ```bash
-git fetch
-git log origin/main  # Vérifier
+git fetch  
+git log origin/main  # Vérifier  
 git pull  # Si tout va bien
 ```
 
@@ -609,8 +609,8 @@ git config --global alias.pf 'push --force-with-lease'
 git config --global alias.sync '!git fetch && git pull && git push'
 
 # Utilisation
-git pr
-git pf
+git pr  
+git pf  
 git sync
 ```
 

@@ -113,7 +113,7 @@ git remote -v
 
 Vous devriez voir :
 ```
-origin  https://github.com/votre-nom/mon-projet.git (fetch)
+origin  https://github.com/votre-nom/mon-projet.git (fetch)  
 origin  https://github.com/votre-nom/mon-projet.git (push)
 ```
 
@@ -145,7 +145,7 @@ git push -u origin master
 Lors de votre premier push, Git vous demandera de vous authentifier :
 
 ```
-Username for 'https://github.com': votre-nom
+Username for 'https://github.com': votre-nom  
 Password for 'https://votre-nom@github.com':
 ```
 
@@ -197,12 +197,12 @@ Quand vous exécutez `git push -u origin main`, Git :
 
 Vous verrez quelque chose comme :
 ```
-Enumerating objects: 15, done.
-Counting objects: 100% (15/15), done.
-Delta compression using up to 8 threads
-Compressing objects: 100% (10/10), done.
-Writing objects: 100% (15/15), 1.25 KiB | 1.25 MiB/s, done.
-Total 15 (delta 3), reused 0 (delta 0)
+Enumerating objects: 15, done.  
+Counting objects: 100% (15/15), done.  
+Delta compression using up to 8 threads  
+Compressing objects: 100% (10/10), done.  
+Writing objects: 100% (15/15), 1.25 KiB | 1.25 MiB/s, done.  
+Total 15 (delta 3), reused 0 (delta 0)  
 To https://github.com/votre-nom/mon-projet.git
  * [new branch]      main -> main
 Branch 'main' set up to track remote branch 'main' from 'origin'.
@@ -238,22 +238,22 @@ Imaginons que vous avez créé un site web simple :
 
 ```bash
 # 1. Créer le projet et initialiser Git
-mkdir mon-portfolio
-cd mon-portfolio
+mkdir mon-portfolio  
+cd mon-portfolio  
 git init
 
 # 2. Créer des fichiers
-echo "# Mon Portfolio" > README.md
-echo "<h1>Bienvenue</h1>" > index.html
+echo "# Mon Portfolio" > README.md  
+echo "<h1>Bienvenue</h1>" > index.html  
 echo "body { font-family: Arial; }" > style.css
 
 # 3. Faire le premier commit
-git add .
+git add .  
 git commit -m "Initial commit: structure de base"
 
 # 4. Ajouter plus de contenu
-echo "<p>Présentation</p>" >> index.html
-git add index.html
+echo "<p>Présentation</p>" >> index.html  
+git add index.html  
 git commit -m "Ajout de la présentation"
 
 # À ce stade, tout est uniquement en local
@@ -284,7 +284,7 @@ Après le premier push avec `-u`, les prochains pushs sont beaucoup plus simples
 echo "<footer>Contact</footer>" >> index.html
 
 # Vous commitez
-git add index.html
+git add index.html  
 git commit -m "Ajout du footer"
 
 # Vous poussez simplement avec
@@ -327,7 +327,7 @@ Soit vous avez accidentellement coché "Add README" lors de la création. Créez
 
 Soit vous devez d'abord récupérer ces commits :
 ```bash
-git pull origin main --allow-unrelated-histories
+git pull origin main --allow-unrelated-histories  
 git push -u origin main
 ```
 
@@ -392,7 +392,7 @@ git remote remove origin
 
 Prenez l'habitude de vérifier l'état de votre dépôt avant de pousser :
 ```bash
-git status
+git status  
 git log --oneline -5
 ```
 

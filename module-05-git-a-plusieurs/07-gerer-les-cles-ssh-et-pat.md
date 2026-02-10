@@ -122,7 +122,7 @@ git clone https://github.com/utilisateur/projet.git
 
 Git vous demandera :
 ```
-Username for 'https://github.com': votre-nom-utilisateur
+Username for 'https://github.com': votre-nom-utilisateur  
 Password for 'https://votre-nom-utilisateur@github.com':
 ```
 
@@ -215,7 +215,7 @@ ssh-keygen -t rsa -b 4096 -C "votre-email@example.com"
 **Processus interactif :**
 
 ```
-Generating public/private ed25519 key pair.
+Generating public/private ed25519 key pair.  
 Enter file in which to save the key (/Users/vous/.ssh/id_ed25519):
 ```
 
@@ -337,8 +337,8 @@ Si vous voyez un message de bienvenue avec votre nom d'utilisateur, c'est réuss
 
 Lors de la première connexion, vous verrez :
 ```
-The authenticity of host 'github.com (xxx.xxx.xxx.xxx)' can't be established.
-ED25519 key fingerprint is SHA256:...
+The authenticity of host 'github.com (xxx.xxx.xxx.xxx)' can't be established.  
+ED25519 key fingerprint is SHA256:...  
 Are you sure you want to continue connecting (yes/no)?
 ```
 
@@ -507,8 +507,8 @@ Ajoutez une couche de sécurité supplémentaire à vos clés.
 
 **Permissions correctes des fichiers**
 ```bash
-chmod 700 ~/.ssh
-chmod 600 ~/.ssh/id_ed25519
+chmod 700 ~/.ssh  
+chmod 600 ~/.ssh/id_ed25519  
 chmod 644 ~/.ssh/id_ed25519.pub
 ```
 

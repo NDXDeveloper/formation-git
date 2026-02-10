@@ -73,7 +73,7 @@ Pour l'instant, utilisez HTTPS. Nous verrons SSH plus tard dans ce module.
 **Cloner un projet dans le dossier courant**
 
 ```bash
-cd ~/Documents
+cd ~/Documents  
 git clone https://github.com/torvalds/linux.git
 ```
 
@@ -139,7 +139,7 @@ git remote -v
 
 Vous verrez quelque chose comme :
 ```
-origin  https://github.com/utilisateur/projet.git (fetch)
+origin  https://github.com/utilisateur/projet.git (fetch)  
 origin  https://github.com/utilisateur/projet.git (push)
 ```
 
@@ -257,15 +257,15 @@ Créez une structure de dossiers cohérente :
 
 Clonez ensuite dans le dossier approprié :
 ```bash
-cd ~/Projets/open-source
+cd ~/Projets/open-source  
 git clone https://github.com/projet/cool.git
 ```
 
 **Vérifiez toujours après le clonage**
 Prenez l'habitude de faire :
 ```bash
-cd projet-clone
-git status
+cd projet-clone  
+git status  
 git remote -v
 ```
 
