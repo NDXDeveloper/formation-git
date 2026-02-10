@@ -30,8 +30,8 @@ Git n'a pas été conçu pour les gros fichiers. Voici pourquoi :
 **Chaque version est conservée**
 Quand vous modifiez un fichier et que vous faites un commit, Git conserve TOUTES les versions :
 ```
-video.mp4 (version 1) - 500 Mo
-video.mp4 (version 2) - 500 Mo  ← légèrement modifiée
+video.mp4 (version 1) - 500 Mo  
+video.mp4 (version 2) - 500 Mo  ← légèrement modifiée  
 video.mp4 (version 3) - 500 Mo  ← encore modifiée
 ```
 
@@ -59,8 +59,8 @@ git clone https://github.com/username/projet-avec-videos.git
 **2. Opérations Git lentes**
 Chaque commande Git doit parcourir l'historique complet :
 ```bash
-git status   # Lent
-git log      # Lent
+git status   # Lent  
+git log      # Lent  
 git diff     # Très lent
 ```
 
@@ -119,8 +119,8 @@ Serveur LFS distant
 
 **Le pointeur ressemble à ça :**
 ```
-version https://git-lfs.github.com/spec/v1
-oid sha256:4d7a214614ab2935c943f9e0ff69d22eadbb8f32b1258daaa5e2ca24d17e2393
+version https://git-lfs.github.com/spec/v1  
+oid sha256:4d7a214614ab2935c943f9e0ff69d22eadbb8f32b1258daaa5e2ca24d17e2393  
 size 5242880
 ```
 
@@ -204,7 +204,7 @@ git lfs install
 
 Vous verrez :
 ```
-Updated git hooks.
+Updated git hooks.  
 Git LFS initialized.
 ```
 
@@ -220,15 +220,15 @@ Vous créez un site web avec des photos haute résolution.
 
 **Étape 1 : Initialiser le dépôt Git**
 ```bash
-mkdir mon-portfolio
-cd mon-portfolio
+mkdir mon-portfolio  
+cd mon-portfolio  
 git init
 ```
 
 **Étape 2 : Configurer LFS pour suivre les images**
 ```bash
-git lfs track "*.png"
-git lfs track "*.jpg"
+git lfs track "*.png"  
+git lfs track "*.jpg"  
 git lfs track "*.jpeg"
 ```
 
@@ -244,18 +244,18 @@ Un fichier `.gitattributes` est créé :
 
 **Important :** Ce fichier `.gitattributes` doit être commité !
 ```bash
-git add .gitattributes
+git add .gitattributes  
 git commit -m "Configure Git LFS pour les images"
 ```
 
 **Étape 3 : Ajouter vos gros fichiers**
 ```bash
 # Ajouter des images
-cp ~/Downloads/photo1.jpg images/
+cp ~/Downloads/photo1.jpg images/  
 cp ~/Downloads/photo2.png images/
 
 # Git LFS les gère automatiquement !
-git add images/
+git add images/  
 git commit -m "Ajouter photos du portfolio"
 ```
 
@@ -274,7 +274,7 @@ L'astérisque `*` indique que le fichier est suivi par LFS !
 
 **Étape 5 : Pousser vers GitHub/GitLab**
 ```bash
-git remote add origin https://github.com/username/mon-portfolio.git
+git remote add origin https://github.com/username/mon-portfolio.git  
 git push -u origin main
 ```
 
@@ -288,15 +288,15 @@ Git LFS pousse automatiquement les gros fichiers vers le serveur LFS !
 
 **Suivre par extension :**
 ```bash
-git lfs track "*.psd"          # Fichiers Photoshop
-git lfs track "*.mp4"          # Vidéos
-git lfs track "*.zip"          # Archives
+git lfs track "*.psd"          # Fichiers Photoshop  
+git lfs track "*.mp4"          # Vidéos  
+git lfs track "*.zip"          # Archives  
 git lfs track "*.bin"          # Fichiers binaires
 ```
 
 **Suivre par dossier :**
 ```bash
-git lfs track "assets/videos/**"    # Tous les fichiers dans assets/videos/
+git lfs track "assets/videos/**"    # Tous les fichiers dans assets/videos/  
 git lfs track "datasets/*.csv"      # Tous les CSV dans datasets/
 ```
 
@@ -348,7 +348,7 @@ git lfs pull --include="images/*.jpg"
 
 **Pré-télécharger avant un checkout :**
 ```bash
-git lfs fetch
+git lfs fetch  
 git checkout autre-branche
 ```
 
@@ -389,9 +389,9 @@ cp -r mon-projet mon-projet-backup
 
 **Étape 2 : Installer et configurer LFS**
 ```bash
-git lfs install
-git lfs track "*.mp4"
-git add .gitattributes
+git lfs install  
+git lfs track "*.mp4"  
+git add .gitattributes  
 git commit -m "Configure LFS pour les vidéos"
 ```
 
@@ -468,7 +468,7 @@ Les fichiers LFS ne sont pas téléchargés. Vous voyez les pointeurs à la plac
 
 **Télécharger ensuite :**
 ```bash
-cd projet
+cd projet  
 git lfs pull
 ```
 
@@ -637,9 +637,9 @@ Parfois, la meilleure solution est de ne PAS versionner les gros fichiers :
 ```bash
 # download_assets.sh
 #!/bin/bash
-echo "Téléchargement des assets..."
-curl -o images/banner.jpg https://example.com/assets/banner.jpg
-curl -o models/model.pth https://example.com/models/model.pth
+echo "Téléchargement des assets..."  
+curl -o images/banner.jpg https://example.com/assets/banner.jpg  
+curl -o models/model.pth https://example.com/models/model.pth  
 echo "Téléchargement terminé !"
 ```
 
@@ -664,7 +664,7 @@ Ne migrez pas vers LFS au milieu d'un projet avec beaucoup d'historique. Commenc
 
 Le fichier `.gitattributes` doit être versionné :
 ```bash
-git add .gitattributes
+git add .gitattributes  
 git commit -m "Configure Git LFS"
 ```
 
@@ -685,7 +685,7 @@ Ce projet utilise Git LFS pour les gros fichiers.
 
 ### Après le clone
 ```bash
-git lfs install
+git lfs install  
 git lfs pull
 ```
 ```
@@ -738,7 +738,7 @@ Cela supprime les fichiers LFS qui ne sont plus référencés par aucun commit r
 
 **Symptômes :**
 ```
-git-lfs filter-process: git-lfs: command not found
+git-lfs filter-process: git-lfs: command not found  
 error: external filter 'git-lfs filter-process' failed
 ```
 
@@ -746,7 +746,7 @@ error: external filter 'git-lfs filter-process' failed
 Installez Git LFS et configurez-le :
 ```bash
 # Installer (selon votre OS)
-brew install git-lfs  # macOS
+brew install git-lfs  # macOS  
 sudo apt-get install git-lfs  # Ubuntu
 
 # Configurer
@@ -758,8 +758,8 @@ git lfs install
 **Symptômes :**
 Vous voyez le contenu du pointeur au lieu du fichier :
 ```
-version https://git-lfs.github.com/spec/v1
-oid sha256:4d7a...
+version https://git-lfs.github.com/spec/v1  
+oid sha256:4d7a...  
 size 5242880
 ```
 
@@ -872,7 +872,7 @@ git lfs push origin main --include="images/*.jpg"
 
 **Calcul du coût :**
 ```
-Exemple : 100 images de 2 Mo chacune
+Exemple : 100 images de 2 Mo chacune  
 Stockage : 200 Mo (OK pour le plan gratuit)
 
 5 contributeurs clonent le dépôt par mois

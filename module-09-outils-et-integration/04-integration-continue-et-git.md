@@ -149,14 +149,14 @@ Vous créez une PR sur GitHub/GitLab
 
 **Merge dans main**
 ```
-git merge feature/nouvelle-fonctionnalite
+git merge feature/nouvelle-fonctionnalite  
 git push origin main
 ```
 → Déclenche : tests complets, build de production, déploiement automatique
 
 **Tags**
 ```
-git tag v1.2.0
+git tag v1.2.0  
 git push origin v1.2.0
 ```
 → Déclenche : création d'une release, déploiement en production
@@ -472,8 +472,8 @@ jobs:
 #### Étape 3 : Commit et push
 
 ```bash
-git add .github/workflows/ci.yml
-git commit -m "feat: add CI pipeline"
+git add .github/workflows/ci.yml  
+git commit -m "feat: add CI pipeline"  
 git push origin main
 ```
 
@@ -804,7 +804,7 @@ Votre pipeline est rouge ? Pas de panique ! Voici comment investiguer.
 
 Cliquez sur le job en échec et lisez attentivement les logs. L'erreur est généralement claire :
 ```
-npm ERR! Test failed
+npm ERR! Test failed  
 Error: Expected 5 to equal 4
 ```
 
@@ -812,7 +812,7 @@ Error: Expected 5 to equal 4
 
 Exécutez les mêmes commandes localement :
 ```bash
-npm install
+npm install  
 npm test
 ```
 

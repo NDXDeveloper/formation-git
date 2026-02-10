@@ -102,7 +102,7 @@ git push origin main
 
 **Création d'un tag**
 ```bash
-git tag v1.5.0
+git tag v1.5.0  
 git push origin v1.5.0
 ```
 → Création d'une release et déploiement
@@ -229,9 +229,9 @@ L'ancienne version est arrêtée, la nouvelle version est déployée, puis déma
 Les serveurs sont mis à jour un par un. Pendant la mise à jour, les autres serveurs continuent de servir l'ancienne version.
 
 ```
-Serveur 1: V1 → V2
-Serveur 2: V1 → V2
-Serveur 3: V1 → V2
+Serveur 1: V1 → V2  
+Serveur 2: V1 → V2  
+Serveur 3: V1 → V2  
 Serveur 4: V1 → V2
 ```
 
@@ -253,12 +253,12 @@ Serveur 4: V1 → V2
 Deux environnements identiques (Blue et Green). L'un est actif, l'autre en standby. Vous déployez sur l'environnement inactif, puis basculez le trafic.
 
 ```
-Blue (V1) ← Trafic utilisateurs
+Blue (V1) ← Trafic utilisateurs  
 Green (V2) ← Nouveau déploiement
 
 [Bascule instantanée]
 
-Blue (V1) ← En standby (prêt pour rollback)
+Blue (V1) ← En standby (prêt pour rollback)  
 Green (V2) ← Trafic utilisateurs
 ```
 
@@ -281,16 +281,16 @@ Green (V2) ← Trafic utilisateurs
 La nouvelle version est déployée progressivement : d'abord 5% du trafic, puis 25%, puis 50%, puis 100%.
 
 ```
-V1: 100% du trafic
+V1: 100% du trafic  
 V2: 0%
     ↓
-V1: 95% du trafic
+V1: 95% du trafic  
 V2: 5% du trafic (surveillance intensive)
     ↓
-V1: 50% du trafic
+V1: 50% du trafic  
 V2: 50% du trafic
     ↓
-V1: 0%
+V1: 0%  
 V2: 100% du trafic
 ```
 
@@ -482,7 +482,7 @@ Plateforme cloud qui supporte de nombreux langages (Node.js, Python, Ruby, Java,
 
 **Exemple de fichier Procfile (configuration Heroku) :**
 ```
-web: npm start
+web: npm start  
 worker: npm run queue
 ```
 
@@ -509,9 +509,9 @@ Service de hosting gratuit intégré à GitHub pour sites statiques.
 npm run build
 
 # Déployer sur la branche gh-pages
-git checkout -b gh-pages
-git add dist -f
-git commit -m "Deploy"
+git checkout -b gh-pages  
+git add dist -f  
+git commit -m "Deploy"  
 git push origin gh-pages
 ```
 
@@ -660,11 +660,11 @@ git init
 echo "node_modules/\ndist/\n.env" > .gitignore
 
 # Premier commit
-git add .
+git add .  
 git commit -m "Initial commit"
 
 # Créer un dépôt sur GitHub et pousser
-git remote add origin https://github.com/username/mon-site.git
+git remote add origin https://github.com/username/mon-site.git  
 git push -u origin main
 ```
 
@@ -726,8 +726,8 @@ netlify deploy --prod
 
 Maintenant, à chaque fois que vous faites :
 ```bash
-git add .
-git commit -m "Nouvelle fonctionnalité"
+git add .  
+git commit -m "Nouvelle fonctionnalité"  
 git push origin main
 ```
 
@@ -769,11 +769,11 @@ C'est le hook le plus utilisé pour le déploiement automatique.
 
 ```bash
 # Créer un dépôt bare (sans working directory)
-cd /var/www/
+cd /var/www/  
 git init --bare mon-site.git
 
 # Créer le hook post-receive
-cd mon-site.git/hooks/
+cd mon-site.git/hooks/  
 nano post-receive
 ```
 
@@ -782,7 +782,7 @@ nano post-receive
 #!/bin/bash
 
 # Dossier de travail où déployer
-WORK_TREE=/var/www/mon-site-live
+WORK_TREE=/var/www/mon-site-live  
 GIT_DIR=/var/www/mon-site.git
 
 # Checkout du code
@@ -829,7 +829,7 @@ Les applications ont souvent besoin de **secrets** (clés API, mots de passe de 
 
 ```javascript
 // config.js - NE FAITES JAMAIS ÇA !
-export const API_KEY = "sk_live_abc123def456"
+export const API_KEY = "sk_live_abc123def456"  
 export const DATABASE_PASSWORD = "motdepasse123"
 ```
 
@@ -841,7 +841,7 @@ Si vous committez ce fichier, vos secrets sont publics !
 
 ```javascript
 // config.js
-export const API_KEY = process.env.API_KEY
+export const API_KEY = process.env.API_KEY  
 export const DATABASE_PASSWORD = process.env.DATABASE_PASSWORD
 ```
 
@@ -849,7 +849,7 @@ export const DATABASE_PASSWORD = process.env.DATABASE_PASSWORD
 
 ```bash
 # .env - Ce fichier n'est PAS commité
-API_KEY=sk_live_abc123def456
+API_KEY=sk_live_abc123def456  
 DATABASE_PASSWORD=motdepasse123
 ```
 
@@ -866,7 +866,7 @@ DATABASE_PASSWORD=motdepasse123
 
 ```bash
 # .env.example - Ce fichier est commité
-API_KEY=your_api_key_here
+API_KEY=your_api_key_here  
 DATABASE_PASSWORD=your_password_here
 ```
 
@@ -879,7 +879,7 @@ DATABASE_PASSWORD=your_password_here
 
 **Heroku :**
 ```bash
-heroku config:set API_KEY=sk_live_abc123def456
+heroku config:set API_KEY=sk_live_abc123def456  
 heroku config:set DATABASE_PASSWORD=motdepasse123
 ```
 
@@ -936,11 +936,11 @@ heroku rollback v42
 **Avec tags Git :**
 ```bash
 # Déployer un tag spécifique
-git checkout v1.2.0
+git checkout v1.2.0  
 git push production v1.2.0
 
 # Ou créer un nouveau tag qui pointe vers l'ancien commit
-git tag v1.2.1 abc123  # abc123 = hash du bon commit
+git tag v1.2.1 abc123  # abc123 = hash du bon commit  
 git push origin v1.2.1
 ```
 
@@ -985,7 +985,7 @@ jobs:
 
 ```bash
 # Créer un tag pour la version
-git tag -a v1.2.0 -m "Version 1.2.0 - Ajout du dashboard"
+git tag -a v1.2.0 -m "Version 1.2.0 - Ajout du dashboard"  
 git push origin v1.2.0
 ```
 
@@ -1045,7 +1045,7 @@ Alice - 14h30 UTC
 
 ```bash
 # Toujours tester le build localement
-npm run build
+npm run build  
 npm run preview  # ou servir le dossier dist/
 
 # Vérifier que tout fonctionne avant de pousser
@@ -1146,7 +1146,7 @@ web: node server.js
 
 ```python
 # requirements.txt
-Flask==2.3.0
+Flask==2.3.0  
 gunicorn==20.1.0
 ```
 
@@ -1205,7 +1205,7 @@ web: gunicorn app:app
 
 ```javascript
 // Astuce : logger les variables d'env au démarrage
-console.log('NODE_ENV:', process.env.NODE_ENV)
+console.log('NODE_ENV:', process.env.NODE_ENV)  
 console.log('Database connected:', dbConnected)
 ```
 

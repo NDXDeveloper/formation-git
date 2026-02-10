@@ -191,8 +191,8 @@ Les messages de commit bien formatés facilitent :
 
 **Exemple de format :**
 ```
-feat(auth): add password reset functionality
-fix(api): correct response status code
+feat(auth): add password reset functionality  
+fix(api): correct response status code  
 docs(readme): update installation instructions
 ```
 
@@ -333,8 +333,8 @@ Ajoute des commandes Git pour faciliter le workflow Git Flow (branches feature/,
 **Pourquoi l'installer :**
 Si vous utilisez le workflow Git Flow, ces commandes simplifient la création et la gestion des branches :
 ```bash
-git flow feature start nouvelle-fonctionnalite
-git flow feature finish nouvelle-fonctionnalite
+git flow feature start nouvelle-fonctionnalite  
+git flow feature finish nouvelle-fonctionnalite  
 git flow release start 1.0.0
 ```
 
@@ -412,7 +412,7 @@ Les diffs Git par défaut peuvent être difficiles à lire. Delta les rend magni
 **Configuration :**
 Après installation, configurez Git pour utiliser Delta :
 ```bash
-git config --global core.pager delta
+git config --global core.pager delta  
 git config --global interactive.diffFilter delta --color-only
 ```
 

@@ -39,7 +39,7 @@ Si ce n'est pas déjà fait, configurez votre nom et email (utilisés pour les c
 1. Ouvrez le terminal intégré (`Ctrl+ù` ou menu Terminal → Nouveau terminal)
 2. Tapez les commandes suivantes :
 ```
-git config --global user.name "Votre Nom"
+git config --global user.name "Votre Nom"  
 git config --global user.email "votre.email@example.com"
 ```
 
@@ -204,7 +204,7 @@ Si ce n'est pas déjà fait, configurez votre nom et email :
 1. Ouvrez le terminal intégré (onglet en bas)
 2. Tapez :
 ```
-git config --global user.name "Votre Nom"
+git config --global user.name "Votre Nom"  
 git config --global user.email "votre.email@example.com"
 ```
 
