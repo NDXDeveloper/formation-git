@@ -146,7 +146,7 @@ git commit --amend -m "Nouveau message corrigé"
 **Message d'erreur :**
 ```
 ! [rejected]        main -> main (non-fast-forward)
-error: failed to push some refs to 'origin'
+error: failed to push some refs to 'origin'  
 hint: Updates were rejected because the tip of your current branch is behind
 ```
 
@@ -227,7 +227,7 @@ git push origin main
 
 **Message d'erreur :**
 ```
-Permission denied (publickey).
+Permission denied (publickey).  
 fatal: Could not read from remote repository.
 ```
 
@@ -339,8 +339,8 @@ Please commit your changes or stash them before you switch branches.
 
 **Option 1 : Commiter les modifications**
 ```bash
-git add .
-git commit -m "Sauvegarde avant changement de branche"
+git add .  
+git commit -m "Sauvegarde avant changement de branche"  
 git checkout autre-branche
 ```
 
@@ -353,7 +353,7 @@ git stash
 git checkout autre-branche
 
 # Plus tard, récupérer les modifications
-git checkout branche-originale
+git checkout branche-originale  
 git stash pop
 ```
 
@@ -396,7 +396,7 @@ git checkout main
 
 **Message :**
 ```
-CONFLICT (content): Merge conflict in fichier.txt
+CONFLICT (content): Merge conflict in fichier.txt  
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
@@ -435,7 +435,7 @@ Version finale après résolution
 
 **Étape 4 : Marquer comme résolu et terminer le merge**
 ```bash
-git add fichier.txt
+git add fichier.txt  
 git commit -m "Résolution des conflits"
 ```
 
@@ -445,7 +445,7 @@ git commit -m "Résolution des conflits"
 git mergetool
 
 # Ou configurer VS Code
-git config --global merge.tool vscode
+git config --global merge.tool vscode  
 git config --global mergetool.vscode.cmd 'code --wait $MERGED'
 ```
 
@@ -537,7 +537,7 @@ git log -- fichier.txt
 git checkout <hash-du-commit> -- fichier.txt
 
 # Commiter la restauration
-git add fichier.txt
+git add fichier.txt  
 git commit -m "Restauration de fichier.txt"
 ```
 
@@ -564,20 +564,20 @@ Please move or remove them before you switch branches.
 
 **Option 1 : Renommer/déplacer le fichier**
 ```bash
-mv fichier.txt fichier.txt.backup
+mv fichier.txt fichier.txt.backup  
 git checkout autre-branche
 ```
 
 **Option 2 : Supprimer le fichier (si pas important)**
 ```bash
-rm fichier.txt
+rm fichier.txt  
 git checkout autre-branche
 ```
 
 **Option 3 : Commiter le fichier d'abord**
 ```bash
-git add fichier.txt
-git commit -m "Ajout de fichier.txt"
+git add fichier.txt  
+git commit -m "Ajout de fichier.txt"  
 git checkout autre-branche
 ```
 
@@ -589,7 +589,7 @@ git checkout autre-branche
 
 **Message d'avertissement :**
 ```
-warning: LF will be replaced by CRLF in fichier.txt.
+warning: LF will be replaced by CRLF in fichier.txt.  
 The file will have its original line endings in your working directory
 ```
 
@@ -682,7 +682,7 @@ Vérifier l'encodage de votre éditeur (devrait être UTF-8).
 
 **2. Activer le cache de fichiers :**
 ```bash
-git config --global core.preloadindex true
+git config --global core.preloadindex true  
 git config --global core.fscache true
 ```
 
@@ -706,7 +706,7 @@ fatal: unable to auto-detect email address (got 'user@machine.(none)')
 
 **Solution :**
 ```bash
-git config --global user.email "votre.email@example.com"
+git config --global user.email "votre.email@example.com"  
 git config --global user.name "Votre Nom"
 ```
 
@@ -723,7 +723,7 @@ fatal: no submodule mapping found in .gitmodules
 
 **Initialiser les sous-modules :**
 ```bash
-git submodule init
+git submodule init  
 git submodule update
 ```
 

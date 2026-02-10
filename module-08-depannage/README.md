@@ -170,23 +170,23 @@ Pour vous entraîner sans risque, créez un dépôt de test :
 
 ```bash
 # Créer un dossier de test
-mkdir git-test-depannage
+mkdir git-test-depannage  
 cd git-test-depannage
 
 # Initialiser Git
 git init
 
 # Créer quelques commits de test
-echo "Fichier 1" > fichier1.txt
-git add fichier1.txt
+echo "Fichier 1" > fichier1.txt  
+git add fichier1.txt  
 git commit -m "Premier commit"
 
-echo "Fichier 2" > fichier2.txt
-git add fichier2.txt
+echo "Fichier 2" > fichier2.txt  
+git add fichier2.txt  
 git commit -m "Deuxième commit"
 
-echo "Fichier 3" > fichier3.txt
-git add fichier3.txt
+echo "Fichier 3" > fichier3.txt  
+git add fichier3.txt  
 git commit -m "Troisième commit"
 ```
 

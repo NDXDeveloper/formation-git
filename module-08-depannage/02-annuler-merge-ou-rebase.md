@@ -165,11 +165,11 @@ git reflog
 
 Vous verrez quelque chose comme :
 ```
-a1b2c3d HEAD@{0}: rebase finished: returning to refs/heads/feature
-a1b2c3d HEAD@{1}: rebase: commit 3
-e4f5g6h HEAD@{2}: rebase: commit 2
-i7j8k9l HEAD@{3}: rebase: commit 1
-m0n1o2p HEAD@{4}: rebase: checkout main
+a1b2c3d HEAD@{0}: rebase finished: returning to refs/heads/feature  
+a1b2c3d HEAD@{1}: rebase: commit 3  
+e4f5g6h HEAD@{2}: rebase: commit 2  
+i7j8k9l HEAD@{3}: rebase: commit 1  
+m0n1o2p HEAD@{4}: rebase: checkout main  
 q3r4s5t HEAD@{5}: commit: Mon dernier commit avant rebase
 ```
 

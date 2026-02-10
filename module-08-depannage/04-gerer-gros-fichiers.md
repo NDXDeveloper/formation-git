@@ -109,9 +109,9 @@ La **meilleure solution** est de ne jamais commiter les gros fichiers en premier
 *.dump
 
 # Dossiers de build
-build/
-dist/
-node_modules/
+build/  
+dist/  
+node_modules/  
 target/
 
 # Fichiers de données volumineux
@@ -185,15 +185,15 @@ git lfs track "large-dataset.csv"
 Cela crée/modifie un fichier `.gitattributes` qui doit être commité :
 
 ```bash
-git add .gitattributes
+git add .gitattributes  
 git commit -m "Configure Git LFS"
 ```
 
 **Étape 2 : Ajouter vos fichiers normalement**
 
 ```bash
-git add mon-gros-fichier.psd
-git commit -m "Ajout du design"
+git add mon-gros-fichier.psd  
+git commit -m "Ajout du design"  
 git push
 ```
 
@@ -267,8 +267,8 @@ bfg --strip-blobs-bigger-than 100M repo.git
 bfg --delete-files gros-fichier.zip repo.git
 
 # Nettoyer le dépôt
-cd repo.git
-git reflog expire --expire=now --all
+cd repo.git  
+git reflog expire --expire=now --all  
 git gc --prune=now --aggressive
 
 # Pousser les changements
@@ -316,7 +316,7 @@ git filter-repo --path dossier-volumineux/ --invert-paths
 Après avoir nettoyé l'historique, vous devez forcer le push :
 
 ```bash
-git push origin --force --all
+git push origin --force --all  
 git push origin --force --tags
 ```
 
@@ -489,18 +489,18 @@ git reset --soft HEAD~1
 echo "video.mp4" >> .gitignore
 
 # Recommiter sans le gros fichier
-git add .gitignore
+git add .gitignore  
 git commit -m "Ajout de video.mp4 au .gitignore"
 ```
 
 **Solution 2 : Utiliser Git LFS**
 ```bash
 # Installer et configurer Git LFS
-git lfs install
+git lfs install  
 git lfs track "*.mp4"
 
 # Ajouter .gitattributes
-git add .gitattributes
+git add .gitattributes  
 git commit -m "Configure Git LFS pour les vidéos"
 
 # Push

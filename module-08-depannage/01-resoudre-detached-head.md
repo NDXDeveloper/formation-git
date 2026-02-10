@@ -19,7 +19,7 @@ HEAD -> main -> commit C3
 
 **Situation "detached HEAD" :**
 ```
-HEAD -> commit C2
+HEAD -> commit C2  
 main -> commit C3
 ```
 
@@ -46,8 +46,8 @@ Plusieurs actions peuvent vous mettre dans cet état :
 
 Lorsque vous effectuez l'une de ces commandes, Git vous avertit généralement :
 ```
-You are in 'detached HEAD' state. You can look around, make experimental
-changes and commit them, and you can discard any commits you make in this
+You are in 'detached HEAD' state. You can look around, make experimental  
+changes and commit them, and you can discard any commits you make in this  
 state without impacting any branches by switching back to a branch.
 ```
 
@@ -68,7 +68,7 @@ Imaginons ce qui peut arriver :
 git checkout HEAD~3
 
 # Vous faites des modifications et des commits
-git add .
+git add .  
 git commit -m "Correction importante"
 
 # Vous revenez sur main
@@ -126,15 +126,15 @@ git reflog
 
 Vous verrez quelque chose comme :
 ```
-a1b2c3d HEAD@{0}: checkout: moving from a1b2c3d to main
-a1b2c3d HEAD@{1}: commit: Correction importante
+a1b2c3d HEAD@{0}: checkout: moving from a1b2c3d to main  
+a1b2c3d HEAD@{1}: commit: Correction importante  
 e4f5g6h HEAD@{2}: checkout: moving from main to HEAD~3
 ```
 
 Trouvez le hash du commit que vous voulez récupérer (ici `a1b2c3d`) et créez une branche à partir de là :
 
 ```bash
-git branch recuperation-commits a1b2c3d
+git branch recuperation-commits a1b2c3d  
 git checkout recuperation-commits
 ```
 

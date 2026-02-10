@@ -33,12 +33,12 @@ git reflog
 Vous verrez quelque chose comme :
 
 ```
-a1b2c3d HEAD@{0}: commit: Ajout de la nouvelle fonctionnalité
-e4f5g6h HEAD@{1}: checkout: moving from feature to main
-i7j8k9l HEAD@{2}: commit: Correction du bug critique
-m0n1o2p HEAD@{3}: rebase finished: returning to refs/heads/feature
-q3r4s5t HEAD@{4}: commit: Travail en cours
-u5v6w7x HEAD@{5}: reset: moving to HEAD~2
+a1b2c3d HEAD@{0}: commit: Ajout de la nouvelle fonctionnalité  
+e4f5g6h HEAD@{1}: checkout: moving from feature to main  
+i7j8k9l HEAD@{2}: commit: Correction du bug critique  
+m0n1o2p HEAD@{3}: rebase finished: returning to refs/heads/feature  
+q3r4s5t HEAD@{4}: commit: Travail en cours  
+u5v6w7x HEAD@{5}: reset: moving to HEAD~2  
 y8z9a0b HEAD@{6}: commit: Version complète de la fonction
 ```
 
@@ -59,8 +59,8 @@ git reflog show --date=relative
 
 Résultat :
 ```
-a1b2c3d HEAD@{5 minutes ago}: commit: Ajout de la nouvelle fonctionnalité
-e4f5g6h HEAD@{2 hours ago}: checkout: moving from feature to main
+a1b2c3d HEAD@{5 minutes ago}: commit: Ajout de la nouvelle fonctionnalité  
+e4f5g6h HEAD@{2 hours ago}: checkout: moving from feature to main  
 i7j8k9l HEAD@{3 hours ago}: commit: Correction du bug critique
 ```
 
@@ -83,10 +83,10 @@ git reflog
 
 Résultat :
 ```
-a1b2c3d HEAD@{0}: reset: moving to HEAD~3
-e4f5g6h HEAD@{1}: commit: Commit important 3
-i7j8k9l HEAD@{2}: commit: Commit important 2
-m0n1o2p HEAD@{3}: commit: Commit important 1
+a1b2c3d HEAD@{0}: reset: moving to HEAD~3  
+e4f5g6h HEAD@{1}: commit: Commit important 3  
+i7j8k9l HEAD@{2}: commit: Commit important 2  
+m0n1o2p HEAD@{3}: commit: Commit important 1  
 q3r4s5t HEAD@{4}: commit: Commit de base
 ```
 
@@ -142,8 +142,8 @@ git reflog
 
 Cherchez dans l'historique la dernière fois que vous étiez sur cette branche :
 ```
-a1b2c3d HEAD@{0}: checkout: moving from ma-branche-importante to main
-e4f5g6h HEAD@{1}: commit: Dernier commit sur ma-branche-importante
+a1b2c3d HEAD@{0}: checkout: moving from ma-branche-importante to main  
+e4f5g6h HEAD@{1}: commit: Dernier commit sur ma-branche-importante  
 i7j8k9l HEAD@{2}: commit: Avant-dernier commit
 ```
 
@@ -197,11 +197,11 @@ git reflog
 ```
 
 ```
-a1b2c3d HEAD@{0}: rebase finished: returning to refs/heads/feature
-e4f5g6h HEAD@{1}: rebase: commit 3
-i7j8k9l HEAD@{2}: rebase: commit 2
-m0n1o2p HEAD@{3}: rebase: commit 1
-q3r4s5t HEAD@{4}: rebase: checkout main
+a1b2c3d HEAD@{0}: rebase finished: returning to refs/heads/feature  
+e4f5g6h HEAD@{1}: rebase: commit 3  
+i7j8k9l HEAD@{2}: rebase: commit 2  
+m0n1o2p HEAD@{3}: rebase: commit 1  
+q3r4s5t HEAD@{4}: rebase: checkout main  
 u5v6w7x HEAD@{5}: commit: Mon dernier commit avant le rebase
 ```
 
@@ -230,7 +230,7 @@ git reflog
 ```
 
 ```
-a1b2c3d HEAD@{0}: commit (amend): Message modifié
+a1b2c3d HEAD@{0}: commit (amend): Message modifié  
 e4f5g6h HEAD@{1}: commit: Message original
 ```
 
@@ -273,29 +273,29 @@ Quand vous récupérez du travail avec le reflog, vous utiliserez souvent `git r
 
 État initial :
 ```
-Répertoire de travail : fichiers modifiés
-Staging area : fichiers "git add"
+Répertoire de travail : fichiers modifiés  
+Staging area : fichiers "git add"  
 Repository : commits A-B-C (HEAD)
 ```
 
 Après `git reset --soft A` :
 ```
-Répertoire de travail : fichiers modifiés ✓
-Staging area : fichiers "git add" ✓
+Répertoire de travail : fichiers modifiés ✓  
+Staging area : fichiers "git add" ✓  
 Repository : commits A (HEAD)
 ```
 
 Après `git reset --mixed A` :
 ```
-Répertoire de travail : fichiers modifiés ✓
-Staging area : vide ✗
+Répertoire de travail : fichiers modifiés ✓  
+Staging area : vide ✗  
 Repository : commits A (HEAD)
 ```
 
 Après `git reset --hard A` :
 ```
-Répertoire de travail : propre ✗
-Staging area : vide ✗
+Répertoire de travail : propre ✗  
+Staging area : vide ✗  
 Repository : commits A (HEAD)
 ```
 
