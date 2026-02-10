@@ -32,9 +32,9 @@ Cette section regroupe toutes les ressources externes qui vous aideront à appro
 ### Gratuits en ligne
 
 #### 1. Pro Git (Scott Chacon & Ben Straub)
-**Lien :** https://git-scm.com/book/fr/v2
-**Langue :** Français et anglais
-**Niveau :** Débutant à avancé
+**Lien :** https://git-scm.com/book/fr/v2  
+**Langue :** Français et anglais  
+**Niveau :** Débutant à avancé  
 
 Le livre de référence sur Git, complet et accessible. Couvre tout, des bases aux concepts avancés.
 
@@ -45,32 +45,32 @@ Le livre de référence sur Git, complet et accessible. Couvre tout, des bases a
 - Chapitre 5 : Git distribué
 
 #### 2. Git Magic (Ben Lynn)
-**Lien :** http://www-cs-students.stanford.edu/~blynn/gitmagic/
-**Langue :** Anglais (traductions disponibles)
-**Niveau :** Débutant
+**Lien :** http://www-cs-students.stanford.edu/~blynn/gitmagic/  
+**Langue :** Anglais (traductions disponibles)  
+**Niveau :** Débutant  
 
 Approche ludique et accessible de Git avec des analogies simples.
 
 ### Livres payants recommandés
 
 #### 1. Git Pocket Guide (Richard E. Silverman)
-**Éditeur :** O'Reilly
-**Format :** Court et pratique (~200 pages)
-**Niveau :** Débutant à intermédiaire
+**Éditeur :** O'Reilly  
+**Format :** Court et pratique (~200 pages)  
+**Niveau :** Débutant à intermédiaire  
 
 Guide de poche parfait pour avoir toujours sous la main.
 
 #### 2. Git for Teams (Emma Jane Hogbin Westby)
-**Éditeur :** O'Reilly
-**Format :** ~300 pages
-**Niveau :** Intermédiaire
+**Éditeur :** O'Reilly  
+**Format :** ~300 pages  
+**Niveau :** Intermédiaire  
 
 Focus sur les workflows d'équipe et les bonnes pratiques collaboratives.
 
 #### 3. Version Control with Git (Jon Loeliger & Matthew McCullough)
-**Éditeur :** O'Reilly
-**Format :** ~450 pages
-**Niveau :** Intermédiaire à avancé
+**Éditeur :** O'Reilly  
+**Format :** ~450 pages  
+**Niveau :** Intermédiaire à avancé  
 
 Approche technique et détaillée de Git.
 
@@ -79,10 +79,10 @@ Approche technique et détaillée de Git.
 ## Tutoriels interactifs
 
 ### 1. Learn Git Branching
-**Lien :** https://learngitbranching.js.org/
-**Langue :** Français disponible
-**Type :** Jeu interactif
-**Gratuit :** Oui
+**Lien :** https://learngitbranching.js.org/  
+**Langue :** Français disponible  
+**Type :** Jeu interactif  
+**Gratuit :** Oui  
 
 **Description :** Visualisation interactive des branches et commits. Excellent pour comprendre les concepts de branchement, merge, et rebase.
 
@@ -95,10 +95,10 @@ Approche technique et détaillée de Git.
 **Temps estimé :** 2-3 heures pour les niveaux principaux
 
 ### 2. Git Immersion
-**Lien :** https://gitimmersion.com/
-**Langue :** Anglais
-**Type :** Tutoriel pas à pas
-**Gratuit :** Oui
+**Lien :** https://gitimmersion.com/  
+**Langue :** Anglais  
+**Type :** Tutoriel pas à pas  
+**Gratuit :** Oui  
 
 **Description :** 53 labs pratiques pour apprendre Git en faisant. Approche très pédagogique.
 
@@ -110,20 +110,20 @@ Approche technique et détaillée de Git.
 **Temps estimé :** 4-6 heures
 
 ### 3. Codecademy - Learn Git
-**Lien :** https://www.codecademy.com/learn/learn-git
-**Langue :** Anglais
-**Type :** Cours interactif
-**Gratuit :** Version de base gratuite
+**Lien :** https://www.codecademy.com/learn/learn-git  
+**Langue :** Anglais  
+**Type :** Cours interactif  
+**Gratuit :** Version de base gratuite  
 
 **Description :** Cours structuré avec exercices dans le navigateur.
 
 **Temps estimé :** 2 heures
 
 ### 4. GitHub Skills
-**Lien :** https://skills.github.com/
-**Langue :** Anglais
-**Type :** Cours pratiques sur GitHub
-**Gratuit :** Oui
+**Lien :** https://skills.github.com/  
+**Langue :** Anglais  
+**Type :** Cours pratiques sur GitHub  
+**Gratuit :** Oui  
 
 **Description :** Parcours d'apprentissage sur GitHub avec des projets réels.
 
@@ -139,52 +139,52 @@ Approche technique et détaillée de Git.
 ### Français
 
 #### 1. Grafikart - Git
-**Lien :** https://grafikart.fr/formations/git
-**Langue :** Français
-**Type :** Vidéos tutoriels
-**Gratuit :** Oui
+**Lien :** https://grafikart.fr/formations/git  
+**Langue :** Français  
+**Type :** Vidéos tutoriels  
+**Gratuit :** Oui  
 
 **Description :** Formation complète en français, très pédagogique. Excellente pour les francophones.
 
 **Durée :** ~3 heures de vidéos
 
 #### 2. OpenClassrooms - Gérez votre code avec Git et GitHub
-**Lien :** https://openclassrooms.com/fr/courses/7162856-gerez-du-code-avec-git-et-github
-**Langue :** Français
-**Type :** Cours structuré
-**Gratuit :** Oui
+**Lien :** https://openclassrooms.com/fr/courses/7162856-gerez-du-code-avec-git-et-github  
+**Langue :** Français  
+**Type :** Cours structuré  
+**Gratuit :** Oui  
 
 **Durée :** 6 heures
 
 #### 3. Docstring - Git sur YouTube
-**Lien :** Rechercher "Docstring Git" sur YouTube
-**Langue :** Français
-**Type :** Tutoriels vidéo
-**Gratuit :** Oui
+**Lien :** Rechercher "Docstring Git" sur YouTube  
+**Langue :** Français  
+**Type :** Tutoriels vidéo  
+**Gratuit :** Oui  
 
 ### Anglais
 
 #### 1. freeCodeCamp - Git and GitHub for Beginners
-**Lien :** https://www.youtube.com/watch?v=RGOj5yH7evk
-**Langue :** Anglais
-**Type :** Tutoriel vidéo long format
-**Gratuit :** Oui
+**Lien :** https://www.youtube.com/watch?v=RGOj5yH7evk  
+**Langue :** Anglais  
+**Type :** Tutoriel vidéo long format  
+**Gratuit :** Oui  
 
 **Durée :** ~1 heure
 
 #### 2. The Net Ninja - Git & GitHub Tutorial
-**Lien :** https://www.youtube.com/playlist?list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR
-**Langue :** Anglais
-**Type :** Playlist de tutoriels
-**Gratuit :** Oui
+**Lien :** https://www.youtube.com/playlist?list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR  
+**Langue :** Anglais  
+**Type :** Playlist de tutoriels  
+**Gratuit :** Oui  
 
 **Durée :** ~2 heures (série de vidéos courtes)
 
 #### 3. Traversy Media - Git & GitHub Crash Course
-**Lien :** https://www.youtube.com/watch?v=SWYqp7iY_Tc
-**Langue :** Anglais
-**Type :** Crash course
-**Gratuit :** Oui
+**Lien :** https://www.youtube.com/watch?v=SWYqp7iY_Tc  
+**Langue :** Anglais  
+**Type :** Crash course  
+**Gratuit :** Oui  
 
 **Durée :** ~30 minutes
 
@@ -193,55 +193,55 @@ Approche technique et détaillée de Git.
 ## Plateformes d'apprentissage
 
 ### 1. Udemy
-**Lien :** https://www.udemy.com/
-**Cours recommandés :**
+**Lien :** https://www.udemy.com/  
+**Cours recommandés :**  
 - "Git Complete: The definitive guide" (anglais)
 - "Git & GitHub - Le guide complet" (français)
 
-**Prix :** Payant (souvent en promotion)
-**Avantages :** Vidéos, exercices, certificat
+**Prix :** Payant (souvent en promotion)  
+**Avantages :** Vidéos, exercices, certificat  
 
 ### 2. Pluralsight
-**Lien :** https://www.pluralsight.com/
-**Cours recommandés :**
+**Lien :** https://www.pluralsight.com/  
+**Cours recommandés :**  
 - "How Git Works"
 - "Mastering Git"
 
-**Prix :** Abonnement mensuel
-**Avantages :** Chemins d'apprentissage, skill assessments
+**Prix :** Abonnement mensuel  
+**Avantages :** Chemins d'apprentissage, skill assessments  
 
 ### 3. LinkedIn Learning
-**Lien :** https://www.linkedin.com/learning/
-**Cours recommandés :**
+**Lien :** https://www.linkedin.com/learning/  
+**Cours recommandés :**  
 - "Git Essential Training"
 - "Learning Git and GitHub"
 
-**Prix :** Abonnement (essai gratuit disponible)
-**Avantages :** Certificat LinkedIn, parcours professionnels
+**Prix :** Abonnement (essai gratuit disponible)  
+**Avantages :** Certificat LinkedIn, parcours professionnels  
 
 ---
 
 ## Cheat Sheets (antisèches)
 
 ### 1. GitHub Git Cheat Sheet
-**Lien :** https://education.github.com/git-cheat-sheet-education.pdf
-**Langue :** Plusieurs langues dont français
-**Format :** PDF imprimable
+**Lien :** https://education.github.com/git-cheat-sheet-education.pdf  
+**Langue :** Plusieurs langues dont français  
+**Format :** PDF imprimable  
 
 ### 2. Atlassian Git Cheat Sheet
-**Lien :** https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet
-**Langue :** Anglais
-**Format :** Web et PDF
+**Lien :** https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet  
+**Langue :** Anglais  
+**Format :** Web et PDF  
 
 ### 3. GitLab Git Cheat Sheet
-**Lien :** https://about.gitlab.com/images/press/git-cheat-sheet.pdf
-**Langue :** Anglais
-**Format :** PDF imprimable
+**Lien :** https://about.gitlab.com/images/press/git-cheat-sheet.pdf  
+**Langue :** Anglais  
+**Format :** PDF imprimable  
 
 ### 4. Tower Git Cheat Sheet
-**Lien :** https://www.git-tower.com/blog/git-cheat-sheet/
-**Langue :** Plusieurs langues
-**Format :** PDF interactif
+**Lien :** https://www.git-tower.com/blog/git-cheat-sheet/  
+**Langue :** Plusieurs langues  
+**Format :** PDF interactif  
 
 ---
 
@@ -250,51 +250,51 @@ Approche technique et détaillée de Git.
 ### Outils en ligne
 
 #### 1. Git Graph Visualizer
-**Lien :** https://git-school.github.io/visualizing-git/
-**Description :** Visualisez les opérations Git en temps réel
-**Utilité :** Comprendre merge, rebase, cherry-pick visuellement
+**Lien :** https://git-school.github.io/visualizing-git/  
+**Description :** Visualisez les opérations Git en temps réel  
+**Utilité :** Comprendre merge, rebase, cherry-pick visuellement  
 
 #### 2. Explain Git with D3
-**Lien :** https://onlywei.github.io/explain-git-with-d3/
-**Description :** Visualiseur interactif des commandes Git
-**Utilité :** Voir l'effet des commandes en direct
+**Lien :** https://onlywei.github.io/explain-git-with-d3/  
+**Description :** Visualiseur interactif des commandes Git  
+**Utilité :** Voir l'effet des commandes en direct  
 
 #### 3. Git Explorer
-**Lien :** https://gitexplorer.com/
-**Description :** Trouvez la bonne commande Git selon votre besoin
-**Utilité :** Assistant pour trouver les commandes
+**Lien :** https://gitexplorer.com/  
+**Description :** Trouvez la bonne commande Git selon votre besoin  
+**Utilité :** Assistant pour trouver les commandes  
 
 ### Clients graphiques Git
 
 #### 1. GitKraken (multiplateforme)
-**Lien :** https://www.gitkraken.com/
-**Prix :** Gratuit pour usage personnel / Payant pour fonctionnalités avancées
-**Points forts :** Interface magnifique, intuitif, GitFlow intégré
+**Lien :** https://www.gitkraken.com/  
+**Prix :** Gratuit pour usage personnel / Payant pour fonctionnalités avancées  
+**Points forts :** Interface magnifique, intuitif, GitFlow intégré  
 
 #### 2. Sourcetree (Windows, macOS)
-**Lien :** https://www.sourcetreeapp.com/
-**Prix :** Gratuit
-**Points forts :** Complet, stable, de Atlassian
+**Lien :** https://www.sourcetreeapp.com/  
+**Prix :** Gratuit  
+**Points forts :** Complet, stable, de Atlassian  
 
 #### 3. GitHub Desktop (multiplateforme)
-**Lien :** https://desktop.github.com/
-**Prix :** Gratuit
-**Points forts :** Simple, intégration GitHub parfaite
+**Lien :** https://desktop.github.com/  
+**Prix :** Gratuit  
+**Points forts :** Simple, intégration GitHub parfaite  
 
 #### 4. Fork (Windows, macOS)
-**Lien :** https://git-fork.com/
-**Prix :** Gratuit pendant évaluation, achat unique
-**Points forts :** Rapide, élégant, fonctionnalités avancées
+**Lien :** https://git-fork.com/  
+**Prix :** Gratuit pendant évaluation, achat unique  
+**Points forts :** Rapide, élégant, fonctionnalités avancées  
 
 #### 5. GitExtensions (Windows)
-**Lien :** https://gitextensions.github.io/
-**Prix :** Gratuit et open source
-**Points forts :** Intégration Windows Explorer, puissant
+**Lien :** https://gitextensions.github.io/  
+**Prix :** Gratuit et open source  
+**Points forts :** Intégration Windows Explorer, puissant  
 
 #### 6. Tower (Windows, macOS)
-**Lien :** https://www.git-tower.com/
-**Prix :** Payant (essai gratuit)
-**Points forts :** Professionnel, support excellent
+**Lien :** https://www.git-tower.com/  
+**Prix :** Payant (essai gratuit)  
+**Points forts :** Professionnel, support excellent  
 
 ### Extensions IDE
 
@@ -315,52 +315,52 @@ Approche technique et détaillée de Git.
 ## Blogs et sites spécialisés
 
 ### 1. Atlassian Git Tutorials
-**Lien :** https://www.atlassian.com/git/tutorials
-**Langue :** Anglais
-**Description :** Tutoriels détaillés sur tous les aspects de Git
-**Recommandé pour :** Comprendre en profondeur chaque concept
+**Lien :** https://www.atlassian.com/git/tutorials  
+**Langue :** Anglais  
+**Description :** Tutoriels détaillés sur tous les aspects de Git  
+**Recommandé pour :** Comprendre en profondeur chaque concept  
 
 ### 2. GitHub Blog
-**Lien :** https://github.blog/
-**Langue :** Anglais
-**Description :** Actualités et nouvelles fonctionnalités GitHub
+**Lien :** https://github.blog/  
+**Langue :** Anglais  
+**Description :** Actualités et nouvelles fonctionnalités GitHub  
 
 ### 3. GitLab Blog
-**Lien :** https://about.gitlab.com/blog/
-**Langue :** Anglais
-**Description :** Articles techniques sur Git et DevOps
+**Lien :** https://about.gitlab.com/blog/  
+**Langue :** Anglais  
+**Description :** Articles techniques sur Git et DevOps  
 
 ### 4. Git Tower Blog
-**Lien :** https://www.git-tower.com/blog
-**Langue :** Anglais
-**Description :** Tutoriels et conseils pratiques
+**Lien :** https://www.git-tower.com/blog  
+**Langue :** Anglais  
+**Description :** Tutoriels et conseils pratiques  
 
 ### 5. Think Like a Git
-**Lien :** http://think-like-a-git.net/
-**Langue :** Anglais
-**Description :** Comprendre la philosophie de Git
+**Lien :** http://think-like-a-git.net/  
+**Langue :** Anglais  
+**Description :** Comprendre la philosophie de Git  
 
 ---
 
 ## Communautés et forums
 
 ### Stack Overflow
-**Lien :** https://stackoverflow.com/questions/tagged/git
-**Langue :** Principalement anglais
-**Description :** Posez vos questions, cherchez des solutions
-**Tag recommandé :** [git]
+**Lien :** https://stackoverflow.com/questions/tagged/git  
+**Langue :** Principalement anglais  
+**Description :** Posez vos questions, cherchez des solutions  
+**Tag recommandé :** [git]  
 
 ### Reddit
 
 #### r/git
-**Lien :** https://www.reddit.com/r/git/
-**Langue :** Anglais
-**Description :** Discussions, questions, actualités Git
+**Lien :** https://www.reddit.com/r/git/  
+**Langue :** Anglais  
+**Description :** Discussions, questions, actualités Git  
 
 #### r/github
-**Lien :** https://www.reddit.com/r/github/
-**Langue :** Anglais
-**Description :** Spécifique à GitHub
+**Lien :** https://www.reddit.com/r/github/  
+**Langue :** Anglais  
+**Description :** Spécifique à GitHub  
 
 ### Discord
 
@@ -372,25 +372,25 @@ Serveurs recommandés :
 - Coding Den
 
 ### GitHub Discussions
-**Sur les dépôts de projets open source**
-**Description :** Discussions communautaires sur les projets
+**Sur les dépôts de projets open source**  
+**Description :** Discussions communautaires sur les projets  
 
 ---
 
 ## Exercices et challenges
 
 ### 1. Git Katas
-**Lien :** https://github.com/eficode-academy/git-katas
-**Description :** Exercices pratiques Git sous forme de "katas"
-**Niveau :** Intermédiaire
-**Format :** Dépôt GitHub avec exercices
+**Lien :** https://github.com/eficode-academy/git-katas  
+**Description :** Exercices pratiques Git sous forme de "katas"  
+**Niveau :** Intermédiaire  
+**Format :** Dépôt GitHub avec exercices  
 
 ### 2. Learn Git Branching (déjà mentionné)
 **Excellents challenges** dans les niveaux avancés
 
 ### 3. Atlassian Git Tutorials - Exercises
-**Lien :** Dans les tutoriels Atlassian
-**Description :** Exercices pratiques pour chaque concept
+**Lien :** Dans les tutoriels Atlassian  
+**Description :** Exercices pratiques pour chaque concept  
 
 ---
 
@@ -399,20 +399,20 @@ Serveurs recommandés :
 ### Sites pour trouver des projets
 
 #### 1. Good First Issue
-**Lien :** https://goodfirstissue.dev/
-**Description :** Issues adaptées aux débutants, filtrées par langage
+**Lien :** https://goodfirstissue.dev/  
+**Description :** Issues adaptées aux débutants, filtrées par langage  
 
 #### 2. First Timers Only
-**Lien :** https://www.firsttimersonly.com/
-**Description :** Ressources pour première contribution open source
+**Lien :** https://www.firsttimersonly.com/  
+**Description :** Ressources pour première contribution open source  
 
 #### 3. Up For Grabs
-**Lien :** https://up-for-grabs.net/
-**Description :** Projets qui veulent activement des contributeurs
+**Lien :** https://up-for-grabs.net/  
+**Description :** Projets qui veulent activement des contributeurs  
 
 #### 4. CodeTriage
-**Lien :** https://www.codetriage.com/
-**Description :** Recevez des issues par email pour contribuer
+**Lien :** https://www.codetriage.com/  
+**Description :** Recevez des issues par email pour contribuer  
 
 ### Projets recommandés pour débuter
 
@@ -425,67 +425,67 @@ Serveurs recommandés :
 ## Outils complémentaires
 
 ### Git LFS (Large File Storage)
-**Lien :** https://git-lfs.github.com/
-**Description :** Gérer les gros fichiers dans Git
-**Utilité :** Images, vidéos, assets, binaires
+**Lien :** https://git-lfs.github.com/  
+**Description :** Gérer les gros fichiers dans Git  
+**Utilité :** Images, vidéos, assets, binaires  
 
 ### Git Flow CLI
-**Lien :** https://github.com/nvie/gitflow
-**Description :** Extension Git pour faciliter Git Flow
-**Installation :** Via Homebrew, apt, ou installeur Windows
+**Lien :** https://github.com/nvie/gitflow  
+**Description :** Extension Git pour faciliter Git Flow  
+**Installation :** Via Homebrew, apt, ou installeur Windows  
 
 ### Hub / gh (GitHub CLI)
-**Lien :** https://cli.github.com/
-**Description :** GitHub en ligne de commande
-**Utilité :** Créer PR, issues, gérer repos depuis le terminal
+**Lien :** https://cli.github.com/  
+**Description :** GitHub en ligne de commande  
+**Utilité :** Créer PR, issues, gérer repos depuis le terminal  
 
 ### Semantic Release
-**Lien :** https://github.com/semantic-release/semantic-release
-**Description :** Automatiser le versioning et les releases
-**Utilité :** Projets JavaScript/Node.js
+**Lien :** https://github.com/semantic-release/semantic-release  
+**Description :** Automatiser le versioning et les releases  
+**Utilité :** Projets JavaScript/Node.js  
 
 ### Commitizen
-**Lien :** https://github.com/commitizen/cz-cli
-**Description :** Formater les messages de commit
-**Utilité :** Standardiser les commits d'équipe
+**Lien :** https://github.com/commitizen/cz-cli  
+**Description :** Formater les messages de commit  
+**Utilité :** Standardiser les commits d'équipe  
 
 ### Husky
-**Lien :** https://github.com/typicode/husky
-**Description :** Git hooks simplifiés
-**Utilité :** Automatiser tests, linting avant commit
+**Lien :** https://github.com/typicode/husky  
+**Description :** Git hooks simplifiés  
+**Utilité :** Automatiser tests, linting avant commit  
 
 ---
 
 ## Newsletters et actualités
 
 ### 1. GitHub Newsletter
-**Lien :** Inscription sur github.com
-**Fréquence :** Hebdomadaire
-**Contenu :** Nouveautés GitHub, projets tendance
+**Lien :** Inscription sur github.com  
+**Fréquence :** Hebdomadaire  
+**Contenu :** Nouveautés GitHub, projets tendance  
 
 ### 2. GitLab Newsletter
-**Lien :** Inscription sur gitlab.com
-**Fréquence :** Variable
-**Contenu :** Actualités GitLab et DevOps
+**Lien :** Inscription sur gitlab.com  
+**Fréquence :** Variable  
+**Contenu :** Actualités GitLab et DevOps  
 
 ### 3. Git Rev News
-**Lien :** https://git.github.io/rev_news/
-**Fréquence :** Mensuelle
-**Contenu :** Actualités autour de Git
+**Lien :** https://git.github.io/rev_news/  
+**Fréquence :** Mensuelle  
+**Contenu :** Actualités autour de Git  
 
 ---
 
 ## Conférences et événements
 
 ### Git Merge
-**Description :** Conférence annuelle dédiée à Git
-**Lien :** https://git-merge.com/
-**Format :** Présentiel et en ligne
+**Description :** Conférence annuelle dédiée à Git  
+**Lien :** https://git-merge.com/  
+**Format :** Présentiel et en ligne  
 
 ### GitHub Universe
-**Description :** Conférence annuelle GitHub
-**Lien :** https://githubuniverse.com/
-**Format :** Présentiel et streaming
+**Description :** Conférence annuelle GitHub  
+**Lien :** https://githubuniverse.com/  
+**Format :** Présentiel et streaming  
 
 ### Meetups locaux
 **Recherchez "Git" ou "GitHub" sur Meetup.com** pour trouver des événements près de chez vous.
@@ -495,18 +495,18 @@ Serveurs recommandés :
 ## Certifications
 
 ### GitHub Certifications
-**Lien :** https://examregistration.github.com/
-**Types :**
+**Lien :** https://examregistration.github.com/  
+**Types :**  
 - GitHub Foundations
 - GitHub Actions
 - GitHub Advanced Security
 
-**Prix :** Payant
-**Validité :** 2 ans
+**Prix :** Payant  
+**Validité :** 2 ans  
 
 ### GitLab Certifications
-**Lien :** https://about.gitlab.com/learn/certifications/
-**Types :**
+**Lien :** https://about.gitlab.com/learn/certifications/  
+**Types :**  
 - GitLab Certified Associate
 - GitLab Certified CI/CD Specialist
 
@@ -517,45 +517,45 @@ Serveurs recommandés :
 ## Podcasts
 
 ### 1. All Things Git
-**Lien :** Recherchez sur votre app de podcast
-**Langue :** Anglais
-**Description :** Discussions sur Git et workflows
+**Lien :** Recherchez sur votre app de podcast  
+**Langue :** Anglais  
+**Description :** Discussions sur Git et workflows  
 
 ### 2. Software Engineering Daily - Git Episodes
-**Lien :** Recherchez les épisodes sur Git
-**Langue :** Anglais
-**Description :** Interviews sur Git et outils de développement
+**Lien :** Recherchez les épisodes sur Git  
+**Langue :** Anglais  
+**Description :** Interviews sur Git et outils de développement  
 
 ---
 
 ## Jeux et gamification
 
 ### 1. Oh My Git!
-**Lien :** https://ohmygit.org/
-**Type :** Jeu éducatif
-**Description :** Apprendre Git en jouant à un jeu
-**Gratuit :** Oui
+**Lien :** https://ohmygit.org/  
+**Type :** Jeu éducatif  
+**Description :** Apprendre Git en jouant à un jeu  
+**Gratuit :** Oui  
 
 ### 2. Git Game
-**Lien :** https://github.com/git-game/git-game
-**Type :** Jeu en ligne de commande
-**Description :** Résoudre des énigmes avec Git
+**Lien :** https://github.com/git-game/git-game  
+**Type :** Jeu en ligne de commande  
+**Description :** Résoudre des énigmes avec Git  
 
 ---
 
 ## Documentation de référence
 
 ### 1. Git Reference Manual
-**Lien :** https://git-scm.com/docs
-**Description :** Documentation technique complète de toutes les commandes
+**Lien :** https://git-scm.com/docs  
+**Description :** Documentation technique complète de toutes les commandes  
 
 ### 2. Git Wiki
-**Lien :** https://git.wiki.kernel.org/
-**Description :** Wiki communautaire Git
+**Lien :** https://git.wiki.kernel.org/  
+**Description :** Wiki communautaire Git  
 
 ### 3. Git Source Code
-**Lien :** https://github.com/git/git
-**Description :** Code source de Git (pour les curieux/avancés)
+**Lien :** https://github.com/git/git  
+**Description :** Code source de Git (pour les curieux/avancés)  
 
 ---
 
@@ -581,12 +581,12 @@ Serveurs recommandés :
 ## Livres blancs et articles académiques
 
 ### 1. Git from the Bottom Up (John Wiegley)
-**Lien :** https://jwiegley.github.io/git-from-the-bottom-up/
-**Description :** Comprendre les internals de Git
+**Lien :** https://jwiegley.github.io/git-from-the-bottom-up/  
+**Description :** Comprendre les internals de Git  
 
 ### 2. Git Internals (Scott Chacon)
-**Lien :** https://github.com/pluralsight/git-internals-pdf
-**Description :** PDF sur le fonctionnement interne de Git
+**Lien :** https://github.com/pluralsight/git-internals-pdf  
+**Description :** PDF sur le fonctionnement interne de Git  
 
 ---
 
