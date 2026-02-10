@@ -80,15 +80,15 @@ git --version
 ### Configuration minimale
 
 ```bash
-git config --global user.name "Votre Nom"
-git config --global user.email "votre.email@example.com"
+git config --global user.name "Votre Nom"  
+git config --global user.email "votre.email@example.com"  
 git config --global init.defaultBranch main
 ```
 
 ### Cloner cette formation
 
 ```bash
-git clone https://github.com/NDXDeveloper/formation-git.git
+git clone https://github.com/NDXDeveloper/formation-git.git  
 cd formation-git
 ```
 
@@ -179,8 +179,8 @@ Ce projet est sous licence **CC BY 4.0** (Creative Commons Attribution 4.0 Inter
 
 **Attribution :**
 ```
-Formation Git par Nicolas DEOUX
-https://github.com/NDXDeveloper/formation-git
+Formation Git par Nicolas DEOUX  
+https://github.com/NDXDeveloper/formation-git  
 Licence CC BY 4.0
 ```
 

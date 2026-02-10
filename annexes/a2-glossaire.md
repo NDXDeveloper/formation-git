@@ -474,8 +474,8 @@ Git a trois niveaux de configuration, par ordre de priorité :
 
 Commandes :
 ```bash
-git config --local   # Configuration du dépôt
-git config --global  # Configuration utilisateur
+git config --local   # Configuration du dépôt  
+git config --global  # Configuration utilisateur  
 git config --system  # Configuration système
 ```
 

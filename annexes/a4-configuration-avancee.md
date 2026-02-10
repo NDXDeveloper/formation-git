@@ -94,11 +94,11 @@ git config --global user.email "votre.email@example.com"
 
 ```bash
 # Pour un projet professionnel
-cd projet-travail
+cd projet-travail  
 git config --local user.email "prenom.nom@entreprise.com"
 
 # Pour un projet personnel
-cd projet-perso
+cd projet-perso  
 git config --local user.email "perso@gmail.com"
 ```
 
@@ -181,11 +181,11 @@ git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -mul
 
 ```bash
 # Utiliser VSCode comme difftool
-git config --global diff.tool vscode
+git config --global diff.tool vscode  
 git config --global difftool.vscode.cmd 'code --wait --diff $LOCAL $REMOTE'
 
 # Utiliser VSCode comme mergetool
-git config --global merge.tool vscode
+git config --global merge.tool vscode  
 git config --global mergetool.vscode.cmd 'code --wait $MERGED'
 ```
 
@@ -210,18 +210,18 @@ git config --global color.ui false
 
 ```bash
 # Couleurs pour git status
-git config --global color.status.changed "yellow bold"
-git config --global color.status.untracked "red bold"
+git config --global color.status.changed "yellow bold"  
+git config --global color.status.untracked "red bold"  
 git config --global color.status.added "green bold"
 
 # Couleurs pour git diff
-git config --global color.diff.meta "yellow bold"
-git config --global color.diff.old "red bold"
+git config --global color.diff.meta "yellow bold"  
+git config --global color.diff.old "red bold"  
 git config --global color.diff.new "green bold"
 
 # Couleurs pour git branch
-git config --global color.branch.current "yellow reverse"
-git config --global color.branch.local "yellow"
+git config --global color.branch.current "yellow reverse"  
+git config --global color.branch.local "yellow"  
 git config --global color.branch.remote "green"
 ```
 
@@ -282,9 +282,9 @@ Les alias permettent de créer des raccourcis pour les commandes fréquentes.
 
 ```bash
 # Raccourcis pour les commandes courantes
-git config --global alias.co checkout
-git config --global alias.br branch
-git config --global alias.ci commit
+git config --global alias.co checkout  
+git config --global alias.br branch  
+git config --global alias.ci commit  
 git config --global alias.st status
 
 # Utilisation : git co main (au lieu de git checkout main)
@@ -316,7 +316,7 @@ git config --global alias.changed "diff --name-only"
 git config --global alias.staged "diff --staged"
 
 # Annuler les modifications
-git config --global alias.unstage "restore --staged"
+git config --global alias.unstage "restore --staged"  
 git config --global alias.discard "restore"
 
 # Dernier commit
@@ -417,11 +417,11 @@ git config --global core.whitespace trailing-space,space-before-tab
 
 ```bash
 # Utiliser Beyond Compare
-git config --global diff.tool bc
+git config --global diff.tool bc  
 git config --global difftool.bc.path "c:/Program Files/Beyond Compare 4/bcomp.exe"
 
 # Utiliser Meld
-git config --global diff.tool meld
+git config --global diff.tool meld  
 git config --global difftool.meld.path "/usr/bin/meld"
 ```
 
@@ -446,7 +446,7 @@ git config --global merge.conflictstyle diff3
 
 ```bash
 # Configurer VSCode comme merge tool
-git config --global merge.tool vscode
+git config --global merge.tool vscode  
 git config --global mergetool.vscode.cmd 'code --wait $MERGED'
 
 # Ne pas créer de fichiers .orig après merge
@@ -473,7 +473,7 @@ git config --global rerere.autoupdate true
 
 ```bash
 # Cache les credentials pour 1 heure (Linux/Mac)
-git config --global credential.helper cache
+git config --global credential.helper cache  
 git config --global credential.helper 'cache --timeout=3600'
 
 # Utiliser le trousseau système (Mac)
@@ -531,7 +531,7 @@ git config --global receive.denyNonFastForwards true
 
 ```bash
 # Bloquer les URLs dangereuses
-git config --global protocol.file.allow user
+git config --global protocol.file.allow user  
 git config --global protocol.ext.allow user
 ```
 
@@ -570,13 +570,13 @@ git config --global init.templateDir ~/.git-templates
 #!/bin/sh
 # Exemple : Vérifier le code avant commit
 
-echo "Running linter..."
+echo "Running linter..."  
 npm run lint || {
     echo "Linting failed. Commit aborted."
     exit 1
 }
 
-echo "Running tests..."
+echo "Running tests..."  
 npm test || {
     echo "Tests failed. Commit aborted."
     exit 1
@@ -605,7 +605,7 @@ fi
 #!/bin/sh
 # Exemple : Empêcher le push de code non testé
 
-echo "Running tests before push..."
+echo "Running tests before push..."  
 npm test || {
     echo "Tests failed. Push aborted."
     exit 1
@@ -634,14 +634,14 @@ chmod +x .git/hooks/pre-commit
 
 **Husky (JavaScript/Node.js)**
 ```bash
-npm install husky --save-dev
-npx husky install
+npm install husky --save-dev  
+npx husky install  
 npx husky add .git/hooks/pre-commit "npm test"
 ```
 
 **pre-commit (Python)**
 ```bash
-pip install pre-commit
+pip install pre-commit  
 pre-commit install
 ```
 
@@ -663,14 +663,14 @@ git config --global submodule.fetchJobs 8
 
 ```bash
 # Désactiver le pager pour certaines commandes
-git config --global pager.branch false
+git config --global pager.branch false  
 git config --global pager.tag false
 
 # Utiliser less avec des options
 git config --global core.pager 'less -RFX'
 
 # Utiliser delta (amélioration de diff)
-git config --global core.pager delta
+git config --global core.pager delta  
 git config --global interactive.diffFilter 'delta --color-only'
 ```
 
@@ -773,7 +773,7 @@ Voici une configuration complète et optimisée à copier-coller :
 
 ```bash
 # ===== IDENTITÉ =====
-git config --global user.name "Votre Nom"
+git config --global user.name "Votre Nom"  
 git config --global user.email "votre.email@example.com"
 
 # ===== ÉDITEUR =====
@@ -783,43 +783,43 @@ git config --global core.editor "code --wait"
 git config --global init.defaultBranch main
 
 # ===== COMPORTEMENT PULL/PUSH =====
-git config --global pull.rebase true
-git config --global push.default simple
-git config --global push.autoSetupRemote true
+git config --global pull.rebase true  
+git config --global push.default simple  
+git config --global push.autoSetupRemote true  
 git config --global push.followTags true
 
 # ===== COULEURS =====
 git config --global color.ui auto
 
 # ===== DIFF ET MERGE =====
-git config --global diff.algorithm histogram
-git config --global diff.colorMoved default
-git config --global merge.conflictstyle diff3
-git config --global rerere.enabled true
+git config --global diff.algorithm histogram  
+git config --global diff.colorMoved default  
+git config --global merge.conflictstyle diff3  
+git config --global rerere.enabled true  
 git config --global rerere.autoupdate true
 
 # ===== ALIAS =====
-git config --global alias.co checkout
-git config --global alias.br branch
-git config --global alias.ci commit
-git config --global alias.st status
-git config --global alias.unstage 'restore --staged'
-git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-git config --global alias.last 'log -1 HEAD --stat'
+git config --global alias.co checkout  
+git config --global alias.br branch  
+git config --global alias.ci commit  
+git config --global alias.st status  
+git config --global alias.unstage 'restore --staged'  
+git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"  
+git config --global alias.last 'log -1 HEAD --stat'  
 git config --global alias.amend 'commit --amend --no-edit'
 
 # ===== SÉCURITÉ =====
-git config --global credential.helper cache
+git config --global credential.helper cache  
 git config --global credential.helper 'cache --timeout=3600'
 
 # ===== PERFORMANCE =====
-git config --global core.preloadindex true
-git config --global core.fscache true
+git config --global core.preloadindex true  
+git config --global core.fscache true  
 git config --global gc.auto 256
 
 # ===== MERGE TOOL =====
-git config --global merge.tool vscode
-git config --global mergetool.vscode.cmd 'code --wait $MERGED'
+git config --global merge.tool vscode  
+git config --global mergetool.vscode.cmd 'code --wait $MERGED'  
 git config --global mergetool.keepBackup false
 
 # ===== SUBMODULES =====
@@ -933,11 +933,11 @@ Vous pouvez aussi éditer directement `~/.gitconfig` :
 
 ```bash
 # Vérifier la configuration actuelle
-git config user.name
+git config user.name  
 git config user.email
 
 # Corriger
-git config --global user.name "Bon Nom"
+git config --global user.name "Bon Nom"  
 git config --global user.email "bon.email@example.com"
 
 # Modifier le dernier commit
@@ -971,7 +971,7 @@ git config --global core.autocrlf input
 git config --global credential.helper cache
 
 # Ou utiliser le gestionnaire système
-git config --global credential.helper manager  # Windows
+git config --global credential.helper manager  # Windows  
 git config --global credential.helper osxkeychain  # Mac
 ```
 
@@ -1022,7 +1022,7 @@ Créez un `CONTRIBUTING.md` dans votre projet :
 Avant de contribuer, configurez Git :
 
 ```bash
-git config user.email "votre.email@entreprise.com"
+git config user.email "votre.email@entreprise.com"  
 git config pull.rebase true
 ```
 
@@ -1059,11 +1059,11 @@ Plusieurs outils facilitent la gestion de configurations complexes :
 
 ```bash
 # Créer un dépôt dotfiles
-mkdir ~/dotfiles
-cd ~/dotfiles
-cp ~/.gitconfig gitconfig
-git init
-git add gitconfig
+mkdir ~/dotfiles  
+cd ~/dotfiles  
+cp ~/.gitconfig gitconfig  
+git init  
+git add gitconfig  
 git commit -m "Initial: Git configuration"
 ```
 

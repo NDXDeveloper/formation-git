@@ -13,11 +13,11 @@ Cet aide-mémoire regroupe toutes les commandes Git essentielles organisées par
 
 ```bash
 # Configuration globale (pour tous vos projets)
-git config --global user.name "Votre Nom"
+git config --global user.name "Votre Nom"  
 git config --global user.email "votre.email@example.com"
 
 # Configuration locale (pour un projet spécifique)
-git config --local user.name "Autre Nom"
+git config --local user.name "Autre Nom"  
 git config --local user.email "autre.email@example.com"
 
 # Voir toute la configuration
@@ -50,7 +50,7 @@ git config --global color.ui auto
 git config --global init.defaultBranch main
 
 # Configurer le comportement de pull
-git config --global pull.rebase false  # merge (par défaut)
+git config --global pull.rebase false  # merge (par défaut)  
 git config --global pull.rebase true   # rebase
 ```
 
@@ -68,7 +68,7 @@ git init
 git init --initial-branch=main
 
 # Initialiser dans un nouveau dossier
-git init nom-du-projet
+git init nom-du-projet  
 cd nom-du-projet
 ```
 
@@ -99,7 +99,7 @@ git clone -b nom-branche https://github.com/utilisateur/depot.git
 git status
 
 # État court
-git status -s
+git status -s  
 git status --short
 
 # Voir les fichiers ignorés aussi
@@ -116,19 +116,19 @@ git add fichier.txt
 git add fichier1.txt fichier2.txt
 
 # Ajouter tous les fichiers modifiés et nouveaux
-git add .
-git add --all
+git add .  
+git add --all  
 git add -A
 
 # Ajouter tous les fichiers d'un dossier
 git add dossier/
 
 # Ajouter de manière interactive
-git add -i
+git add -i  
 git add --interactive
 
 # Ajouter seulement une partie d'un fichier
-git add -p fichier.txt
+git add -p fichier.txt  
 git add --patch fichier.txt
 ```
 
@@ -181,16 +181,16 @@ git log --oneline --graph --all --decorate
 
 ```bash
 # Limiter le nombre de commits affichés
-git log -n 5
+git log -n 5  
 git log -5
 
 # Voir les commits depuis une date
-git log --since="2024-01-01"
-git log --since="2 weeks ago"
+git log --since="2024-01-01"  
+git log --since="2 weeks ago"  
 git log --after="2024-01-01"
 
 # Voir les commits jusqu'à une date
-git log --until="2024-12-31"
+git log --until="2024-12-31"  
 git log --before="yesterday"
 
 # Voir les commits d'un auteur
@@ -203,7 +203,7 @@ git log --grep="fix"
 git log -S"fonction_recherchée"
 
 # Voir l'historique d'un fichier
-git log fichier.txt
+git log fichier.txt  
 git log --follow fichier.txt  # Suit les renommages
 ```
 
@@ -217,7 +217,7 @@ git show abc1234
 git show HEAD
 
 # Voir l'avant-dernier commit
-git show HEAD~1
+git show HEAD~1  
 git show HEAD^
 
 # Voir les changements d'un commit
@@ -233,7 +233,7 @@ git show abc1234 --stat
 git diff
 
 # Différences entre staging area et dernier commit
-git diff --staged
+git diff --staged  
 git diff --cached
 
 # Différences entre working directory et dernier commit
@@ -266,7 +266,7 @@ git diff --word-diff
 git branch
 
 # Lister toutes les branches (locales et distantes)
-git branch -a
+git branch -a  
 git branch --all
 
 # Lister les branches distantes uniquement
@@ -289,11 +289,11 @@ git checkout nom-branche
 git switch nom-branche
 
 # Créer et changer de branche
-git checkout -b nouvelle-branche
+git checkout -b nouvelle-branche  
 git switch -c nouvelle-branche
 
 # Revenir à la branche précédente
-git checkout -
+git checkout -  
 git switch -
 ```
 
@@ -372,14 +372,14 @@ git rebase -p nom-branche
 
 ```bash
 # Annuler les modifications d'un fichier (non stagé)
-git restore fichier.txt
+git restore fichier.txt  
 git checkout -- fichier.txt  # ancienne syntaxe
 
 # Annuler toutes les modifications non stagées
 git restore .
 
 # Retirer un fichier de la staging area
-git restore --staged fichier.txt
+git restore --staged fichier.txt  
 git reset HEAD fichier.txt  # ancienne syntaxe
 
 # Annuler les modifications stagées ET non stagées
@@ -393,7 +393,7 @@ git restore --staged --worktree fichier.txt
 git reset --soft HEAD~1
 
 # Annuler le dernier commit (déstagé les changements)
-git reset --mixed HEAD~1
+git reset --mixed HEAD~1  
 git reset HEAD~1  # mixed est le défaut
 
 # Annuler le dernier commit (supprimer les changements)
@@ -428,26 +428,26 @@ git revert --no-commit abc1234
 
 ```bash
 # Mettre de côté les modifications
-git stash
+git stash  
 git stash push
 
 # Stash avec un message
-git stash save "Message descriptif"
+git stash save "Message descriptif"  
 git stash push -m "Message descriptif"
 
 # Stash incluant les fichiers non suivis
-git stash -u
+git stash -u  
 git stash --include-untracked
 
 # Stash incluant tout (même les fichiers ignorés)
-git stash -a
+git stash -a  
 git stash --all
 
 # Lister les stashes
 git stash list
 
 # Voir le contenu d'un stash
-git stash show
+git stash show  
 git stash show -p  # avec le diff
 
 # Appliquer le dernier stash (le garde dans la liste)
@@ -480,7 +480,7 @@ git stash branch nom-branche
 
 ```bash
 # Lister les dépôts distants
-git remote
+git remote  
 git remote -v  # avec les URLs
 
 # Ajouter un dépôt distant
@@ -496,7 +496,7 @@ git remote rename origin upstream
 git remote set-url origin https://nouvelle-url.git
 
 # Supprimer un remote
-git remote remove origin
+git remote remove origin  
 git remote rm origin
 ```
 
@@ -504,24 +504,24 @@ git remote rm origin
 
 ```bash
 # Récupérer les changements (sans appliquer)
-git fetch
-git fetch origin
+git fetch  
+git fetch origin  
 git fetch --all  # Tous les remotes
 
 # Récupérer et appliquer les changements
-git pull
+git pull  
 git pull origin main
 
 # Pull avec rebase
-git pull --rebase
+git pull --rebase  
 git pull --rebase origin main
 
 # Pousser vers le dépôt distant
-git push
+git push  
 git push origin main
 
 # Pousser et définir l'upstream
-git push -u origin main
+git push -u origin main  
 git push --set-upstream origin main
 
 # Pousser toutes les branches
@@ -567,14 +567,14 @@ git show v1.0.0
 git push origin v1.0.0
 
 # Pousser tous les tags
-git push --tags
+git push --tags  
 git push origin --tags
 
 # Supprimer un tag local
 git tag -d v1.0.0
 
 # Supprimer un tag distant
-git push origin --delete v1.0.0
+git push origin --delete v1.0.0  
 git push origin :refs/tags/v1.0.0
 
 # Checkout un tag
@@ -676,7 +676,7 @@ git bisect good abc1234
 
 # Git va vous proposer des commits à tester
 # Après chaque test, marquez :
-git bisect good  # si le commit est bon
+git bisect good  # si le commit est bon  
 git bisect bad   # si le commit est mauvais
 
 # Terminer la session bisect
@@ -698,7 +698,7 @@ git clean -f
 git clean -fd
 
 # Voir ce qui serait supprimé (simulation)
-git clean -n
+git clean -n  
 git clean --dry-run
 
 # Supprimer aussi les fichiers ignorés
@@ -749,9 +749,9 @@ git submodule status
 
 ```bash
 # Créer un alias
-git config --global alias.co checkout
-git config --global alias.br branch
-git config --global alias.ci commit
+git config --global alias.co checkout  
+git config --global alias.br branch  
+git config --global alias.ci commit  
 git config --global alias.st status
 
 # Alias pour log formaté
@@ -767,7 +767,7 @@ git config --global alias.unstage "restore --staged"
 git config --global alias.last "log -1 HEAD --stat"
 
 # Utilisation
-git co main       # au lieu de git checkout main
+git co main       # au lieu de git checkout main  
 git lg            # au lieu de git log --oneline --graph --all
 ```
 
@@ -822,19 +822,19 @@ git config --global rerere.enabled true
 # Options applicables à de nombreuses commandes
 
 # Mode verbeux (plus de détails)
-git [commande] --verbose
+git [commande] --verbose  
 git [commande] -v
 
 # Mode silencieux
-git [commande] --quiet
+git [commande] --quiet  
 git [commande] -q
 
 # Mode simulation (ne fait rien, montre ce qui serait fait)
-git [commande] --dry-run
+git [commande] --dry-run  
 git [commande] -n
 
 # Forcer l'opération
-git [commande] --force
+git [commande] --force  
 git [commande] -f
 ```
 
@@ -847,7 +847,7 @@ git [commande] -f
 git help
 
 # Aide sur une commande spécifique
-git help commit
+git help commit  
 git commit --help
 
 # Aide courte (options principales)
@@ -869,12 +869,12 @@ git help -w commit
 HEAD
 
 # Parent de HEAD (commit précédent)
-HEAD~1
-HEAD^
+HEAD~1  
+HEAD^  
 HEAD~
 
 # Arrière-grand-parent
-HEAD~2
+HEAD~2  
 HEAD^^
 
 # 5 commits en arrière
@@ -903,7 +903,7 @@ fichier.txt
 *.tmp
 
 # Tous les fichiers dans un dossier
-node_modules/
+node_modules/  
 build/
 
 # Tous les .txt sauf un
@@ -958,7 +958,7 @@ git status
 
 # Éditer les fichiers pour résoudre
 # puis
-git add fichier-resolu.txt
+git add fichier-resolu.txt  
 git commit
 
 # Ou annuler le merge
@@ -985,7 +985,7 @@ Copiez-collez ces commandes pour une configuration optimale :
 
 ```bash
 # Identité
-git config --global user.name "Votre Nom"
+git config --global user.name "Votre Nom"  
 git config --global user.email "votre.email@example.com"
 
 # Éditeur (choisissez celui que vous préférez)
@@ -1001,11 +1001,11 @@ git config --global color.ui auto
 git config --global pull.rebase true
 
 # Alias utiles
-git config --global alias.co checkout
-git config --global alias.br branch
-git config --global alias.ci commit
-git config --global alias.st status
-git config --global alias.lg "log --oneline --graph --all --decorate"
+git config --global alias.co checkout  
+git config --global alias.br branch  
+git config --global alias.ci commit  
+git config --global alias.st status  
+git config --global alias.lg "log --oneline --graph --all --decorate"  
 git config --global alias.unstage "restore --staged"
 
 # Rerere (réutiliser les résolutions de conflits)
@@ -1021,41 +1021,41 @@ git config --global merge.conflictstyle diff3
 
 ### Quotidien (tous les jours)
 ```bash
-git status
-git add .
-git commit -m "message"
-git push
-git pull
+git status  
+git add .  
+git commit -m "message"  
+git push  
+git pull  
 git log --oneline
 ```
 
 ### Hebdomadaire (plusieurs fois par semaine)
 ```bash
-git branch
-git checkout -b nouvelle-branche
-git merge branche
-git stash
-git stash pop
+git branch  
+git checkout -b nouvelle-branche  
+git merge branche  
+git stash  
+git stash pop  
 git diff
 ```
 
 ### Mensuel (de temps en temps)
 ```bash
-git rebase
-git cherry-pick
-git reset
-git revert
-git tag
+git rebase  
+git cherry-pick  
+git reset  
+git revert  
+git tag  
 git fetch --all
 ```
 
 ### Occasionnel (situations spéciales)
 ```bash
-git reflog
-git bisect
-git clean
-git rebase -i
-git blame
+git reflog  
+git bisect  
+git clean  
+git rebase -i  
+git blame  
 git remote add
 ```
 
@@ -1065,53 +1065,53 @@ git remote add
 
 ### Niveau Débutant 🌱
 ```bash
-git init
-git clone
-git add
-git commit
-git status
-git log
-git push
-git pull
-git branch
+git init  
+git clone  
+git add  
+git commit  
+git status  
+git log  
+git push  
+git pull  
+git branch  
 git checkout
 ```
 
 ### Niveau Intermédiaire 🌿
 ```bash
-git merge
-git diff
-git stash
-git reset
-git restore
-git remote
-git fetch
-git tag
+git merge  
+git diff  
+git stash  
+git reset  
+git restore  
+git remote  
+git fetch  
+git tag  
 git log --graph
 ```
 
 ### Niveau Avancé 🌳
 ```bash
-git rebase
-git rebase -i
-git cherry-pick
-git reflog
-git bisect
-git blame
-git revert
-git clean
+git rebase  
+git rebase -i  
+git cherry-pick  
+git reflog  
+git bisect  
+git blame  
+git revert  
+git clean  
 git worktree
 ```
 
 ### Niveau Expert 🌟
 ```bash
-git filter-branch
-git gc
-git fsck
-git rerere
-git submodule
-git archive
-git bundle
+git filter-branch  
+git gc  
+git fsck  
+git rerere  
+git submodule  
+git archive  
+git bundle  
 git replace
 ```
 
