@@ -92,7 +92,7 @@ Indique à Git un commit où le bug n'existait pas.
 
 ```bash
 # Vous êtes sur le commit actuel qui a le bug
-git bisect start
+git bisect start  
 git bisect bad
 
 # Il y a 3 mois, le bug n'existait pas (commit a1b2c3d)
@@ -184,8 +184,8 @@ Continuez à tester et marquer chaque commit comme `good` ou `bad`.
 **Exemple de session complète :**
 
 ```bash
-git bisect start
-git bisect bad                    # Commit actuel (bad)
+git bisect start  
+git bisect bad                    # Commit actuel (bad)  
 git bisect good a1b2c3d          # Ancien commit (good)
 
 # [Git vous place sur commit m6n5o4p]
@@ -208,9 +208,9 @@ git bisect bad
 #### Étape 6 : Git trouve le coupable !
 
 ```bash
-e5f6g7h8i9j0 is the first bad commit
-commit e5f6g7h8i9j0
-Author: John Doe <john@example.com>
+e5f6g7h8i9j0 is the first bad commit  
+commit e5f6g7h8i9j0  
+Author: John Doe <john@example.com>  
 Date:   Mon Sep 15 14:32:18 2024
 
     Refactor price calculation
@@ -240,18 +240,18 @@ Voici comment Git navigue dans l'historique :
 
 ```
 État initial :
-GOOD ← ? ← ? ← ? ← ? ← ? ← ? ← ? ← ? ← ? ← BAD
+GOOD ← ? ← ? ← ? ← ? ← ? ← ? ← ? ← ? ← ? ← BAD  
 a1b2c3d                                        HEAD
 
-Après git bisect good a1b2c3d :
-GOOD ← ? ← ? ← ? ← [?] ← ? ← ? ← ? ← ? ← ? ← BAD
+Après git bisect good a1b2c3d :  
+GOOD ← ? ← ? ← ? ← [?] ← ? ← ? ← ? ← ? ← ? ← BAD  
 a1b2c3d            TEST                        HEAD
 
-Supposons que TEST est BAD :
+Supposons que TEST est BAD :  
 GOOD ← ? ← [?] ← ? ← BAD
        TEST
 
-Supposons que TEST est GOOD :
+Supposons que TEST est GOOD :  
 GOOD ← ? ← [?] ← BAD
             TEST
 
@@ -267,9 +267,9 @@ Si vous pouvez automatiser le test (avec un test unitaire par exemple), bisect p
 #### Syntaxe
 
 ```bash
-git bisect start
-git bisect bad
-git bisect good <hash>
+git bisect start  
+git bisect bad  
+git bisect good <hash>  
 git bisect run <commande-de-test>
 ```
 
@@ -282,8 +282,8 @@ La `<commande-de-test>` doit retourner :
 
 ```bash
 # Démarrer bisect
-git bisect start
-git bisect bad
+git bisect start  
+git bisect bad  
 git bisect good a1b2c3d
 
 # Lancer bisect automatique avec les tests
@@ -298,10 +298,10 @@ git bisect run npm test
 ```
 running npm test
 ✓ Test passed
-Bisecting: 12 revisions left to test
+Bisecting: 12 revisions left to test  
 running npm test
 ✗ Test failed
-Bisecting: 6 revisions left to test
+Bisecting: 6 revisions left to test  
 running npm test
 ✓ Test passed
 ...
@@ -324,9 +324,9 @@ EOF
 chmod +x test.sh
 
 # Lancer bisect automatique
-git bisect start
-git bisect bad
-git bisect good a1b2c3d
+git bisect start  
+git bisect bad  
+git bisect good a1b2c3d  
 git bisect run ./test.sh
 ```
 
@@ -404,20 +404,20 @@ git bisect replay bisect-session.txt
 
 ```bash
 # Un test qui passait il y a 2 semaines échoue maintenant
-git bisect start
-git bisect bad
-git bisect good HEAD~50
+git bisect start  
+git bisect bad  
+git bisect good HEAD~50  
 git bisect run npm test -- specific-test.js
 ```
 
 #### Cas 2 : Bug visuel dans l'interface
 
 ```bash
-git bisect start
+git bisect start  
 git bisect bad
 
 # Trouver un commit où l'interface était correcte
-git log --oneline
+git log --oneline  
 git bisect good <hash-d-il-y-a-1-mois>
 
 # Tester manuellement à chaque étape
@@ -437,20 +437,20 @@ if [ $result -gt 500 ]; then
   exit 1
 else
   exit 0
-fi
+fi  
 EOF
 
-git bisect start
-git bisect bad
-git bisect good <commit-rapide>
+git bisect start  
+git bisect bad  
+git bisect good <commit-rapide>  
 git bisect run ./bench.sh
 ```
 
 #### Cas 4 : Bug de compilation
 
 ```bash
-git bisect start
-git bisect bad
+git bisect start  
+git bisect bad  
 git bisect good <dernier-commit-qui-compilait>
 
 # Script qui teste la compilation
@@ -473,14 +473,14 @@ git bisect run sh -c "make clean && make"
 
 ```bash
 # Quand vous trouvez le commit coupable
-git show <commit-coupable> > bug-analysis.txt
+git show <commit-coupable> > bug-analysis.txt  
 git log -p <commit-coupable> >> bug-analysis.txt
 ```
 
 ✅ **Utilisez des tags ou branches pour les commits "good" connus** :
 
 ```bash
-git tag last-working-version a1b2c3d
+git tag last-working-version a1b2c3d  
 git bisect good last-working-version
 ```
 
@@ -529,8 +529,8 @@ cat > test-multiple.sh << 'EOF'
 #!/bin/bash
 for i in 1 2 3; do
   npm test || exit 1
-done
-exit 0
+done  
+exit 0  
 EOF
 
 git bisect run ./test-multiple.sh
@@ -592,23 +592,23 @@ Voici un exemple complet avec un vrai projet JavaScript :
 
 ```bash
 # 1. Le bug : La fonction totalPrice retourne NaN
-git bisect start
+git bisect start  
 git bisect bad
 
 # 2. Trouver un commit où ça marchait
-git log --since="2024-09-01" --oneline
+git log --since="2024-09-01" --oneline  
 git bisect good 5f3e8c2
 
 # 3. Créer un script de test automatique
-cat > test-price.js << 'EOF'
-const { totalPrice } = require('./src/price.js');
-const result = totalPrice([10, 20, 30]);
+cat > test-price.js << 'EOF'  
+const { totalPrice } = require('./src/price.js');  
+const result = totalPrice([10, 20, 30]);  
 if (isNaN(result)) {
   console.error('FAILED: totalPrice returns NaN');
   process.exit(1);
 }
-console.log('PASSED: totalPrice returns', result);
-process.exit(0);
+console.log('PASSED: totalPrice returns', result);  
+process.exit(0);  
 EOF
 
 # 4. Lancer le bisect automatique

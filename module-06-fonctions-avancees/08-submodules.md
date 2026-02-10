@@ -109,7 +109,7 @@ git submodule add https://github.com/user/awesome-lib.git lib/awesome-lib
 #### Commiter l'ajout du submodule
 
 ```bash
-git add .gitmodules lib/awesome-lib
+git add .gitmodules lib/awesome-lib  
 git commit -m "Add awesome-lib submodule"
 ```
 
@@ -128,7 +128,7 @@ Quand quelqu'un clone votre projet, les submodules ne sont **pas clonés automat
 
 ```bash
 # 1. Cloner le projet principal
-git clone https://github.com/user/mon-projet.git
+git clone https://github.com/user/mon-projet.git  
 cd mon-projet
 
 # 2. Les dossiers de submodules existent mais sont vides !
@@ -194,9 +194,9 @@ git submodule status
 Les submodules sont des dépôts Git normaux :
 
 ```bash
-cd lib/awesome-lib
-git status
-git log
+cd lib/awesome-lib  
+git status  
+git log  
 git branch
 # Toutes les commandes Git fonctionnent !
 ```
@@ -216,7 +216,7 @@ git checkout -b fix-bug
 # ... éditer des fichiers ...
 
 # 4. Commiter dans le submodule
-git add .
+git add .  
 git commit -m "fix: Correct calculation bug"
 
 # 5. Pousser vers le dépôt distant du submodule
@@ -232,7 +232,7 @@ git status
 #   modified:   lib/awesome-lib (new commits)
 
 # 8. Commiter la nouvelle référence dans le projet parent
-git add lib/awesome-lib
+git add lib/awesome-lib  
 git commit -m "Update awesome-lib to fix bug"
 
 # 9. Pousser le projet parent
@@ -254,7 +254,7 @@ git push
 cd lib/awesome-lib
 
 # Récupérer les dernières modifications
-git fetch
+git fetch  
 git merge origin/main
 # ou git pull origin main
 
@@ -262,7 +262,7 @@ git merge origin/main
 cd ../..
 
 # Commiter la mise à jour
-git add lib/awesome-lib
+git add lib/awesome-lib  
 git commit -m "Update awesome-lib to latest version"
 ```
 
@@ -366,11 +366,11 @@ git submodule add https://github.com/company/custom-theme.git custom-theme
 
 ```bash
 # Service API
-git submodule add https://github.com/company/common-models.git shared/models
+git submodule add https://github.com/company/common-models.git shared/models  
 git submodule add https://github.com/company/common-auth.git shared/auth
 
 # Service Web
-git submodule add https://github.com/company/common-models.git shared/models
+git submodule add https://github.com/company/common-models.git shared/models  
 git submodule add https://github.com/company/common-ui.git shared/ui
 ```
 
@@ -439,13 +439,13 @@ git submodule update --remote --rebase
 
 ```bash
 # Vous modifiez le submodule
-cd lib/awesome-lib
+cd lib/awesome-lib  
 git commit -m "Fix bug"
 
 # Vous committez dans le projet parent
-cd ../..
-git add lib/awesome-lib
-git commit -m "Update lib"
+cd ../..  
+git add lib/awesome-lib  
+git commit -m "Update lib"  
 git push  # ❌ Mais vous oubliez de pousser le submodule !
 ```
 
@@ -455,11 +455,11 @@ git push  # ❌ Mais vous oubliez de pousser le submodule !
 
 ```bash
 # Toujours pousser le submodule en premier
-cd lib/awesome-lib
+cd lib/awesome-lib  
 git push
 
 # Puis pousser le projet parent
-cd ../..
+cd ../..  
 git push
 ```
 
@@ -481,7 +481,7 @@ git config --global push.recurseSubmodules on-demand
 Les submodules pointent vers un commit spécifique, pas une branche.
 
 ```bash
-cd lib/awesome-lib
+cd lib/awesome-lib  
 git branch
 # * (HEAD detached at a1b2c3d)
 ```
@@ -491,7 +491,7 @@ git branch
 Toujours créer une branche avant de modifier :
 
 ```bash
-cd lib/awesome-lib
+cd lib/awesome-lib  
 git checkout -b my-changes
 # Maintenant vous êtes sur une branche
 ```
@@ -512,7 +512,7 @@ git pull
 cd lib/awesome-lib
 
 # 2. Résoudre comme un conflit normal
-git fetch
+git fetch  
 git merge origin/main
 # Résoudre les conflits si nécessaire
 
@@ -520,7 +520,7 @@ git merge origin/main
 cd ../..
 
 # 4. Indiquer que c'est résolu
-git add lib/awesome-lib
+git add lib/awesome-lib  
 git commit
 ```
 
@@ -609,27 +609,27 @@ Voici un workflow typique pour un projet utilisant des submodules :
 
 ```bash
 # Créer le projet principal
-mkdir mon-projet
-cd mon-projet
+mkdir mon-projet  
+cd mon-projet  
 git init
 
 # Ajouter des submodules
-git submodule add https://github.com/user/lib1.git lib/lib1
+git submodule add https://github.com/user/lib1.git lib/lib1  
 git submodule add https://github.com/user/lib2.git lib/lib2
 
 # Commiter
-git add .
+git add .  
 git commit -m "Initial commit with submodules"
 
 # Créer le dépôt distant et pousser
-git remote add origin https://github.com/user/mon-projet.git
+git remote add origin https://github.com/user/mon-projet.git  
 git push -u origin main
 ```
 
 #### 2. Nouveau développeur clone le projet
 
 ```bash
-git clone --recursive https://github.com/user/mon-projet.git
+git clone --recursive https://github.com/user/mon-projet.git  
 cd mon-projet
 ```
 
@@ -644,7 +644,7 @@ git checkout -b feature/new-feature
 
 # Développer
 # ... modifications ...
-git add .
+git add .  
 git commit -m "feat: Add new feature"
 
 # Pousser le submodule
@@ -654,8 +654,8 @@ git push origin feature/new-feature
 cd ../..
 
 # Mettre à jour la référence
-git add lib/lib1
-git commit -m "Update lib1 with new feature"
+git add lib/lib1  
+git commit -m "Update lib1 with new feature"  
 git push
 ```
 
@@ -669,8 +669,8 @@ git pull
 git submodule update --recursive --remote
 
 # Si des modifications ont eu lieu
-git add lib/
-git commit -m "Update submodules"
+git add lib/  
+git commit -m "Update submodules"  
 git push
 ```
 
@@ -733,7 +733,7 @@ git submodule foreach git status
 
 ```bash
 # Supprimer complètement
-rm -rf lib/awesome-lib
+rm -rf lib/awesome-lib  
 rm -rf .git/modules/lib/awesome-lib
 
 # Réinitialiser

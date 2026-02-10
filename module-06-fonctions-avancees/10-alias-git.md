@@ -59,9 +59,9 @@ git config --global alias.ci commit
 **Utilisation :**
 
 ```bash
-git st        # équivalent à git status
-git co main   # équivalent à git checkout main
-git br -a     # équivalent à git branch -a
+git st        # équivalent à git status  
+git co main   # équivalent à git checkout main  
+git br -a     # équivalent à git branch -a  
 git ci -m "Message"  # équivalent à git commit -m "Message"
 ```
 
@@ -93,11 +93,11 @@ git config --global --edit
 Les alias les plus basiques remplacent simplement une commande par une autre :
 
 ```bash
-git config --global alias.st status
-git config --global alias.co checkout
-git config --global alias.br branch
-git config --global alias.ci commit
-git config --global alias.unstage 'reset HEAD --'
+git config --global alias.st status  
+git config --global alias.co checkout  
+git config --global alias.br branch  
+git config --global alias.ci commit  
+git config --global alias.unstage 'reset HEAD --'  
 git config --global alias.last 'log -1 HEAD'
 ```
 
@@ -122,8 +122,8 @@ git config --global alias.lg 'log --oneline --graph --decorate --all'
 **Utilisation :**
 
 ```bash
-git s              # Status court
-git ciam "Message" # Add all + commit
+git s              # Status court  
+git ciam "Message" # Add all + commit  
 git lg             # Log graphique magnifique
 ```
 
@@ -244,11 +244,11 @@ git cob feature/new-feature
 
 ```bash
 # Commit avec préfixe automatique
-git config --global alias.feat '!f() { git commit -m "feat: $1"; }; f'
+git config --global alias.feat '!f() { git commit -m "feat: $1"; }; f'  
 git config --global alias.fix '!f() { git commit -m "fix: $1"; }; f'
 
 # Utilisation :
-git feat "Add login feature"  # commit: "feat: Add login feature"
+git feat "Add login feature"  # commit: "feat: Add login feature"  
 git fix "Correct typo"        # commit: "fix: Correct typo"
 ```
 
@@ -415,33 +415,33 @@ Créez un fichier `install-git-aliases.sh` :
 echo "Installation des alias Git..."
 
 # Commandes de base
-git config --global alias.st status
-git config --global alias.s "status -s"
-git config --global alias.co checkout
-git config --global alias.cob "checkout -b"
-git config --global alias.br branch
-git config --global alias.ci commit
-git config --global alias.cm "commit -m"
+git config --global alias.st status  
+git config --global alias.s "status -s"  
+git config --global alias.co checkout  
+git config --global alias.cob "checkout -b"  
+git config --global alias.br branch  
+git config --global alias.ci commit  
+git config --global alias.cm "commit -m"  
 git config --global alias.cam "commit -am"
 
 # Log
-git config --global alias.l "log --oneline"
-git config --global alias.lg "log --oneline --graph --decorate --all"
+git config --global alias.l "log --oneline"  
+git config --global alias.lg "log --oneline --graph --decorate --all"  
 git config --global alias.last "log -1 HEAD"
 
 # Diff
-git config --global alias.d diff
+git config --global alias.d diff  
 git config --global alias.dc "diff --cached"
 
 # Reset
-git config --global alias.undo "reset --soft HEAD~1"
+git config --global alias.undo "reset --soft HEAD~1"  
 git config --global alias.unstage "reset HEAD --"
 
 # Branches
-git config --global alias.branches "branch -a"
+git config --global alias.branches "branch -a"  
 git config --global alias.bv "branch -v"
 
-echo "✅ Alias installés avec succès !"
+echo "✅ Alias installés avec succès !"  
 echo "Testez avec : git st"
 ```
 
@@ -567,15 +567,15 @@ Vous pouvez aussi créer des alias dans votre shell pour rendre Git encore plus 
 
 ```bash
 # Alias Git ultra-courts
-alias g='git'
-alias gs='git status'
-alias ga='git add'
-alias gc='git commit'
-alias gp='git push'
-alias gl='git pull'
-alias gco='git checkout'
-alias gb='git branch'
-alias gd='git diff'
+alias g='git'  
+alias gs='git status'  
+alias ga='git add'  
+alias gc='git commit'  
+alias gp='git push'  
+alias gl='git pull'  
+alias gco='git checkout'  
+alias gb='git branch'  
+alias gd='git diff'  
 alias gl='git log --oneline'
 
 # Avec autocomplétion (bash)
@@ -585,9 +585,9 @@ complete -o default -o nospace -F _git g
 **Utilisation :**
 
 ```bash
-g st        # git status
-gs          # git status
-ga .        # git add .
+g st        # git status  
+gs          # git status  
+ga .        # git add .  
 gc -m "msg" # git commit -m "msg"
 ```
 
@@ -628,8 +628,8 @@ Voici des alias populaires utilisés par de nombreux développeurs :
 Ne créez pas 50 alias d'un coup. Commencez par :
 
 ```bash
-git config --global alias.st status
-git config --global alias.co checkout
+git config --global alias.st status  
+git config --global alias.co checkout  
 git config --global alias.br branch
 ```
 
@@ -639,11 +639,11 @@ Ajoutez-en au fur et à mesure de vos besoins.
 
 ```bash
 # ✅ Bon : facile à retenir
-git config --global alias.st status
+git config --global alias.st status  
 git config --global alias.undo "reset --soft HEAD~1"
 
 # ❌ Mauvais : cryptique
-git config --global alias.x status
+git config --global alias.x status  
 git config --global alias.zz "reset --soft HEAD~1"
 ```
 
@@ -667,8 +667,8 @@ Créez un fichier `git-aliases.txt` dans votre projet avec les alias recommandé
 cp ~/.gitconfig ~/gitconfig-backup
 
 # Ou versionner
-git init ~/dotfiles
-cp ~/.gitconfig ~/dotfiles/
+git init ~/dotfiles  
+cp ~/.gitconfig ~/dotfiles/  
 cd ~/dotfiles && git add . && git commit -m "Backup git config"
 ```
 
@@ -790,15 +790,15 @@ Voici les alias que vous devriez avoir au minimum :
 
 ```bash
 # Les 10 alias indispensables
-git config --global alias.st status
-git config --global alias.co checkout
-git config --global alias.br branch
-git config --global alias.ci commit
-git config --global alias.cm "commit -m"
-git config --global alias.l "log --oneline"
-git config --global alias.lg "log --oneline --graph --all"
-git config --global alias.d diff
-git config --global alias.undo "reset --soft HEAD~1"
+git config --global alias.st status  
+git config --global alias.co checkout  
+git config --global alias.br branch  
+git config --global alias.ci commit  
+git config --global alias.cm "commit -m"  
+git config --global alias.l "log --oneline"  
+git config --global alias.lg "log --oneline --graph --all"  
+git config --global alias.d diff  
+git config --global alias.undo "reset --soft HEAD~1"  
 git config --global alias.aliases "config --get-regexp alias"
 ```
 
@@ -850,10 +850,10 @@ Les **alias Git** sont un moyen simple et puissant d'améliorer votre productivi
 
 ```bash
 # Installer les 5 alias essentiels
-git config --global alias.st status
-git config --global alias.co checkout
-git config --global alias.l "log --oneline"
-git config --global alias.lg "log --oneline --graph --all"
+git config --global alias.st status  
+git config --global alias.co checkout  
+git config --global alias.l "log --oneline"  
+git config --global alias.lg "log --oneline --graph --all"  
 git config --global alias.undo "reset --soft HEAD~1"
 
 # Tester

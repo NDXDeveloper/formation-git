@@ -69,14 +69,14 @@ ls .git/hooks/
 **Contenu typique :**
 
 ```
-applypatch-msg.sample
-commit-msg.sample
-post-update.sample
-pre-applypatch.sample
-pre-commit.sample
-pre-push.sample
-pre-rebase.sample
-prepare-commit-msg.sample
+applypatch-msg.sample  
+commit-msg.sample  
+post-update.sample  
+pre-applypatch.sample  
+pre-commit.sample  
+pre-push.sample  
+pre-rebase.sample  
+prepare-commit-msg.sample  
 update.sample
 ```
 
@@ -110,14 +110,14 @@ nano .git/hooks/pre-commit
 ```bash
 #!/bin/bash
 
-echo "🔍 Vérification avant commit..."
+echo "🔍 Vérification avant commit..."  
 echo "✅ Tout est OK !"
 ```
 
 **Test :**
 
 ```bash
-git add .
+git add .  
 git commit -m "Test du hook"
 # 🔍 Vérification avant commit...
 # ✅ Tout est OK !
@@ -152,7 +152,7 @@ if git diff --cached --name-only | grep '\.js$' | xargs grep -l 'console.log' > 
     exit 1
 fi
 
-echo "✅ Pas de console.log trouvé"
+echo "✅ Pas de console.log trouvé"  
 exit 0
 ```
 
@@ -160,8 +160,8 @@ exit 0
 
 ```bash
 # Ajouter un console.log dans un fichier
-echo "console.log('debug');" >> app.js
-git add app.js
+echo "console.log('debug');" >> app.js  
+git add app.js  
 git commit -m "Test"
 # ❌ Erreur : Des console.log ont été trouvés !
 # Le commit est annulé !
@@ -181,7 +181,7 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-echo "✅ Tous les tests passent !"
+echo "✅ Tous les tests passent !"  
 exit 0
 ```
 
@@ -200,7 +200,7 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-echo "✅ Le code est bien formaté !"
+echo "✅ Le code est bien formaté !"  
 exit 0
 ```
 
@@ -236,7 +236,7 @@ if ! echo "$commit_msg" | grep -qE "$pattern"; then
     exit 1
 fi
 
-echo "✅ Message de commit valide"
+echo "✅ Message de commit valide"  
 exit 0
 ```
 
@@ -263,7 +263,7 @@ if ! echo "$commit_msg" | grep -qE "[A-Z]+-[0-9]+"; then
     exit 1
 fi
 
-echo "✅ Numéro de ticket présent"
+echo "✅ Numéro de ticket présent"  
 exit 0
 ```
 
@@ -289,7 +289,7 @@ if [ "$current_branch" = "main" ]; then
     exit 1
 fi
 
-echo "✅ Push autorisé sur la branche $current_branch"
+echo "✅ Push autorisé sur la branche $current_branch"  
 exit 0
 ```
 
@@ -308,7 +308,7 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-echo "✅ Tous les tests passent, push autorisé"
+echo "✅ Tous les tests passent, push autorisé"  
 exit 0
 ```
 
@@ -326,7 +326,7 @@ Le hook `post-commit` s'exécute après un commit réussi. Il ne peut pas annule
 ```bash
 #!/bin/bash
 
-commit_msg=$(git log -1 --pretty=%B)
+commit_msg=$(git log -1 --pretty=%B)  
 echo "✅ Commit réussi : $commit_msg"
 
 # Afficher une notification système (macOS)
@@ -346,7 +346,7 @@ Le hook `prepare-commit-msg` modifie le message avant que l'éditeur s'ouvre.
 ```bash
 #!/bin/bash
 
-commit_msg_file="$1"
+commit_msg_file="$1"  
 branch=$(git symbolic-ref --short HEAD)
 
 # Extraire le numéro de ticket du nom de branche
@@ -432,7 +432,7 @@ git clone <url>
 **Installation :**
 
 ```bash
-npm install --save-dev husky
+npm install --save-dev husky  
 npx husky init
 ```
 
@@ -549,8 +549,8 @@ npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$1"'
 echo "🔍 Vérifications pre-commit..."
 
 # 1. Vérifier qu'il n'y a pas de fichiers trop gros
-echo "📦 Vérification de la taille des fichiers..."
-max_size=5000000  # 5 MB
+echo "📦 Vérification de la taille des fichiers..."  
+max_size=5000000  # 5 MB  
 for file in $(git diff --cached --name-only); do
     if [ -f "$file" ]; then
         size=$(wc -c < "$file")
@@ -562,7 +562,7 @@ for file in $(git diff --cached --name-only); do
 done
 
 # 2. Vérifier qu'il n'y a pas de secrets
-echo "🔐 Recherche de secrets..."
+echo "🔐 Recherche de secrets..."  
 if git diff --cached | grep -iE '(api_key|password|secret|token).*=.*["\047][^"\047]{20,}' > /dev/null; then
     echo "❌ Attention : Possible secret détecté !"
     echo "Vérifiez que vous ne commitez pas de clés ou mots de passe."
@@ -570,22 +570,22 @@ if git diff --cached | grep -iE '(api_key|password|secret|token).*=.*["\047][^"\
 fi
 
 # 3. Lancer les tests
-echo "🧪 Lancement des tests..."
-npm test
+echo "🧪 Lancement des tests..."  
+npm test  
 if [ $? -ne 0 ]; then
     echo "❌ Les tests échouent"
     exit 1
 fi
 
 # 4. Vérifier le formatage
-echo "🎨 Vérification du formatage..."
-npm run lint
+echo "🎨 Vérification du formatage..."  
+npm run lint  
 if [ $? -ne 0 ]; then
     echo "❌ Erreurs de formatage"
     exit 1
 fi
 
-echo "✅ Toutes les vérifications sont passées !"
+echo "✅ Toutes les vérifications sont passées !"  
 exit 0
 ```
 
@@ -595,15 +595,15 @@ exit 0
 #!/bin/bash
 
 # Afficher des stats après chaque commit
-commit_hash=$(git rev-parse --short HEAD)
-commit_msg=$(git log -1 --pretty=%B)
+commit_hash=$(git rev-parse --short HEAD)  
+commit_msg=$(git log -1 --pretty=%B)  
 files_changed=$(git show --pretty="" --name-only | wc -l)
 
-echo ""
-echo "📊 Statistiques du commit $commit_hash:"
-echo "   Message : $commit_msg"
-echo "   Fichiers modifiés : $files_changed"
-echo "   Total de commits : $(git rev-list --count HEAD)"
+echo ""  
+echo "📊 Statistiques du commit $commit_hash:"  
+echo "   Message : $commit_msg"  
+echo "   Fichiers modifiés : $files_changed"  
+echo "   Total de commits : $(git rev-list --count HEAD)"  
 echo ""
 
 # Envoyer une notification (optionnel)
@@ -618,11 +618,11 @@ echo ""
 
 ```bash
 # .husky/pre-commit
-npm run lint
+npm run lint  
 npm run test:unit
 
 # .husky/pre-push
-npm run test:integration
+npm run test:integration  
 npm run build
 
 # .husky/commit-msg
@@ -643,7 +643,7 @@ npx commitlint --edit "$1"
 ```bash
 # Simple pre-commit pour éviter les erreurs de base
 #!/bin/bash
-npm run lint
+npm run lint  
 echo "✅ Commit autorisé"
 ```
 
@@ -741,12 +741,12 @@ Utilisez Husky ou un script d'installation pour que toute l'équipe utilise les 
 
 ```bash
 # ❌ Mauvais
-echo "Error"
+echo "Error"  
 exit 1
 
 # ✅ Bon
-echo "❌ Le formatage du code ne respecte pas les standards."
-echo "Lancez 'npm run lint:fix' pour corriger automatiquement."
+echo "❌ Le formatage du code ne respecte pas les standards."  
+echo "Lancez 'npm run lint:fix' pour corriger automatiquement."  
 exit 1
 ```
 
@@ -864,11 +864,11 @@ module.exports = {
 
 ```bash
 # Installation
-npm install
+npm install  
 npx husky init
 
 # Créer les hooks
-npx husky add .husky/pre-commit "npx lint-staged"
+npx husky add .husky/pre-commit "npx lint-staged"  
 npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$1"'
 ```
 
@@ -894,7 +894,7 @@ Les **hooks Git** sont un outil puissant pour automatiser votre workflow et main
 
 ```bash
 # 1. Installer Husky
-npm install --save-dev husky
+npm install --save-dev husky  
 npx husky init
 
 # 2. Ajouter un hook pre-commit simple

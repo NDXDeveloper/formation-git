@@ -281,12 +281,12 @@ Chaque section est **indépendante** et peut être étudiée séparément.
 Les fonctions avancées modifient souvent l'historique. Créez un dépôt de test pour expérimenter sans risque :
 
 ```bash
-mkdir git-advanced-practice
-cd git-advanced-practice
+mkdir git-advanced-practice  
+cd git-advanced-practice  
 git init
 # Créez quelques commits de test
-echo "test" > file.txt
-git add .
+echo "test" > file.txt  
+git add .  
 git commit -m "Test commit 1"
 # etc.
 ```

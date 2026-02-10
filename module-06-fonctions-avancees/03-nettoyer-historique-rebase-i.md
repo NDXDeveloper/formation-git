@@ -26,11 +26,11 @@ Un historique Git propre présente de nombreux avantages :
 **Exemple d'historique "sale" :**
 
 ```
-a1b2c3d WIP
-e4f5g6h Fix typo
-h7i8j9k Ajout feature login
-k0l1m2n Oops forgot file
-n3o4p5q Fix another typo
+a1b2c3d WIP  
+e4f5g6h Fix typo  
+h7i8j9k Ajout feature login  
+k0l1m2n Oops forgot file  
+n3o4p5q Fix another typo  
 q6r7s8t Actually fix the bug
 ```
 
@@ -69,8 +69,8 @@ git rebase -i HEAD~3
 Quand vous lancez `git rebase -i HEAD~3`, Git ouvre votre éditeur de texte avec une liste de vos commits :
 
 ```
-pick a1b2c3d Add login form
-pick e4f5g6h Fix typo in login
+pick a1b2c3d Add login form  
+pick e4f5g6h Fix typo in login  
 pick h7i8j9k Add validation
 
 # Rebase k0l1m2n..h7i8j9k onto k0l1m2n (3 commands)
@@ -133,15 +133,15 @@ Git s'arrête sur ce commit, vous permettant de :
 Une fois vos modifications faites :
 
 ```bash
-git add fichiers-modifies
-git commit --amend  # Pour modifier le commit actuel
+git add fichiers-modifies  
+git commit --amend  # Pour modifier le commit actuel  
 git rebase --continue  # Pour continuer le rebase
 ```
 
 #### 4. squash (s) - Fusionner avec le commit précédent
 
 ```
-pick a1b2c3d Add login form
+pick a1b2c3d Add login form  
 squash e4f5g6h Fix typo in login
 ```
 
@@ -159,7 +159,7 @@ Fix typo in login
 #### 5. fixup (f) - Fusionner et ignorer le message
 
 ```
-pick a1b2c3d Add login form
+pick a1b2c3d Add login form  
 fixup e4f5g6h Fix typo in login
 ```
 
@@ -208,9 +208,9 @@ git rebase -i HEAD~4
 **Dans l'éditeur :**
 
 ```
-pick k0l1m2n Add feature
-fixup a1b2c3d WIP
-fixup e4f5g6h Fix bug
+pick k0l1m2n Add feature  
+fixup a1b2c3d WIP  
+fixup e4f5g6h Fix bug  
 pick h7i8j9k Add tests
 ```
 
@@ -241,8 +241,8 @@ git rebase -i HEAD~3
 **Dans l'éditeur :**
 
 ```
-reword a1b2c3d Update
-reword e4f5g6h Fix
+reword a1b2c3d Update  
+reword e4f5g6h Fix  
 reword h7i8j9k stuff
 ```
 
@@ -274,8 +274,8 @@ git rebase -i HEAD~3
 **Dans l'éditeur, réorganisez les lignes :**
 
 ```
-pick e4f5g6h Add feature
-pick c3d4e5f Add tests
+pick e4f5g6h Add feature  
+pick c3d4e5f Add tests  
 pick a1b2c3d Add documentation
 ```
 
@@ -308,11 +308,11 @@ git reset HEAD~
 # Les modifications sont maintenant dans le Working Directory
 
 # Créer le premier commit
-git add login.js
+git add login.js  
 git commit -m "feat: Add login feature"
 
 # Créer le second commit
-git add payment.js
+git add payment.js  
 git commit -m "feat: Add payment feature"
 
 # Continuer le rebase
@@ -339,8 +339,8 @@ git rebase -i HEAD~3
 **Dans l'éditeur :**
 
 ```
-pick a1b2c3d Add tests
-drop e4f5g6h Debug console.log everywhere
+pick a1b2c3d Add tests  
+drop e4f5g6h Debug console.log everywhere  
 pick h7i8j9k Add feature
 ```
 
@@ -367,12 +367,12 @@ git log --oneline
 git rebase -i HEAD~7
 
 # 3. Dans l'éditeur, organisez intelligemment
-pick a3b4c5d Add login feature
-fixup b4c5d6e Add validation
-fixup c5d6e7f WIP
-pick d6e7f8g Add tests
-fixup e7f8g9h WIP tests
-reword f8g9h0i Fix typo
+pick a3b4c5d Add login feature  
+fixup b4c5d6e Add validation  
+fixup c5d6e7f WIP  
+pick d6e7f8g Add tests  
+fixup e7f8g9h WIP tests  
+reword f8g9h0i Fix typo  
 squash g9h0i1j Update readme
 
 # 4. Résultat : historique propre en 2 commits
@@ -448,7 +448,7 @@ Le rebase réécrit l'historique en créant de nouveaux commits avec de nouveaux
 ✅ **Faites des sauvegardes** : Créez une branche de backup avant un gros rebase
 
 ```bash
-git branch backup-avant-rebase
+git branch backup-avant-rebase  
 git rebase -i HEAD~5
 ```
 
@@ -489,7 +489,7 @@ git rebase -i --autosquash HEAD~5
 Si vous créez des commits de fix avec `--fixup` :
 
 ```bash
-git commit --fixup=a1b2c3d
+git commit --fixup=a1b2c3d  
 git rebase -i --autosquash HEAD~5
 ```
 
@@ -522,9 +522,9 @@ git log --oneline
 git rebase -i HEAD~4
 
 # Dans l'éditeur :
-pick b2c3d4e Add feature
-fixup c3d4e5f WIP
-pick d4e5f6g Add unit tests
+pick b2c3d4e Add feature  
+fixup c3d4e5f WIP  
+pick d4e5f6g Add unit tests  
 squash e5f6g7h Typo in readme
 
 # Git ouvre l'éditeur pour le squash :

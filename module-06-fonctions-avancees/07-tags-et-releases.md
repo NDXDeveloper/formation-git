@@ -130,10 +130,10 @@ git tag
 **Sortie typique :**
 
 ```
-v0.5.0
-v0.9.0
-v1.0.0
-v1.1.0
+v0.5.0  
+v0.9.0  
+v1.0.0  
+v1.1.0  
 v2.0.0
 ```
 
@@ -174,8 +174,8 @@ git show v1.0.0
 **Sortie typique :**
 
 ```
-tag v1.0.0
-Tagger: Alice Martin <alice@example.com>
+tag v1.0.0  
+Tagger: Alice Martin <alice@example.com>  
 Date:   Mon Oct 15 14:30:00 2024 +0200
 
 Version 1.0.0 - Initial Release
@@ -184,8 +184,8 @@ Features:
 - User authentication
 - Payment processing
 
-commit a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6
-Author: Alice Martin <alice@example.com>
+commit a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6  
+Author: Alice Martin <alice@example.com>  
 Date:   Mon Oct 15 14:00:00 2024 +0200
 
     Final touches for v1.0
@@ -285,8 +285,8 @@ git checkout v1.0.0
 ```
 Note: switching to 'v1.0.0'.
 
-You are in 'detached HEAD' state. You can look around, make experimental
-changes and commit them, and you can discard any commits you make in this
+You are in 'detached HEAD' state. You can look around, make experimental  
+changes and commit them, and you can discard any commits you make in this  
 state without impacting any branches.
 ```
 
@@ -327,8 +327,8 @@ v2.4.1
 **Version 0.x.x** : Développement initial, API instable
 
 ```
-v0.1.0 → Première version expérimentale
-v0.2.0 → Ajout de fonctionnalités
+v0.1.0 → Première version expérimentale  
+v0.2.0 → Ajout de fonctionnalités  
 v0.9.0 → Version presque stable
 ```
 
@@ -341,21 +341,21 @@ v1.0.0 → API stable, prête pour la production
 **PATCH (x.x.1)** : Corrections de bugs rétrocompatibles
 
 ```
-v1.0.0 → v1.0.1 : Fix bug dans le login
+v1.0.0 → v1.0.1 : Fix bug dans le login  
 v1.0.1 → v1.0.2 : Fix typo dans les emails
 ```
 
 **MINOR (x.1.x)** : Nouvelles fonctionnalités rétrocompatibles
 
 ```
-v1.0.2 → v1.1.0 : Ajout de l'export PDF
+v1.0.2 → v1.1.0 : Ajout de l'export PDF  
 v1.1.0 → v1.2.0 : Ajout du dark mode
 ```
 
 **MAJOR (2.x.x)** : Changements incompatibles
 
 ```
-v1.2.0 → v2.0.0 : Refonte complète de l'API
+v1.2.0 → v2.0.0 : Refonte complète de l'API  
 v2.0.0 → v3.0.0 : Changement de framework
 ```
 
@@ -363,12 +363,12 @@ v2.0.0 → v3.0.0 : Changement de framework
 
 ```bash
 # Pre-release
-v1.0.0-alpha     # Version alpha (très instable)
-v1.0.0-beta      # Version beta (tests)
+v1.0.0-alpha     # Version alpha (très instable)  
+v1.0.0-beta      # Version beta (tests)  
 v1.0.0-rc.1      # Release candidate 1
 
 # Build metadata
-v1.0.0+20241015  # Avec date de build
+v1.0.0+20241015  # Avec date de build  
 v1.0.0+001       # Avec numéro de build
 ```
 
@@ -386,7 +386,7 @@ v1.0.0-alpha < v1.0.0-beta < v1.0.0-rc.1 < v1.0.0
 
 ```bash
 # Votre projet est prêt pour la production
-git checkout main
+git checkout main  
 git pull
 
 # Créer le tag de la première version stable
@@ -416,7 +416,7 @@ git checkout -b hotfix-1.0.1 v1.0.0
 
 # 2. Corriger le bug
 # ... modifications ...
-git add .
+git add .  
 git commit -m "fix: Critical security vulnerability"
 
 # 3. Créer le nouveau tag
@@ -426,12 +426,12 @@ Fixed:
 - Critical security vulnerability in auth module"
 
 # 4. Pousser
-git push origin hotfix-1.0.1
+git push origin hotfix-1.0.1  
 git push origin v1.0.1
 
 # 5. Merger dans main si nécessaire
-git checkout main
-git merge hotfix-1.0.1
+git checkout main  
+git merge hotfix-1.0.1  
 git push
 ```
 
@@ -439,15 +439,15 @@ git push
 
 ```bash
 # Version beta pour les tests
-git tag -a v2.0.0-beta -m "Version 2.0.0-beta - Testing release"
+git tag -a v2.0.0-beta -m "Version 2.0.0-beta - Testing release"  
 git push origin v2.0.0-beta
 
 # Après tests, release candidate
-git tag -a v2.0.0-rc.1 -m "Version 2.0.0-rc.1 - Release candidate"
+git tag -a v2.0.0-rc.1 -m "Version 2.0.0-rc.1 - Release candidate"  
 git push origin v2.0.0-rc.1
 
 # Après validation finale
-git tag -a v2.0.0 -m "Version 2.0.0 - Major release"
+git tag -a v2.0.0 -m "Version 2.0.0 - Major release"  
 git push origin v2.0.0
 ```
 
@@ -455,7 +455,7 @@ git push origin v2.0.0
 
 ```bash
 # Créer un tag de déploiement avec la date
-git tag -a deploy-prod-$(date +%Y%m%d) -m "Production deployment $(date +%Y-%m-%d)"
+git tag -a deploy-prod-$(date +%Y%m%d) -m "Production deployment $(date +%Y-%m-%d)"  
 git push origin deploy-prod-$(date +%Y%m%d)
 
 # Exemple : deploy-prod-20241015
@@ -503,7 +503,7 @@ gh release create v1.0.0 \
 
 ```bash
 # Créer un tag localement
-git tag -a v1.0.0 -m "Version 1.0.0"
+git tag -a v1.0.0 -m "Version 1.0.0"  
 git push origin v1.0.0
 
 # Créer la release via curl
@@ -582,18 +582,18 @@ git log v1.0.0..HEAD --oneline --pretty=format:"- %s"
 #!/bin/bash
 # generate-changelog.sh
 
-LAST_TAG=$(git describe --tags --abbrev=0)
+LAST_TAG=$(git describe --tags --abbrev=0)  
 CURRENT_VERSION=$1
 
-echo "## Version $CURRENT_VERSION"
-echo ""
-echo "### Features"
-git log $LAST_TAG..HEAD --oneline --grep="feat:" --pretty=format:"- %s"
-echo ""
-echo "### Bug Fixes"
-git log $LAST_TAG..HEAD --oneline --grep="fix:" --pretty=format:"- %s"
-echo ""
-echo "### Documentation"
+echo "## Version $CURRENT_VERSION"  
+echo ""  
+echo "### Features"  
+git log $LAST_TAG..HEAD --oneline --grep="feat:" --pretty=format:"- %s"  
+echo ""  
+echo "### Bug Fixes"  
+git log $LAST_TAG..HEAD --oneline --grep="fix:" --pretty=format:"- %s"  
+echo ""  
+echo "### Documentation"  
 git log $LAST_TAG..HEAD --oneline --grep="docs:" --pretty=format:"- %s"
 ```
 
@@ -609,14 +609,14 @@ chmod +x generate-changelog.sh
 **Conventional Changelog :**
 
 ```bash
-npm install -g conventional-changelog-cli
+npm install -g conventional-changelog-cli  
 conventional-changelog -p angular -i CHANGELOG.md -s
 ```
 
 **Standard Version :**
 
 ```bash
-npm install -g standard-version
+npm install -g standard-version  
 standard-version
 # Crée automatiquement le tag et met à jour CHANGELOG.md
 ```
@@ -631,13 +631,13 @@ standard-version
 
 ```bash
 # Bon : préfixe "v"
-v1.0.0
-v1.1.0
+v1.0.0  
+v1.1.0  
 v2.0.0
 
 # Éviter : mélange de formats
 1.0.0
-v1.1.0
+v1.1.0  
 release-2.0.0
 ```
 
@@ -655,8 +655,8 @@ git tag v1.0.0
 
 ```bash
 # Progression logique
-v1.0.0 → v1.0.1 (patch)
-v1.0.1 → v1.1.0 (minor)
+v1.0.0 → v1.0.1 (patch)  
+v1.0.1 → v1.1.0 (minor)  
 v1.1.0 → v2.0.0 (major)
 
 # Éviter : sauts illogiques
@@ -679,7 +679,7 @@ git tag -a v1.0.0 -m "Release"
 # Oops, il y a un bug !
 
 # Bonne pratique
-npm test          # ou votre commande de test
+npm test          # ou votre commande de test  
 npm run build     # vérifier que ça compile
 # Si tout est OK
 git tag -a v1.0.0 -m "Version 1.0.0"
@@ -712,8 +712,8 @@ git tag -a v1.0.0 -m "Version 1.0.0"
 
 ```bash
 # MAUVAIS : ne faites JAMAIS cela
-git tag -d v1.0.0
-git tag -a v1.0.0 -m "Updated message"
+git tag -d v1.0.0  
+git tag -a v1.0.0 -m "Updated message"  
 git push origin v1.0.0 --force
 
 # BON : créez un nouveau tag
@@ -785,8 +785,8 @@ git for-each-ref --sort=creatordate --format '%(refname:short) %(creatordate:sho
 **Sortie :**
 
 ```
-v1.0.0 2024-09-01
-v1.1.0 2024-09-15
+v1.0.0 2024-09-01  
+v1.1.0 2024-09-15  
 v2.0.0 2024-10-15
 ```
 

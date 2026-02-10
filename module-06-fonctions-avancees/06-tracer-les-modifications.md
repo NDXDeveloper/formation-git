@@ -43,12 +43,12 @@ git blame src/utils.js
 **Sortie typique :**
 
 ```
-a1b2c3d4 (Alice Martin  2024-09-15 10:30:45 +0200  1) function calculatePrice(items) {
-a1b2c3d4 (Alice Martin  2024-09-15 10:30:45 +0200  2)   let total = 0;
-e5f6g7h8 (Bob Durant    2024-10-01 14:22:11 +0200  3)   for (const item of items) {
-e5f6g7h8 (Bob Durant    2024-10-01 14:22:11 +0200  4)     total += item.price * item.quantity;
-a1b2c3d4 (Alice Martin  2024-09-15 10:30:45 +0200  5)   }
-i9j0k1l2 (Charlie Lee   2024-10-05 09:15:33 +0200  6)   return Math.round(total * 100) / 100;
+a1b2c3d4 (Alice Martin  2024-09-15 10:30:45 +0200  1) function calculatePrice(items) {  
+a1b2c3d4 (Alice Martin  2024-09-15 10:30:45 +0200  2)   let total = 0;  
+e5f6g7h8 (Bob Durant    2024-10-01 14:22:11 +0200  3)   for (const item of items) {  
+e5f6g7h8 (Bob Durant    2024-10-01 14:22:11 +0200  4)     total += item.price * item.quantity;  
+a1b2c3d4 (Alice Martin  2024-09-15 10:30:45 +0200  5)   }  
+i9j0k1l2 (Charlie Lee   2024-10-05 09:15:33 +0200  6)   return Math.round(total * 100) / 100;  
 a1b2c3d4 (Alice Martin  2024-09-15 10:30:45 +0200  7) }
 ```
 
@@ -222,7 +222,7 @@ cat > .git-blame-ignore-revs << 'EOF'
 a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6
 
 # Migration vers eslint
-q9r8s7t6u5v4w3x2y1z0a9b8c7d6e5f4
+q9r8s7t6u5v4w3x2y1z0a9b8c7d6e5f4  
 EOF
 ```
 
@@ -267,14 +267,14 @@ Cette commande trouve tous les commits qui ont ajouté ou supprimé le texte "ca
 **Sortie typique :**
 
 ```
-commit e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0
-Author: Bob Durant <bob@example.com>
+commit e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0  
+Author: Bob Durant <bob@example.com>  
 Date:   Tue Oct 1 14:22:11 2024 +0200
 
     Refactor price calculation
 
-commit a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6
-Author: Alice Martin <alice@example.com>
+commit a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6  
+Author: Alice Martin <alice@example.com>  
 Date:   Mon Sep 15 10:30:45 2024 +0200
 
     Add price calculation feature
@@ -293,13 +293,13 @@ L'option `-p` (patch) montre les modifications exactes dans chaque commit.
 **Exemple de sortie :**
 
 ```
-commit a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6
-Author: Alice Martin <alice@example.com>
+commit a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6  
+Author: Alice Martin <alice@example.com>  
 Date:   Mon Sep 15 10:30:45 2024 +0200
 
     Add price calculation feature
 
-diff --git a/src/utils.js b/src/utils.js
+diff --git a/src/utils.js b/src/utils.js  
 index abc123..def456 100644
 --- a/src/utils.js
 +++ b/src/utils.js
@@ -378,13 +378,13 @@ git log -S "calculatePrice" --name-only
 **Sortie :**
 
 ```
-commit e5f6g7h8...
-Author: Bob Durant
+commit e5f6g7h8...  
+Author: Bob Durant  
 Date: Tue Oct 1 14:22:11 2024
 
     Refactor price calculation
 
-src/utils.js
+src/utils.js  
 src/price.js
 ```
 
@@ -397,7 +397,7 @@ git log -S "calculatePrice" --oneline
 **Sortie :**
 
 ```
-e5f6g7h8 Refactor price calculation
+e5f6g7h8 Refactor price calculation  
 a1b2c3d4 Add price calculation feature
 ```
 

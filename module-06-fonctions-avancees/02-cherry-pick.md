@@ -181,12 +181,12 @@ Très utile pour la traçabilité !
 # Vous êtes sur develop et corrigez un bug
 git checkout develop
 # ... corrections dans fichier.js ...
-git add fichier.js
+git add fichier.js  
 git commit -m "Fix: correction calcul prix"
 # Commit créé : a1b2c3d
 
 # Le bug existe aussi en production (branche main)
-git checkout main
+git checkout main  
 git cherry-pick a1b2c3d
 # Le correctif est maintenant aussi sur main !
 
@@ -208,7 +208,7 @@ git checkout -b feature/nouvelle-fonctionnalite
 git cherry-pick e5f6g7h
 
 # Retourner sur main et annuler le commit
-git checkout main
+git checkout main  
 git reset --hard HEAD~1
 # Le commit est maintenant seulement sur la branche feature
 ```
@@ -221,7 +221,7 @@ git checkout v2.0
 # Commit de correction : x9y8z7w
 
 # Le bug existe aussi sur la version 1.5 encore maintenue
-git checkout v1.5
+git checkout v1.5  
 git cherry-pick x9y8z7w
 
 # La correction est maintenant aussi sur v1.5
@@ -238,7 +238,7 @@ git log feature/dashboard --oneline
 # q9p8o7n Initial dashboard
 
 # Sur main, récupérer seulement les commits voulus
-git checkout main
+git checkout main  
 git cherry-pick z9y8x7w w6v5u4t
 ```
 
@@ -300,11 +300,11 @@ Tout revient à l'état d'avant le cherry-pick.
 **Exemple visuel :**
 
 ```
-Cherry-pick :
-feature:  A---B---C---D
+Cherry-pick :  
+feature:  A---B---C---D  
 main:     A---E---F---C'  (seulement C est copié)
 
-Merge :
+Merge :  
 feature:  A---B---C---D
                \       \
 main:     A---E---F-----M  (tout B, C, D est intégré)
@@ -376,14 +376,14 @@ Voici un scénario complet pour bien comprendre :
 
 ```bash
 # 1. Créer une situation de départ
-git checkout -b feature/new-button
-echo "Button component" > button.js
-git add button.js
+git checkout -b feature/new-button  
+echo "Button component" > button.js  
+git add button.js  
 git commit -m "Add button component"
 # Commit créé : abc123
 
-echo "Button styles" > button.css
-git add button.css
+echo "Button styles" > button.css  
+git add button.css  
 git commit -m "Add button styles"
 # Commit créé : def456
 

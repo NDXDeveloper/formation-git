@@ -108,8 +108,8 @@ git stash list
 **Exemple de sortie :**
 
 ```
-stash@{0}: WIP on feature/login: a3f5d8e Ajout formulaire
-stash@{1}: WIP on feature/design: 2b8c4fa Modification CSS
+stash@{0}: WIP on feature/login: a3f5d8e Ajout formulaire  
+stash@{1}: WIP on feature/design: 2b8c4fa Modification CSS  
 stash@{2}: WIP on main: 9e1f3bc Correctif urgent
 ```
 
@@ -255,18 +255,18 @@ git stash branch feature/correctif-menu
 
 ```bash
 # Vous travaillez sur feature/nouvelle-page
-git add .
+git add .  
 git stash -m "Page de contact en cours"
 
 # Correction urgente sur main
 git checkout main
 # ... correctifs ...
-git add .
-git commit -m "Fix: correction bug critique"
+git add .  
+git commit -m "Fix: correction bug critique"  
 git push
 
 # Retour au travail
-git checkout feature/nouvelle-page
+git checkout feature/nouvelle-page  
 git stash pop
 ```
 
@@ -316,7 +316,7 @@ git stash pop
 
 # Résoudre le conflit dans index.html
 # Ensuite :
-git add index.html
+git add index.html  
 git stash drop
 ```
 

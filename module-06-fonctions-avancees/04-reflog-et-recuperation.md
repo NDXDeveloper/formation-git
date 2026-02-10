@@ -53,11 +53,11 @@ git reflog show HEAD
 **Exemple de sortie :**
 
 ```
-a1b2c3d HEAD@{0}: commit: Add payment feature
-e4f5g6h HEAD@{1}: commit: Add login feature
-h7i8j9k HEAD@{2}: checkout: moving from main to feature/login
-k0l1m2n HEAD@{3}: reset: moving to HEAD~1
-n3o4p5q HEAD@{4}: commit: WIP broken code
+a1b2c3d HEAD@{0}: commit: Add payment feature  
+e4f5g6h HEAD@{1}: commit: Add login feature  
+h7i8j9k HEAD@{2}: checkout: moving from main to feature/login  
+k0l1m2n HEAD@{3}: reset: moving to HEAD~1  
+n3o4p5q HEAD@{4}: commit: WIP broken code  
 q6r7s8t HEAD@{5}: commit: Fix bug in header
 ```
 
@@ -83,9 +83,9 @@ La notation `HEAD@{n}` représente la position de HEAD il y a n actions.
 **Exemple visuel :**
 
 ```
-Action actuelle   → HEAD@{0}: commit: Add feature C
-Action précédente → HEAD@{1}: commit: Add feature B
-Il y a 2 actions  → HEAD@{2}: commit: Add feature A
+Action actuelle   → HEAD@{0}: commit: Add feature C  
+Action précédente → HEAD@{1}: commit: Add feature B  
+Il y a 2 actions  → HEAD@{2}: commit: Add feature A  
 Il y a 3 actions  → HEAD@{3}: checkout: moving from main to feature
 ```
 
@@ -271,8 +271,8 @@ git checkout -b feature/login h7i8j9k
 Par défaut, `git reflog` montre l'historique de HEAD, mais vous pouvez voir le reflog de n'importe quelle branche :
 
 ```bash
-git reflog show main
-git reflog show feature/login
+git reflog show main  
+git reflog show feature/login  
 git reflog show origin/main
 ```
 
@@ -314,8 +314,8 @@ git reflog --date=relative
 **Exemple de sortie :**
 
 ```
-a1b2c3d HEAD@{2 minutes ago}: commit: Add feature
-e4f5g6h HEAD@{1 hour ago}: commit: Fix bug
+a1b2c3d HEAD@{2 minutes ago}: commit: Add feature  
+e4f5g6h HEAD@{1 hour ago}: commit: Fix bug  
 h7i8j9k HEAD@{3 hours ago}: checkout: moving from main to feature
 ```
 
@@ -404,9 +404,9 @@ Voici un exemple réaliste et complet :
 
 ```bash
 # Vous travaillez sur une fonctionnalité importante
-git checkout -b feature/payment
-git commit -m "Add payment processing"
-git commit -m "Add payment validation"
+git checkout -b feature/payment  
+git commit -m "Add payment processing"  
+git commit -m "Add payment validation"  
 git commit -m "Add payment tests"
 
 # Vous revenez sur main
@@ -450,7 +450,7 @@ git log --oneline
 ✅ **Créez des branches de backup avant des opérations risquées** :
 
 ```bash
-git branch backup-$(date +%Y%m%d)
+git branch backup-$(date +%Y%m%d)  
 git rebase -i HEAD~10
 ```
 
