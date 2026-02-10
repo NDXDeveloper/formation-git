@@ -484,8 +484,8 @@ git push origin main
 3. Vous voyez votre workflow en cours d'exécution !
 4. Cliquez dessus pour voir les logs en temps réel
 
-**Si les tests passent :** ✅ Checkmark verte
-**Si les tests échouent :** ❌ Croix rouge + détails de l'erreur
+**Si les tests passent :** ✅ Checkmark verte  
+**Si les tests échouent :** ❌ Croix rouge + détails de l'erreur  
 
 ---
 
