@@ -50,7 +50,7 @@ git status
 
 Résultat :
 ```
-On branch main
+On branch main  
 nothing to commit, working tree clean
 ```
 
@@ -72,7 +72,7 @@ git status
 
 Résultat :
 ```
-On branch main
+On branch main  
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 	nouveau.txt
@@ -96,7 +96,7 @@ git status
 
 Résultat :
 ```
-On branch main
+On branch main  
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
@@ -121,7 +121,7 @@ git status
 
 Résultat :
 ```
-On branch main
+On branch main  
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
 	modified:   README.md
@@ -137,7 +137,7 @@ Changes to be committed:
 
 ```bash
 # Modifier, ajouter
-echo "Première modification" >> fichier.txt
+echo "Première modification" >> fichier.txt  
 git add fichier.txt
 
 # Modifier à nouveau
@@ -148,7 +148,7 @@ git status
 
 Résultat :
 ```
-On branch main
+On branch main  
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
 	modified:   fichier.txt
@@ -178,7 +178,7 @@ git status
 
 Résultat :
 ```
-On branch main
+On branch main  
 Changes not staged for commit:
   (use "git add/rm <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
@@ -203,7 +203,7 @@ Résultat :
 ```
 M  fichier_staged.txt
  M fichier_modifié.txt
-MM fichier_modifié_deux_fois.txt
+MM fichier_modifié_deux_fois.txt  
 A  nouveau_staged.txt
 ?? fichier_non_suivi.txt
  D fichier_supprimé.txt
@@ -391,7 +391,7 @@ git rm fichier.txt
 
 ```bash
 # Mauvaise méthode : renommer manuellement
-mv ancien_nom.txt nouveau_nom.txt
+mv ancien_nom.txt nouveau_nom.txt  
 git add ancien_nom.txt nouveau_nom.txt
 
 # Bonne méthode : utiliser git mv
@@ -470,8 +470,8 @@ git commit -m "Correction du bug de validation du formulaire"
 
 **Mauvais** :
 ```bash
-git commit -m "Fix"
-git commit -m "Modifications"
+git commit -m "Fix"  
+git commit -m "Modifications"  
 git commit -m "Update"
 ```
 
@@ -481,14 +481,14 @@ Comme si vous donniez un ordre au code.
 
 **Bon** :
 ```bash
-git commit -m "Ajouter la fonctionnalité de recherche"
-git commit -m "Corriger l'erreur 404 sur la page produits"
+git commit -m "Ajouter la fonctionnalité de recherche"  
+git commit -m "Corriger l'erreur 404 sur la page produits"  
 git commit -m "Refactoriser la fonction de calcul"
 ```
 
 **Acceptable (mais moins conventionnel)** :
 ```bash
-git commit -m "Ajout de la fonctionnalité de recherche"
+git commit -m "Ajout de la fonctionnalité de recherche"  
 git commit -m "Correction de l'erreur 404"
 ```
 
@@ -519,13 +519,13 @@ Cela ouvre votre éditeur de texte configuré. Vous pouvez alors écrire :
 ```
 Titre du commit (50 caractères max)
 
-Description détaillée du commit si nécessaire.
+Description détaillée du commit si nécessaire.  
 Vous pouvez écrire sur plusieurs lignes.
 
 - Vous pouvez utiliser des listes
 - Pour expliquer plusieurs points
 
-Le titre et le corps sont séparés par une ligne vide.
+Le titre et le corps sont séparés par une ligne vide.  
 Le corps peut contenir plusieurs paragraphes.
 ```
 
@@ -544,7 +544,7 @@ git commit -am "Message"
 
 **Équivaut à** :
 ```bash
-git add -u
+git add -u  
 git commit -m "Message"
 ```
 
@@ -562,7 +562,7 @@ Si vous venez de faire un commit et que vous réalisez :
 
 ```bash
 # Oublié d'ajouter un fichier
-git add fichier_oublie.txt
+git add fichier_oublie.txt  
 git commit --amend --no-edit
 
 # Modifier le message du dernier commit
@@ -647,7 +647,7 @@ git status
 ```
 
 ```
-On branch main
+On branch main  
 nothing to commit, working tree clean
 ```
 
@@ -657,7 +657,7 @@ Vous travaillez normalement : créez, modifiez, supprimez des fichiers dans votr
 
 ```bash
 # Par exemple
-echo "Nouveau contenu" > fichier1.txt
+echo "Nouveau contenu" > fichier1.txt  
 echo "Modification" >> fichier2.txt
 ```
 
@@ -668,7 +668,7 @@ git status
 ```
 
 ```
-On branch main
+On branch main  
 Changes not staged for commit:
 	modified:   fichier2.txt
 
@@ -694,7 +694,7 @@ git diff HEAD
 
 ```bash
 # Option 1 : ajouter fichier par fichier
-git add fichier1.txt
+git add fichier1.txt  
 git add fichier2.txt
 
 # Option 2 : tout ajouter
@@ -708,7 +708,7 @@ git status
 ```
 
 ```
-On branch main
+On branch main  
 Changes to be committed:
 	new file:   fichier1.txt
 	modified:   fichier2.txt
@@ -741,7 +741,7 @@ git status
 ```
 
 ```
-On branch main
+On branch main  
 nothing to commit, working tree clean
 ```
 
@@ -752,7 +752,7 @@ git log --oneline
 ```
 
 ```
-a1b2c3d Ajout de fichier1 et modification de fichier2
+a1b2c3d Ajout de fichier1 et modification de fichier2  
 e4f5g6h Commit précédent
 ...
 ```
@@ -795,8 +795,8 @@ Chaque commit devrait représenter **une seule chose**.
 
 **Bon** : Trois commits séparés
 ```bash
-git commit -m "Ajout de la validation côté client"
-git commit -m "Ajout de la validation côté serveur"
+git commit -m "Ajout de la validation côté client"  
+git commit -m "Ajout de la validation côté serveur"  
 git commit -m "Ajout des tests de validation"
 ```
 
@@ -811,10 +811,10 @@ Avant chaque `git add` ou `git commit`, utilisez `git status` pour être sûr de
 
 ```bash
 # Toujours faire
-git status      # Voir ce qui a changé
-git add ...     # Ajouter
-git status      # Vérifier ce qui est staged
-git commit ...  # Commiter
+git status      # Voir ce qui a changé  
+git add ...     # Ajouter  
+git status      # Vérifier ce qui est staged  
+git commit ...  # Commiter  
 git status      # Confirmer que c'est propre
 ```
 
@@ -835,9 +835,9 @@ Cela vous évite de commiter des choses inattendues (fichiers de debug, console.
 
 **Préférez** :
 ```bash
-git add .
-git status
-git diff --staged
+git add .  
+git status  
+git diff --staged  
 git commit -m "Message"
 ```
 
@@ -886,15 +886,15 @@ Si vous devez absolument commiter du travail incomplet, indiquez-le clairement d
 # Situation : fichierA.js, fichierB.js et fichierC.js modifiés
 
 # Commit 1
-git add fichierA.js
+git add fichierA.js  
 git commit -m "Refactorisation de la fonction A"
 
 # Commit 2
-git add fichierB.js
+git add fichierB.js  
 git commit -m "Ajout de la fonction B"
 
 # Commit 3
-git add fichierC.js
+git add fichierC.js  
 git commit -m "Correction de bug dans C"
 ```
 
@@ -905,7 +905,7 @@ git commit -m "Correction de bug dans C"
 git commit -m "Ajout de la page de contact"
 
 # Oups, j'ai oublié contact.css
-git add contact.css
+git add contact.css  
 git commit --amend --no-edit
 
 # Le commit est modifié pour inclure contact.css
@@ -983,39 +983,39 @@ Voici les commandes essentielles pour vérifier votre travail à chaque étape :
 ### git status
 
 ```bash
-git status           # Affichage complet
-git status -s        # Affichage court
-git status -sb       # Court + info branche
+git status           # Affichage complet  
+git status -s        # Affichage court  
+git status -sb       # Court + info branche  
 git status -uno      # Sans fichiers untracked
 ```
 
 ### git add
 
 ```bash
-git add fichier.txt         # Un fichier
-git add .                   # Tous les fichiers du dossier courant
-git add -A                  # Tous les changements du dépôt
-git add -u                  # Seulement fichiers déjà suivis
-git add -p                  # Mode interactif
+git add fichier.txt         # Un fichier  
+git add .                   # Tous les fichiers du dossier courant  
+git add -A                  # Tous les changements du dépôt  
+git add -u                  # Seulement fichiers déjà suivis  
+git add -p                  # Mode interactif  
 git add *.js                # Tous les .js
 ```
 
 ### git commit
 
 ```bash
-git commit -m "Message"              # Commit avec message
-git commit -am "Message"             # Add + commit (fichiers suivis)
-git commit --amend                   # Modifier dernier commit
-git commit --amend --no-edit         # Amend sans changer message
+git commit -m "Message"              # Commit avec message  
+git commit -am "Message"             # Add + commit (fichiers suivis)  
+git commit --amend                   # Modifier dernier commit  
+git commit --amend --no-edit         # Amend sans changer message  
 git commit -v                        # Voir diff dans l'éditeur
 ```
 
 ### Annulation
 
 ```bash
-git restore fichier.txt              # Annuler modifications locales
-git restore --staged fichier.txt     # Unstage un fichier
-git reset HEAD~1                     # Annuler dernier commit (garder modifs)
+git restore fichier.txt              # Annuler modifications locales  
+git restore --staged fichier.txt     # Unstage un fichier  
+git reset HEAD~1                     # Annuler dernier commit (garder modifs)  
 git reset --hard HEAD~1              # Annuler dernier commit (tout supprimer)
 ```
 

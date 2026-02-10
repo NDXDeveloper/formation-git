@@ -33,20 +33,20 @@ git log
 Résultat typique :
 
 ```
-commit a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0
-Author: Marie Dupont <marie@email.com>
+commit a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0  
+Author: Marie Dupont <marie@email.com>  
 Date:   Wed Oct 15 14:30:00 2025 +0200
 
     Ajout de la fonctionnalité de recherche
 
-commit d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4
-Author: Jean Martin <jean@email.com>
+commit d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4  
+Author: Jean Martin <jean@email.com>  
 Date:   Wed Oct 15 10:15:00 2025 +0200
 
     Correction du bug de pagination
 
-commit x5y6z7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p3q4
-Author: Marie Dupont <marie@email.com>
+commit x5y6z7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p3q4  
+Author: Marie Dupont <marie@email.com>  
 Date:   Tue Oct 14 16:45:00 2025 +0200
 
     Refactorisation du code CSS
@@ -71,9 +71,9 @@ git log --oneline
 Résultat :
 
 ```
-a1b2c3d Ajout de la fonctionnalité de recherche
-d5e6f7g Correction du bug de pagination
-x5y6z7a Refactorisation du code CSS
+a1b2c3d Ajout de la fonctionnalité de recherche  
+d5e6f7g Correction du bug de pagination  
+x5y6z7a Refactorisation du code CSS  
 e8f9g0h Mise à jour de la documentation
 ```
 
@@ -101,10 +101,10 @@ git log --oneline -5
 Résultat :
 
 ```
-a1b2c3d Ajout de la fonctionnalité de recherche
-d5e6f7g Correction du bug de pagination
-x5y6z7a Refactorisation du code CSS
-e8f9g0h Mise à jour de la documentation
+a1b2c3d Ajout de la fonctionnalité de recherche  
+d5e6f7g Correction du bug de pagination  
+x5y6z7a Refactorisation du code CSS  
+e8f9g0h Mise à jour de la documentation  
 i1j2k3l Ajout des tests unitaires
 ```
 
@@ -129,7 +129,7 @@ git log --until="2025-10-15"
 git log --since="2025-10-01" --until="2025-10-15"
 
 # Format relatif
-git log --since="3 days ago"
+git log --since="3 days ago"  
 git log --since="1 month ago"
 ```
 
@@ -220,8 +220,8 @@ git log --stat
 Résultat :
 
 ```
-commit a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0
-Author: Marie Dupont <marie@email.com>
+commit a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0  
+Author: Marie Dupont <marie@email.com>  
 Date:   Wed Oct 15 14:30:00 2025 +0200
 
     Ajout de la fonctionnalité de recherche
@@ -284,8 +284,8 @@ git log --pretty=format:"%h - %an, %ar : %s"
 Résultat :
 
 ```
-a1b2c3d - Marie Dupont, 2 hours ago : Ajout de la fonctionnalité de recherche
-d5e6f7g - Jean Martin, 5 hours ago : Correction du bug de pagination
+a1b2c3d - Marie Dupont, 2 hours ago : Ajout de la fonctionnalité de recherche  
+d5e6f7g - Jean Martin, 5 hours ago : Correction du bug de pagination  
 x5y6z7a - Marie Dupont, 1 day ago : Refactorisation du code CSS
 ```
 
@@ -376,8 +376,8 @@ git show
 Résultat :
 
 ```
-commit a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0
-Author: Marie Dupont <marie@email.com>
+commit a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0  
+Author: Marie Dupont <marie@email.com>  
 Date:   Wed Oct 15 14:30:00 2025 +0200
 
     Ajout de la fonctionnalité de recherche
@@ -385,8 +385,8 @@ Date:   Wed Oct 15 14:30:00 2025 +0200
     Implémentation d'une barre de recherche avec suggestions
     en temps réel. Utilise l'API de recherche du backend.
 
-diff --git a/src/search.js b/src/search.js
-new file mode 100644
+diff --git a/src/search.js b/src/search.js  
+new file mode 100644  
 index 0000000..e5f6a8b
 --- /dev/null
 +++ b/src/search.js
@@ -422,7 +422,7 @@ git show HEAD~2
 git show HEAD~3
 
 # Autre notation équivalente
-git show HEAD^   # Parent immédiat (= HEAD~1)
+git show HEAD^   # Parent immédiat (= HEAD~1)  
 git show HEAD^^  # Grand-parent (= HEAD~2)
 ```
 
@@ -441,8 +441,8 @@ git show --stat a1b2c3d
 Résultat :
 
 ```
-commit a1b2c3d...
-Author: Marie Dupont <marie@email.com>
+commit a1b2c3d...  
+Author: Marie Dupont <marie@email.com>  
 Date:   Wed Oct 15 14:30:00 2025 +0200
 
     Ajout de la fonctionnalité de recherche
@@ -462,12 +462,12 @@ git show --name-only a1b2c3d
 Résultat :
 
 ```
-commit a1b2c3d...
+commit a1b2c3d...  
 Author: Marie Dupont <marie@email.com>
 ...
 
-src/search.js
-src/index.html
+src/search.js  
+src/index.html  
 tests/search.test.js
 ```
 
@@ -483,8 +483,8 @@ Résultat :
 commit a1b2c3d...
 ...
 
-A	src/search.js
-M	src/index.html
+A	src/search.js  
+M	src/index.html  
 A	tests/search.test.js
 ```
 
@@ -544,7 +544,7 @@ Compare le **Working Directory** avec la **Staging Area**.
 Résultat :
 
 ```diff
-diff --git a/README.md b/README.md
+diff --git a/README.md b/README.md  
 index e5f6a8b..d1e2f3g 100644
 --- a/README.md
 +++ b/README.md
@@ -658,8 +658,8 @@ git diff --name-only
 Résultat :
 
 ```
-README.md
-src/index.js
+README.md  
+src/index.js  
 src/style.css
 ```
 
@@ -672,8 +672,8 @@ git diff --name-status
 Résultat :
 
 ```
-M	README.md
-M	src/index.js
+M	README.md  
+M	src/index.js  
 M	src/style.css
 ```
 
@@ -737,7 +737,7 @@ git diff main...feature-x
 Comprendre la sortie de `git diff` est essentiel. Décortiquons un exemple :
 
 ```diff
-diff --git a/src/index.js b/src/index.js
+diff --git a/src/index.js b/src/index.js  
 index e5f6a8b..d1e2f3g 100644
 --- a/src/index.js
 +++ b/src/index.js
@@ -864,10 +864,10 @@ git config --global alias.recent "log --oneline -10"
 Ensuite, vous pouvez utiliser :
 
 ```bash
-git lg
-git ls
-git last
-git today
+git lg  
+git ls  
+git last  
+git today  
 git recent
 ```
 
@@ -953,42 +953,42 @@ Ces commandes sont "en lecture seule" : elles ne modifient rien. Explorez librem
 ### git log
 
 ```bash
-git log                              # Historique complet
-git log --oneline                    # Format compact
-git log -n 5                         # 5 derniers commits
-git log --since="2 weeks ago"        # Par date
-git log --author="Marie"             # Par auteur
-git log --grep="bug"                 # Recherche dans messages
-git log --graph --all                # Vue graphique
-git log --stat                       # Avec statistiques
-git log -p                           # Avec diff complet
-git log fichier.txt                  # Historique d'un fichier
+git log                              # Historique complet  
+git log --oneline                    # Format compact  
+git log -n 5                         # 5 derniers commits  
+git log --since="2 weeks ago"        # Par date  
+git log --author="Marie"             # Par auteur  
+git log --grep="bug"                 # Recherche dans messages  
+git log --graph --all                # Vue graphique  
+git log --stat                       # Avec statistiques  
+git log -p                           # Avec diff complet  
+git log fichier.txt                  # Historique d'un fichier  
 git log -S "texte"                   # Recherche dans contenu
 ```
 
 ### git show
 
 ```bash
-git show                             # Dernier commit
-git show a1b2c3d                     # Commit spécifique
-git show HEAD~2                      # Commit d'il y a 2 commits
-git show --stat a1b2c3d              # Avec statistiques
-git show --name-only a1b2c3d         # Seulement noms fichiers
+git show                             # Dernier commit  
+git show a1b2c3d                     # Commit spécifique  
+git show HEAD~2                      # Commit d'il y a 2 commits  
+git show --stat a1b2c3d              # Avec statistiques  
+git show --name-only a1b2c3d         # Seulement noms fichiers  
 git show a1b2c3d:fichier.txt         # Fichier à un commit donné
 ```
 
 ### git diff
 
 ```bash
-git diff                             # Modifications non stagées
-git diff --staged                    # Modifications stagées
-git diff HEAD                        # Toutes modifications locales
-git diff a1b2c3d                     # Avec un commit
-git diff a1b2c3d d5e6f7g              # Entre deux commits
-git diff main                        # Avec une branche
-git diff --stat                      # Vue statistique
-git diff --name-only                 # Seulement noms fichiers
-git diff -w                          # Ignorer espaces
+git diff                             # Modifications non stagées  
+git diff --staged                    # Modifications stagées  
+git diff HEAD                        # Toutes modifications locales  
+git diff a1b2c3d                     # Avec un commit  
+git diff a1b2c3d d5e6f7g              # Entre deux commits  
+git diff main                        # Avec une branche  
+git diff --stat                      # Vue statistique  
+git diff --name-only                 # Seulement noms fichiers  
+git diff -w                          # Ignorer espaces  
 git diff fichier.txt                 # Un fichier spécifique
 ```
 

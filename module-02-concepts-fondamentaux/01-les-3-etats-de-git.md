@@ -349,7 +349,7 @@ git add .
 #### 5. Vérifier ce qui est staged
 
 ```bash
-git status
+git status  
 git diff --staged
 ```
 
@@ -374,32 +374,32 @@ Voici un récapitulatif des commandes qui font transiter les fichiers entre les 
 ### Du Working Directory vers la Staging Area
 
 ```bash
-git add <fichier>      # Ajouter un fichier spécifique
-git add .              # Ajouter tous les fichiers
-git add *.txt          # Ajouter tous les fichiers .txt
-git add -A             # Ajouter tous les fichiers (y compris suppressions)
+git add <fichier>      # Ajouter un fichier spécifique  
+git add .              # Ajouter tous les fichiers  
+git add *.txt          # Ajouter tous les fichiers .txt  
+git add -A             # Ajouter tous les fichiers (y compris suppressions)  
 git add -u             # Ajouter seulement les fichiers déjà suivis
 ```
 
 ### De la Staging Area vers le Repository
 
 ```bash
-git commit -m "Message"           # Commit avec message court
-git commit                         # Ouvre l'éditeur pour un message long
+git commit -m "Message"           # Commit avec message court  
+git commit                         # Ouvre l'éditeur pour un message long  
 git commit -am "Message"           # Add + commit pour fichiers suivis
 ```
 
 ### Retour arrière : de la Staging Area vers le Working Directory
 
 ```bash
-git restore --staged <fichier>    # Unstage un fichier (moderne)
+git restore --staged <fichier>    # Unstage un fichier (moderne)  
 git reset HEAD <fichier>           # Unstage un fichier (classique)
 ```
 
 ### Retour arrière : annuler les modifications du Working Directory
 
 ```bash
-git restore <fichier>              # Restaurer la version du dernier commit
+git restore <fichier>              # Restaurer la version du dernier commit  
 git checkout -- <fichier>          # Ancienne syntaxe
 ```
 
@@ -415,15 +415,15 @@ Vous avez modifié plusieurs fichiers, mais vous voulez les commiter séparémen
 
 ```bash
 # Modifier plusieurs fichiers
-echo "Fix bug" >> bug.js
+echo "Fix bug" >> bug.js  
 echo "New feature" >> feature.js
 
 # Ajouter et commiter le fix séparément
-git add bug.js
+git add bug.js  
 git commit -m "Correction du bug d'authentification"
 
 # Puis la feature
-git add feature.js
+git add feature.js  
 git commit -m "Ajout de la fonctionnalité de recherche"
 ```
 
@@ -606,7 +606,7 @@ Les trois états de Git constituent le cœur du fonctionnement de l'outil :
 ```
 Modifier → git add → git commit
    ↓          ↓          ↓
-Working    Staging   Repository
+Working    Staging   Repository  
 Directory   Area
 ```
 

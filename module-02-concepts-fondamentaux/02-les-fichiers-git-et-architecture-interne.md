@@ -266,9 +266,9 @@ git cat-file -p HEAD
 
 Résultat :
 ```
-tree f1a2b3c4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0
-parent d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4
-author Marie Dupont <marie@email.com> 1729000000 +0200
+tree f1a2b3c4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0  
+parent d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4  
+author Marie Dupont <marie@email.com> 1729000000 +0200  
 committer Marie Dupont <marie@email.com> 1729000000 +0200
 
 Ajout de la page d'accueil
@@ -363,9 +363,9 @@ ls .git/hooks/
 Vous verrez des fichiers avec `.sample` :
 
 ```
-applypatch-msg.sample
-commit-msg.sample
-pre-commit.sample
+applypatch-msg.sample  
+commit-msg.sample  
+pre-commit.sample  
 pre-push.sample
 ...
 ```
@@ -411,7 +411,7 @@ Si deux fichiers ont le même contenu, Git ne les stocke qu'**une seule fois**.
 
 ```bash
 # Créer deux fichiers identiques
-echo "Même contenu" > fichier1.txt
+echo "Même contenu" > fichier1.txt  
 echo "Même contenu" > fichier2.txt
 
 # Les ajouter
@@ -497,7 +497,7 @@ Faisons un petit exercice pour voir comment tout est lié.
 echo "Contenu de test" > test.txt
 
 # L'ajouter et commiter
-git add test.txt
+git add test.txt  
 git commit -m "Test d'architecture"
 ```
 
@@ -521,8 +521,8 @@ git cat-file -p a1b2c3d
 
 Résultat :
 ```
-tree e4f5g6h7...
-parent i8j9k0l1...
+tree e4f5g6h7...  
+parent i8j9k0l1...  
 author Marie Dupont <marie@email.com>
 ...
 Test d'architecture

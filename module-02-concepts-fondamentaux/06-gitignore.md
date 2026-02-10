@@ -41,7 +41,7 @@ Untracked files:
 
 **Avec .gitignore** :
 ```
-On branch main
+On branch main  
 nothing to commit, working tree clean
 ```
 
@@ -109,7 +109,7 @@ node_modules/
 Le fichier `.gitignore` lui-même **doit être versionné** :
 
 ```bash
-git add .gitignore
+git add .gitignore  
 git commit -m "Ajout du fichier .gitignore"
 ```
 
@@ -125,7 +125,7 @@ Ainsi, tous les membres de l'équipe bénéficieront des mêmes règles d'ignora
 
 ```gitignore
 # Ignorer un fichier précis
-secret.txt
+secret.txt  
 config.local.json
 ```
 
@@ -265,14 +265,14 @@ logs/**/*.log
 
 ```gitignore
 # Dépendances
-node_modules/
-npm-debug.log
-yarn-error.log
+node_modules/  
+npm-debug.log  
+yarn-error.log  
 package-lock.json  # Optionnel, selon la politique de l'équipe
 
 # Build
-dist/
-build/
+dist/  
+build/  
 out/
 
 # Cache
@@ -310,14 +310,14 @@ __pycache__/
 *$py.class
 
 # Distribution / packaging
-build/
+build/  
 dist/
 *.egg-info/
 .eggs/
 
 # Virtual environments
-venv/
-env/
+venv/  
+env/  
 ENV/
 .venv/
 
@@ -359,8 +359,8 @@ htmlcov/
 *.rar
 
 # Maven
-target/
-pom.xml.tag
+target/  
+pom.xml.tag  
 pom.xml.releaseBackup
 
 # Gradle
@@ -386,7 +386,7 @@ build/
 
 ```gitignore
 # Dépendances Composer
-vendor/
+vendor/  
 composer.lock  # Optionnel
 
 # Variables d'environnement
@@ -394,7 +394,7 @@ composer.lock  # Optionnel
 .env.local
 
 # Cache
-cache/
+cache/  
 storage/logs/
 
 # IDE
@@ -420,7 +420,7 @@ Thumbs.db
 *.lib
 
 # Build
-build/
+build/  
 cmake-build-*/
 
 # Débogage
@@ -438,12 +438,12 @@ cmake-build-*/
 
 ```gitignore
 # Dépendances
-node_modules/
+node_modules/  
 vendor/
 
 # Build / Compilation
-dist/
-build/
+dist/  
+build/  
 public/build/
 
 # Cache
@@ -466,7 +466,7 @@ logs/
 
 # Fichiers système
 .DS_Store
-Thumbs.db
+Thumbs.db  
 desktop.ini
 
 # Fichiers temporaires
@@ -560,8 +560,8 @@ config.json
 ### Windows
 
 ```gitignore
-Thumbs.db
-ehthumbs.db
+Thumbs.db  
+ehthumbs.db  
 Desktop.ini
 $RECYCLE.BIN/
 *.lnk
@@ -838,10 +838,10 @@ Extension **gitignore** : Ajoute automatiquement des templates dans l'éditeur.
 
 ```bash
 # Ordre recommandé
-git init
+git init  
 touch .gitignore
 # Configurer .gitignore
-git add .gitignore
+git add .gitignore  
 git commit -m "Initial commit avec .gitignore"
 ```
 
@@ -853,11 +853,11 @@ Ne réinventez pas la roue. Utilisez des templates existants et adaptez-les.
 
 ```gitignore
 # === Dépendances ===
-node_modules/
+node_modules/  
 vendor/
 
 # === Build ===
-dist/
+dist/  
 build/
 
 # === Configuration locale ===
@@ -877,7 +877,7 @@ Les commentaires aident à comprendre pourquoi certains fichiers sont ignorés.
 **Bon** :
 ```gitignore
 # Fichiers de configuration locale
-config.local.json
+config.local.json  
 settings.json
 ```
 
@@ -933,7 +933,7 @@ git rm --cached .env
 echo ".env" >> .gitignore
 
 # Amender le dernier commit
-git add .gitignore
+git add .gitignore  
 git commit --amend
 ```
 
@@ -962,7 +962,7 @@ node_modules/
 coverage/
 
 # Production
-build/
+build/  
 dist/
 
 # Misc
@@ -973,8 +973,8 @@ dist/
 .env.test.local
 .env.production.local
 
-npm-debug.log*
-yarn-debug.log*
+npm-debug.log*  
+yarn-debug.log*  
 yarn-error.log*
 
 # IDE
@@ -994,8 +994,8 @@ __pycache__/
 *.so
 
 # Virtual environment
-venv/
-env/
+venv/  
+env/  
 ENV/
 
 # Django
@@ -1034,9 +1034,9 @@ htmlcov/
 .env
 .env.backup
 .phpunit.result.cache
-Homestead.json
-Homestead.yaml
-npm-debug.log
+Homestead.json  
+Homestead.yaml  
+npm-debug.log  
 yarn-error.log
 
 # IDE

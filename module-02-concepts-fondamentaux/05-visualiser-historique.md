@@ -746,7 +746,7 @@ Un commit est **accessible** depuis un autre si on peut l'atteindre en remontant
 ```
 A ─ B ─ C ─ D
 
-D est accessible depuis C, B, A
+D est accessible depuis C, B, A  
 C est accessible depuis B, A
 ```
 

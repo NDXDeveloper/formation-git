@@ -135,8 +135,8 @@ Les sections sont conçues pour être lues séquentiellement. Chacune s'appuie s
 
 ```bash
 # Créez un projet de test pour ce module
-mkdir git-module2-test
-cd git-module2-test
+mkdir git-module2-test  
+cd git-module2-test  
 git init
 ```
 
@@ -159,7 +159,7 @@ Si un concept vous semble flou, relisez la section précédente. Tout est interc
 Au fur et à mesure, créez des raccourcis pour les commandes que vous utilisez souvent :
 
 ```bash
-git config --global alias.st status
+git config --global alias.st status  
 git config --global alias.lg "log --graph --oneline --all"
 ```
 
@@ -186,7 +186,7 @@ git status
 
 **Résultats affichés** :
 ```
-On branch main
+On branch main  
 nothing to commit, working tree clean
 ```
 
