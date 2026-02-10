@@ -13,8 +13,8 @@ Ces deux outils sont essentiels pour :
 - Suivre l'évolution d'une partie spécifique du code
 - Déboguer en remontant à l'origine d'un problème
 
-**git blame** répond à : "Qui a modifié cette ligne ?"
-**git log -S** répond à : "Quand ce texte est-il apparu ou disparu ?"
+**git blame** répond à : "Qui a modifié cette ligne ?"  
+**git log -S** répond à : "Quand ce texte est-il apparu ou disparu ?"  
 
 ---
 
