@@ -36,7 +36,7 @@ Nous allons créer un **site portfolio personnel** qui présentera vos compéten
 
 ```bash
 # Créez un dossier pour votre projet
-mkdir mon-portfolio
+mkdir mon-portfolio  
 cd mon-portfolio
 
 # Vérifiez que vous êtes dans le bon dossier
@@ -60,7 +60,7 @@ ls -la
 
 ```bash
 # Si pas déjà fait globalement
-git config user.name "Votre Nom"
+git config user.name "Votre Nom"  
 git config user.email "votre.email@example.com"
 
 # Vérifier la configuration
@@ -71,14 +71,14 @@ git config --list
 
 ```bash
 # Créer les dossiers
-mkdir css
-mkdir js
+mkdir css  
+mkdir js  
 mkdir images
 
 # Créer les fichiers de base
-touch index.html
-touch css/style.css
-touch js/script.js
+touch index.html  
+touch css/style.css  
+touch js/script.js  
 touch README.md
 ```
 
@@ -240,11 +240,11 @@ git checkout -b feature/html-structure
 
 ```bash
 # Vérifier les modifications
-git status
+git status  
 git diff
 
 # Ajouter et commiter
-git add index.html
+git add index.html  
 git commit -m "Add: Structure HTML de base avec sections principales"
 
 # Vérifier l'historique
@@ -275,7 +275,7 @@ git branch -d feature/html-structure
 
 ```bash
 # Créer une branche depuis develop
-git checkout develop
+git checkout develop  
 git checkout -b feature/css-styling
 ```
 
@@ -384,19 +384,19 @@ footer {
 
 ```bash
 # Commit 1 : Styles de base
-git add css/style.css
+git add css/style.css  
 git commit -m "Add: Styles de base et reset CSS"
 
 # Modifiez le CSS pour ajouter les styles du header
-git add css/style.css
+git add css/style.css  
 git commit -m "Add: Styles pour le header et la navigation"
 
 # Continuez avec les sections
-git add css/style.css
+git add css/style.css  
 git commit -m "Add: Styles pour les sections hero et compétences"
 
 # Footer
-git add css/style.css
+git add css/style.css  
 git commit -m "Add: Styles pour le footer"
 ```
 
@@ -423,7 +423,7 @@ git branch -d feature/css-styling
 ### Étape 4.1 : Branche pour JavaScript
 
 ```bash
-git checkout develop
+git checkout develop  
 git checkout -b feature/javascript-interactions
 ```
 
@@ -474,12 +474,12 @@ console.log('Portfolio chargé avec succès !');
 **Commiter :**
 
 ```bash
-git add js/script.js
+git add js/script.js  
 git commit -m "Add: Smooth scroll et animations au scroll"
 
 # Merger dans develop
-git checkout develop
-git merge feature/javascript-interactions
+git checkout develop  
+git merge feature/javascript-interactions  
 git branch -d feature/javascript-interactions
 ```
 
@@ -575,7 +575,7 @@ MIT License - Voir le fichier LICENSE pour plus de détails
 **Commiter :**
 
 ```bash
-git add README.md
+git add README.md  
 git commit -m "Docs: Mise à jour du README avec informations complètes"
 ```
 
@@ -607,11 +607,11 @@ git remote -v
 
 ```bash
 # Pousser la branche main
-git checkout main
+git checkout main  
 git push -u origin main
 
 # Pousser la branche develop
-git checkout develop
+git checkout develop  
 git push -u origin develop
 
 # Pousser les tags
@@ -653,7 +653,7 @@ Maintenant, ajoutons une section projets avec des cartes.
 
 ```bash
 # S'assurer d'être à jour
-git checkout develop
+git checkout develop  
 git pull origin develop
 
 # Créer la branche feature
@@ -764,11 +764,11 @@ git checkout -b feature/projects-cards
 
 ```bash
 # Commit pour le HTML
-git add index.html
+git add index.html  
 git commit -m "Add: Cartes de projets dans la section projets"
 
 # Commit pour le CSS
-git add css/style.css
+git add css/style.css  
 git commit -m "Add: Styles pour les cartes de projets"
 ```
 
@@ -776,14 +776,14 @@ git commit -m "Add: Styles pour les cartes de projets"
 
 ```bash
 # Merger dans develop
-git checkout develop
+git checkout develop  
 git merge feature/projects-cards
 
 # Pousser sur GitHub
 git push origin develop
 
 # Merger dans main pour déployer
-git checkout main
+git checkout main  
 git merge develop
 
 # Créer un nouveau tag
@@ -805,7 +805,7 @@ Imaginons qu'un utilisateur signale un bug : les liens de navigation ne fonction
 
 ```bash
 # Partir de main (production)
-git checkout main
+git checkout main  
 git pull origin main
 
 # Créer une branche hotfix
@@ -835,7 +835,7 @@ git checkout -b hotfix/mobile-navigation
 **Commiter :**
 
 ```bash
-git add css/style.css
+git add css/style.css  
 git commit -m "Fix: Navigation responsive sur mobile"
 ```
 
@@ -843,7 +843,7 @@ git commit -m "Fix: Navigation responsive sur mobile"
 
 ```bash
 # Merger dans main
-git checkout main
+git checkout main  
 git merge hotfix/mobile-navigation
 
 # Créer un tag patch
@@ -853,8 +853,8 @@ git tag -a v1.1.1 -m "Hotfix 1.1.1: Correction navigation mobile"
 git push origin main --tags
 
 # Merger aussi dans develop
-git checkout develop
-git merge hotfix/mobile-navigation
+git checkout develop  
+git merge hotfix/mobile-navigation  
 git push origin develop
 
 # Supprimer la branche hotfix
@@ -868,7 +868,7 @@ git branch -d hotfix/mobile-navigation
 ### Étape 10.1 : Créer un fichier LICENSE
 
 ```bash
-git checkout develop
+git checkout develop  
 touch LICENSE
 ```
 
@@ -879,30 +879,30 @@ MIT License
 
 Copyright (c) 2025 Votre Nom
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
+Permission is hereby granted, free of charge, to any person obtaining a copy  
+of this software and associated documentation files (the "Software"), to deal  
+in the Software without restriction, including without limitation the rights  
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell  
+copies of the Software, and to permit persons to whom the Software is  
 furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
+The above copyright notice and this permission notice shall be included in all  
 copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR  
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,  
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE  
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER  
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,  
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE  
 SOFTWARE.
 ```
 
 **Commiter :**
 
 ```bash
-git add LICENSE
-git commit -m "Docs: Ajout de la licence MIT"
+git add LICENSE  
+git commit -m "Docs: Ajout de la licence MIT"  
 git push origin develop
 ```
 
@@ -912,12 +912,12 @@ git push origin develop
 
 ```bash
 # En début de journée
-git checkout develop
+git checkout develop  
 git pull origin develop
 
 # En fin de journée (ou après chaque fonctionnalité)
-git add .
-git commit -m "Description de ce qui a été fait"
+git add .  
+git commit -m "Description de ce qui a été fait"  
 git push origin develop
 ```
 
@@ -927,34 +927,34 @@ git push origin develop
 
 ### Commandes de base
 ```bash
-git init                          # Initialiser le dépôt
-git status                        # Vérifier l'état
-git add .                         # Ajouter tous les fichiers
-git commit -m "message"           # Créer un commit
+git init                          # Initialiser le dépôt  
+git status                        # Vérifier l'état  
+git add .                         # Ajouter tous les fichiers  
+git commit -m "message"           # Créer un commit  
 git log --oneline --graph         # Voir l'historique
 ```
 
 ### Gestion des branches
 ```bash
-git branch                        # Lister les branches
-git checkout -b nom-branche       # Créer et basculer
-git merge nom-branche             # Fusionner une branche
+git branch                        # Lister les branches  
+git checkout -b nom-branche       # Créer et basculer  
+git merge nom-branche             # Fusionner une branche  
 git branch -d nom-branche         # Supprimer une branche
 ```
 
 ### Travail avec GitHub
 ```bash
-git remote add origin URL         # Lier le dépôt distant
-git push -u origin main           # Pousser la première fois
-git push origin nom-branche       # Pousser une branche
-git pull origin nom-branche       # Récupérer les changements
+git remote add origin URL         # Lier le dépôt distant  
+git push -u origin main           # Pousser la première fois  
+git push origin nom-branche       # Pousser une branche  
+git pull origin nom-branche       # Récupérer les changements  
 git push origin --tags            # Pousser les tags
 ```
 
 ### Versioning
 ```bash
-git tag -a v1.0.0 -m "message"   # Créer un tag annoté
-git tag                           # Lister les tags
+git tag -a v1.0.0 -m "message"   # Créer un tag annoté  
+git tag                           # Lister les tags  
 git show v1.0.0                   # Voir les détails d'un tag
 ```
 
@@ -1008,11 +1008,11 @@ develop ────●──●───●───●──●───●─
 ### 2. Messages de commit significatifs
 ```bash
 # ❌ Mauvais
-git commit -m "fix"
+git commit -m "fix"  
 git commit -m "update"
 
 # ✅ Bon
-git commit -m "Add: Section projets avec cartes"
+git commit -m "Add: Section projets avec cartes"  
 git commit -m "Fix: Navigation responsive sur mobile"
 ```
 
@@ -1040,23 +1040,23 @@ Voici des idées pour continuer à développer votre portfolio :
 
 ### Fonctionnalités
 ```bash
-git checkout -b feature/dark-mode        # Mode sombre
-git checkout -b feature/blog             # Section blog
-git checkout -b feature/contact-form     # Formulaire de contact
-git checkout -b feature/animations       # Animations avancées
+git checkout -b feature/dark-mode        # Mode sombre  
+git checkout -b feature/blog             # Section blog  
+git checkout -b feature/contact-form     # Formulaire de contact  
+git checkout -b feature/animations       # Animations avancées  
 git checkout -b feature/multi-language   # Site multilingue
 ```
 
 ### Optimisations
 ```bash
-git checkout -b optimize/images          # Optimiser les images
-git checkout -b optimize/performance     # Améliorer les performances
+git checkout -b optimize/images          # Optimiser les images  
+git checkout -b optimize/performance     # Améliorer les performances  
 git checkout -b refactor/css             # Refactoriser le CSS
 ```
 
 ### Documentation
 ```bash
-git checkout -b docs/contributing        # Guide de contribution
+git checkout -b docs/contributing        # Guide de contribution  
 git checkout -b docs/deployment          # Guide de déploiement
 ```
 

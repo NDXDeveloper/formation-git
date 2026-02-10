@@ -31,23 +31,23 @@ Pour ces simulations, nous allons créer un dépôt d'entraînement dédié.
 
 ```bash
 # Créer un dossier pour les simulations
-mkdir git-simulations
+mkdir git-simulations  
 cd git-simulations
 
 # Initialiser Git
 git init
 
 # Configurer (si nécessaire)
-git config user.name "Votre Nom"
+git config user.name "Votre Nom"  
 git config user.email "votre.email@example.com"
 ```
 
 **💡 Astuce :** Vous pouvez réinitialiser complètement à tout moment avec :
 ```bash
-cd ..
-rm -rf git-simulations
-mkdir git-simulations
-cd git-simulations
+cd ..  
+rm -rf git-simulations  
+mkdir git-simulations  
+cd git-simulations  
 git init
 ```
 
@@ -67,8 +67,8 @@ Deux développeurs modifient la même ligne dans le même fichier.
 
 ```bash
 # Créer un fichier
-echo "Version originale du projet" > fichier.txt
-git add fichier.txt
+echo "Version originale du projet" > fichier.txt  
+git add fichier.txt  
 git commit -m "Initial: Version originale"
 ```
 
@@ -79,8 +79,8 @@ git commit -m "Initial: Version originale"
 git checkout -b feature-a
 
 # Modifier le fichier
-echo "Version modifiée par développeur A" > fichier.txt
-git add fichier.txt
+echo "Version modifiée par développeur A" > fichier.txt  
+git add fichier.txt  
 git commit -m "Feature A: Modification du fichier"
 
 # Retourner sur main
@@ -90,8 +90,8 @@ git checkout main
 git checkout -b feature-b
 
 # Modifier la MÊME ligne différemment
-echo "Version modifiée par développeur B" > fichier.txt
-git add fichier.txt
+echo "Version modifiée par développeur B" > fichier.txt  
+git add fichier.txt  
 git commit -m "Feature B: Modification du fichier"
 ```
 
@@ -195,27 +195,27 @@ Trois fichiers modifiés différemment sur deux branches.
 git checkout main
 
 # Créer trois fichiers
-echo "Config A: valeur1" > config.txt
-echo "Code A: fonction1" > code.txt
-echo "Data A: données1" > data.txt
-git add .
+echo "Config A: valeur1" > config.txt  
+echo "Code A: fonction1" > code.txt  
+echo "Data A: données1" > data.txt  
+git add .  
 git commit -m "Initial: Trois fichiers"
 
 # Branche developer-1
-git checkout -b developer-1
-echo "Config B: valeur2" > config.txt
-echo "Code B: fonction2" > code.txt
-echo "Data B: données2" > data.txt
-git add .
+git checkout -b developer-1  
+echo "Config B: valeur2" > config.txt  
+echo "Code B: fonction2" > code.txt  
+echo "Data B: données2" > data.txt  
+git add .  
 git commit -m "Dev1: Modifications globales"
 
 # Branche developer-2 (depuis main)
-git checkout main
-git checkout -b developer-2
-echo "Config C: valeur3" > config.txt
-echo "Code C: fonction3" > code.txt
-echo "Data C: données3" > data.txt
-git add .
+git checkout main  
+git checkout -b developer-2  
+echo "Config C: valeur3" > config.txt  
+echo "Code C: fonction3" > code.txt  
+echo "Data C: données3" > data.txt  
+git add .  
 git commit -m "Dev2: Modifications globales"
 
 # Merger developer-1 dans developer-2
@@ -240,11 +240,11 @@ nano config.txt  # ou votre éditeur
 git add config.txt
 
 # 2. Résoudre code.txt
-nano code.txt
+nano code.txt  
 git add code.txt
 
 # 3. Résoudre data.txt
-nano data.txt
+nano data.txt  
 git add data.txt
 
 # 4. Vérifier qu'il ne reste aucun conflit
@@ -270,36 +270,36 @@ Rebaser une branche qui a divergé.
 
 ```bash
 # Partir d'une base propre
-git checkout main
-echo "Ligne 1" > rebase-test.txt
-git add rebase-test.txt
+git checkout main  
+echo "Ligne 1" > rebase-test.txt  
+git add rebase-test.txt  
 git commit -m "Initial: Ligne 1"
 
 # Créer une feature
-git checkout -b feature-rebase
-echo "Ligne 2 (feature)" >> rebase-test.txt
-git add rebase-test.txt
+git checkout -b feature-rebase  
+echo "Ligne 2 (feature)" >> rebase-test.txt  
+git add rebase-test.txt  
 git commit -m "Feature: Ajout ligne 2"
 
-echo "Ligne 3 (feature)" >> rebase-test.txt
-git add rebase-test.txt
+echo "Ligne 3 (feature)" >> rebase-test.txt  
+git add rebase-test.txt  
 git commit -m "Feature: Ajout ligne 3"
 
 # Pendant ce temps, main avance
-git checkout main
-echo "Ligne 2 (main)" >> rebase-test.txt
-git add rebase-test.txt
+git checkout main  
+echo "Ligne 2 (main)" >> rebase-test.txt  
+git add rebase-test.txt  
 git commit -m "Main: Ajout ligne 2 différente"
 
 # Maintenant, rebaser feature sur main
-git checkout feature-rebase
+git checkout feature-rebase  
 git rebase main
 ```
 
 **Résultat :** Conflit pendant le rebase !
 
 ```
-CONFLICT (content): Merge conflict in rebase-test.txt
+CONFLICT (content): Merge conflict in rebase-test.txt  
 error: could not apply [commit]... Feature: Ajout ligne 2
 ```
 
@@ -338,60 +338,60 @@ git rebase --continue
 
 ```bash
 # Réinitialiser
-cd ..
-rm -rf git-simulations
-mkdir git-simulations
-cd git-simulations
+cd ..  
+rm -rf git-simulations  
+mkdir git-simulations  
+cd git-simulations  
 git init
 
 # Commit initial
-echo "A" > file.txt
-git add file.txt
+echo "A" > file.txt  
+git add file.txt  
 git commit -m "A: Initial commit"
 
 # Branche feature-1
-git checkout -b feature-1
-echo "B" >> file.txt
-git add file.txt
+git checkout -b feature-1  
+echo "B" >> file.txt  
+git add file.txt  
 git commit -m "B: Feature 1 step 1"
 
-echo "C" >> file.txt
-git add file.txt
+echo "C" >> file.txt  
+git add file.txt  
 git commit -m "C: Feature 1 step 2"
 
 # Retour sur main, nouvelle branche
-git checkout main
-git checkout -b feature-2
-echo "D" >> file.txt
-git add file.txt
+git checkout main  
+git checkout -b feature-2  
+echo "D" >> file.txt  
+git add file.txt  
 git commit -m "D: Feature 2 step 1"
 
 # Merger feature-1 dans feature-2
 git merge feature-1
 # Résoudre le conflit si nécessaire
-git add file.txt
+git add file.txt  
 git commit -m "E: Merge feature-1 into feature-2"
 
 # Continuer sur feature-2
-echo "F" >> file.txt
-git add file.txt
+echo "F" >> file.txt  
+git add file.txt  
 git commit -m "F: Feature 2 step 2"
 
 # Retour sur main
-git checkout main
-echo "G" >> file.txt
-git add file.txt
+git checkout main  
+echo "G" >> file.txt  
+git add file.txt  
 git commit -m "G: Hotfix on main"
 
 # Nouvelle branche depuis main
-git checkout -b feature-3
-echo "H" >> file.txt
-git add file.txt
+git checkout -b feature-3  
+echo "H" >> file.txt  
+git add file.txt  
 git commit -m "H: Feature 3"
 
 # Merger feature-2 dans feature-3
-git merge feature-2
-git add file.txt
+git merge feature-2  
+git add file.txt  
 git commit -m "I: Merge feature-2 into feature-3"
 ```
 
@@ -423,7 +423,7 @@ git log --oneline --graph --all --decorate
 
 ```bash
 # 1. Revenir au commit "B"
-git checkout [hash-du-commit-B]
+git checkout [hash-du-commit-B]  
 cat file.txt  # Voir le contenu à ce moment
 
 # 2. Revenir sur feature-3
@@ -452,27 +452,27 @@ git blame file.txt
 
 ```bash
 # Nouvelle simulation
-cd ..
-rm -rf git-simulations
-mkdir git-simulations
-cd git-simulations
+cd ..  
+rm -rf git-simulations  
+mkdir git-simulations  
+cd git-simulations  
 git init
 
 # Fichier initial
-echo "Important data" > data.txt
-git add data.txt
+echo "Important data" > data.txt  
+git add data.txt  
 git commit -m "Add data file"
 
 # Branche 1 : Supprime le fichier
-git checkout -b branch-delete
-git rm data.txt
+git checkout -b branch-delete  
+git rm data.txt  
 git commit -m "Delete data.txt (obsolete)"
 
 # Branche 2 : Modifie le fichier
-git checkout main
-git checkout -b branch-modify
-echo "More important data" >> data.txt
-git add data.txt
+git checkout main  
+git checkout -b branch-modify  
+echo "More important data" >> data.txt  
+git add data.txt  
 git commit -m "Update data.txt with new info"
 
 # Tenter de merger
@@ -481,7 +481,7 @@ git merge branch-delete
 
 **Résultat :**
 ```
-CONFLICT (modify/delete): data.txt deleted in branch-delete
+CONFLICT (modify/delete): data.txt deleted in branch-delete  
 and modified in HEAD. Version HEAD of data.txt left in tree.
 ```
 
@@ -489,21 +489,21 @@ and modified in HEAD. Version HEAD of data.txt left in tree.
 
 **Option 1 - Garder le fichier modifié :**
 ```bash
-git add data.txt
+git add data.txt  
 git commit -m "Merge: Kept modified data.txt"
 ```
 
 **Option 2 - Confirmer la suppression :**
 ```bash
-git rm data.txt
+git rm data.txt  
 git commit -m "Merge: Confirmed deletion of data.txt"
 ```
 
 **Option 3 - Créer un nouveau fichier avec nouveau nom :**
 ```bash
-mv data.txt data-legacy.txt
-git add data-legacy.txt
-git rm data.txt
+mv data.txt data-legacy.txt  
+git add data-legacy.txt  
+git rm data.txt  
 git commit -m "Merge: Renamed data.txt to data-legacy.txt"
 ```
 
@@ -517,19 +517,19 @@ git commit -m "Merge: Renamed data.txt to data-legacy.txt"
 
 ```bash
 # Nouvelle simulation
-cd ..
-rm -rf git-simulations
-mkdir git-simulations
-cd git-simulations
+cd ..  
+rm -rf git-simulations  
+mkdir git-simulations  
+cd git-simulations  
 git init
 
 # Base commune
-echo "Base" > app.txt
-git add app.txt
+echo "Base" > app.txt  
+git add app.txt  
 git commit -m "Initial app"
 
 # Branche dev-alice : 5 commits
-git checkout -b dev-alice
+git checkout -b dev-alice  
 for i in {1..5}; do
   echo "Alice change $i" >> app.txt
   git add app.txt
@@ -537,8 +537,8 @@ for i in {1..5}; do
 done
 
 # Branche dev-bob : 5 commits différents
-git checkout main
-git checkout -b dev-bob
+git checkout main  
+git checkout -b dev-bob  
 for i in {1..5}; do
   echo "Bob change $i" >> app.txt
   git add app.txt
@@ -570,12 +570,12 @@ git log --oneline --graph --all
 **Stratégie 1 - Merge (préserve l'historique) :**
 
 ```bash
-git checkout dev-alice
+git checkout dev-alice  
 git merge dev-bob
 
 # Résoudre les conflits
-nano app.txt
-git add app.txt
+nano app.txt  
+git add app.txt  
 git commit -m "Merge dev-bob into dev-alice"
 ```
 
@@ -583,13 +583,13 @@ git commit -m "Merge dev-bob into dev-alice"
 
 ```bash
 # Alternative : rebase (historique plus propre)
-git checkout dev-bob
+git checkout dev-bob  
 git rebase dev-alice
 
 # Résoudre les conflits un par un pour chaque commit
 # Pour chaque conflit :
-nano app.txt
-git add app.txt
+nano app.txt  
+git add app.txt  
 git rebase --continue
 ```
 
@@ -634,29 +634,29 @@ Vous voulez un seul commit d'une branche, pas toute la branche.
 
 ```bash
 # Nouvelle simulation
-cd ..
-rm -rf git-simulations
-mkdir git-simulations
-cd git-simulations
+cd ..  
+rm -rf git-simulations  
+mkdir git-simulations  
+cd git-simulations  
 git init
 
 # Base
-echo "Version 1" > feature.txt
-git add feature.txt
+echo "Version 1" > feature.txt  
+git add feature.txt  
 git commit -m "Initial feature"
 
 # Branche avec plusieurs commits
-git checkout -b experimental
-echo "Version 2 - experimental" > feature.txt
-git add feature.txt
+git checkout -b experimental  
+echo "Version 2 - experimental" > feature.txt  
+git add feature.txt  
 git commit -m "Exp: Version 2"
 
-echo "Version 3 - experimental" > feature.txt
-git add feature.txt
+echo "Version 3 - experimental" > feature.txt  
+git add feature.txt  
 git commit -m "Exp: Version 3"
 
-echo "Version 4 - experimental" > feature.txt
-git add feature.txt
+echo "Version 4 - experimental" > feature.txt  
+git add feature.txt  
 git commit -m "Exp: Version 4"
 
 # Noter le hash du commit "Version 3"
@@ -664,9 +664,9 @@ git log --oneline
 # Exemple : abc1234 Exp: Version 3
 
 # Retour sur main, développement parallèle
-git checkout main
-echo "Version 2 - main" > feature.txt
-git add feature.txt
+git checkout main  
+echo "Version 2 - main" > feature.txt  
+git add feature.txt  
 git commit -m "Main: Version 2"
 
 # Cherry-pick uniquement le commit Version 3
@@ -683,7 +683,7 @@ CONFLICT (content): Merge conflict in feature.txt
 
 ```bash
 # Résoudre le conflit
-nano feature.txt
+nano feature.txt  
 git add feature.txt
 
 # Continuer le cherry-pick
@@ -703,26 +703,26 @@ git log --oneline --graph --all
 
 ```bash
 # Nouvelle simulation
-cd ..
-rm -rf git-simulations
-mkdir git-simulations
-cd git-simulations
+cd ..  
+rm -rf git-simulations  
+mkdir git-simulations  
+cd git-simulations  
 git init
 
 # Setup
-echo "Stable code" > app.js
-git add app.js
+echo "Stable code" > app.js  
+git add app.js  
 git commit -m "Stable version"
 
 # Branche buggy
-git checkout -b buggy-feature
-echo "Buggy code with errors" > app.js
-git add app.js
+git checkout -b buggy-feature  
+echo "Buggy code with errors" > app.js  
+git add app.js  
 git commit -m "Add buggy feature"
 
 # Merger dans main (oups!)
-git checkout main
-git merge buggy-feature
+git checkout main  
+git merge buggy-feature  
 git commit -m "Merge buggy-feature"
 
 # Réaliser l'erreur
@@ -776,31 +776,31 @@ git checkout backup-avant-annulation
 
 ```bash
 # Nouvelle simulation
-cd ..
-rm -rf git-simulations
-mkdir git-simulations
-cd git-simulations
+cd ..  
+rm -rf git-simulations  
+mkdir git-simulations  
+cd git-simulations  
 git init
 
 # Plusieurs commits mal organisés
-echo "Feature start" > feature.js
-git add feature.js
+echo "Feature start" > feature.js  
+git add feature.js  
 git commit -m "Start feature"
 
-echo "Fix typo" >> feature.js
-git add feature.js
+echo "Fix typo" >> feature.js  
+git add feature.js  
 git commit -m "fix"
 
-echo "More code" >> feature.js
-git add feature.js
+echo "More code" >> feature.js  
+git add feature.js  
 git commit -m "wip"
 
-echo "Another fix" >> feature.js
-git add feature.js
+echo "Another fix" >> feature.js  
+git add feature.js  
 git commit -m "oops"
 
-echo "Final version" >> feature.js
-git add feature.js
+echo "Final version" >> feature.js  
+git add feature.js  
 git commit -m "done"
 
 # Historique actuel (pas terrible)
@@ -808,10 +808,10 @@ git log --oneline
 ```
 
 ```
-abc123 done
-def456 oops
-ghi789 wip
-jkl012 fix
+abc123 done  
+def456 oops  
+ghi789 wip  
+jkl012 fix  
 mno345 Start feature
 ```
 
@@ -825,27 +825,27 @@ git rebase -i HEAD~4
 **L'éditeur s'ouvre avec :**
 
 ```
-pick jkl012 fix
-pick ghi789 wip
-pick def456 oops
+pick jkl012 fix  
+pick ghi789 wip  
+pick def456 oops  
 pick abc123 done
 ```
 
 **Modifier en :**
 
 ```
-pick jkl012 fix
-squash ghi789 wip
-squash def456 oops
+pick jkl012 fix  
+squash ghi789 wip  
+squash def456 oops  
 squash abc123 done
 ```
 
 Ou encore mieux :
 
 ```
-pick jkl012 fix
-fixup ghi789 wip
-fixup def456 oops
+pick jkl012 fix  
+fixup ghi789 wip  
+fixup def456 oops  
 fixup abc123 done
 ```
 
@@ -862,18 +862,18 @@ git log --oneline
 ```
 
 ```
-xyz789 fix (contient maintenant tout le travail)
+xyz789 fix (contient maintenant tout le travail)  
 mno345 Start feature
 ```
 
 **Autres options de rebase interactif :**
 
 ```
-pick   = utiliser le commit
-reword = utiliser le commit, mais modifier le message
-edit   = utiliser le commit, mais s'arrêter pour amender
-squash = utiliser le commit, mais fusionner avec le précédent
-fixup  = comme squash, mais ignorer le message de ce commit
+pick   = utiliser le commit  
+reword = utiliser le commit, mais modifier le message  
+edit   = utiliser le commit, mais s'arrêter pour amender  
+squash = utiliser le commit, mais fusionner avec le précédent  
+fixup  = comme squash, mais ignorer le message de ce commit  
 drop   = supprimer le commit
 ```
 
@@ -887,23 +887,23 @@ drop   = supprimer le commit
 
 ```bash
 # Nouvelle simulation
-cd ..
-rm -rf git-simulations
-mkdir git-simulations
-cd git-simulations
+cd ..  
+rm -rf git-simulations  
+mkdir git-simulations  
+cd git-simulations  
 git init
 
 # Travail important
-echo "Work 1" > important.txt
-git add important.txt
+echo "Work 1" > important.txt  
+git add important.txt  
 git commit -m "Important work 1"
 
-echo "Work 2" >> important.txt
-git add important.txt
+echo "Work 2" >> important.txt  
+git add important.txt  
 git commit -m "Important work 2"
 
-echo "Work 3" >> important.txt
-git add important.txt
+echo "Work 3" >> important.txt  
+git add important.txt  
 git commit -m "Important work 3"
 
 # Oups! Reset trop loin par accident
@@ -934,7 +934,7 @@ git reflog
 git reset --hard def5678  # Hash de "Important work 3"
 
 # Option 2 : Créer une branche depuis ce commit
-git branch recuperation def5678
+git branch recuperation def5678  
 git checkout recuperation
 
 # Vérifier
@@ -954,28 +954,28 @@ git log --oneline
 
 ```bash
 # Nouvelle simulation
-cd ..
-rm -rf git-simulations
-mkdir git-simulations
-cd git-simulations
+cd ..  
+rm -rf git-simulations  
+mkdir git-simulations  
+cd git-simulations  
 git init
 
 # Créer un "faux" fichier binaire (pour la démo)
-echo "Binary content version 1" > image.bin
-git add image.bin
+echo "Binary content version 1" > image.bin  
+git add image.bin  
 git commit -m "Add binary file"
 
 # Branche 1
-git checkout -b branch-a
-echo "Binary content version A" > image.bin
-git add image.bin
+git checkout -b branch-a  
+echo "Binary content version A" > image.bin  
+git add image.bin  
 git commit -m "Update binary file (A)"
 
 # Branche 2
-git checkout main
-git checkout -b branch-b
-echo "Binary content version B" > image.bin
-git add image.bin
+git checkout main  
+git checkout -b branch-b  
+echo "Binary content version B" > image.bin  
+git add image.bin  
 git commit -m "Update binary file (B)"
 
 # Merger
@@ -994,13 +994,13 @@ CONFLICT (content): Merge conflict in image.bin
 
 ```bash
 # Option 1 : Garder la version actuelle (branch-b)
-git checkout --ours image.bin
-git add image.bin
+git checkout --ours image.bin  
+git add image.bin  
 git commit -m "Merge: Kept branch-b version of binary"
 
 # Option 2 : Garder la version entrante (branch-a)
-git checkout --theirs image.bin
-git add image.bin
+git checkout --theirs image.bin  
+git add image.bin  
 git commit -m "Merge: Kept branch-a version of binary"
 ```
 
@@ -1020,8 +1020,8 @@ git log --oneline --graph --all --decorate
 git blame fichier.txt
 
 # Trouver le commit qui a introduit un bug
-git bisect start
-git bisect bad          # Le commit actuel est mauvais
+git bisect start  
+git bisect bad          # Le commit actuel est mauvais  
 git bisect good abc123  # Ce vieux commit était bon
 # Git vous aide à trouver le commit problématique
 
@@ -1035,7 +1035,7 @@ git merge-base branche1 branche2
 git log branche1..branche2
 
 # Rechercher dans l'historique
-git log --grep="mot-clé"
+git log --grep="mot-clé"  
 git log -S"fonction_recherchée"  # Chercher dans le code
 ```
 

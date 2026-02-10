@@ -112,7 +112,7 @@ git remote -v
 
 Vous devriez voir :
 ```
-origin  https://github.com/votre-nom/projet.git (fetch)
+origin  https://github.com/votre-nom/projet.git (fetch)  
 origin  https://github.com/votre-nom/projet.git (push)
 ```
 
@@ -130,9 +130,9 @@ git remote -v
 
 Maintenant vous avez :
 ```
-origin    https://github.com/votre-nom/projet.git (fetch)
-origin    https://github.com/votre-nom/projet.git (push)
-upstream  https://github.com/utilisateur-original/projet.git (fetch)
+origin    https://github.com/votre-nom/projet.git (fetch)  
+origin    https://github.com/votre-nom/projet.git (push)  
+upstream  https://github.com/utilisateur-original/projet.git (fetch)  
 upstream  https://github.com/utilisateur-original/projet.git (push)
 ```
 
@@ -148,7 +148,7 @@ upstream  https://github.com/utilisateur-original/projet.git (push)
 
 ```bash
 # Assurez-vous d'être sur main et à jour
-git checkout main
+git checkout main  
 git pull upstream main
 
 # Créez une nouvelle branche avec un nom descriptif
@@ -180,8 +180,8 @@ Suivez les instructions du README pour installer le projet localement :
 
 ```bash
 # Exemples courants (selon le projet)
-npm install          # Pour JavaScript/Node.js
-pip install -r requirements.txt   # Pour Python
+npm install          # Pour JavaScript/Node.js  
+pip install -r requirements.txt   # Pour Python  
 bundle install       # Pour Ruby
 ```
 
@@ -195,7 +195,7 @@ bundle install       # Pour Ruby
 
 ```bash
 # Lancez les tests (si le projet en a)
-npm test           # JavaScript
+npm test           # JavaScript  
 pytest             # Python
 ./gradlew test     # Java
 ```
@@ -209,7 +209,7 @@ pytest             # Python
 ### Vérifiez ce qui a changé
 
 ```bash
-git status
+git status  
 git diff
 ```
 
@@ -233,7 +233,7 @@ git commit -m "Fix: Correction de la faute de frappe dans README"
 ```
 Type: Résumé court (50 caractères max)
 
-Description détaillée si nécessaire (72 caractères par ligne).
+Description détaillée si nécessaire (72 caractères par ligne).  
 Expliquez POURQUOI ce changement, pas seulement CE QUI change.
 
 Fixes #42
@@ -253,7 +253,7 @@ Fixes #42
 ```bash
 git commit -m "Fix: Corrige l'erreur de division par zéro dans calculate()
 
-Le cas n = 0 n'était pas géré, causant un crash.
+Le cas n = 0 n'était pas géré, causant un crash.  
 Ajout d'une vérification avant la division.
 
 Fixes #42"
@@ -262,7 +262,7 @@ Fixes #42"
 ```bash
 git commit -m "Docs: Ajoute des exemples d'utilisation dans README
 
-Les utilisateurs ne comprenaient pas comment démarrer.
+Les utilisateurs ne comprenaient pas comment démarrer.  
 Ajout de 3 exemples concrets avec code."
 ```
 
@@ -323,8 +323,8 @@ J'ai remarqué cette faute en lisant la documentation.
 
 **Lier une issue** (si applicable) :
 ```
-Fixes #42
-Closes #42
+Fixes #42  
+Closes #42  
 Resolves #42
 ```
 
@@ -361,7 +361,7 @@ git checkout fix-typo-readme
 # 2. Faites les modifications demandées
 
 # 3. Commitez
-git add .
+git add .  
 git commit -m "Applique les suggestions de revue"
 
 # 4. Poussez (pas besoin de -u cette fois)
@@ -380,12 +380,12 @@ git push origin fix-typo-readme
 **Exemples de réponses :**
 
 ```markdown
-Merci pour la revue ! J'ai appliqué vos suggestions.
+Merci pour la revue ! J'ai appliqué vos suggestions.  
 Pouvez-vous vérifier si c'est mieux maintenant ?
 ```
 
 ```markdown
-Je ne suis pas sûr de comprendre ce que vous voulez dire.
+Je ne suis pas sûr de comprendre ce que vous voulez dire.  
 Pourriez-vous me donner un exemple de ce que vous attendez ?
 ```
 
@@ -494,39 +494,39 @@ Votre contribution est intégrée ! ✨
 ```bash
 # === SETUP INITIAL ===
 # Fork sur GitHub (interface web)
-git clone https://github.com/votre-nom/projet.git
-cd projet
+git clone https://github.com/votre-nom/projet.git  
+cd projet  
 git remote add upstream https://github.com/original/projet.git
 
 # === AVANT CHAQUE CONTRIBUTION ===
-git checkout main
-git pull upstream main
+git checkout main  
+git pull upstream main  
 git checkout -b nom-descriptif-de-branche
 
 # === PENDANT LE TRAVAIL ===
 # Faites vos modifications
-git status
-git add .
-git commit -m "Type: Message clair"
+git status  
+git add .  
+git commit -m "Type: Message clair"  
 git push -u origin nom-descriptif-de-branche
 
 # === APRÈS RETOURS DE REVUE ===
 # Faites les modifications
-git add .
-git commit -m "Applique les suggestions"
+git add .  
+git commit -m "Applique les suggestions"  
 git push origin nom-descriptif-de-branche
 
 # === METTRE À JOUR DEPUIS UPSTREAM ===
-git checkout main
-git pull upstream main
-git checkout nom-de-branche
-git rebase main
+git checkout main  
+git pull upstream main  
+git checkout nom-de-branche  
+git rebase main  
 git push origin nom-de-branche --force-with-lease
 
 # === APRÈS LE MERGE ===
-git checkout main
-git pull upstream main
-git branch -d nom-de-branche
+git checkout main  
+git pull upstream main  
+git branch -d nom-de-branche  
 git push origin --delete nom-de-branche
 ```
 
@@ -554,7 +554,7 @@ git push origin votre-branche --force-with-lease
 
 **Solution :** Ouvrez les fichiers en conflit, résolvez, puis :
 ```bash
-git add fichier-resolu
+git add fichier-resolu  
 git rebase --continue
 # ou
 git merge --continue
@@ -564,8 +564,8 @@ git merge --continue
 
 **Solution :**
 ```bash
-git checkout -b nouvelle-branche
-git checkout main
+git checkout -b nouvelle-branche  
+git checkout main  
 git reset --hard upstream/main
 ```
 

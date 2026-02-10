@@ -64,8 +64,8 @@ develop = La prochaine version en préparation
 - **Durée de vie** : Temporaire (supprimée après merge)
 
 ```
-feature/login
-feature/user-profile
+feature/login  
+feature/user-profile  
 feature/payment-system
 ```
 
@@ -76,7 +76,7 @@ feature/payment-system
 - **Durée de vie** : Temporaire (supprimée après déploiement)
 
 ```
-release/1.0.0
+release/1.0.0  
 release/2.3.0
 ```
 
@@ -87,7 +87,7 @@ release/2.3.0
 - **Durée de vie** : Temporaire (supprimée après correction)
 
 ```
-hotfix/fix-payment-crash
+hotfix/fix-payment-crash  
 hotfix/security-patch
 ```
 
@@ -129,20 +129,20 @@ Imaginons que vous développez une application de gestion de tâches avec votre 
 
 ```bash
 # Créer le dépôt et la première structure
-git init projet-todo-app
+git init projet-todo-app  
 cd projet-todo-app
 
 # Créer un fichier initial
-echo "# Todo App" > README.md
-git add README.md
+echo "# Todo App" > README.md  
+git add README.md  
 git commit -m "Initial commit"
 
 # Créer la branche develop
-git branch develop
+git branch develop  
 git checkout develop
 
 # Pousser les deux branches
-git push -u origin main
+git push -u origin main  
 git push -u origin develop
 ```
 
@@ -156,7 +156,7 @@ git push -u origin develop
 
 ```bash
 # 1. Se mettre à jour avec develop
-git checkout develop
+git checkout develop  
 git pull origin develop
 
 # 2. Créer une branche de fonctionnalité
@@ -166,13 +166,13 @@ git checkout -b feature/login
 # ... écrire le code ...
 
 # 4. Commiter régulièrement
-git add src/auth/login.js
+git add src/auth/login.js  
 git commit -m "Add: Implémentation de la page de login"
 
-git add src/auth/validation.js
+git add src/auth/validation.js  
 git commit -m "Add: Validation des identifiants"
 
-git add tests/auth/login.test.js
+git add tests/auth/login.test.js  
 git commit -m "Add: Tests unitaires pour le login"
 
 # 5. Pousser la branche
@@ -183,13 +183,13 @@ git push -u origin feature/login
 
 ```bash
 # Même processus, mais branche différente
-git checkout develop
-git pull origin develop
+git checkout develop  
+git pull origin develop  
 git checkout -b feature/user-profile
 
 # ... développement ...
 
-git add src/user/profile.js
+git add src/user/profile.js  
 git commit -m "Add: Page de profil utilisateur"
 
 git push -u origin feature/user-profile
@@ -225,7 +225,7 @@ Sur GitHub/GitLab/Bitbucket :
 
 ```bash
 # Toujours sur la branche feature/login
-git add src/auth/login.js
+git add src/auth/login.js  
 git commit -m "Fix: Amélioration de la sécurité des mots de passe"
 
 git push origin feature/login
@@ -243,8 +243,8 @@ Sur la plateforme :
 **Développeur 1 : Nettoyer localement**
 
 ```bash
-git checkout develop
-git pull origin develop
+git checkout develop  
+git pull origin develop  
 git branch -d feature/login
 ```
 
@@ -258,15 +258,15 @@ Après plusieurs features mergées, l'équipe décide de sortir la version 1.0.0
 
 ```bash
 # Partir de develop (qui contient toutes les features prêtes)
-git checkout develop
+git checkout develop  
 git pull origin develop
 
 # Créer la branche de release
 git checkout -b release/1.0.0
 
 # Mettre à jour le numéro de version
-echo "1.0.0" > VERSION
-git add VERSION
+echo "1.0.0" > VERSION  
+git add VERSION  
 git commit -m "Bump version to 1.0.0"
 
 # Pousser la branche
@@ -280,7 +280,7 @@ git push -u origin release/1.0.0
 git checkout release/1.0.0
 
 # Exemple : correction d'un bug trouvé en test
-git add src/auth/login.js
+git add src/auth/login.js  
 git commit -m "Fix: Correction du bug de double-clic sur login"
 
 git push origin release/1.0.0
@@ -300,20 +300,20 @@ git push origin release/1.0.0
 
 ```bash
 # 1. Merger dans main (production)
-git checkout main
-git pull origin main
-git merge --no-ff release/1.0.0
-git tag -a v1.0.0 -m "Version 1.0.0 - Premier déploiement"
+git checkout main  
+git pull origin main  
+git merge --no-ff release/1.0.0  
+git tag -a v1.0.0 -m "Version 1.0.0 - Premier déploiement"  
 git push origin main --tags
 
 # 2. Merger aussi dans develop (pour ne pas perdre les corrections)
-git checkout develop
-git pull origin develop
-git merge --no-ff release/1.0.0
+git checkout develop  
+git pull origin develop  
+git merge --no-ff release/1.0.0  
 git push origin develop
 
 # 3. Supprimer la branche de release
-git branch -d release/1.0.0
+git branch -d release/1.0.0  
 git push origin --delete release/1.0.0
 ```
 
@@ -329,14 +329,14 @@ git push origin --delete release/1.0.0
 
 ```bash
 # 1. Partir de main (production)
-git checkout main
+git checkout main  
 git pull origin main
 
 # 2. Créer une branche hotfix
 git checkout -b hotfix/login-crash
 
 # 3. Corriger le bug rapidement
-git add src/auth/login.js
+git add src/auth/login.js  
 git commit -m "Hotfix: Correction du crash au login avec username vide"
 
 # 4. Pousser
@@ -347,18 +347,18 @@ git push -u origin hotfix/login-crash
 
 ```bash
 # 1. Merger dans main
-git checkout main
-git merge --no-ff hotfix/login-crash
-git tag -a v1.0.1 -m "Hotfix: Correction crash login"
+git checkout main  
+git merge --no-ff hotfix/login-crash  
+git tag -a v1.0.1 -m "Hotfix: Correction crash login"  
 git push origin main --tags
 
 # 2. Merger aussi dans develop
-git checkout develop
-git merge --no-ff hotfix/login-crash
+git checkout develop  
+git merge --no-ff hotfix/login-crash  
 git push origin develop
 
 # 3. Supprimer la branche hotfix
-git branch -d hotfix/login-crash
+git branch -d hotfix/login-crash  
 git push origin --delete hotfix/login-crash
 ```
 
@@ -372,16 +372,16 @@ git push origin --delete hotfix/login-crash
 
 ```bash
 # ❌ MAUVAIS
-git checkout main
-git add fichier.js
-git commit -m "Fix rapide"
+git checkout main  
+git add fichier.js  
+git commit -m "Fix rapide"  
 git push
 
 # ✅ BON
-git checkout develop
-git checkout -b feature/correction-rapide
-git add fichier.js
-git commit -m "Fix: Correction du bug"
+git checkout develop  
+git checkout -b feature/correction-rapide  
+git add fichier.js  
+git commit -m "Fix: Correction du bug"  
 git push -u origin feature/correction-rapide
 # Puis créer une PR
 ```
@@ -402,11 +402,11 @@ git push -u origin feature/correction-rapide
 
 ```bash
 # Avant de commencer à travailler chaque jour
-git checkout develop
+git checkout develop  
 git pull origin develop
 
 # Avant de merger une feature
-git checkout feature/ma-feature
+git checkout feature/ma-feature  
 git merge develop
 # Résoudre les conflits si nécessaire
 ```
@@ -416,13 +416,13 @@ git merge develop
 **Convention de nommage :**
 
 ```bash
-feature/nom-descriptif          # feature/add-dark-mode
-feature/numero-issue            # feature/issue-42
+feature/nom-descriptif          # feature/add-dark-mode  
+feature/numero-issue            # feature/issue-42  
 feature/prenom-fonctionnalite   # feature/pierre-notification
 
 release/version                 # release/2.0.0
 
-hotfix/description-bug          # hotfix/fix-payment-error
+hotfix/description-bug          # hotfix/fix-payment-error  
 hotfix/numero-issue             # hotfix/issue-789
 ```
 
@@ -475,33 +475,33 @@ git flow hotfix finish fix-login
 
 ```bash
 # === FEATURE ===
-git checkout develop
+git checkout develop  
 git checkout -b feature/login
 # ... travail ...
-git checkout develop
-git merge --no-ff feature/login
+git checkout develop  
+git merge --no-ff feature/login  
 git branch -d feature/login
 
 # === RELEASE ===
-git checkout develop
+git checkout develop  
 git checkout -b release/1.0.0
 # ... corrections ...
-git checkout main
-git merge --no-ff release/1.0.0
-git tag v1.0.0
-git checkout develop
-git merge --no-ff release/1.0.0
+git checkout main  
+git merge --no-ff release/1.0.0  
+git tag v1.0.0  
+git checkout develop  
+git merge --no-ff release/1.0.0  
 git branch -d release/1.0.0
 
 # === HOTFIX ===
-git checkout main
+git checkout main  
 git checkout -b hotfix/fix-bug
 # ... correction ...
-git checkout main
-git merge --no-ff hotfix/fix-bug
-git tag v1.0.1
-git checkout develop
-git merge --no-ff hotfix/fix-bug
+git checkout main  
+git merge --no-ff hotfix/fix-bug  
+git tag v1.0.1  
+git checkout develop  
+git merge --no-ff hotfix/fix-bug  
 git branch -d hotfix/fix-bug
 ```
 
@@ -526,12 +526,12 @@ git branch -d hotfix/fix-bug
 
 ```bash
 # Alice
-git checkout develop
-git pull origin develop
+git checkout develop  
+git pull origin develop  
 git checkout -b feature/notifications
 # ... code code code ...
-git add .
-git commit -m "Add: Système de notifications en temps réel"
+git add .  
+git commit -m "Add: Système de notifications en temps réel"  
 git push -u origin feature/notifications
 
 # Bob fait de même sur sa feature
@@ -553,21 +553,21 @@ git push -u origin feature/notifications
 
 ```bash
 # Lead Developer
-git checkout develop
-git pull origin develop
+git checkout develop  
+git pull origin develop  
 git checkout -b release/1.1.0
 
 # Équipe : Tests finaux sur release/1.1.0
 # Correction de bugs mineurs si besoin
 
 # Fin de journée : Déploiement
-git checkout main
-git merge --no-ff release/1.1.0
-git tag v1.1.0
+git checkout main  
+git merge --no-ff release/1.1.0  
+git tag v1.1.0  
 git push origin main --tags
 
-git checkout develop
-git merge --no-ff release/1.1.0
+git checkout develop  
+git merge --no-ff release/1.1.0  
 git push origin develop
 
 git branch -d release/1.1.0
@@ -577,16 +577,16 @@ git branch -d release/1.1.0
 
 ```bash
 # Si un bug critique est détecté
-git checkout main
+git checkout main  
 git checkout -b hotfix/critical-bug
 # ... correction rapide ...
-git checkout main
-git merge --no-ff hotfix/critical-bug
-git tag v1.1.1
+git checkout main  
+git merge --no-ff hotfix/critical-bug  
+git tag v1.1.1  
 git push origin main --tags
 
-git checkout develop
-git merge --no-ff hotfix/critical-bug
+git checkout develop  
+git merge --no-ff hotfix/critical-bug  
 git push origin develop
 ```
 

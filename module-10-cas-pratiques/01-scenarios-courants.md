@@ -63,7 +63,7 @@ git log --oneline
 git reset --hard HEAD~1
 
 # 3. Créez une nouvelle branche et appliquez le commit
-git checkout -b ma-feature
+git checkout -b ma-feature  
 git cherry-pick [identifiant-du-commit]
 ```
 
@@ -100,8 +100,8 @@ git clean -fd
 **Situation :** Vous essayez de fusionner une branche, mais Git vous signale des conflits.
 
 ```
-Auto-merging fichier.txt
-CONFLICT (content): Merge conflict in fichier.txt
+Auto-merging fichier.txt  
+CONFLICT (content): Merge conflict in fichier.txt  
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
@@ -170,7 +170,7 @@ git push
 **Alternative avec rebase (historique plus propre) :**
 
 ```bash
-git pull --rebase
+git pull --rebase  
 git push
 ```
 
@@ -202,7 +202,7 @@ git log --all -- chemin/vers/fichier.txt
 git checkout [identifiant-commit] -- chemin/vers/fichier.txt
 
 # 3. Committez la restauration
-git add chemin/vers/fichier.txt
+git add chemin/vers/fichier.txt  
 git commit -m "Restauration du fichier supprimé"
 ```
 
@@ -235,7 +235,7 @@ git branch sauvetage-detached
 git switch sauvetage-detached
 
 # 3. Vous pouvez maintenant merger cette branche ailleurs
-git switch main
+git switch main  
 git merge sauvetage-detached
 ```
 
@@ -256,7 +256,7 @@ git commit --amend -m "Nouveau message corrigé"
 Il n'est pas recommandé de modifier l'historique pushé. Mais si c'est vraiment nécessaire et que vous êtes seul sur la branche :
 
 ```bash
-git commit --amend -m "Nouveau message corrigé"
+git commit --amend -m "Nouveau message corrigé"  
 git push --force-with-lease
 ```
 
@@ -284,12 +284,12 @@ Ajoutez ces fichiers à `.gitignore` :
 
 ```bash
 # Créez ou éditez .gitignore
-echo "*.log" >> .gitignore
-echo "node_modules/" >> .gitignore
+echo "*.log" >> .gitignore  
+echo "node_modules/" >> .gitignore  
 echo ".env" >> .gitignore
 
 # Committez le .gitignore
-git add .gitignore
+git add .gitignore  
 git commit -m "Ajout de règles .gitignore"
 ```
 
@@ -320,8 +320,8 @@ git push
 git revert HEAD~2..HEAD
 
 # Ou un par un
-git revert [commit3]
-git revert [commit2]
+git revert [commit3]  
+git revert [commit2]  
 git revert [commit1]
 ```
 
@@ -345,7 +345,7 @@ git reflog
 git checkout def5678
 
 # 3. Créez une branche pour le sauvegarder
-git branch recuperation
+git branch recuperation  
 git switch recuperation
 ```
 
@@ -367,20 +367,20 @@ git rebase -i HEAD~5
 Un éditeur s'ouvre avec :
 
 ```
-pick abc1234 Premier commit
-pick def5678 fix
-pick ghi9012 encore un fix
-pick jkl3456 ça marche
+pick abc1234 Premier commit  
+pick def5678 fix  
+pick ghi9012 encore un fix  
+pick jkl3456 ça marche  
 pick mno7890 Commit final
 ```
 
 Modifiez en :
 
 ```
-pick abc1234 Premier commit
-squash def5678 fix
-squash ghi9012 encore un fix
-squash jkl3456 ça marche
+pick abc1234 Premier commit  
+squash def5678 fix  
+squash ghi9012 encore un fix  
+squash jkl3456 ça marche  
 squash mno7890 Commit final
 ```
 

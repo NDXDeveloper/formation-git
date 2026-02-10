@@ -703,7 +703,7 @@ Vous débutez votre parcours Git. C'est normal !
         CERTIFICAT DE COMPÉTENCE GIT
 ═══════════════════════════════════════════════
 
-Je certifie avoir complété la formation Git
+Je certifie avoir complété la formation Git  
 et validé les compétences suivantes :
 
 ✓ Concepts fondamentaux de Git
@@ -713,7 +713,7 @@ et validé les compétences suivantes :
 ✓ Bonnes pratiques et workflows
 ✓ Cas pratiques et situations complexes
 
-Niveau atteint : [Votre niveau]
+Niveau atteint : [Votre niveau]  
 Date : [Date de validation]
 
 Signé : [Votre nom]
