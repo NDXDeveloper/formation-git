@@ -26,11 +26,11 @@ Ce module est parfait pour vous si :
 
 À la fin de ce module, vous serez capable de :
 
-✅ Comprendre en profondeur les **trois états** de Git (Working Directory, Staging Area, Repository)
-✅ Expliquer l'**architecture interne** de Git et ce que contient le dossier .git
-✅ Utiliser avec assurance **git status, git add et git commit** dans tous les scénarios
-✅ Explorer l'historique avec **git log, git show et git diff** de manière experte
-✅ Visualiser et interpréter le **graphe** de l'historique Git
+✅ Comprendre en profondeur les **trois états** de Git (Working Directory, Staging Area, Repository)  
+✅ Expliquer l'**architecture interne** de Git et ce que contient le dossier .git  
+✅ Utiliser avec assurance **git status, git add et git commit** dans tous les scénarios  
+✅ Explorer l'historique avec **git log, git show et git diff** de manière experte  
+✅ Visualiser et interpréter le **graphe** de l'historique Git  
 ✅ Créer et gérer un fichier **.gitignore** efficace
 
 ### Ce que vous allez apprendre
@@ -269,12 +269,12 @@ Si vous voulez approfondir certains points :
 
 À la fin de chaque section, posez-vous ces questions :
 
-**Section 1** : Puis-je expliquer les trois états de Git avec mes propres mots ?
-**Section 2** : Est-ce que je comprends où Git stocke les données ?
-**Section 3** : Suis-je à l'aise avec status, add et commit ?
-**Section 4** : Puis-je explorer l'historique efficacement ?
-**Section 5** : Suis-je capable de lire un graphe Git ?
-**Section 6** : Ai-je créé un .gitignore pour mes projets ?
+**Section 1** : Puis-je expliquer les trois états de Git avec mes propres mots ?  
+**Section 2** : Est-ce que je comprends où Git stocke les données ?  
+**Section 3** : Suis-je à l'aise avec status, add et commit ?  
+**Section 4** : Puis-je explorer l'historique efficacement ?  
+**Section 5** : Suis-je capable de lire un graphe Git ?  
+**Section 6** : Ai-je créé un .gitignore pour mes projets ?  
 
 Si vous répondez "oui" à toutes ces questions, vous avez réussi le module !
 
