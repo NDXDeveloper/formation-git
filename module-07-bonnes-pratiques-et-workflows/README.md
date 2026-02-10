@@ -376,9 +376,9 @@ Ne lisez pas passivement. Pour chaque pratique :
 
 ### 2. Commencez petit
 
-**Cette semaine** : Concentrez-vous sur les messages de commit
-**Semaine suivante** : Ajoutez les commits atomiques
-**Semaine d'après** : Ajoutez .gitignore propre
+**Cette semaine** : Concentrez-vous sur les messages de commit  
+**Semaine suivante** : Ajoutez les commits atomiques  
+**Semaine d'après** : Ajoutez .gitignore propre  
 ...et ainsi de suite.
 
 ### 3. Partagez avec votre équipe
