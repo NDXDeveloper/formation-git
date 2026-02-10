@@ -320,18 +320,18 @@ git flow hotfix finish security-fix
 
 ### Avantages de Git Flow
 
-✅ **Structure claire** : Chaque type de travail a sa branche
-✅ **Historique propre** : Facile de voir les features, releases, hotfixes
-✅ **Multiversioning** : Plusieurs versions en production simultanément
-✅ **Stabilité** : `main` reste toujours stable
+✅ **Structure claire** : Chaque type de travail a sa branche  
+✅ **Historique propre** : Facile de voir les features, releases, hotfixes  
+✅ **Multiversioning** : Plusieurs versions en production simultanément  
+✅ **Stabilité** : `main` reste toujours stable  
 ✅ **Processus rigoureux** : Idéal pour les grosses équipes
 
 ### Inconvénients de Git Flow
 
-❌ **Complexité** : Beaucoup de branches à gérer
-❌ **Lenteur** : Processus long pour déployer
-❌ **Pas adapté au CD** : Trop lourd pour le déploiement continu
-❌ **Risque de conflits** : Les branches longues créent des conflits
+❌ **Complexité** : Beaucoup de branches à gérer  
+❌ **Lenteur** : Processus long pour déployer  
+❌ **Pas adapté au CD** : Trop lourd pour le déploiement continu  
+❌ **Risque de conflits** : Les branches longues créent des conflits  
 ❌ **Overhead** : Trop pour les petites équipes
 
 ---
@@ -603,18 +603,18 @@ release/1.0   o---o (déployé quand prêt)
 
 ### Avantages de GitHub Flow
 
-✅ **Simplicité** : Une seule branche principale
-✅ **Rapidité** : Déploiement continu possible
-✅ **Collaboration** : Les PR facilitent la revue
-✅ **Traçabilité** : Tout est documenté dans les PR
-✅ **Flexibilité** : S'adapte aux petites et moyennes équipes
+✅ **Simplicité** : Une seule branche principale  
+✅ **Rapidité** : Déploiement continu possible  
+✅ **Collaboration** : Les PR facilitent la revue  
+✅ **Traçabilité** : Tout est documenté dans les PR  
+✅ **Flexibilité** : S'adapte aux petites et moyennes équipes  
 ✅ **Moderne** : Conçu pour le web moderne
 
 ### Inconvénients de GitHub Flow
 
-❌ **Une seule version** : Pas adapté au multiversioning
-❌ **Dépendance CI/CD** : Nécessite une bonne automatisation
-❌ **Releases complexes** : Pas de processus formel de release
+❌ **Une seule version** : Pas adapté au multiversioning  
+❌ **Dépendance CI/CD** : Nécessite une bonne automatisation  
+❌ **Releases complexes** : Pas de processus formel de release  
 ❌ **Rollback difficile** : Nécessite un hotfix si problème en prod
 
 ---
@@ -891,20 +891,20 @@ git push origin v1.2.3
 
 ### Avantages de Trunk-Based Development
 
-✅ **Simplicité maximale** : Une seule branche
-✅ **Intégration continue réelle** : Pas de branches longues = pas de conflits
-✅ **Feedback rapide** : Problèmes détectés immédiatement
-✅ **Déploiement très fréquent** : Plusieurs fois par jour
-✅ **Moins de merge conflicts** : Tout le monde travaille au même endroit
+✅ **Simplicité maximale** : Une seule branche  
+✅ **Intégration continue réelle** : Pas de branches longues = pas de conflits  
+✅ **Feedback rapide** : Problèmes détectés immédiatement  
+✅ **Déploiement très fréquent** : Plusieurs fois par jour  
+✅ **Moins de merge conflicts** : Tout le monde travaille au même endroit  
 ✅ **Culture de qualité** : Les tests deviennent essentiels
 
 ### Inconvénients de Trunk-Based Development
 
-❌ **Nécessite maturité** : Équipe expérimentée requise
-❌ **Tests obligatoires** : Impossible sans bonne couverture de tests
-❌ **Complexité des feature flags** : Peut devenir un code spaghetti
-❌ **Pression** : Chaque commit va en prod, stress élevé
-❌ **Courbe d'apprentissage** : Difficile pour les débutants
+❌ **Nécessite maturité** : Équipe expérimentée requise  
+❌ **Tests obligatoires** : Impossible sans bonne couverture de tests  
+❌ **Complexité des feature flags** : Peut devenir un code spaghetti  
+❌ **Pression** : Chaque commit va en prod, stress élevé  
+❌ **Courbe d'apprentissage** : Difficile pour les débutants  
 ❌ **Outillage** : Nécessite infrastructure CI/CD solide
 
 ---
