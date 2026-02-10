@@ -13,9 +13,9 @@ Git utilise trois niveaux de configuration, appliqués dans cet ordre de priorit
 
 ### 1. Configuration locale (--local)
 
-**Fichier :** `.git/config` (dans le dépôt)
-**Portée :** Uniquement pour le dépôt actuel
-**Priorité :** La plus haute
+**Fichier :** `.git/config` (dans le dépôt)  
+**Portée :** Uniquement pour le dépôt actuel  
+**Priorité :** La plus haute  
 
 ```bash
 # Configurer localement
@@ -29,9 +29,9 @@ git config --local --list
 
 ### 2. Configuration globale (--global)
 
-**Fichier :** `~/.gitconfig` ou `~/.config/git/config` (home directory)
-**Portée :** Tous vos dépôts sur cette machine
-**Priorité :** Moyenne
+**Fichier :** `~/.gitconfig` ou `~/.config/git/config` (home directory)  
+**Portée :** Tous vos dépôts sur cette machine  
+**Priorité :** Moyenne  
 
 ```bash
 # Configurer globalement
@@ -45,9 +45,9 @@ git config --global --list
 
 ### 3. Configuration système (--system)
 
-**Fichier :** `/etc/gitconfig` (Linux/Mac) ou `C:\Program Files\Git\etc\gitconfig` (Windows)
-**Portée :** Tous les utilisateurs de la machine
-**Priorité :** La plus basse
+**Fichier :** `/etc/gitconfig` (Linux/Mac) ou `C:\Program Files\Git\etc\gitconfig` (Windows)  
+**Portée :** Tous les utilisateurs de la machine  
+**Priorité :** La plus basse  
 
 ```bash
 # Configurer au niveau système (nécessite admin/sudo)
