@@ -509,16 +509,16 @@ Période de développement fixe (souvent 2 semaines) dans les méthodes agiles.
 ## Expressions courantes
 
 ### "Commit early, commit often"
-**Traduction :** Commitez tôt, commitez souvent
-**Signification :** Mieux vaut faire de nombreux petits commits qu'un énorme commit. Facilite le suivi et le debugging.
+**Traduction :** Commitez tôt, commitez souvent  
+**Signification :** Mieux vaut faire de nombreux petits commits qu'un énorme commit. Facilite le suivi et le debugging.  
 
 ### "Don't push to main"
-**Traduction :** Ne poussez pas sur main
-**Signification :** Travaillez sur des branches séparées et utilisez des Pull Requests plutôt que de pousser directement sur la branche principale.
+**Traduction :** Ne poussez pas sur main  
+**Signification :** Travaillez sur des branches séparées et utilisez des Pull Requests plutôt que de pousser directement sur la branche principale.  
 
 ### "Merge hell"
-**Traduction :** L'enfer du merge
-**Signification :** Situation où de nombreux conflits apparaissent lors d'un merge, souvent due à un manque de synchronisation entre branches.
+**Traduction :** L'enfer du merge  
+**Signification :** Situation où de nombreux conflits apparaissent lors d'un merge, souvent due à un manque de synchronisation entre branches.  
 
 ### "Detached HEAD state"
 **Signification :** État où vous travaillez directement sur un commit au lieu d'une branche. Les modifications peuvent être perdues.
@@ -530,8 +530,8 @@ Période de développement fixe (souvent 2 semaines) dans les méthodes agiles.
 **Signification :** Déplacer une série de commits sur une nouvelle base, réécrivant l'historique.
 
 ### "Cherry-picking commits"
-**Traduction :** Picorage de commits
-**Signification :** Sélectionner et appliquer uniquement certains commits spécifiques d'une branche.
+**Traduction :** Picorage de commits  
+**Signification :** Sélectionner et appliquer uniquement certains commits spécifiques d'une branche.  
 
 ---
 
