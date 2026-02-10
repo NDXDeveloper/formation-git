@@ -127,10 +127,10 @@ git checkout -b feature/user-login
 
 ```bash
 # Faire vos modifications
-git add .
+git add .  
 git commit -m "feat: ajoute le formulaire de login"
 
-git add .
+git add .  
 git commit -m "feat: implémente l'authentification JWT"
 
 # Pousser régulièrement
@@ -169,7 +169,7 @@ git push origin --delete feature/user-login
 
 ```bash
 # Quand develop est prêt pour la production
-git checkout develop
+git checkout develop  
 git pull origin develop
 
 # Créer la branche release
@@ -193,22 +193,22 @@ git commit -am "chore: bump version to 1.0.0"
 
 ```bash
 # Merger dans main (production)
-git checkout main
-git pull origin main
+git checkout main  
+git pull origin main  
 git merge --no-ff release/1.0.0
 
 # Taguer la version
-git tag -a v1.0.0 -m "Version 1.0.0"
+git tag -a v1.0.0 -m "Version 1.0.0"  
 git push origin main --tags
 
 # Merger aussi dans develop (pour garder les corrections)
-git checkout develop
-git pull origin develop
-git merge --no-ff release/1.0.0
+git checkout develop  
+git pull origin develop  
+git merge --no-ff release/1.0.0  
 git push origin develop
 
 # Supprimer la branche release
-git branch -d release/1.0.0
+git branch -d release/1.0.0  
 git push origin --delete release/1.0.0
 ```
 
@@ -222,7 +222,7 @@ Un bug critique en production nécessite une correction immédiate :
 
 ```bash
 # Partir de main (production)
-git checkout main
+git checkout main  
 git pull origin main
 
 # Créer la branche hotfix
@@ -242,20 +242,20 @@ git commit -am "fix: corrige la faille de sécurité CVE-2024-1234"
 
 ```bash
 # Merger dans main
-git checkout main
+git checkout main  
 git merge --no-ff hotfix/security-vulnerability
 
 # Taguer la version patch
-git tag -a v1.0.1 -m "Hotfix 1.0.1 - Security patch"
+git tag -a v1.0.1 -m "Hotfix 1.0.1 - Security patch"  
 git push origin main --tags
 
 # Merger dans develop
-git checkout develop
-git merge --no-ff hotfix/security-vulnerability
+git checkout develop  
+git merge --no-ff hotfix/security-vulnerability  
 git push origin develop
 
 # Supprimer la branche hotfix
-git branch -d hotfix/security-vulnerability
+git branch -d hotfix/security-vulnerability  
 git push origin --delete hotfix/security-vulnerability
 ```
 
@@ -409,13 +409,13 @@ git checkout -b add-search-feature
 
 ```bash
 # Développer la fonctionnalité
-git add .
+git add .  
 git commit -m "feat: ajoute la barre de recherche"
 
-git add .
+git add .  
 git commit -m "feat: implémente la logique de recherche"
 
-git add .
+git add .  
 git commit -m "test: ajoute les tests de recherche"
 ```
 
@@ -479,8 +479,8 @@ Fixes #234
 
 ```bash
 # Faire les corrections demandées
-git add .
-git commit -m "fix: corrige les remarques de la review"
+git add .  
+git commit -m "fix: corrige les remarques de la review"  
 git push origin add-search-feature
 ```
 
@@ -504,7 +504,7 @@ Après le merge :
 ```bash
 # Supprimer la branche (automatique sur GitHub)
 # Mettre à jour main localement
-git checkout main
+git checkout main  
 git pull origin main
 
 # Supprimer la branche locale
@@ -696,11 +696,11 @@ if (featureFlags.isEnabled('newSearchAlgorithm')) {
 
 ```bash
 # Se placer sur main
-git checkout main
+git checkout main  
 git pull origin main
 
 # Faire un petit changement
-git add .
+git add .  
 git commit -m "fix: corrige le typo dans le footer"
 
 # Pousser immédiatement
@@ -716,7 +716,7 @@ git push origin main
 git checkout -b fix-typo
 
 # Faire le changement
-git add .
+git add .  
 git commit -m "fix: corrige le typo"
 
 # Pousser et ouvrir une PR
@@ -870,7 +870,7 @@ Pour les releases planifiées :
 
 ```bash
 # Créer une branche de release depuis main
-git checkout -b release/2024-10
+git checkout -b release/2024-10  
 git push origin release/2024-10
 
 # main continue d'évoluer
@@ -881,7 +881,7 @@ git push origin release/2024-10
 
 ```bash
 # Taguer main à un moment donné
-git tag -a v1.2.3 -m "Release 1.2.3"
+git tag -a v1.2.3 -m "Release 1.2.3"  
 git push origin v1.2.3
 
 # Déployer ce tag en production

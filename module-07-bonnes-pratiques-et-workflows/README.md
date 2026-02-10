@@ -211,16 +211,16 @@ Les bonnes pratiques ne sont pas des **règles rigides** gravées dans le marbre
 
 ```bash
 # Historique confus
-commit 3a5b7c9
+commit 3a5b7c9  
 Update
 
-commit 8d4e2f1
+commit 8d4e2f1  
 Fix stuff
 
-commit 1f9a3b7
+commit 1f9a3b7  
 WIP
 
-commit 7c2d8e4
+commit 7c2d8e4  
 Final version (for real this time)
 ```
 
@@ -235,16 +235,16 @@ Final version (for real this time)
 
 ```bash
 # Historique clair
-commit 3a5b7c9
+commit 3a5b7c9  
 feat(auth): ajoute l'authentification OAuth2
 
-commit 8d4e2f1
+commit 8d4e2f1  
 fix(payment): corrige le calcul de la TVA
 
-commit 1f9a3b7
+commit 1f9a3b7  
 refactor(api): simplifie la gestion des erreurs
 
-commit 7c2d8e4
+commit 7c2d8e4  
 docs: met à jour le guide d'installation
 ```
 

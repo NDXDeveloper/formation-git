@@ -171,15 +171,15 @@ Avant la première version stable :
 
 ❌ **Interdit** :
 ```
-Publier 2.1.0
-Modifier le code
+Publier 2.1.0  
+Modifier le code  
 Republier 2.1.0 (même numéro)
 ```
 
 ✅ **Correct** :
 ```
-Publier 2.1.0
-Trouver un bug
+Publier 2.1.0  
+Trouver un bug  
 Publier 2.1.1 (nouveau numéro)
 ```
 
@@ -402,10 +402,10 @@ v1.0.0      (avec 'v' préfixe)
 
 **Exemples** :
 ```
-v1.0.0
-v1.0.1
-v2.0.0-alpha.1
-v2.0.0-beta.1
+v1.0.0  
+v1.0.1  
+v2.0.0-alpha.1  
+v2.0.0-beta.1  
 v2.0.0
 ```
 
@@ -450,7 +450,7 @@ git push origin --delete v1.0.0
 
 ```bash
 # 1. S'assurer d'être sur la bonne branche
-git checkout main
+git checkout main  
 git pull origin main
 
 # 2. Mettre à jour le numéro de version dans les fichiers
@@ -461,7 +461,7 @@ git pull origin main
 # Ajouter les changements de cette version
 
 # 4. Commiter les changements de version
-git add package.json CHANGELOG.md
+git add package.json CHANGELOG.md  
 git commit -m "chore: bump version to 1.3.0"
 
 # 5. Créer le tag
@@ -478,7 +478,7 @@ git tag -a v1.3.0 -m "Release 1.3.0
 Closes #234, #235, #236"
 
 # 6. Pousser
-git push origin main
+git push origin main  
 git push origin v1.3.0
 
 # 7. Créer la release sur GitHub/GitLab (optionnel)
@@ -521,7 +521,7 @@ setup(
 
 ```toml
 [package]
-name = "mon-projet"
+name = "mon-projet"  
 version = "1.3.0"
 ```
 
@@ -544,7 +544,7 @@ Le **CHANGELOG** (journal des modifications) liste **toutes** les modifications 
 
 Toutes les modifications notables de ce projet seront documentées dans ce fichier.
 
-Le format est basé sur [Keep a Changelog](https://keepachangelog.com/),
+Le format est basé sur [Keep a Changelog](https://keepachangelog.com/),  
 et ce projet adhère au [Semantic Versioning](https://semver.org/).
 
 ## [Non publié]
@@ -673,8 +673,8 @@ npm install --save-dev semantic-release
 
 **Analyse les commits** :
 ```
-feat: → MINOR
-fix: → PATCH
+feat: → MINOR  
+fix: → PATCH  
 BREAKING CHANGE: → MAJOR
 ```
 
@@ -693,7 +693,7 @@ npm install --save-dev standard-version
 npm run release
 
 # Release spécifique
-npm run release -- --release-as minor
+npm run release -- --release-as minor  
 npm run release -- --release-as 2.0.0
 
 # Première release
@@ -705,14 +705,14 @@ npm run release -- --first-release
 Aide à écrire des commits conventionnels.
 
 ```bash
-npm install -g commitizen
+npm install -g commitizen  
 commitizen init cz-conventional-changelog --save-dev --save-exact
 ```
 
 **Usage** :
 
 ```bash
-git add .
+git add .  
 git cz    # Au lieu de git commit
 ```
 
@@ -726,8 +726,8 @@ pip install bump2version
 
 ```bash
 # Incrémenter la version
-bump2version patch  # 1.2.3 → 1.2.4
-bump2version minor  # 1.2.4 → 1.3.0
+bump2version patch  # 1.2.3 → 1.2.4  
+bump2version minor  # 1.2.4 → 1.3.0  
 bump2version major  # 1.3.0 → 2.0.0
 ```
 
@@ -1004,14 +1004,14 @@ Chaque package a sa propre version.
 
 **Option 2 : Version dans le header**
 ```
-GET /api/users
+GET /api/users  
 Accept: application/vnd.api+json; version=2
 ```
 
 **Stratégie de dépréciation** :
 ```
-v1 → v2 lancée
-v1 → Dépréciée (6 mois)
+v1 → v2 lancée  
+v1 → Dépréciée (6 mois)  
 v1 → End of life
 ```
 
@@ -1076,7 +1076,7 @@ release:
 **CircleCI** :
 
 ```yaml
-version: 2.1
+version: 2.1  
 workflows:
   release:
     jobs:
@@ -1125,10 +1125,10 @@ workflows:
 ### Node.js
 
 ```
-v18.0.0  → Nouvelle version majeure
-v18.1.0  → Nouvelles fonctionnalités
-v18.2.0  → Encore plus de features
-v18.12.1 → Correction de sécurité
+v18.0.0  → Nouvelle version majeure  
+v18.1.0  → Nouvelles fonctionnalités  
+v18.2.0  → Encore plus de features  
+v18.12.1 → Correction de sécurité  
 v19.0.0  → Nouvelle version majeure
 ```
 

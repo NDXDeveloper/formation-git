@@ -49,9 +49,9 @@ Un historique atomique raconte une histoire claire :
 
 ✅ **Bon** :
 ```
-feat: ajoute le bouton de connexion
-feat: implémente la logique d'authentification
-feat: ajoute la validation du formulaire
+feat: ajoute le bouton de connexion  
+feat: implémente la logique d'authentification  
+feat: ajoute la validation du formulaire  
 fix: corrige l'erreur de redirection après login
 ```
 
@@ -59,9 +59,9 @@ Chaque commit a un but clair. On comprend l'évolution du projet.
 
 ❌ **Mauvais** :
 ```
-WIP
-Update
-Fix stuff and add things
+WIP  
+Update  
+Fix stuff and add things  
 Final version (for real this time)
 ```
 
@@ -163,7 +163,7 @@ Ajoute le formulaire de contact et corrige le footer
 
 ✅ **Bon** :
 ```
-Commit 1: feat: ajoute le formulaire de contact
+Commit 1: feat: ajoute le formulaire de contact  
 Commit 2: fix: corrige l'alignement du footer
 ```
 
@@ -201,12 +201,12 @@ Ne attendez pas d'avoir tout terminé. Commitez dès qu'une petite partie logiqu
 ```bash
 # Travaillez sur une petite fonctionnalité
 # Testez que ça marche
-git add <fichiers concernés>
+git add <fichiers concernés>  
 git commit -m "feat: ajoute X"
 
 # Continuez avec la suite
 # Testez que ça marche
-git add <fichiers concernés>
+git add <fichiers concernés>  
 git commit -m "feat: ajoute Y"
 ```
 
@@ -242,11 +242,11 @@ Avec `git add -p`, vous pouvez créer deux commits séparés à partir du même 
 
 ```bash
 # Premier commit : le bug
-git add -p fichier.js  # Sélectionnez seulement les corrections
+git add -p fichier.js  # Sélectionnez seulement les corrections  
 git commit -m "fix: corrige l'erreur de calcul"
 
 # Deuxième commit : la fonctionnalité
-git add -p fichier.js  # Sélectionnez le reste
+git add -p fichier.js  # Sélectionnez le reste  
 git commit -m "feat: ajoute la fonction d'export"
 ```
 
@@ -260,11 +260,11 @@ La staging area (zone de transit) vous permet de préparer vos commits.
 git status
 
 # Ajoutez seulement ce qui concerne une logique
-git add header.css navbar.js
+git add header.css navbar.js  
 git commit -m "feat: améliore le menu de navigation"
 
 # Puis le reste
-git add footer.css
+git add footer.css  
 git commit -m "fix: corrige l'alignement du footer"
 ```
 
@@ -274,7 +274,7 @@ git commit -m "fix: corrige l'alignement du footer"
 git status
 
 # Voir les différences
-git diff              # Ce qui n'est PAS staged
+git diff              # Ce qui n'est PAS staged  
 git diff --staged     # Ce qui EST staged
 
 # Enlever un fichier du staging
@@ -305,19 +305,19 @@ Menu interactif avec des options pour :
 
 ```bash
 # 1. Structure HTML
-git add page.html
+git add page.html  
 git commit -m "feat: ajoute la structure de la page profil"
 
 # 2. Styles
-git add page.css
+git add page.css  
 git commit -m "style: ajoute les styles de la page profil"
 
 # 3. Fonctionnalités JavaScript
-git add page.js
+git add page.js  
 git commit -m "feat: implémente la logique de la page profil"
 
 # 4. Tests
-git add page.test.js
+git add page.test.js  
 git commit -m "test: ajoute les tests pour la page profil"
 ```
 
@@ -372,7 +372,7 @@ git commit -am "Modifications diverses"
 
 ❌ **Exemple** :
 ```bash
-git add .
+git add .  
 git commit -m "feat: ajoute la recherche"
 ```
 
@@ -392,8 +392,8 @@ Il existe aussi l'extrême inverse : des commits trop granulaires.
 
 ❌ **Trop petit** :
 ```bash
-Commit 1: Ajoute la ligne 1 du fichier
-Commit 2: Ajoute la ligne 2 du fichier
+Commit 1: Ajoute la ligne 1 du fichier  
+Commit 2: Ajoute la ligne 2 du fichier  
 Commit 3: Ajoute la ligne 3 du fichier
 ```
 
@@ -415,7 +415,7 @@ feat: ajoute la fonctionnalité X et refactorise le module Y
 
 ✅ **Bon** :
 ```bash
-Commit 1: refactor: simplifie le module Y
+Commit 1: refactor: simplifie le module Y  
 Commit 2: feat: ajoute la fonctionnalité X
 ```
 
@@ -460,11 +460,11 @@ Si vous réalisez que vous avez fait plusieurs choses non liées :
 **Option 1 : Créer plusieurs commits** (recommandé)
 ```bash
 # Ajouter par morceaux
-git add -p fichier1.js  # Sélectionnez les parties liées à la première tâche
+git add -p fichier1.js  # Sélectionnez les parties liées à la première tâche  
 git commit -m "feat: ajoute X"
 
-git add -p fichier1.js  # Sélectionnez les parties liées à la deuxième tâche
-git add fichier2.js
+git add -p fichier1.js  # Sélectionnez les parties liées à la deuxième tâche  
+git add fichier2.js  
 git commit -m "fix: corrige Y"
 ```
 
@@ -474,10 +474,10 @@ git commit -m "fix: corrige Y"
 git stash
 
 # Créer une branche pour la première tâche
-git checkout -b feature/premiere-tache
+git checkout -b feature/premiere-tache  
 git stash pop
 # Garder seulement les changements liés, commiter
-git add ...
+git add ...  
 git commit -m "feat: ajoute X"
 
 # Revenir à la branche principale
@@ -510,16 +510,16 @@ git rebase -i HEAD~5
 
 Avant :
 ```
-Commit 5: WIP
-Commit 4: Oops, forgot this
-Commit 3: Add feature X (part 2)
-Commit 2: Add feature X (part 1)
+Commit 5: WIP  
+Commit 4: Oops, forgot this  
+Commit 3: Add feature X (part 2)  
+Commit 2: Add feature X (part 1)  
 Commit 1: Update config
 ```
 
 Après rebase interactif :
 ```
-Commit 2: feat: ajoute la fonctionnalité X
+Commit 2: feat: ajoute la fonctionnalité X  
 Commit 1: chore: met à jour la configuration
 ```
 
@@ -552,30 +552,30 @@ Commit 1: chore: met à jour la configuration
 ```bash
 # Tout coder
 # Tout ajouter d'un coup
-git add .
+git add .  
 git commit -m "Ajoute la page contact"
 ```
 
 ✅ **Approche atomique** :
 ```bash
 # 1. Structure HTML
-git add contact.html
+git add contact.html  
 git commit -m "feat(contact): ajoute la structure HTML"
 
 # 2. Formulaire
-git add contact-form.html contact-form.js
+git add contact-form.html contact-form.js  
 git commit -m "feat(contact): implémente le formulaire"
 
 # 3. Validation
-git add validation.js
+git add validation.js  
 git commit -m "feat(contact): ajoute la validation du formulaire"
 
 # 4. Styles
-git add contact.css
+git add contact.css  
 git commit -m "style(contact): ajoute les styles de la page"
 
 # 5. API
-git add api/contact.js
+git add api/contact.js  
 git commit -m "feat(contact): connecte le formulaire à l'API"
 ```
 
@@ -586,15 +586,15 @@ Vous découvrez 3 bugs différents. Ne les corrigez pas tous dans un seul commit
 ✅ **Bon** :
 ```bash
 # Bug 1
-git add auth.js
+git add auth.js  
 git commit -m "fix: corrige la redirection après login"
 
 # Bug 2
-git add form.js
+git add form.js  
 git commit -m "fix: corrige la validation des emails"
 
 # Bug 3
-git add api.js
+git add api.js  
 git commit -m "fix: corrige la gestion des erreurs 500"
 ```
 

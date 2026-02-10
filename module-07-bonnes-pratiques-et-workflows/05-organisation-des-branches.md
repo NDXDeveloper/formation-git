@@ -36,7 +36,7 @@ Cette section vous guide pour mettre en place une organisation de branches profe
 
 ```bash
 # Renommer master en main (si besoin)
-git branch -m master main
+git branch -m master main  
 git push -u origin main
 
 # Définir main comme branche par défaut
@@ -83,17 +83,17 @@ git config --global init.defaultBranch main
 
 ```bash
 # Créer develop depuis main
-git checkout main
-git checkout -b develop
+git checkout main  
+git checkout -b develop  
 git push -u origin develop
 
 # Les features mergent dans develop
-git checkout develop
+git checkout develop  
 git merge --no-ff feature/nouvelle-fonctionnalite
 
 # Quand prêt, develop merge dans main
-git checkout main
-git merge --no-ff develop
+git checkout main  
+git merge --no-ff develop  
 git tag -a v1.0.0 -m "Release 1.0.0"
 ```
 
@@ -131,20 +131,20 @@ feature/nom-descriptif-en-kebab-case
 
 **Exemples** :
 ```
-feature/user-authentication
-feature/payment-integration
-feature/dark-mode
-feature/search-functionality
-feature/export-pdf
+feature/user-authentication  
+feature/payment-integration  
+feature/dark-mode  
+feature/search-functionality  
+feature/export-pdf  
 feature/user-profile-page
 ```
 
 **Mauvais exemples** :
 ```
-feature/fix         ❌ Trop vague
-feature/update      ❌ Pas descriptif
-feature/JIRA-123    ❌ Référence seule (pas de contexte)
-feature123          ❌ Pas de préfixe clair
+feature/fix         ❌ Trop vague  
+feature/update      ❌ Pas descriptif  
+feature/JIRA-123    ❌ Référence seule (pas de contexte)  
+feature123          ❌ Pas de préfixe clair  
 new-feature         ❌ Pas de catégorie
 ```
 
@@ -152,21 +152,21 @@ new-feature         ❌ Pas de catégorie
 
 **Avec identifiant de ticket** :
 ```
-feature/JIRA-123-user-authentication
-feature/GH-456-dark-mode
+feature/JIRA-123-user-authentication  
+feature/GH-456-dark-mode  
 feature/TKT-789-export-pdf
 ```
 
 **Par équipe/personne** (pour grandes équipes) :
 ```
-feature/frontend-dark-mode
-feature/backend-payment-api
+feature/frontend-dark-mode  
+feature/backend-payment-api  
 feature/mobile-offline-mode
 ```
 
 **Par priorité** (peu recommandé) :
 ```
-feature/p0-critical-security-fix
+feature/p0-critical-security-fix  
 feature/p1-user-auth
 ```
 
@@ -174,12 +174,12 @@ feature/p1-user-auth
 
 ```bash
 # 1. Créer la branche depuis develop (ou main)
-git checkout develop
-git pull origin develop
+git checkout develop  
+git pull origin develop  
 git checkout -b feature/user-authentication
 
 # 2. Développer
-git add .
+git add .  
 git commit -m "feat: ajoute le formulaire de connexion"
 # ... autres commits ...
 
@@ -190,12 +190,12 @@ git push origin feature/user-authentication
 # Via GitHub/GitLab interface
 
 # 5. Après approbation, merger
-git checkout develop
-git merge --no-ff feature/user-authentication
+git checkout develop  
+git merge --no-ff feature/user-authentication  
 git push origin develop
 
 # 6. Supprimer la branche
-git branch -d feature/user-authentication
+git branch -d feature/user-authentication  
 git push origin --delete feature/user-authentication
 ```
 
@@ -226,22 +226,22 @@ git push origin --delete feature/user-authentication
 
 **Format** :
 ```
-bugfix/description-du-bug
+bugfix/description-du-bug  
 fix/description-du-bug
 ```
 
 **Exemples** :
 ```
-bugfix/login-validation-error
-bugfix/broken-navbar-on-mobile
-bugfix/email-sending-failure
-fix/pagination-incorrect-count
+bugfix/login-validation-error  
+bugfix/broken-navbar-on-mobile  
+bugfix/email-sending-failure  
+fix/pagination-incorrect-count  
 fix/memory-leak-in-dashboard
 ```
 
 **Avec référence** :
 ```
-bugfix/JIRA-567-login-error
+bugfix/JIRA-567-login-error  
 fix/GH-890-memory-leak
 ```
 
@@ -249,15 +249,15 @@ fix/GH-890-memory-leak
 
 ```bash
 # Créer depuis develop
-git checkout develop
+git checkout develop  
 git checkout -b bugfix/login-validation-error
 
 # Corriger et tester
 git commit -m "fix: corrige la validation du formulaire de login"
 
 # Merger dans develop
-git checkout develop
-git merge --no-ff bugfix/login-validation-error
+git checkout develop  
+git merge --no-ff bugfix/login-validation-error  
 git branch -d bugfix/login-validation-error
 ```
 
@@ -281,22 +281,22 @@ git branch -d bugfix/login-validation-error
 
 **Format** :
 ```
-hotfix/description-critique
+hotfix/description-critique  
 hotfix/version-numero
 ```
 
 **Exemples** :
 ```
-hotfix/security-vulnerability
-hotfix/payment-processing-failure
-hotfix/data-loss-bug
-hotfix/1.2.1
+hotfix/security-vulnerability  
+hotfix/payment-processing-failure  
+hotfix/data-loss-bug  
+hotfix/1.2.1  
 hotfix/critical-server-crash
 ```
 
 **Avec CVE (vulnérabilité)** :
 ```
-hotfix/CVE-2024-1234-sql-injection
+hotfix/CVE-2024-1234-sql-injection  
 hotfix/security-patch-auth-bypass
 ```
 
@@ -304,8 +304,8 @@ hotfix/security-patch-auth-bypass
 
 ```bash
 # 1. Créer depuis main (production!)
-git checkout main
-git pull origin main
+git checkout main  
+git pull origin main  
 git checkout -b hotfix/security-vulnerability
 
 # 2. Corriger rapidement
@@ -315,20 +315,20 @@ git commit -m "fix: corrige la faille de sécurité CVE-2024-1234"
 # Tests automatiques + tests manuels
 
 # 4. Merger dans main
-git checkout main
+git checkout main  
 git merge --no-ff hotfix/security-vulnerability
 
 # 5. Taguer la nouvelle version
-git tag -a v1.2.1 -m "Hotfix 1.2.1 - Security patch"
+git tag -a v1.2.1 -m "Hotfix 1.2.1 - Security patch"  
 git push origin main --tags
 
 # 6. Merger AUSSI dans develop (important!)
-git checkout develop
-git merge --no-ff hotfix/security-vulnerability
+git checkout develop  
+git merge --no-ff hotfix/security-vulnerability  
 git push origin develop
 
 # 7. Supprimer la branche
-git branch -d hotfix/security-vulnerability
+git branch -d hotfix/security-vulnerability  
 git push origin --delete hotfix/security-vulnerability
 
 # 8. Déployer immédiatement en production
@@ -352,17 +352,17 @@ git push origin --delete hotfix/security-vulnerability
 
 **Format** :
 ```
-release/version-numero
-release/YYYY-MM-DD
+release/version-numero  
+release/YYYY-MM-DD  
 release/nom-de-version
 ```
 
 **Exemples** :
 ```
-release/1.0.0
-release/2.3.1
-release/2024-10
-release/q4-2024
+release/1.0.0  
+release/2.3.1  
+release/2024-10  
+release/q4-2024  
 release/winter-update
 ```
 
@@ -370,29 +370,29 @@ release/winter-update
 
 ```bash
 # 1. Créer depuis develop quand prêt pour release
-git checkout develop
+git checkout develop  
 git checkout -b release/1.0.0
 
 # 2. Finaliser (corrections mineures seulement)
-git commit -m "chore: bump version to 1.0.0"
-git commit -m "fix: corrige typo dans la doc"
+git commit -m "chore: bump version to 1.0.0"  
+git commit -m "fix: corrige typo dans la doc"  
 git commit -m "docs: met à jour le CHANGELOG"
 
 # 3. Tests finaux, QA, validation
 
 # 4. Merger dans main
-git checkout main
-git merge --no-ff release/1.0.0
-git tag -a v1.0.0 -m "Release 1.0.0"
+git checkout main  
+git merge --no-ff release/1.0.0  
+git tag -a v1.0.0 -m "Release 1.0.0"  
 git push origin main --tags
 
 # 5. Merger dans develop (garder les corrections)
-git checkout develop
-git merge --no-ff release/1.0.0
+git checkout develop  
+git merge --no-ff release/1.0.0  
 git push origin develop
 
 # 6. Supprimer la branche
-git branch -d release/1.0.0
+git branch -d release/1.0.0  
 git push origin --delete release/1.0.0
 ```
 
@@ -425,9 +425,9 @@ refactor/description-du-refactoring
 
 **Exemples** :
 ```
-refactor/simplify-authentication-logic
-refactor/extract-payment-service
-refactor/improve-database-queries
+refactor/simplify-authentication-logic  
+refactor/extract-payment-service  
+refactor/improve-database-queries  
 refactor/modernize-api-endpoints
 ```
 
@@ -439,9 +439,9 @@ refactor/modernize-api-endpoints
 - Code plus **propre**, plus **maintenable**
 
 ```bash
-git checkout develop
-git checkout -b refactor/simplify-auth-logic
-git commit -m "refactor: extrait la logique de validation dans une fonction"
+git checkout develop  
+git checkout -b refactor/simplify-auth-logic  
+git commit -m "refactor: extrait la logique de validation dans une fonction"  
 git commit -m "refactor: renomme les variables pour plus de clarté"
 ```
 
@@ -459,17 +459,17 @@ docs/description-de-la-doc
 
 **Exemples** :
 ```
-docs/update-readme
-docs/add-api-documentation
-docs/fix-installation-guide
+docs/update-readme  
+docs/add-api-documentation  
+docs/fix-installation-guide  
 docs/improve-contributing-guidelines
 ```
 
 **Avantage** : Permet de réviser la documentation sans se mélanger avec le code.
 
 ```bash
-git checkout main  # ou develop
-git checkout -b docs/update-readme
+git checkout main  # ou develop  
+git checkout -b docs/update-readme  
 git commit -m "docs: ajoute les instructions d'installation macOS"
 ```
 
@@ -480,15 +480,15 @@ git commit -m "docs: ajoute les instructions d'installation macOS"
 **Rôle** : Ajouter ou améliorer les **tests**.
 
 ```
-test/add-user-service-tests
-test/improve-integration-tests
+test/add-user-service-tests  
+test/improve-integration-tests  
 test/fix-flaky-tests
 ```
 
 **Usage** :
 ```bash
-git checkout develop
-git checkout -b test/add-payment-tests
+git checkout develop  
+git checkout -b test/add-payment-tests  
 git commit -m "test: ajoute les tests unitaires pour le service de paiement"
 ```
 
@@ -500,9 +500,9 @@ git commit -m "test: ajoute les tests unitaires pour le service de paiement"
 
 **Exemples** :
 ```
-chore/update-dependencies
-chore/configure-ci-pipeline
-chore/cleanup-unused-files
+chore/update-dependencies  
+chore/configure-ci-pipeline  
+chore/cleanup-unused-files  
 chore/upgrade-nodejs-version
 ```
 
@@ -520,9 +520,9 @@ chore/upgrade-nodejs-version
 **Rôle** : Expérimentations et **prototypes**.
 
 ```
-experiment/new-architecture
-experiment/performance-optimization
-spike/graphql-migration
+experiment/new-architecture  
+experiment/performance-optimization  
+spike/graphql-migration  
 spike/new-ui-framework
 ```
 
@@ -559,18 +559,18 @@ git checkout -b experiment/try-new-database
 ### Exemples complets
 
 ```
-feature/user-authentication
-feature/JIRA-234-payment-integration
-bugfix/login-form-validation
-bugfix/GH-567-memory-leak
-hotfix/security-vulnerability
-hotfix/1.2.1-critical-patch
-release/2.0.0
-release/2024-Q4
-refactor/simplify-api-endpoints
-docs/update-installation-guide
-test/add-unit-tests-auth
-chore/update-dependencies
+feature/user-authentication  
+feature/JIRA-234-payment-integration  
+bugfix/login-form-validation  
+bugfix/GH-567-memory-leak  
+hotfix/security-vulnerability  
+hotfix/1.2.1-critical-patch  
+release/2.0.0  
+release/2024-Q4  
+refactor/simplify-api-endpoints  
+docs/update-installation-guide  
+test/add-unit-tests-auth  
+chore/update-dependencies  
 experiment/try-microservices
 ```
 
@@ -639,7 +639,7 @@ Pour les grandes équipes ou projets complexes, organisez par **catégories**.
 ### Structure recommandée
 
 ```
-main
+main  
 develop
 
 feature/
@@ -707,7 +707,7 @@ git checkout -b feature/new-feature
 git switch -c feature/new-feature
 
 # Basculer sur une branche existante
-git checkout feature/existing-feature
+git checkout feature/existing-feature  
 git switch feature/existing-feature
 ```
 
@@ -858,12 +858,12 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
-FEATURE_NAME=$1
+FEATURE_NAME=$1  
 BRANCH_NAME="feature/$FEATURE_NAME"
 
-git checkout develop
-git pull origin develop
-git checkout -b "$BRANCH_NAME"
+git checkout develop  
+git pull origin develop  
+git checkout -b "$BRANCH_NAME"  
 git push -u origin "$BRANCH_NAME"
 
 echo "✅ Branche $BRANCH_NAME créée et poussée"
@@ -930,13 +930,13 @@ Créez un fichier à la racine du projet :
 
 ```bash
 # Créer une feature
-git checkout develop
-git pull origin develop
+git checkout develop  
+git pull origin develop  
 git checkout -b feature/ma-feature
 
 # Créer un hotfix
-git checkout main
-git pull origin main
+git checkout main  
+git pull origin main  
 git checkout -b hotfix/mon-fix
 ```
 ```
@@ -949,15 +949,15 @@ git checkout -b hotfix/mon-fix
 
 ```bash
 # 1. Partir de develop
-git checkout develop
+git checkout develop  
 git pull origin develop
 
 # 2. Créer la branche
 git checkout -b feature/payment-integration
 
 # 3. Développer
-git commit -m "feat: ajoute l'interface de paiement"
-git commit -m "feat: intègre l'API Stripe"
+git commit -m "feat: ajoute l'interface de paiement"  
+git commit -m "feat: intègre l'API Stripe"  
 git commit -m "test: ajoute les tests du module paiement"
 
 # 4. Pousser
@@ -965,8 +965,8 @@ git push origin feature/payment-integration
 
 # 5. Ouvrir une PR vers develop
 # 6. Après merge, supprimer
-git checkout develop
-git pull origin develop
+git checkout develop  
+git pull origin develop  
 git branch -d feature/payment-integration
 ```
 
@@ -974,7 +974,7 @@ git branch -d feature/payment-integration
 
 ```bash
 # 1. Partir de develop
-git checkout develop
+git checkout develop  
 git pull origin develop
 
 # 2. Créer la branche bugfix
@@ -984,8 +984,8 @@ git checkout -b bugfix/navbar-broken-mobile
 git commit -m "fix: corrige le menu sur mobile"
 
 # 4. Merger rapidement dans develop
-git checkout develop
-git merge --no-ff bugfix/navbar-broken-mobile
+git checkout develop  
+git merge --no-ff bugfix/navbar-broken-mobile  
 git push origin develop
 
 # 5. Supprimer
@@ -996,7 +996,7 @@ git branch -d bugfix/navbar-broken-mobile
 
 ```bash
 # 1. Partir de main (PRODUCTION!)
-git checkout main
+git checkout main  
 git pull origin main
 
 # 2. Créer le hotfix
@@ -1006,14 +1006,14 @@ git checkout -b hotfix/critical-security-fix
 git commit -m "fix: corrige la faille de sécurité XSS"
 
 # 4. Merger dans main
-git checkout main
-git merge --no-ff hotfix/critical-security-fix
-git tag -a v1.2.1 -m "Hotfix v1.2.1"
+git checkout main  
+git merge --no-ff hotfix/critical-security-fix  
+git tag -a v1.2.1 -m "Hotfix v1.2.1"  
 git push origin main --tags
 
 # 5. Merger AUSSI dans develop (important!)
-git checkout develop
-git merge --no-ff hotfix/critical-security-fix
+git checkout develop  
+git merge --no-ff hotfix/critical-security-fix  
 git push origin develop
 
 # 6. Supprimer
@@ -1026,25 +1026,25 @@ git branch -d hotfix/critical-security-fix
 
 ```bash
 # 1. Partir de develop quand prêt
-git checkout develop
+git checkout develop  
 git pull origin develop
 
 # 2. Créer la release
 git checkout -b release/2.0.0
 
 # 3. Finaliser
-git commit -m "chore: bump version to 2.0.0"
+git commit -m "chore: bump version to 2.0.0"  
 git commit -m "docs: update CHANGELOG"
 
 # 4. Merger dans main
-git checkout main
-git merge --no-ff release/2.0.0
-git tag -a v2.0.0 -m "Release 2.0.0"
+git checkout main  
+git merge --no-ff release/2.0.0  
+git tag -a v2.0.0 -m "Release 2.0.0"  
 git push origin main --tags
 
 # 5. Merger dans develop
-git checkout develop
-git merge --no-ff release/2.0.0
+git checkout develop  
+git merge --no-ff release/2.0.0  
 git push origin develop
 
 # 6. Supprimer

@@ -21,8 +21,8 @@ Un message de commit se compose généralement de deux parties :
 ```
 Titre court et descriptif (max 50 caractères)
 
-Corps du message plus détaillé qui explique le contexte,
-les raisons du changement, et éventuellement les impacts.
+Corps du message plus détaillé qui explique le contexte,  
+les raisons du changement, et éventuellement les impacts.  
 Chaque ligne ne devrait pas dépasser 72 caractères.
 ```
 
@@ -44,8 +44,8 @@ Ajoute la validation des emails dans le formulaire
 
 ❌ **Mauvais** :
 ```
-ajout de code pour les emails (trop vague, pas de majuscule)
-Ajouté la validation des emails dans le formulaire d'inscription utilisateur avec regex (trop long, passé)
+ajout de code pour les emails (trop vague, pas de majuscule)  
+Ajouté la validation des emails dans le formulaire d'inscription utilisateur avec regex (trop long, passé)  
 bug fix (pas informatif)
 ```
 
@@ -70,14 +70,14 @@ Le corps est optionnel pour les petits changements évidents, mais **fortement r
 ```
 Corrige le bug d'affichage des dates en timezone UTC
 
-Les dates s'affichaient en UTC au lieu de la timezone locale
-de l'utilisateur, causant de la confusion sur les horaires
+Les dates s'affichaient en UTC au lieu de la timezone locale  
+de l'utilisateur, causant de la confusion sur les horaires  
 d'événements.
 
-Solution : conversion automatique de toutes les dates vers
+Solution : conversion automatique de toutes les dates vers  
 la timezone du navigateur avant affichage.
 
-Impacte tous les composants affichant des dates.
+Impacte tous les composants affichant des dates.  
 Fixes #342
 ```
 
@@ -141,8 +141,8 @@ test: ajoute les tests unitaires pour le module de paiement
 Vous pouvez ajouter une portée entre parenthèses pour plus de précision :
 
 ```
-feat(auth): ajoute la connexion via Google
-fix(api): corrige la gestion des erreurs 500
+feat(auth): ajoute la connexion via Google  
+fix(api): corrige la gestion des erreurs 500  
 docs(readme): ajoute la section troubleshooting
 ```
 
@@ -155,7 +155,7 @@ Si votre projet utilise un système de suivi (GitHub Issues, Jira, etc.), réfé
 ```
 fix: corrige la pagination des résultats de recherche
 
-La pagination ne fonctionnait pas au-delà de la page 10
+La pagination ne fonctionnait pas au-delà de la page 10  
 en raison d'une erreur de calcul de l'offset.
 
 Fixes #123
@@ -177,10 +177,10 @@ Fixes #123
 
 ❌ **Messages trop vagues** :
 ```
-Update
-Fix bug
-Changes
-WIP
+Update  
+Fix bug  
+Changes  
+WIP  
 asdfgh
 ```
 
@@ -203,7 +203,7 @@ Ajoute login, corrige bugs, met à jour CSS, refactorise API
 
 ❌ **Humour ou messages personnels** :
 ```
-YOLO, ça devrait marcher maintenant
+YOLO, ça devrait marcher maintenant  
 J'en ai marre de ce bug
 ```
 → Restez professionnel, votre historique est public
@@ -218,8 +218,8 @@ Chaque commit devrait représenter **un changement logique unique**. Si vous dev
 
 ✅ **Bon** : Séparer en plusieurs commits
 ```
-feat: ajoute le formulaire de contact
-fix: corrige l'erreur de validation email
+feat: ajoute le formulaire de contact  
+fix: corrige l'erreur de validation email  
 docs: met à jour le guide utilisateur
 ```
 
@@ -235,7 +235,7 @@ Si vous travaillez en pair programming :
 ```
 feat: implémente la fonctionnalité de chat en temps réel
 
-Co-authored-by: Marie Dupont <marie@example.com>
+Co-authored-by: Marie Dupont <marie@example.com>  
 Co-authored-by: Pierre Martin <pierre@example.com>
 ```
 
@@ -246,7 +246,7 @@ Si votre changement casse la compatibilité :
 ```
 feat!: change le format de réponse de l'API
 
-BREAKING CHANGE: L'API renvoie maintenant un objet au lieu
+BREAKING CHANGE: L'API renvoie maintenant un objet au lieu  
 d'un tableau. Les clients doivent mettre à jour leur code.
 
 Migration : remplacer `data` par `data.items`

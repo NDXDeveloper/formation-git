@@ -67,7 +67,7 @@ node_modules/
 Puis commitez-le :
 
 ```bash
-git add .gitignore
+git add .gitignore  
 git commit -m "chore: ajoute le fichier .gitignore"
 ```
 
@@ -264,13 +264,13 @@ temp            # Ignore le fichier ET le dossier temp
 
 ```gitignore
 # Dépendances
-node_modules/
-npm-debug.log*
-yarn-debug.log*
+node_modules/  
+npm-debug.log*  
+yarn-debug.log*  
 yarn-error.log*
 
 # Fichiers de build
-dist/
+dist/  
 build/
 .cache/
 
@@ -303,14 +303,14 @@ __pycache__/
 *$py.class
 
 # Distribution / packaging
-dist/
+dist/  
 build/
 *.egg-info/
 .eggs/
 
 # Virtual environment
-venv/
-env/
+venv/  
+env/  
 ENV/
 .venv
 
@@ -341,7 +341,7 @@ htmlcov/
 *.ear
 
 # Maven
-target/
+target/  
 pom.xml.tag
 
 # Gradle
@@ -366,19 +366,19 @@ build/
 
 ```gitignore
 # Composer
-vendor/
+vendor/  
 composer.lock
 
 # Laravel specific
 .env
-storage/framework/cache/*
-storage/framework/sessions/*
-storage/framework/views/*
+storage/framework/cache/*  
+storage/framework/sessions/*  
+storage/framework/views/*  
 storage/logs/*
 
 # Symfony specific
-var/cache/
-var/logs/
+var/cache/  
+var/logs/  
 var/sessions/
 ```
 
@@ -422,8 +422,8 @@ vendor/bundle/
 *.dll
 
 # CMake
-CMakeCache.txt
-CMakeFiles/
+CMakeCache.txt  
+CMakeFiles/  
 cmake_install.cmake
 ```
 
@@ -483,7 +483,7 @@ git rm --cached -r dossier/
 echo "fichier.txt" >> .gitignore
 
 # Commiter
-git add .gitignore
+git add .gitignore  
 git commit -m "chore: retire fichier.txt du suivi et l'ajoute à .gitignore"
 ```
 
@@ -540,7 +540,7 @@ curl -L https://www.toptal.com/developers/gitignore/api/node,visualstudiocode,ma
 
 #### GitHub templates
 
-GitHub propose des templates officiels :
+GitHub propose des templates officiels :  
 https://github.com/github/gitignore
 
 **Exemples** :
@@ -621,8 +621,8 @@ git config --global core.excludesfile ~/.gitignore_global
 .LSOverride
 
 # === Windows ===
-Thumbs.db
-ehthumbs.db
+Thumbs.db  
+ehthumbs.db  
 Desktop.ini
 
 # === Linux ===
@@ -675,7 +675,7 @@ touch .gitattributes
 Puis commitez-le :
 
 ```bash
-git add .gitattributes
+git add .gitattributes  
 git commit -m "chore: ajoute .gitattributes"
 ```
 
@@ -780,7 +780,7 @@ Makefile text eol=lf
 *.md text diff=markdown
 *.txt text
 *.adoc text
-LICENSE text
+LICENSE text  
 README text
 ```
 
@@ -904,7 +904,7 @@ Les filtres transforment les fichiers lors du `git add` (clean) et `git checkout
 
 Configuration :
 ```bash
-git config filter.remove-secrets.clean "sed 's/password=.*/password=REDACTED/'"
+git config filter.remove-secrets.clean "sed 's/password=.*/password=REDACTED/'"  
 git config filter.remove-secrets.smudge cat
 ```
 
@@ -944,7 +944,7 @@ version.txt export-subst
 
 Dans `version.txt` :
 ```
-Version: $Format:%H$
+Version: $Format:%H$  
 Date: $Format:%ci$
 ```
 
@@ -966,7 +966,7 @@ Git LFS permet de gérer de **gros fichiers** (vidéos, assets 3D, datasets).
 
 **Installation de Git LFS** :
 ```bash
-git lfs install
+git lfs install  
 git lfs track "*.psd"
 ```
 
@@ -1021,7 +1021,7 @@ Voici un template moderne et complet :
 .env* text
 .gitattributes text
 .gitignore text
-Dockerfile text
+Dockerfile text  
 Makefile text eol=lf
 
 # ===== Documentation =====
@@ -1029,16 +1029,16 @@ Makefile text eol=lf
 *.markdown text diff=markdown
 *.txt text
 *.adoc text
-AUTHORS text
-CHANGELOG text
-CHANGES text
-CONTRIBUTING text
-COPYING text
-COPYRIGHT text
-INSTALL text
-LICENSE text
-NEWS text
-README text
+AUTHORS text  
+CHANGELOG text  
+CHANGES text  
+CONTRIBUTING text  
+COPYING text  
+COPYRIGHT text  
+INSTALL text  
+LICENSE text  
+NEWS text  
+README text  
 TODO text
 
 # ===== Templates =====
@@ -1221,7 +1221,7 @@ config/*.secret filter=clean-secrets
 
 Configuration du filtre :
 ```bash
-git config filter.clean-secrets.clean "sed 's/password=.*/password=REDACTED/'"
+git config filter.clean-secrets.clean "sed 's/password=.*/password=REDACTED/'"  
 git config filter.clean-secrets.smudge cat
 ```
 

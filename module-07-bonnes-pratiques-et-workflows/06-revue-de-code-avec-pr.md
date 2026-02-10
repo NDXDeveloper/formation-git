@@ -116,9 +116,9 @@ Avant d'ouvrir une PR, assurez-vous que :
 
 ```bash
 # Votre branche est à jour avec la branche cible
-git checkout develop
-git pull origin develop
-git checkout feature/ma-feature
+git checkout develop  
+git pull origin develop  
+git checkout feature/ma-feature  
 git merge develop
 
 # Ou avec rebase (préférable)
@@ -160,9 +160,9 @@ Sur **GitHub** :
 **Format recommandé** : Suivez les mêmes conventions que les commits
 
 ```
-feat: ajoute l'authentification Google OAuth
-fix: corrige le bug de pagination
-refactor: simplifie le module de paiement
+feat: ajoute l'authentification Google OAuth  
+fix: corrige le bug de pagination  
+refactor: simplifie le module de paiement  
 docs: met à jour le guide d'installation
 ```
 
@@ -181,7 +181,7 @@ Une bonne description contient :
 ```markdown
 ## Description
 
-Cette PR ajoute l'authentification via Google OAuth pour permettre
+Cette PR ajoute l'authentification via Google OAuth pour permettre  
 aux utilisateurs de se connecter avec leur compte Google.
 ```
 
@@ -190,11 +190,11 @@ aux utilisateurs de se connecter avec leur compte Google.
 ```markdown
 ## Pourquoi ?
 
-Les utilisateurs demandent depuis longtemps une option de connexion
-simplifiée. L'authentification Google réduit les frictions et améliore
+Les utilisateurs demandent depuis longtemps une option de connexion  
+simplifiée. L'authentification Google réduit les frictions et améliore  
 l'expérience utilisateur.
 
-Closes #234
+Closes #234  
 Related to #189
 ```
 
@@ -439,7 +439,7 @@ Pour proposer une amélioration :
 💡 Suggestion : Tu pourrais utiliser la syntaxe destructuring ici :
 ```javascript
 // Au lieu de
-const name = user.name;
+const name = user.name;  
 const email = user.email;
 
 // Utilise
@@ -484,8 +484,8 @@ Ce code est nul. Tu ne sais pas coder ?
 
 ✅ **Bon** :
 ```
-Cette approche pourrait être améliorée. As-tu considéré utiliser
-un design pattern Observer ? Cela rendrait le code plus maintenable.
+Cette approche pourrait être améliorée. As-tu considéré utiliser  
+un design pattern Observer ? Cela rendrait le code plus maintenable.  
 Voici un exemple : [lien vers doc]
 ```
 
@@ -498,8 +498,8 @@ Change ça.
 
 ✅ **Bon** :
 ```
-Je suggère d'utiliser `const` plutôt que `let` ici car la variable
-n'est jamais réassignée. Cela rend l'intention du code plus claire
+Je suggère d'utiliser `const` plutôt que `let` ici car la variable  
+n'est jamais réassignée. Cela rend l'intention du code plus claire  
 et évite les bugs potentiels.
 ```
 
@@ -512,7 +512,7 @@ Tu dois utiliser async/await ici.
 
 ✅ **Bon** :
 ```
-As-tu considéré utiliser async/await plutôt que .then() ?
+As-tu considéré utiliser async/await plutôt que .then() ?  
 Cela pourrait améliorer la lisibilité. Qu'en penses-tu ?
 ```
 
@@ -549,7 +549,7 @@ Il y a un problème de performance ici.
 ✅ **Spécifique** :
 ```
 ⚡ Cette requête dans une boucle crée un problème N+1. Avec 1000 utilisateurs,
-cela génère 1000 requêtes au lieu d'une seule. Solution suggérée :
+cela génère 1000 requêtes au lieu d'une seule. Solution suggérée :  
 utiliser un JOIN ou un bulk query.
 ```
 
@@ -570,8 +570,8 @@ Je sais ce que je fais, laisse-moi tranquille.
 
 ✅ **Bon** :
 ```
-Merci pour ton retour ! Je comprends ton point. J'ai choisi
-cette approche parce que [raison]. Es-tu d'accord ou préfères-tu
+Merci pour ton retour ! Je comprends ton point. J'ai choisi  
+cette approche parce que [raison]. Es-tu d'accord ou préfères-tu  
 que je modifie ?
 ```
 
@@ -593,7 +593,7 @@ Après avoir répondu et/ou corrigé, marquez la conversation comme résolue.
 
 ```bash
 # Faire les corrections
-git add .
+git add .  
 git commit -m "fix: corrige les remarques de la review"
 
 # Pousser (la PR se met à jour automatiquement)
@@ -1022,9 +1022,9 @@ Pour les changements UI/UX, toujours ajouter des screenshots ou GIFs.
 #### 5. Liez les issues
 
 ```markdown
-Closes #123
-Fixes #456
-Resolves #789
+Closes #123  
+Fixes #456  
+Resolves #789  
 Related to #101
 ```
 
@@ -1197,7 +1197,7 @@ refactor: extrait la logique de validation dans un module séparé
 
 # Description
 ## Pourquoi
-La logique de validation était dupliquée dans 5 fichiers différents,
+La logique de validation était dupliquée dans 5 fichiers différents,  
 rendant la maintenance difficile.
 
 ## Changements
@@ -1213,7 +1213,7 @@ rendant la maintenance difficile.
 - ⚠️ Aucun changement de comportement
 
 ## Tests
-Tous les tests existants passent, confirmant que le comportement
+Tous les tests existants passent, confirmant que le comportement  
 est identique.
 ```
 
