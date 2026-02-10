@@ -89,7 +89,7 @@ A ← B ← C ← D ← E
 **Commande :**
 
 ```bash
-git switch main
+git switch main  
 git merge feature
 ```
 
@@ -106,7 +106,7 @@ Git déplace simplement le pointeur `main` vers `E`. Aucun nouveau commit n'est 
 **Message Git :**
 
 ```
-Updating c3d4e5f..e5f6g7h
+Updating c3d4e5f..e5f6g7h  
 Fast-forward
  fichier1.txt | 10 ++++++++++
  fichier2.js  | 25 +++++++++++++++++++++++++
@@ -132,7 +132,7 @@ A ← B ← C ← D ← E
 **Commande :**
 
 ```bash
-git switch main
+git switch main  
 git merge feature
 ```
 
@@ -179,7 +179,7 @@ A ← B ← C ← D
 **Commande :**
 
 ```bash
-git merge --squash feature
+git merge --squash feature  
 git commit -m "Ajout feature complète"
 ```
 
@@ -208,16 +208,16 @@ Vous développez une nouvelle fonctionnalité de login, puis la fusionnez dans m
 git switch -c feature-login
 
 # 2. Développer la fonctionnalité (plusieurs commits)
-echo "Login form HTML" > login.html
-git add login.html
+echo "Login form HTML" > login.html  
+git add login.html  
 git commit -m "Ajout formulaire login"
 
-echo "Authentication logic" > auth.js
-git add auth.js
+echo "Authentication logic" > auth.js  
+git add auth.js  
 git commit -m "Ajout logique authentification"
 
-echo "Validation" >> auth.js
-git add auth.js
+echo "Validation" >> auth.js  
+git add auth.js  
 git commit -m "Ajout validation formulaire"
 
 # 3. Tester la fonctionnalité
@@ -254,7 +254,7 @@ git merge --no-ff feature-login
 **Visualisation :**
 
 ```
-Sans --no-ff (fast-forward) :
+Sans --no-ff (fast-forward) :  
 A ← B ← C ← D ← E
                 ↑
               main
@@ -280,9 +280,9 @@ Un **conflit** se produit quand Git ne peut pas fusionner automatiquement parce 
 #### Quand surviennent les conflits ?
 
 ```
-Branche main :        Branche feature :
-ligne 1               ligne 1
-ligne 2 modifiée A    ligne 2 modifiée B  ← CONFLIT !
+Branche main :        Branche feature :  
+ligne 1               ligne 1  
+ligne 2 modifiée A    ligne 2 modifiée B  ← CONFLIT !  
 ligne 3               ligne 3
 ```
 
@@ -556,7 +556,7 @@ git commit -m "Merge feature-login avec modifications supplémentaires"
 Combine tous les commits de la branche en un seul.
 
 ```bash
-git merge --squash feature-multiple-commits
+git merge --squash feature-multiple-commits  
 git commit -m "Ajout feature complète"
 ```
 
@@ -599,13 +599,13 @@ git log --oneline --graph
 # * b2c3d4e Initial commit
 
 # Créer et développer une feature
-git switch -c feature-navbar
-echo "Nav HTML" > navbar.html
-git add navbar.html
+git switch -c feature-navbar  
+echo "Nav HTML" > navbar.html  
+git add navbar.html  
 git commit -m "Ajout navbar"
 
-echo "Nav CSS" > navbar.css
-git add navbar.css
+echo "Nav CSS" > navbar.css  
+git add navbar.css  
 git commit -m "Style navbar"
 
 # Retour sur main
@@ -634,19 +634,19 @@ git branch -d feature-navbar
 
 ```bash
 # Sur main
-git switch main
-echo "Version Main" > config.txt
-git add config.txt
+git switch main  
+echo "Version Main" > config.txt  
+git add config.txt  
 git commit -m "Config main"
 
 # Sur feature
-git switch -c feature-new-config
-echo "Version Feature" > config.txt
-git add config.txt
+git switch -c feature-new-config  
+echo "Version Feature" > config.txt  
+git add config.txt  
 git commit -m "Config feature"
 
 # Retour sur main pour merger
-git switch main
+git switch main  
 git merge feature-new-config
 # CONFLICT (content): Merge conflict in config.txt
 
@@ -679,20 +679,20 @@ git switch -c feature-A
 # ... développer feature A ...
 git commit -m "Feature A ready"
 
-git switch main
+git switch main  
 git switch -c feature-B
 # ... développer feature B ...
 git commit -m "Feature B ready"
 
-git switch main
+git switch main  
 git switch -c feature-C
 # ... développer feature C ...
 git commit -m "Feature C ready"
 
 # Fusionner toutes les features dans main
-git switch main
-git merge feature-A
-git merge feature-B
+git switch main  
+git merge feature-A  
+git merge feature-B  
 git merge feature-C
 
 # Si conflits, les résoudre un par un
@@ -702,13 +702,13 @@ git merge feature-C
 
 ```bash
 # Feature avec plusieurs commits
-git switch -c feature-multi-step
-git commit -m "Step 1"
-git commit -m "Step 2"
+git switch -c feature-multi-step  
+git commit -m "Step 1"  
+git commit -m "Step 2"  
 git commit -m "Step 3"
 
 # Merge avec commit de fusion explicite
-git switch main
+git switch main  
 git merge --no-ff feature-multi-step -m "Merge feature-multi-step : ajout fonctionnalité complète"
 
 # L'historique montre clairement la feature
@@ -780,11 +780,11 @@ git diff
 
 ```bash
 # ✅ Correct
-git switch main
+git switch main  
 git merge feature-login
 
 # ❌ Incorrect (source de confusion)
-git switch feature-login
+git switch feature-login  
 git merge main  # Vous mergez main dans feature, pas l'inverse !
 ```
 
@@ -792,7 +792,7 @@ git merge main  # Vous mergez main dans feature, pas l'inverse !
 
 ```bash
 # S'assurer que main est à jour
-git switch main
+git switch main  
 git pull origin main
 
 # Puis merger
@@ -803,12 +803,12 @@ git merge feature-login
 
 ```bash
 # Tester la feature sur sa branche
-git switch feature-login
-npm test
+git switch feature-login  
+npm test  
 npm run build
 
 # Si OK, merger
-git switch main
+git switch main  
 git merge feature-login
 ```
 
@@ -825,7 +825,7 @@ git merge main
 # Résoudre les conflits ici
 
 # Plus tard, le merge inverse sera plus simple
-git switch main
+git switch main  
 git merge feature-login  # Pas de conflit !
 ```
 
@@ -837,7 +837,7 @@ git status
 # Changes not staged for commit...
 
 # ✅ Commiter ou stasher d'abord
-git commit -am "WIP"
+git commit -am "WIP"  
 git merge feature-login
 ```
 
@@ -871,7 +871,7 @@ git merge feature-login
 ```bash
 # Vous vouliez merger feature dans main
 # Mais vous avez fait l'inverse
-git switch feature-login
+git switch feature-login  
 git merge main  # ❌ Main est maintenant dans feature !
 ```
 
@@ -942,27 +942,27 @@ Nous verrons rebase en détail dans la section suivante.
 
 ```bash
 # MERGE DE BASE
-git merge branche                 # Fusionner branche dans la branche actuelle
-git merge --no-ff branche         # Forcer un commit de merge
+git merge branche                 # Fusionner branche dans la branche actuelle  
+git merge --no-ff branche         # Forcer un commit de merge  
 git merge --squash branche        # Combiner tous les commits en un seul
 
 # GESTION DES CONFLITS
-git merge --abort                 # Annuler un merge en cours
-git mergetool                     # Ouvrir l'outil de résolution
+git merge --abort                 # Annuler un merge en cours  
+git mergetool                     # Ouvrir l'outil de résolution  
 git diff --name-only --diff-filter=U  # Lister les fichiers en conflit
 
 # OPTIONS AVANCÉES
-git merge --no-commit branche     # Merger sans commiter
-git merge --edit branche          # Forcer l'édition du message
-git merge -s strategy branche     # Spécifier une stratégie
+git merge --no-commit branche     # Merger sans commiter  
+git merge --edit branche          # Forcer l'édition du message  
+git merge -s strategy branche     # Spécifier une stratégie  
 git merge -X theirs branche       # Favoriser l'autre branche en conflit
 
 # ANNULATION
-git reset --hard HEAD~1           # Annuler dernier merge (non pushé)
+git reset --hard HEAD~1           # Annuler dernier merge (non pushé)  
 git revert -m 1 HEAD              # Annuler dernier merge (pushé)
 
 # VÉRIFICATION
-git log --oneline --graph         # Voir l'historique avec merges
+git log --oneline --graph         # Voir l'historique avec merges  
 git show HEAD                     # Voir le dernier commit (merge)
 ```
 

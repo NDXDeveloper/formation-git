@@ -82,8 +82,8 @@ Chaque tâche a sa propre branche. Si l'une casse, les autres continuent de fonc
 **Principe 3 : Les branches facilitent la collaboration**
 
 ```
-Alice travaille sur feature-login
-Bob travaille sur feature-payment
+Alice travaille sur feature-login  
+Bob travaille sur feature-payment  
 Claire travaille sur bugfix-header
 
 Tous en parallèle, sans se gêner !
@@ -292,15 +292,15 @@ Voici comment vous utiliserez les branches au quotidien :
 
 ```bash
 # 1. Partir de main
-git switch main
+git switch main  
 git pull
 
 # 2. Créer une branche
 git switch -c feature-dark-mode
 
 # 3. Développer
-git commit -m "Ajout variables CSS"
-git commit -m "Ajout toggle"
+git commit -m "Ajout variables CSS"  
+git commit -m "Ajout toggle"  
 git commit -m "Ajout sauvegarde préférence"
 
 # 4. Synchroniser (si main a avancé)
@@ -310,7 +310,7 @@ git merge main
 npm test
 
 # 6. Fusionner dans main
-git switch main
+git switch main  
 git merge feature-dark-mode
 
 # 7. Supprimer la branche
@@ -375,8 +375,8 @@ La gestion des branches devient naturelle avec la pratique. Au début, réfléch
 **Conseil :** Créez un projet de test pour expérimenter sans risque :
 
 ```bash
-mkdir git-branch-practice
-cd git-branch-practice
+mkdir git-branch-practice  
+cd git-branch-practice  
 git init
 
 # Créez des fichiers, des commits, des branches

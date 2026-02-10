@@ -24,9 +24,9 @@ Un **conflit** se produit quand Git essaie de fusionner deux branches, mais trou
 #### Cause principale : Modifications simultanées
 
 ```
-Branche main :              Branche feature :
-ligne 1                     ligne 1
-ligne 2 → "version A"       ligne 2 → "version B"  ← CONFLIT !
+Branche main :              Branche feature :  
+ligne 1                     ligne 1  
+ligne 2 → "version A"       ligne 2 → "version B"  ← CONFLIT !  
 ligne 3                     ligne 3
 ```
 
@@ -38,11 +38,11 @@ Deux développeurs (ou vous-même sur deux branches) ont modifié la même ligne
 
 ```bash
 # Alice sur main
-echo "Prix: 100€" > prix.txt
+echo "Prix: 100€" > prix.txt  
 git commit -am "Fixe prix à 100"
 
 # Bob sur feature-promotion
-echo "Prix: 80€" > prix.txt
+echo "Prix: 80€" > prix.txt  
 git commit -am "Prix promotionnel"
 
 # Lors du merge → CONFLIT
@@ -52,11 +52,11 @@ git commit -am "Prix promotionnel"
 
 ```bash
 # Sur main : modification
-echo "Nouveau contenu" >> fichier.txt
+echo "Nouveau contenu" >> fichier.txt  
 git commit -am "Update fichier"
 
 # Sur feature : suppression
-git rm fichier.txt
+git rm fichier.txt  
 git commit -m "Delete fichier"
 
 # Lors du merge → CONFLIT
@@ -368,11 +368,11 @@ git log --oneline --graph -5
 
 ```bash
 # Garder uniquement la version de HEAD (main)
-git checkout --ours fichier.txt
+git checkout --ours fichier.txt  
 git add fichier.txt
 
 # Garder uniquement la version de l'autre branche
-git checkout --theirs fichier.txt
+git checkout --theirs fichier.txt  
 git add fichier.txt
 ```
 
@@ -382,8 +382,8 @@ git add fichier.txt
 # Conflit dans config.json
 # La version de feature est complètement fausse
 
-git checkout --ours config.json
-git add config.json
+git checkout --ours config.json  
+git add config.json  
 git commit
 ```
 
@@ -482,7 +482,7 @@ git merge feature-refactor
 # Éditer le fichier avec le nouveau nom
 code new-name.txt
 # Résoudre les conflits
-git add new-name.txt
+git add new-name.txt  
 git commit
 ```
 
@@ -498,7 +498,7 @@ git merge feature-new-file
 Éditer le fichier et combiner les deux versions, puis :
 
 ```bash
-git add new-file.txt
+git add new-file.txt  
 git commit
 ```
 
@@ -630,7 +630,7 @@ Si le conflit est simple, vous pouvez le résoudre directement dans l'interface 
 
 ```bash
 # Mettre à jour votre branche avec main régulièrement
-git switch feature-votre-branche
+git switch feature-votre-branche  
 git merge main
 
 # Ou avec rebase
@@ -645,7 +645,7 @@ Faire des commits petits et focalisés.
 
 ```bash
 # ✅ Bon
-git commit -m "Ajout fonction validateEmail"
+git commit -m "Ajout fonction validateEmail"  
 git commit -m "Ajout fonction validatePassword"
 
 # ❌ Mauvais
@@ -699,7 +699,7 @@ Voici un workflow professionnel pour gérer les conflits efficacement :
 
 ```bash
 # 1. Tenter le merge
-git switch main
+git switch main  
 git merge feature-payment
 # CONFLICT!
 
@@ -717,7 +717,7 @@ git add src/payment.js
 git mergetool
 
 # Option C : Accepter une version complète
-git checkout --ours src/config.json
+git checkout --ours src/config.json  
 git add src/config.json
 
 # 4. Vérifier qu'il ne reste plus de conflits
@@ -725,13 +725,13 @@ git status
 # All conflicts fixed but you are still merging.
 
 # 5. Chercher les marqueurs oubliés
-grep -r "<<<<<<" .
+grep -r "<<<<<<" .  
 grep -r ">>>>>>>" .
 # (ne devrait rien retourner)
 
 # 6. Tester le code
-npm test
-npm run lint
+npm test  
+npm run lint  
 npm start
 # Tester manuellement les fonctionnalités affectées
 
@@ -877,8 +877,8 @@ cat package.json | jq .
 
 ```bash
 # Analyser les deux approches
-git show :1:fichier.js > base.js
-git show :2:fichier.js > ours.js
+git show :1:fichier.js > base.js  
+git show :2:fichier.js > ours.js  
 git show :3:fichier.js > theirs.js
 
 # Comprendre les intentions
@@ -894,7 +894,7 @@ git show :3:fichier.js > theirs.js
 #### Erreur 1 : Oublier les marqueurs de conflit
 
 ```bash
-git add fichier.js
+git add fichier.js  
 git commit
 # Le code contient toujours <<<<<<<
 
@@ -905,7 +905,7 @@ git commit
 
 ```bash
 # Avant de commiter, chercher les marqueurs
-grep -r "<<<<<<" .
+grep -r "<<<<<<" .  
 grep -r ">>>>>>>" .
 
 # Configurer un pre-commit hook
@@ -920,8 +920,8 @@ fi
 
 ```bash
 # Résoudre le conflit rapidement
-git add .
-git commit
+git add .  
+git commit  
 git push
 
 # Plus tard : les tests échouent ou l'app crash
@@ -931,8 +931,8 @@ git push
 
 ```bash
 # Toujours tester après résolution
-npm test
-npm run build
+npm test  
+npm run build  
 npm start
 # Vérifier manuellement
 ```
@@ -944,7 +944,7 @@ npm start
 git checkout --theirs fichier-important.js
 # Oups, on voulait "ours" !
 
-git checkout --ours fichier-important.js
+git checkout --ours fichier-important.js  
 git add fichier-important.js
 ```
 
@@ -967,7 +967,7 @@ git branch backup-avant-resolution
 
 ```bash
 # Voir l'ancien contenu
-git show :2:fichier.js  # Version de HEAD
+git show :2:fichier.js  # Version de HEAD  
 git show :3:fichier.js  # Version de l'autre branche
 ```
 
@@ -996,26 +996,26 @@ git merge --abort
 
 ```bash
 # DIAGNOSTIC
-git status                           # État du merge
-git diff                             # Voir les conflits
+git status                           # État du merge  
+git diff                             # Voir les conflits  
 git diff --name-only --diff-filter=U # Lister fichiers en conflit
 
 # VISUALISATION
-git show :1:fichier.js               # Version de base (ancêtre commun)
-git show :2:fichier.js               # Version de HEAD (votre branche)
+git show :1:fichier.js               # Version de base (ancêtre commun)  
+git show :2:fichier.js               # Version de HEAD (votre branche)  
 git show :3:fichier.js               # Version de l'autre branche
 
 # RÉSOLUTION RAPIDE
-git checkout --ours fichier.js       # Garder votre version
-git checkout --theirs fichier.js     # Garder leur version
+git checkout --ours fichier.js       # Garder votre version  
+git checkout --theirs fichier.js     # Garder leur version  
 git mergetool                        # Lancer outil graphique
 
 # ANNULATION
-git merge --abort                    # Annuler le merge
+git merge --abort                    # Annuler le merge  
 git reset --hard HEAD                # Réinitialiser tout
 
 # FINALISATION
-git add fichier.js                   # Marquer comme résolu
+git add fichier.js                   # Marquer comme résolu  
 git commit                           # Finaliser le merge
 ```
 
@@ -1033,7 +1033,7 @@ git commit                           # Finaliser le merge
 # - Les implications de chaque choix
 
 # Utiliser git log pour le contexte
-git log --oneline feature-branch
+git log --oneline feature-branch  
 git log --oneline main
 ```
 
@@ -1048,7 +1048,7 @@ Résolution des conflits :
 - config.json : gardé la version de feature (plus à jour)
 - style.css : conservé les deux styles (pas incompatibles)
 
-Tests réussis : npm test (100% pass)
+Tests réussis : npm test (100% pass)  
 Testé manuellement : paiements Visa, Mastercard, PayPal"
 ```
 
@@ -1056,8 +1056,8 @@ Testé manuellement : paiements Visa, Mastercard, PayPal"
 
 ```bash
 # Tests automatiques
-npm test
-npm run lint
+npm test  
+npm run lint  
 npm run build
 
 # Tests manuels
@@ -1090,26 +1090,26 @@ git push origin main
 
 ```bash
 # DÉTECTER
-git merge branche           # Conflit apparaît
+git merge branche           # Conflit apparaît  
 git status                  # Voir les fichiers en conflit
 
 # ANALYSER
-code fichier.js            # Ouvrir et voir les marqueurs
+code fichier.js            # Ouvrir et voir les marqueurs  
 git diff fichier.js        # Voir les différences
 
 # RÉSOUDRE
 # Éditer manuellement et supprimer les marqueurs
 # OU
-git checkout --ours file   # Garder votre version
-git checkout --theirs file # Garder leur version
+git checkout --ours file   # Garder votre version  
+git checkout --theirs file # Garder leur version  
 git mergetool              # Outil graphique
 
 # VÉRIFIER
-grep -r "<<<<<<" .         # Chercher marqueurs oubliés
+grep -r "<<<<<<" .         # Chercher marqueurs oubliés  
 npm test                   # Tester le code
 
 # FINALISER
-git add fichier.js         # Marquer résolu
+git add fichier.js         # Marquer résolu  
 git commit                 # Commiter le merge
 
 # ANNULER (si nécessaire)

@@ -198,7 +198,7 @@ Vous avez un site web fonctionnel avec 3 commits.
 #### Création d'une branche pour une nouvelle fonctionnalité
 
 ```bash
-git branch feature-newsletter
+git branch feature-newsletter  
 git checkout feature-newsletter
 ```
 
@@ -216,7 +216,7 @@ Les deux branches pointent sur le même commit. Vous êtes maintenant sur `featu
 Vous faites deux commits pour implémenter la newsletter :
 
 ```bash
-git commit -m "Ajout formulaire newsletter"
+git commit -m "Ajout formulaire newsletter"  
 git commit -m "Connexion API MailChimp"
 ```
 
@@ -236,7 +236,7 @@ Votre branche `feature-newsletter` a avancé avec les commits `D` et `E`. La bra
 Vous découvrez un bug critique et devez le corriger sur `main` :
 
 ```bash
-git checkout main
+git checkout main  
 git commit -m "Fix bug sécurité"
 ```
 
@@ -259,7 +259,7 @@ Les deux branches ont maintenant divergé :
 Une fois la newsletter terminée et testée, vous la fusionnez dans `main` :
 
 ```bash
-git checkout main
+git checkout main  
 git merge feature-newsletter
 ```
 
@@ -374,7 +374,7 @@ Les branches distantes sont préfixées par `origin/` (ou le nom de votre remote
 ```
 Votre ordinateur          │  Serveur GitHub
                           │
-main ──────────────────→  │  origin/main
+main ──────────────────→  │  origin/main  
 feature-A                 │
                           │  origin/develop
 ```
@@ -390,8 +390,8 @@ Vous pouvez :
 #### 1. Une branche est juste un pointeur
 
 ```
-Commit A: a1b2c3d
-Commit B: c3d4e5f
+Commit A: a1b2c3d  
+Commit B: c3d4e5f  
 Commit C: e5f6g7h
 
 Branch main: pointe vers e5f6g7h
@@ -507,16 +507,16 @@ git checkout main
 git checkout -b feature-nouvelle-page
 
 # 3. Travailler (plusieurs cycles)
-git add .
-git commit -m "Ajout structure HTML"
-git add .
+git add .  
+git commit -m "Ajout structure HTML"  
+git add .  
 git commit -m "Ajout styles CSS"
 
 # 4. Tester localement
 # ... tests ...
 
 # 5. Fusionner dans main
-git checkout main
+git checkout main  
 git merge feature-nouvelle-page
 
 # 6. Supprimer la branche
@@ -530,8 +530,8 @@ git branch -d feature-nouvelle-page
 #### 1. Développement parallèle
 
 ```
-Alice travaille sur feature-A
-Bob travaille sur feature-B
+Alice travaille sur feature-A  
+Bob travaille sur feature-B  
 Claire fixe un bug sur bugfix-C
 
 Tous en même temps, sans conflit !
@@ -554,8 +554,8 @@ Avant de fusionner une branche, l'équipe peut :
 # Vous travaillez sur feature-A
 # Urgence : bug critique sur main !
 
-git commit -m "WIP: Feature A en cours"
-git checkout main
+git commit -m "WIP: Feature A en cours"  
+git checkout main  
 git checkout -b hotfix-urgent
 # Corriger le bug
 # ...

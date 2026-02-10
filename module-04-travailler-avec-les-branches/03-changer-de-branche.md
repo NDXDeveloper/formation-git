@@ -53,12 +53,12 @@ git branch
 **Visualisation avant/après :**
 
 ```
-Avant :
+Avant :  
 A ← B ← C ← D
         ↑   ↑
       main  feature-login (HEAD)
 
-Après git checkout main :
+Après git checkout main :  
 A ← B ← C ← D
         ↑   ↑
       main (HEAD)  feature-login
@@ -143,22 +143,22 @@ Quand vous changez de branche, Git fait trois choses :
 
 ```bash
 # Sur la branche main
-git switch main
+git switch main  
 cat index.html
 # <h1>Version Main</h1>
 
 # Créer et basculer vers une branche feature
-git switch -c feature-new-design
-echo "<h1>Nouveau Design</h1>" > index.html
+git switch -c feature-new-design  
+echo "<h1>Nouveau Design</h1>" > index.html  
 git commit -am "Nouveau design"
 
 # Retour à main
-git switch main
+git switch main  
 cat index.html
 # <h1>Version Main</h1>  ← Le fichier a changé !
 
 # Retour à feature
-git switch feature-new-design
+git switch feature-new-design  
 cat index.html
 # <h1>Nouveau Design</h1>  ← Le fichier revient !
 ```
@@ -185,7 +185,7 @@ git switch -
 # Switched to branch 'feature-A'
 
 # Alterner entre les deux
-git switch -  # Retour à main
+git switch -  # Retour à main  
 git switch -  # Retour à feature-A
 ```
 
@@ -222,7 +222,7 @@ L'option `-c` signifie "create" (créer).
 git switch -c feature-dark-mode
 
 # Équivalent à :
-git branch feature-dark-mode
+git branch feature-dark-mode  
 git switch feature-dark-mode
 ```
 
@@ -238,7 +238,7 @@ Si vous avez des modifications non commitées, Git peut refuser de changer de br
 
 ```bash
 # Vous êtes sur main et modifiez un fichier
-echo "Modification" >> index.html
+echo "Modification" >> index.html  
 git status
 # Changes not staged for commit:
 #   modified: index.html
@@ -256,8 +256,8 @@ git switch feature-login
 ##### Solution 1 : Commiter les modifications
 
 ```bash
-git add index.html
-git commit -m "Modifications en cours"
+git add index.html  
+git commit -m "Modifications en cours"  
 git switch feature-login
 ```
 
@@ -270,7 +270,7 @@ git stash
 git switch feature-login
 # Travaillez sur feature-login...
 
-git switch main
+git switch main  
 git stash pop
 # Récupérez vos modifications
 ```
@@ -278,7 +278,7 @@ git stash pop
 ##### Solution 3 : Annuler les modifications
 
 ```bash
-git restore index.html
+git restore index.html  
 git switch feature-login
 ```
 
@@ -380,8 +380,8 @@ Vous pouvez :
 
 ```bash
 # En detached HEAD, vous faites un commit
-echo "Test" > fichier.txt
-git add fichier.txt
+echo "Test" > fichier.txt  
+git add fichier.txt  
 git commit -m "Test commit"
 # [detached HEAD abc123] Test commit
 
@@ -444,7 +444,7 @@ Vous pouvez configurer votre terminal pour afficher la branche actuelle dans le 
 
 ```bash
 # Exemple de résultat :
-user@computer ~/project (main) $
+user@computer ~/project (main) $  
 user@computer ~/project (feature-login) $
 ```
 
@@ -473,11 +473,11 @@ git switch -c hotfix-critical-bug
 
 # Corriger le bug
 # ... corrections ...
-git add .
+git add .  
 git commit -m "Fix critical security bug"
 
 # Fusionner dans main
-git switch main
+git switch main  
 git merge hotfix-critical-bug
 
 # Pousser
@@ -487,7 +487,7 @@ git push origin main
 git branch -d hotfix-critical-bug
 
 # Retourner à votre travail
-git switch feature-newsletter
+git switch feature-newsletter  
 git stash pop
 # Continuer le développement
 ```
@@ -515,7 +515,7 @@ git switch feature-login
 git commit -am "Complete login feature"
 
 # Finir Feature A
-git switch main
+git switch main  
 git merge feature-login
 
 # Revenir à Feature B
@@ -538,7 +538,7 @@ git checkout b2c3d4e
 # En detached HEAD
 
 # Tester...
-npm test
+npm test  
 npm start
 
 # Tout fonctionne, retour à main
@@ -682,7 +682,7 @@ git switch test
 
 ```bash
 # Être explicite
-git switch test          # Pour la branche
+git switch test          # Pour la branche  
 git restore -- test      # Pour le fichier
 ```
 
@@ -706,7 +706,7 @@ git status
 git switch -f autre-branche  # ❌ Mauvais
 
 # Faire proprement
-git stash                    # ✅ Bon
+git stash                    # ✅ Bon  
 git switch autre-branche
 ```
 
@@ -717,16 +717,16 @@ git switch autre-branche
 git switch feature-user-authentication
 
 # ❌ Éviter
-git switch test
-git switch tmp
+git switch test  
+git switch tmp  
 git switch nouvelle
 ```
 
 #### 4. Nettoyer les branches après fusion
 
 ```bash
-git switch main
-git merge feature-completed
+git switch main  
+git merge feature-completed  
 git branch -d feature-completed  # Supprimer après fusion
 ```
 
@@ -747,30 +747,30 @@ git switch feature-login
 
 ```bash
 # CHANGER DE BRANCHE
-git switch branche              # Méthode moderne
+git switch branche              # Méthode moderne  
 git checkout branche            # Méthode classique
 
 # CRÉER ET CHANGER
-git switch -c nouvelle          # Méthode moderne
+git switch -c nouvelle          # Méthode moderne  
 git checkout -b nouvelle        # Méthode classique
 
 # RACCOURCIS
-git switch -                    # Retour à la branche précédente
+git switch -                    # Retour à la branche précédente  
 git checkout -                  # Retour à la branche précédente (classique)
 
 # FORCER LE CHANGEMENT (⚠️ Dangereux)
-git switch -f branche           # Écrase modifications locales
+git switch -f branche           # Écrase modifications locales  
 git checkout -f branche         # Écrase modifications locales
 
 # AVEC MERGE DES MODIFICATIONS
 git switch --merge branche      # Tente de fusionner modifications
 
 # DETACHED HEAD
-git checkout <commit>           # Se déplacer vers un commit
+git checkout <commit>           # Se déplacer vers un commit  
 git switch -c nouvelle-branche  # Créer branche depuis detached HEAD
 
 # VÉRIFIER LA BRANCHE ACTUELLE
-git branch                      # Voir toutes les branches (avec *)
+git branch                      # Voir toutes les branches (avec *)  
 git status                      # Première ligne indique la branche
 ```
 

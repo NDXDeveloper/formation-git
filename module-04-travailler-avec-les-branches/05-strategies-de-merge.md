@@ -58,7 +58,7 @@ Git a simplement déplacé le pointeur `main` vers `E`. Aucun nouveau commit cr�
 
 ```bash
 # Fast-forward se produit automatiquement si possible
-git switch main
+git switch main  
 git merge feature-login
 # Updating c3d4e5f..e5f6g7h
 # Fast-forward
@@ -103,7 +103,7 @@ git merge feature-login
 
 ```bash
 # Situation initiale
-git switch main
+git switch main  
 git log --oneline
 # c3d4e5f (HEAD -> main) Update README
 # b2c3d4e Initial commit
@@ -112,11 +112,11 @@ git log --oneline
 git switch -c fix-typo
 
 # Faire la correction
-sed -i 's/teh/the/g' README.md
+sed -i 's/teh/the/g' README.md  
 git commit -am "Fix typo in README"
 
 # Ajouter une autre petite correction
-sed -i 's/wiht/with/g' README.md
+sed -i 's/wiht/with/g' README.md  
 git commit -am "Fix another typo"
 
 # Retour sur main
@@ -186,7 +186,7 @@ Le commit `M` est un merge commit avec deux parents : `E` (de main) et `G` (de f
 ### Commande
 
 ```bash
-git switch main
+git switch main  
 git merge feature-payment
 # Merge made by the 'ort' strategy.
 #  payment.js | 85 ++++++++++++++++++++++++++++++
@@ -212,7 +212,7 @@ git merge --no-ff feature-login
 **Visualisation de la différence :**
 
 ```
-Avec fast-forward (défaut) :
+Avec fast-forward (défaut) :  
 A ← B ← C ← D ← E
                 ↑
               main
@@ -263,17 +263,17 @@ A ← B ← C ← ──── ─M
 
 ```bash
 # Situation avec divergence
-git switch main
+git switch main  
 git commit -m "Update version in package.json"
 
 git switch feature-api
 # (plusieurs commits sur feature-api)
-git commit -m "Ajout endpoint users"
-git commit -m "Ajout validation"
+git commit -m "Ajout endpoint users"  
+git commit -m "Ajout validation"  
 git commit -m "Ajout tests"
 
 # Retour sur main pour merger
-git switch main
+git switch main  
 git merge feature-api
 # Merge made by the 'ort' strategy.
 
@@ -361,7 +361,7 @@ Le commit `E` contient toutes les modifications de `F`, `G`, et `H` combinées, 
 ### Commande
 
 ```bash
-git switch main
+git switch main  
 git merge --squash feature-multiple-commits
 
 # Git prépare les modifications mais NE commit PAS automatiquement
@@ -440,21 +440,21 @@ git commit -m "Feature complète : système de notifications
 # Développement d'une feature avec beaucoup de commits "sales"
 git switch -c feature-dark-mode
 
-git commit -m "WIP: start dark mode"
-git commit -m "add css variables"
-git commit -m "oups forgot a file"
-git commit -m "fix typo"
-git commit -m "more colors"
-git commit -m "fix button colors"
-git commit -m "add toggle"
-git commit -m "fix toggle bug"
-git commit -m "clean up"
+git commit -m "WIP: start dark mode"  
+git commit -m "add css variables"  
+git commit -m "oups forgot a file"  
+git commit -m "fix typo"  
+git commit -m "more colors"  
+git commit -m "fix button colors"  
+git commit -m "add toggle"  
+git commit -m "fix toggle bug"  
+git commit -m "clean up"  
 git commit -m "final touches"
 
 # 10 commits peu intéressants individuellement
 
 # Merger avec squash
-git switch main
+git switch main  
 git merge --squash feature-dark-mode
 
 # Créer UN commit propre qui résume tout
@@ -486,7 +486,7 @@ Après un squash, vous pouvez ajuster les modifications avant de commiter :
 git merge --squash feature-X
 
 # Modifier encore des fichiers si nécessaire
-echo "Dernière modification" >> fichier.txt
+echo "Dernière modification" >> fichier.txt  
 git add fichier.txt
 
 # Commiter avec toutes les modifications
@@ -605,9 +605,9 @@ git switch -c feature-X
 # ... beaucoup de commits ...
 
 # Merger sur main
-git switch main
-git merge --squash feature-X
-git commit -m "Feature X complete"
+git switch main  
+git merge --squash feature-X  
+git commit -m "Feature X complete"  
 git branch -d feature-X
 ```
 
@@ -621,11 +621,11 @@ git branch -d feature-X
 git switch -c feature/payment
 
 # Merger dans develop avec merge commit
-git switch develop
+git switch develop  
 git merge --no-ff feature/payment
 
 # Plus tard, merger develop dans main
-git switch main
+git switch main  
 git merge --no-ff develop
 ```
 
@@ -638,7 +638,7 @@ git merge --no-ff develop
 # Petites modifications
 git switch -c quick-fix
 # Un ou deux commits
-git switch main
+git switch main  
 git merge quick-fix  # Fast-forward
 ```
 
@@ -682,10 +682,10 @@ git config merge.ff
 # Situation : Faute de frappe dans le README
 # Recommandation : Fast-forward (défaut)
 
-git switch -c fix-readme-typo
-sed -i 's/teh/the/g' README.md
-git commit -am "Fix typo in README"
-git switch main
+git switch -c fix-readme-typo  
+sed -i 's/teh/the/g' README.md  
+git commit -am "Fix typo in README"  
+git switch main  
 git merge fix-readme-typo  # Fast-forward automatique
 ```
 
@@ -699,7 +699,7 @@ git merge fix-readme-typo  # Fast-forward automatique
 
 git switch -c feature/payment-system
 # ... 50 commits sur 3 semaines ...
-git switch main
+git switch main  
 git merge --no-ff feature/payment-system -m "Merge payment system
 
 Complete payment integration with Stripe:
@@ -721,8 +721,8 @@ Closes #234, #235, #236"
 # Situation : PR d'un contributeur externe avec 20 commits "WIP"
 # Recommandation : Squash
 
-git switch main
-git merge --squash feature/external-contribution
+git switch main  
+git merge --squash feature/external-contribution  
 git commit -m "Add user profile customization
 
 Implementation contributed by @external-dev:
@@ -743,11 +743,11 @@ Co-authored-by: External Dev <external@email.com>"
 # Recommandation : Fast-forward ou rebase (pas squash)
 
 # Sur votre feature branch, incorporer les changements de main
-git switch feature/long-running
+git switch feature/long-running  
 git merge main  # Ou git rebase main
 
 # Plus tard, quand feature est prête
-git switch main
+git switch main  
 git merge --no-ff feature/long-running
 ```
 
@@ -779,15 +779,15 @@ Complete OAuth2 implementation:
 - Password reset flow
 - Email verification
 
-Resolves: #123, #124
-Tested-by: QA Team
+Resolves: #123, #124  
+Tested-by: QA Team  
 Reviewed-by: @senior-dev"
 ```
 
 ### Squash : Résumé complet
 
 ```bash
-git merge --squash feature-X
+git merge --squash feature-X  
 git commit
 
 # Message dans l'éditeur :
@@ -811,7 +811,7 @@ Tests:
 - Integration tests for all flows
 - E2E tests for login/logout
 
-Breaking changes: None
+Breaking changes: None  
 Migration needed: Run 'npm run migrate:auth'
 
 Closes #123, #124, #125"
@@ -860,20 +860,20 @@ Closes #123, #124, #125"
 git merge branche                    # Fast-forward automatique si possible
 
 # MERGE COMMIT
-git merge --no-ff branche            # Forcer un merge commit
+git merge --no-ff branche            # Forcer un merge commit  
 git config merge.ff false            # Toujours créer merge commit
 
 # SQUASH
-git merge --squash branche           # Combiner tous les commits
+git merge --squash branche           # Combiner tous les commits  
 git commit -m "Message"              # Commiter manuellement après squash
 
 # VÉRIFICATION
-git log --oneline --graph            # Voir l'historique
-git log --merges                     # Voir seulement les merge commits
+git log --oneline --graph            # Voir l'historique  
+git log --merges                     # Voir seulement les merge commits  
 git log --no-merges                  # Voir seulement les commits normaux
 
 # CONFIGURATION
-git config --global merge.ff false   # Global : toujours merge commit
+git config --global merge.ff false   # Global : toujours merge commit  
 git config merge.ff only             # Autoriser fast-forward uniquement
 ```
 

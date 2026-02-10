@@ -131,7 +131,7 @@ git branch
 
 ```bash
 # Option 1 : Deux commandes
-git branch feature-X
+git branch feature-X  
 git checkout feature-X
 
 # Option 2 : Une commande (recommandé)
@@ -381,7 +381,7 @@ git branch -d nom-de-la-branche
 
 ```bash
 # Fusionner une branche
-git checkout main
+git checkout main  
 git merge feature-login
 
 # Supprimer la branche fusionnée
@@ -553,13 +553,13 @@ git push --set-upstream origin nouveau-nom
 git checkout -b feature-dark-mode
 
 # 2. Développer (plusieurs commits)
-git add style.css
-git commit -m "Ajout variables CSS pour dark mode"
-git add script.js
+git add style.css  
+git commit -m "Ajout variables CSS pour dark mode"  
+git add script.js  
 git commit -m "Toggle dark/light mode"
 
 # 3. Fusionner dans main
-git checkout main
+git checkout main  
 git merge feature-dark-mode
 
 # 4. Supprimer la branche
@@ -602,8 +602,8 @@ git branch --merged
 git branch --merged | grep -v "main" | xargs git branch -d
 
 # Nettoyer aussi sur le serveur
-git push origin --delete feature-login
-git push origin --delete feature-payment
+git push origin --delete feature-login  
+git push origin --delete feature-payment  
 git push origin --delete bugfix-header
 ```
 
@@ -626,7 +626,7 @@ git checkout -b hotfix-bug b2c3d4e
 git commit -m "Fix du bug critique"
 
 # Fusionner le fix dans main
-git checkout main
+git checkout main  
 git merge hotfix-bug
 
 # Supprimer la branche de fix
@@ -647,7 +647,7 @@ git branch -d main
 **Solution :** Changez de branche d'abord
 
 ```bash
-git checkout autre-branche
+git checkout autre-branche  
 git branch -d main  # Maintenant ça marche (mais c'est rarement une bonne idée !)
 ```
 
@@ -662,7 +662,7 @@ git branch -d feature-X
 
 ```bash
 # Option 1 : Fusionner d'abord
-git merge feature-X
+git merge feature-X  
 git branch -d feature-X
 
 # Option 2 : Forcer la suppression (si vous êtes sûr)
@@ -683,7 +683,7 @@ git branch feature-login
 git branch feature-login-v2
 
 # Option 2 : Supprimer l'ancienne branche d'abord
-git branch -d feature-login
+git branch -d feature-login  
 git branch feature-login
 
 # Option 3 : Utiliser le nom différemment
@@ -703,17 +703,17 @@ git checkout autre-branche
 
 ```bash
 # Option 1 : Commiter les modifications
-git add fichier.txt
-git commit -m "WIP"
+git add fichier.txt  
+git commit -m "WIP"  
 git checkout autre-branche
 
 # Option 2 : Mettre de côté avec stash
-git stash
+git stash  
 git checkout autre-branche
 # Plus tard : git stash pop
 
 # Option 3 : Annuler les modifications
-git restore fichier.txt
+git restore fichier.txt  
 git checkout autre-branche
 ```
 
@@ -742,12 +742,12 @@ Suivre des conventions aide à organiser votre projet et à collaborer efficacem
 **Exemples :**
 
 ```bash
-git checkout -b feature/user-authentication
-git checkout -b bugfix/responsive-menu
-git checkout -b hotfix/security-vulnerability
-git checkout -b refactor/database-queries
-git checkout -b test/payment-integration
-git checkout -b docs/api-documentation
+git checkout -b feature/user-authentication  
+git checkout -b bugfix/responsive-menu  
+git checkout -b hotfix/security-vulnerability  
+git checkout -b refactor/database-queries  
+git checkout -b test/payment-integration  
+git checkout -b docs/api-documentation  
 git checkout -b chore/update-dependencies
 ```
 
@@ -827,32 +827,32 @@ git for-each-ref --sort=-committerdate refs/heads/ --format='%(committerdate:sho
 
 ```bash
 # CRÉER
-git branch nom                    # Créer sans changer
-git checkout -b nom               # Créer et changer (méthode classique)
-git switch -c nom                 # Créer et changer (méthode moderne)
+git branch nom                    # Créer sans changer  
+git checkout -b nom               # Créer et changer (méthode classique)  
+git switch -c nom                 # Créer et changer (méthode moderne)  
 git branch nom commit             # Créer depuis un commit spécifique
 
 # LISTER
-git branch                        # Branches locales
-git branch -a                     # Toutes (locales + distantes)
-git branch -r                     # Distantes uniquement
-git branch -v                     # Avec dernier commit
-git branch -vv                    # Avec statut tracking
-git branch --merged               # Branches fusionnées
+git branch                        # Branches locales  
+git branch -a                     # Toutes (locales + distantes)  
+git branch -r                     # Distantes uniquement  
+git branch -v                     # Avec dernier commit  
+git branch -vv                    # Avec statut tracking  
+git branch --merged               # Branches fusionnées  
 git branch --no-merged            # Branches non fusionnées
 
 # SUPPRIMER
-git branch -d nom                 # Suppression sûre
-git branch -D nom                 # Suppression forcée
+git branch -d nom                 # Suppression sûre  
+git branch -D nom                 # Suppression forcée  
 git push origin --delete nom      # Supprimer sur le serveur
 
 # RENOMMER
-git branch -m nouveau-nom         # Renommer la branche actuelle
+git branch -m nouveau-nom         # Renommer la branche actuelle  
 git branch -m ancien nouveau      # Renommer une autre branche
 
 # UTILITAIRES
-git branch --contains commit      # Branches contenant un commit
-git branch --list "pattern"       # Filtrer par pattern
+git branch --contains commit      # Branches contenant un commit  
+git branch --list "pattern"       # Filtrer par pattern  
 git branch --sort=-committerdate  # Trier par date
 ```
 

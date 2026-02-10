@@ -30,7 +30,7 @@ git switch feature-login
 git rebase main  # OK !
 
 # ❌ Historique public (DANGER avec rebase)
-git switch main  # Branche partagée par toute l'équipe
+git switch main  # Branche partagée par toute l'équipe  
 git rebase feature  # DANGEREUX !
 ```
 
@@ -41,13 +41,13 @@ Quand vous rebasez, vous **réécrivez l'historique** : les commits changent d'i
 **Exemple de catastrophe :**
 
 ```
-Vous :                  Alice (votre collègue) :
+Vous :                  Alice (votre collègue) :  
 A ← B ← C               A ← B ← C ← D
     ↑                           ↑
   main                        feature-alice
                               (basée sur C)
 
-Vous rebasez main :
+Vous rebasez main :  
 A ← B ← C' ← C''
          ↑
        main (NEW)
@@ -104,11 +104,11 @@ Pour choisir entre merge et rebase, posez-vous ces trois questions dans l'ordre 
 
 ```bash
 # ❌ INTERDIT
-git switch main
+git switch main  
 git rebase feature  # NON !
 
 # ✅ CORRECT
-git switch main
+git switch main  
 git merge feature   # OUI !
 ```
 
@@ -120,7 +120,7 @@ git merge feature   # OUI !
 
 ```bash
 # ✅ OK : Feature locale, jamais pushée
-git switch feature-login
+git switch feature-login  
 git rebase main
 ```
 
@@ -133,7 +133,7 @@ git rebase main
 ```bash
 # Si Alice et Bob travaillent tous deux sur feature-payment
 # ❌ Bob ne doit PAS rebaser
-git switch feature-payment
+git switch feature-payment  
 git rebase main  # Causerait des problèmes à Alice
 
 # ✅ Utiliser merge
@@ -148,8 +148,8 @@ git merge main
 
 ```bash
 # Vous avez développé localement avec beaucoup de commits "sales"
-git switch feature-newsletter
-git rebase -i main  # Nettoyer l'historique
+git switch feature-newsletter  
+git rebase -i main  # Nettoyer l'historique  
 git push origin feature-newsletter  # Maintenant propre !
 ```
 
@@ -179,16 +179,16 @@ git push origin feature-newsletter  # Maintenant propre !
 
 ```bash
 # Jour 1 : Créer feature
-git switch -c feature-search
-git commit -m "WIP: start search"
+git switch -c feature-search  
+git commit -m "WIP: start search"  
 git commit -m "Add basic search"
 
 # Jour 2 : Synchroniser avec main
-git fetch origin
+git fetch origin  
 git rebase origin/main  # Mettre à jour feature
 
 # Continuer le développement
-git commit -m "Add filters"
+git commit -m "Add filters"  
 git commit -m "Fix bug"
 
 # Jour 3 : Nettoyer avant de partager
@@ -200,7 +200,7 @@ git push origin feature-search
 
 # Créer Pull Request
 # Après review et approbation :
-git switch main
+git switch main  
 git merge --no-ff feature-search
 ```
 
@@ -215,20 +215,20 @@ git merge --no-ff feature-search
 
 ```bash
 # Créer feature
-git switch -c feature-payment
-git commit -m "Add payment form"
-git commit -m "Add validation"
+git switch -c feature-payment  
+git commit -m "Add payment form"  
+git commit -m "Add validation"  
 git commit -m "Connect to API"
 
 # Synchroniser avec main
-git switch feature-payment
+git switch feature-payment  
 git merge main  # Merge au lieu de rebase
 
 # Continuer
 git commit -m "Add tests"
 
 # Merger dans main
-git switch main
+git switch main  
 git merge --no-ff feature-payment
 ```
 
@@ -254,7 +254,7 @@ git rebase -i main
 git push origin feature-profile
 
 # Sur main, merger avec commit explicite
-git switch main
+git switch main  
 git merge --no-ff feature-profile -m "Add user profile feature
 
 Complete implementation:
@@ -275,25 +275,25 @@ Complete implementation:
 
 ```bash
 # Développement
-git switch develop
+git switch develop  
 git switch -c feature/new-dashboard
 
 # Merge dans develop (jamais rebase)
-git switch develop
+git switch develop  
 git merge --no-ff feature/new-dashboard
 
 # Release
 git switch -c release/v2.0 develop
 # ... préparation release ...
-git switch main
+git switch main  
 git merge --no-ff release/v2.0
 
 # Hotfix
 git switch -c hotfix/security main
 # ... fix ...
-git switch main
-git merge --no-ff hotfix/security
-git switch develop
+git switch main  
+git merge --no-ff hotfix/security  
+git switch develop  
 git merge --no-ff hotfix/security
 ```
 
@@ -312,8 +312,8 @@ git merge --no-ff hotfix/security
 # Vous êtes seul, faites ce que vous voulez !
 
 # Option A : Rebase partout (historique ultra-propre)
-git rebase main
-git rebase -i main
+git rebase main  
+git rebase -i main  
 git push --force-with-lease  # Vous êtes seul, pas de danger
 
 # Option B : Merge partout (plus simple)
@@ -328,7 +328,7 @@ git merge main
 # JAMAIS de rebase sur branches partagées
 
 # Toujours merge
-git switch main
+git switch main  
 git merge --no-ff feature-X
 
 # Politique stricte : merge uniquement
@@ -344,7 +344,7 @@ git config branch.main.rebase false
 
 # Accepter les PR avec squash merge
 # (GitHub/GitLab option)
-git merge --squash feature-contribution
+git merge --squash feature-contribution  
 git commit -m "Add feature X (PR #123)
 
 Contributed by @external-dev
@@ -360,11 +360,11 @@ Contributed by @external-dev
 # Synchroniser régulièrement pour éviter les conflits massifs
 
 # Option A : Merge régulier (recommandé pour équipe)
-git switch feature-refactor
+git switch feature-refactor  
 git merge main  # Chaque semaine
 
 # Option B : Rebase régulier (si solo)
-git switch feature-refactor
+git switch feature-refactor  
 git rebase main  # Chaque jour
 ```
 
@@ -377,12 +377,12 @@ git rebase main  # Chaque jour
 
 git switch -c hotfix/critical-bug main
 # ... correction ...
-git switch main
+git switch main  
 git merge --no-ff hotfix/critical-bug -m "HOTFIX: Critical security vulnerability
 
-CVE-2024-XXXX: SQL injection in login
-Fixed by sanitizing user input
-Tested in production environment
+CVE-2024-XXXX: SQL injection in login  
+Fixed by sanitizing user input  
+Tested in production environment  
 Deploy immediately"
 ```
 
@@ -441,8 +441,8 @@ Inconvénients :
 
 ```bash
 # Vous pouvez rebaser autant que vous voulez
-git rebase main
-git rebase -i HEAD~10
+git rebase main  
+git rebase -i HEAD~10  
 git push --force origin feature
 ```
 
@@ -454,8 +454,8 @@ Mais si vous débutez, restez sur merge pour éviter les erreurs.
 
 ```bash
 # ✅ OK : Rebaser votre branche locale avant de la pousser
-git switch ma-feature  # Jamais poussée
-git rebase main
+git switch ma-feature  # Jamais poussée  
+git rebase main  
 git push origin ma-feature
 
 # ❌ NON : Rebaser une fois qu'elle est poussée et que d'autres travaillent dessus
@@ -467,7 +467,7 @@ git push origin ma-feature
 
 ```bash
 # 1. Annuler le rebase avec reflog
-git reflog
+git reflog  
 git reset --hard HEAD@{X}  # Avant le rebase
 
 # 2. Informer l'équipe
@@ -485,11 +485,11 @@ git push --force origin feature-X
 
 ```bash
 # ✅ Sur votre feature branch
-git switch ma-feature
+git switch ma-feature  
 git pull --rebase origin ma-feature
 
 # ❌ Sur main ou branches partagées
-git switch main
+git switch main  
 git pull --rebase  # Potentiellement dangereux
 ```
 
@@ -499,11 +499,11 @@ git pull --rebase  # Potentiellement dangereux
 
 ```bash
 # Branche personnelle : rebase (plus propre)
-git switch feature-mine
+git switch feature-mine  
 git rebase main
 
 # Branche partagée : merge (plus sûr)
-git switch feature-shared-with-alice
+git switch feature-shared-with-alice  
 git merge main
 ```
 
@@ -595,7 +595,7 @@ git rebase --continue
 **Solution :** Abandonner le rebase et utiliser merge.
 
 ```bash
-git rebase --abort
+git rebase --abort  
 git merge main  # Plus simple
 ```
 
@@ -619,7 +619,7 @@ git rebase main
 **Solution :** Utiliser reflog pour récupérer.
 
 ```bash
-git reflog
+git reflog  
 git reset --hard HEAD@{X}
 # Puis utiliser merge à la place
 ```
@@ -637,7 +637,7 @@ Avant de faire un rebase, vérifiez :
 ☐ Je sais comment récupérer avec reflog si ça tourne mal ?
 ☐ J'ai fait un backup (branche ou stash) au cas où ?
 
-Si TOUS les checks sont ✅ → Rebase OK
+Si TOUS les checks sont ✅ → Rebase OK  
 Si UN SEUL est ❌ → Utiliser MERGE
 ```
 

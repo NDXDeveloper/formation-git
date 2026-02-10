@@ -40,7 +40,7 @@ A ← B ← C ← D ← E feature (vous)
 #### Option 1 : Merge (fusion traditionnelle)
 
 ```bash
-git switch main
+git switch main  
 git merge feature
 ```
 
@@ -59,7 +59,7 @@ Un commit de merge `M` est créé. L'historique montre clairement qu'il y a eu d
 #### Option 2 : Rebase (réécriture de l'historique)
 
 ```bash
-git switch feature
+git switch feature  
 git rebase main
 ```
 
@@ -78,7 +78,7 @@ Les commits `F`, `G`, et `H` ont été "rejoués" sur `E`. Ils deviennent `F'`, 
 **Ensuite, pour finir l'intégration :**
 
 ```bash
-git switch main
+git switch main  
 git merge feature  # Fast-forward
 ```
 
@@ -101,7 +101,7 @@ Le rebase se déroule en plusieurs étapes automatiques :
 #### Étape 1 : Git identifie les commits à rejouer
 
 ```
-Commits de feature à rejouer : F, G, H
+Commits de feature à rejouer : F, G, H  
 Nouveau parent (base) : E
 ```
 
@@ -155,7 +155,7 @@ git rebase main
 #### Rebaser main sur votre branche (moins courant)
 
 ```bash
-git switch main
+git switch main  
 git rebase feature
 ```
 
@@ -281,12 +281,12 @@ Chaque commit de la branche est testable individuellement après rebase.
 
 ```bash
 # ❌ DANGEREUX : Rebaser une branche publique
-git switch main
-git rebase feature  # main est publique !
+git switch main  
+git rebase feature  # main est publique !  
 git push --force    # Catastrophe pour l'équipe !
 
 # ✅ SÛR : Rebaser une branche locale
-git switch feature  # feature est locale
+git switch feature  # feature est locale  
 git rebase main     # OK !
 ```
 
@@ -326,7 +326,7 @@ Le rebase est conceptuellement plus difficile à comprendre que le merge.
 
 ```bash
 # Vous avez beaucoup de commits "WIP" locaux
-git rebase -i main  # Rebase interactif pour nettoyer
+git rebase -i main  # Rebase interactif pour nettoyer  
 git push origin feature
 ```
 
@@ -334,7 +334,7 @@ git push origin feature
 
 ```bash
 # Au lieu de merger main dans feature
-git switch feature
+git switch feature  
 git rebase main  # Garde feature à jour
 ```
 
@@ -355,7 +355,7 @@ Certaines équipes adoptent une politique "rebase uniquement" pour un historique
 
 ```bash
 # ❌ Ne jamais rebaser main si d'autres travaillent dessus
-git switch main
+git switch main  
 git rebase feature  # DANGER !
 ```
 
@@ -460,7 +460,7 @@ git rebase --continue
 # CONFLICT in utils.js on commit "Ajout helper"
 
 # Résoudre ce deuxième conflit
-code utils.js
+code utils.js  
 git add utils.js
 
 # Continuer
@@ -491,9 +491,9 @@ git rebase -i main
 Git ouvre un éditeur avec vos commits :
 
 ```
-pick a1b2c3d Premier commit
-pick c3d4e5f Deuxième commit
-pick e5f6g7h Troisième commit
+pick a1b2c3d Premier commit  
+pick c3d4e5f Deuxième commit  
+pick e5f6g7h Troisième commit  
 pick g7h8i9j Quatrième commit
 
 # Commands:
@@ -532,7 +532,7 @@ edit a1b2c3d Mon commit
 **squash (s)** : Fusionner avec le commit précédent
 
 ```
-pick a1b2c3d Premier commit
+pick a1b2c3d Premier commit  
 squash c3d4e5f Deuxième commit
 # Les deux commits seront combinés
 ```
@@ -540,7 +540,7 @@ squash c3d4e5f Deuxième commit
 **fixup (f)** : Comme squash, mais ignore le message
 
 ```
-pick a1b2c3d Mon commit
+pick a1b2c3d Mon commit  
 fixup c3d4e5f Fix typo
 # Le commit "Fix typo" est absorbé silencieusement
 ```
@@ -574,9 +574,9 @@ git rebase -i main
 **Dans l'éditeur :**
 
 ```
-pick a1b2c3d WIP
-squash c3d4e5f Add tests
-squash e5f6g7h Oops forgot file
+pick a1b2c3d WIP  
+squash c3d4e5f Add tests  
+squash e5f6g7h Oops forgot file  
 fixup g7h8i9j Fix final typo
 
 # Devient : un seul commit propre
@@ -618,13 +618,13 @@ Un seul commit propre au lieu de 4 commits chaotiques !
 git switch -c feature-login
 
 # 2. Développer (plusieurs commits)
-git commit -m "WIP: start login"
-git commit -m "Add form"
-git commit -m "Fix bug"
+git commit -m "WIP: start login"  
+git commit -m "Add form"  
+git commit -m "Fix bug"  
 git commit -m "Add validation"
 
 # 3. Mettre à jour avec main régulièrement
-git fetch origin
+git fetch origin  
 git rebase origin/main
 
 # 4. Nettoyer l'historique avant de partager
@@ -638,7 +638,7 @@ git push origin feature-login
 # (Sur GitHub/GitLab)
 
 # 7. Après validation, merger dans main
-git switch main
+git switch main  
 git merge feature-login  # Fast-forward
 ```
 
@@ -646,8 +646,8 @@ git merge feature-login  # Fast-forward
 
 ```bash
 # Chaque matin, avant de commencer à travailler
-git switch feature-my-work
-git fetch origin
+git switch feature-my-work  
+git fetch origin  
 git rebase origin/main
 
 # Si conflits, les résoudre
@@ -661,7 +661,7 @@ git rebase origin/main
 # NE PAS rebaser !
 
 # Utiliser merge à la place
-git switch feature-shared
+git switch feature-shared  
 git merge main
 
 # Le rebase casserait le travail des autres
@@ -681,7 +681,7 @@ git config --global pull.rebase true
 Maintenant, `git pull` fera :
 
 ```bash
-git fetch
+git fetch  
 git rebase  # Au lieu de git merge
 ```
 
@@ -708,7 +708,7 @@ Si vous avez des modifications non commitées, Git les mettra de côté automati
 
 ```bash
 # Situation : main a avancé pendant que vous travailliez
-git switch feature-payment
+git switch feature-payment  
 git log --oneline --graph --all
 # * e5f6g7h (feature-payment) Add payment form
 # * d4e5f6g Add payment logic
@@ -771,14 +771,14 @@ git rebase main
 code config.js
 # ... éditer ...
 
-git add config.js
+git add config.js  
 git rebase --continue
 
 # Nouveau conflit dans utils.js
 # CONFLICT in utils.js
 
-code utils.js
-git add utils.js
+code utils.js  
+git add utils.js  
 git rebase --continue
 
 # Terminé
@@ -808,8 +808,8 @@ git merge main
 
 ```bash
 # ❌ Erreur
-git switch main
-git rebase feature
+git switch main  
+git rebase feature  
 git push --force origin main
 # Toute l'équipe a des problèmes !
 
@@ -852,16 +852,16 @@ git rebase main
 # error: cannot rebase: You have unstaged changes.
 
 # ✅ Solution 1 : Commiter
-git commit -am "WIP"
+git commit -am "WIP"  
 git rebase main
 
 # ✅ Solution 2 : Stasher
-git stash
-git rebase main
+git stash  
+git rebase main  
 git stash pop
 
 # ✅ Solution 3 : Activer autostash
-git config rebase.autoStash true
+git config rebase.autoStash true  
 git rebase main  # Stash automatique
 ```
 
@@ -871,24 +871,24 @@ git rebase main  # Stash automatique
 
 ```bash
 # REBASE DE BASE
-git rebase branche              # Rebaser sur une branche
+git rebase branche              # Rebaser sur une branche  
 git rebase main                 # Rebaser sur main
 
 # REBASE INTERACTIF
-git rebase -i HEAD~5            # 5 derniers commits
+git rebase -i HEAD~5            # 5 derniers commits  
 git rebase -i main              # Tous les commits depuis main
 
 # PENDANT UN REBASE
-git rebase --continue           # Continuer après résolution
-git rebase --skip               # Sauter le commit actuel
+git rebase --continue           # Continuer après résolution  
+git rebase --skip               # Sauter le commit actuel  
 git rebase --abort              # Annuler le rebase
 
 # CONFIGURATION
-git config pull.rebase true     # Pull avec rebase par défaut
+git config pull.rebase true     # Pull avec rebase par défaut  
 git config rebase.autoStash true # Autostash pendant rebase
 
 # VÉRIFICATION
-git log --oneline --graph       # Voir l'historique
+git log --oneline --graph       # Voir l'historique  
 git reflog                      # Voir les anciens états
 ```
 
