@@ -84,7 +84,7 @@ git config --global user.email "marie.dupont@email.com"
 Pour voir ce que vous avez configuré :
 
 ```bash
-git config --global user.name
+git config --global user.name  
 git config --global user.email
 ```
 
@@ -219,8 +219,8 @@ git config --list --show-origin
 Pour vérifier une configuration particulière :
 
 ```bash
-git config user.name
-git config user.email
+git config user.name  
+git config user.email  
 git config core.editor
 ```
 
@@ -270,7 +270,7 @@ Voici un ensemble de commandes recommandées pour bien configurer Git quand on d
 
 ```bash
 # Identité (OBLIGATOIRE - adaptez avec vos informations)
-git config --global user.name "Votre Nom"
+git config --global user.name "Votre Nom"  
 git config --global user.email "votre.email@example.com"
 
 # Éditeur (choisissez celui que vous préférez)

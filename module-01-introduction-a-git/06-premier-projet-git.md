@@ -243,7 +243,7 @@ Changes to be committed:
 Créons quelques fichiers supplémentaires :
 
 ```bash
-echo "print('Hello, Git!')" > hello.py
+echo "print('Hello, Git!')" > hello.py  
 echo "console.log('Hello, Git!');" > hello.js
 ```
 
@@ -305,7 +305,7 @@ git status
 Résultat :
 
 ```
-On branch main
+On branch main  
 nothing to commit, working tree clean
 ```
 
@@ -328,8 +328,8 @@ git log
 Résultat :
 
 ```
-commit a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0
-Author: Votre Nom <votre.email@example.com>
+commit a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0  
+Author: Votre Nom <votre.email@example.com>  
 Date:   Wed Oct 15 14:30:00 2025 +0200
 
     Premier commit : ajout des fichiers initiaux
@@ -376,7 +376,7 @@ Pratiquons en faisant un autre commit. Modifions un fichier :
 Ajoutons du contenu au README :
 
 ```bash
-echo "" >> README.md
+echo "" >> README.md  
 echo "Ce projet est un exemple pour apprendre Git." >> README.md
 ```
 
@@ -391,7 +391,7 @@ git status
 Résultat :
 
 ```
-On branch main
+On branch main  
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
@@ -409,7 +409,7 @@ git diff
 Cette commande montre exactement ce qui a changé :
 
 ```diff
-diff --git a/README.md b/README.md
+diff --git a/README.md b/README.md  
 index e7b5e4c..d5a4b3c 100644
 --- a/README.md
 +++ b/README.md
@@ -424,7 +424,7 @@ Les lignes avec `+` sont les ajouts.
 ### 4. Ajouter et commiter
 
 ```bash
-git add README.md
+git add README.md  
 git commit -m "Ajout de la description du projet"
 ```
 
@@ -437,7 +437,7 @@ git log --oneline
 Résultat :
 
 ```
-b2c3d4e Ajout de la description du projet
+b2c3d4e Ajout de la description du projet  
 a1b2c3d Premier commit : ajout des fichiers initiaux
 ```
 

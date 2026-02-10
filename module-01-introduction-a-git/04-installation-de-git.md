@@ -192,7 +192,7 @@ L'installation sur Linux dépend de votre distribution. Voici les commandes pour
 Ouvrez un terminal et utilisez le gestionnaire de packages **apt** :
 
 ```bash
-sudo apt update
+sudo apt update  
 sudo apt install git
 ```
 
@@ -259,7 +259,7 @@ tar -xzf v2.43.0.tar.gz
 cd git-2.43.0
 
 # Compiler et installer
-make prefix=/usr/local all
+make prefix=/usr/local all  
 sudo make prefix=/usr/local install
 ```
 

@@ -96,7 +96,7 @@ git status
 
 **Résultats affichés par Git** :
 ```
-On branch main
+On branch main  
 nothing to commit, working tree clean
 ```
 
