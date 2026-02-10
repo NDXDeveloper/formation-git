@@ -24,12 +24,12 @@ Ce module est parfait pour vous si :
 
 À la fin de ce module, vous serez capable de :
 
-✅ Comprendre ce qu'est Git et pourquoi il est devenu incontournable
-✅ Installer et configurer Git sur votre système d'exploitation
-✅ Créer votre premier dépôt Git local
-✅ Effectuer vos premiers commits
-✅ Suivre l'évolution de vos fichiers
-✅ Explorer l'historique de votre projet
+✅ Comprendre ce qu'est Git et pourquoi il est devenu incontournable  
+✅ Installer et configurer Git sur votre système d'exploitation  
+✅ Créer votre premier dépôt Git local  
+✅ Effectuer vos premiers commits  
+✅ Suivre l'évolution de vos fichiers  
+✅ Explorer l'historique de votre projet  
 ✅ Comprendre le workflow de base de Git
 
 ### Ce que vous allez apprendre
