@@ -242,17 +242,17 @@ N'ayez pas peur de tester ces commandes ! Le meilleur moyen d'apprendre est de p
 
 ```bash
 # Créer un dépôt de test
-mkdir git-test
-cd git-test
+mkdir git-test  
+cd git-test  
 git init
 
 # Créer quelques fichiers et commits pour expérimenter
-echo "Test 1" > fichier1.txt
-git add fichier1.txt
+echo "Test 1" > fichier1.txt  
+git add fichier1.txt  
 git commit -m "Commit 1"
 
-echo "Test 2" > fichier2.txt
-git add fichier2.txt
+echo "Test 2" > fichier2.txt  
+git add fichier2.txt  
 git commit -m "Commit 2"
 
 # Maintenant vous pouvez tester toutes les commandes !
@@ -282,27 +282,27 @@ Chaque section de ce module suivra cette structure :
 git commit --amend
 
 # Annulation de modifications
-git restore <fichier>
-git restore --staged <fichier>
+git restore <fichier>  
+git restore --staged <fichier>  
 git checkout -- <fichier>
 
 # Reset (avec précaution)
-git reset --soft <commit>
-git reset --mixed <commit>
+git reset --soft <commit>  
+git reset --mixed <commit>  
 git reset --hard <commit>
 
 # Revert (sûr)
 git revert <commit>
 
 # Récupération de fichiers
-git restore --source=<commit> <fichier>
-git checkout <commit> -- <fichier>
+git restore --source=<commit> <fichier>  
+git checkout <commit> -- <fichier>  
 git show <commit>:<fichier>
 
 # Exploration
-git log -- <fichier>
-git log -S "texte"
-git reflog
+git log -- <fichier>  
+git log -S "texte"  
+git reflog  
 git diff <commit1> <commit2>
 ```
 

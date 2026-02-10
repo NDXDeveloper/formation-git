@@ -125,7 +125,7 @@ git show a1b2c3d:fichier.txt
 git show HEAD~5:src/index.html
 
 # Comparer avec la version actuelle
-cat src/index.html           # version actuelle
+cat src/index.html           # version actuelle  
 git show HEAD~5:src/index.html  # version d'il y a 5 commits
 ```
 
@@ -207,8 +207,8 @@ git log --grep="bug fix" --oneline
 
 ```bash
 # Vous avez supprimé un fichier
-rm important.txt
-git add important.txt
+rm important.txt  
+git add important.txt  
 git commit -m "Nettoyage fichiers"
 
 # Plus tard, vous réalisez que ce fichier était important
@@ -501,11 +501,11 @@ cp fichier_backup.txt fichier.txt
 git restore --source=v1.0.0 config.json
 
 # Tester que tout fonctionne
-npm test
+npm test  
 npm start
 
 # Si OK, commiter
-git add config.json
+git add config.json  
 git commit -m "Restauration config depuis v1.0.0"
 ```
 
@@ -513,10 +513,10 @@ git commit -m "Restauration config depuis v1.0.0"
 
 ```bash
 # Bon message expliquant la récupération
-git add fichier_restaure.txt
+git add fichier_restaure.txt  
 git commit -m "Restauration fichier_restaure.txt depuis commit a1b2c3d
 
-Le fichier actuel était corrompu. Récupération de la dernière
+Le fichier actuel était corrompu. Récupération de la dernière  
 version fonctionnelle connue (commit a1b2c3d du 2024-01-15)."
 ```
 
@@ -585,7 +585,7 @@ git restore --source=b2c3d4e fichier_problematique.js
 npm test
 
 # Étape 7 : Si OK, commiter
-git add fichier_problematique.js
+git add fichier_problematique.js  
 git commit -m "Restauration fichier depuis b2c3d4e - version stable"
 
 # Étape 8 : Analyser pourquoi la nouvelle version ne marchait pas
@@ -599,35 +599,35 @@ git diff b2c3d4e d4e5f6g -- fichier_problematique.js
 
 ```bash
 # Restaurer un fichier (méthode moderne)
-git restore --source=<commit> <fichier>
+git restore --source=<commit> <fichier>  
 git restore --source=HEAD~3 fichier.txt
 
 # Restaurer un fichier (ancienne méthode)
 git checkout <commit> -- <fichier>
 
 # Voir le contenu sans restaurer
-git show <commit>:<fichier>
+git show <commit>:<fichier>  
 git show HEAD~5:fichier.txt
 
 # Sauvegarder dans un nouveau fichier
 git show <commit>:<fichier> > nouveau_fichier.txt
 
 # Historique d'un fichier
-git log -- <fichier>
-git log --oneline -- <fichier>
-git log -p -- <fichier>           # Avec différences
+git log -- <fichier>  
+git log --oneline -- <fichier>  
+git log -p -- <fichier>           # Avec différences  
 git log --follow -- <fichier>     # Suit les renommages
 
 # Rechercher dans l'historique
-git log -S "texte" -- <fichier>   # Recherche contenu
-git log -G "regex" -- <fichier>   # Recherche regex
+git log -S "texte" -- <fichier>   # Recherche contenu  
+git log -G "regex" -- <fichier>   # Recherche regex  
 git log --grep="message"          # Recherche message commit
 
 # Voir qui a modifié quoi
 git blame <fichier>
 
 # Lister les fichiers d'un commit
-git ls-tree <commit>
+git ls-tree <commit>  
 git show <commit> --name-only
 
 # Comparer versions

@@ -107,7 +107,7 @@ git restore --staged nom_du_fichier.txt
 
 ```bash
 # Vous modifiez deux fichiers
-echo "Modification A" > fichierA.txt
+echo "Modification A" > fichierA.txt  
 echo "Modification B" > fichierB.txt
 
 # Vous ajoutez les deux à la staging area
@@ -146,7 +146,7 @@ Si vous voulez à la fois retirer un fichier de la staging area ET annuler les m
 
 ```bash
 # Méthode 1 : Deux commandes séparées
-git restore --staged fichier.txt    # Retire de la staging area
+git restore --staged fichier.txt    # Retire de la staging area  
 git restore fichier.txt              # Annule les modifications
 
 # Méthode 2 : Raccourci
@@ -281,7 +281,7 @@ git diff --staged fichier.txt
 #### Exemple de lecture d'un diff :
 
 ```diff
-diff --git a/index.html b/index.html
+diff --git a/index.html b/index.html  
 index 1234567..abcdefg 100644
 --- a/index.html
 +++ b/index.html

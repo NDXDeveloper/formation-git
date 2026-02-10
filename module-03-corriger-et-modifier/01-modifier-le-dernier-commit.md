@@ -87,11 +87,11 @@ Imaginons cette situation :
 
 ```bash
 # Vous créez deux fichiers
-echo "Bonjour" > index.html
+echo "Bonjour" > index.html  
 echo "body { margin: 0; }" > style.css
 
 # Vous ajoutez seulement index.html et faites un commit
-git add index.html
+git add index.html  
 git commit -m "Ajout de la page d'accueil"
 
 # Oups ! Vous avez oublié style.css qui fait partie de la même fonctionnalité
@@ -129,7 +129,7 @@ git commit --amend -m "Nouveau message descriptif"
 Ou sans l'option `-m` pour ouvrir l'éditeur :
 
 ```bash
-git add fichier_modifie.js
+git add fichier_modifie.js  
 git commit --amend
 ```
 
@@ -171,13 +171,13 @@ Vous verrez que le dernier commit a été modifié, mais son identifiant (hash S
 
 **Avant l'amendement :**
 ```
-a1b2c3d (HEAD -> main) Ajout de la fonctionalité de connexion
+a1b2c3d (HEAD -> main) Ajout de la fonctionalité de connexion  
 e4f5g6h Mise à jour du README
 ```
 
 **Après l'amendement :**
 ```
-z9y8x7w (HEAD -> main) Ajout de la fonctionnalité de connexion
+z9y8x7w (HEAD -> main) Ajout de la fonctionnalité de connexion  
 e4f5g6h Mise à jour du README
 ```
 
@@ -195,21 +195,21 @@ Quand vous amendez un commit, Git crée en réalité un **nouveau commit** avec 
 
 **Cas acceptable :**
 ```bash
-git add fichier.txt
+git add fichier.txt  
 git commit -m "Mon commit"
 # Oups, j'ai oublié quelque chose
-git add autre_fichier.txt
+git add autre_fichier.txt  
 git commit --amend --no-edit
 # OK ! Je n'ai pas encore fait git push
 ```
 
 **Cas problématique :**
 ```bash
-git add fichier.txt
-git commit -m "Mon commit"
+git add fichier.txt  
+git commit -m "Mon commit"  
 git push origin main        # ❌ Le commit est maintenant public !
 # Oups, j'ai oublié quelque chose
-git add autre_fichier.txt
+git add autre_fichier.txt  
 git commit --amend --no-edit  # ⚠️ ATTENTION ! Cela va créer des problèmes
 ```
 

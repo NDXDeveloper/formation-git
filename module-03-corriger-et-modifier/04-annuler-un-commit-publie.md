@@ -187,8 +187,8 @@ git revert d4e5f6g --no-edit
 
 ```bash
 # Annuler 3 commits un par un
-git revert HEAD      # Annule le dernier
-git revert HEAD~1    # Annule l'avant-dernier
+git revert HEAD      # Annule le dernier  
+git revert HEAD~1    # Annule l'avant-dernier  
 git revert HEAD~2    # Annule celui d'avant
 
 # Résultat : 3 commits de revert dans l'historique
@@ -260,7 +260,7 @@ git status
 # >>>>>>> parent of d4e5f6g... Message
 
 # Après résolution manuelle
-git add fichier.txt
+git add fichier.txt  
 git commit
 # Le message par défaut sera déjà rempli
 ```
@@ -332,8 +332,8 @@ git log --oneline
 # c3d4e5f Autres choses
 
 # Annuler toute la feature X en un seul commit
-git revert -n d4e5f6g
-git revert -n f6g7h8i
+git revert -n d4e5f6g  
+git revert -n f6g7h8i  
 git revert -n h8i9j0k
 
 # Créer un seul commit d'annulation
@@ -390,8 +390,8 @@ git show d4e5f6g
 git diff d4e5f6g^..d4e5f6g
 
 # Simuler le revert sans le faire
-git revert -n d4e5f6g
-git diff --cached    # Voir les modifications
+git revert -n d4e5f6g  
+git diff --cached    # Voir les modifications  
 git reset --hard     # Annuler la simulation
 ```
 
@@ -460,7 +460,7 @@ git revert d4e5f6g --no-edit
 git revert d4e5f6g
 
 # Tester votre application
-npm test    # ou autre commande de test
+npm test    # ou autre commande de test  
 npm start   # vérifier que tout fonctionne
 
 # Puis pousser
@@ -496,11 +496,11 @@ Si vous devez annuler beaucoup de choses, préférez plusieurs petits reverts qu
 
 ```bash
 # ✅ Bon : reverts spécifiques
-git revert abc123 -m "Revert: partie UI"
+git revert abc123 -m "Revert: partie UI"  
 git revert def456 -m "Revert: partie backend"
 
 # ❌ Moins bon : un gros revert flou
-git revert -n abc123 def456 ghi789
+git revert -n abc123 def456 ghi789  
 git commit -m "Revert plein de trucs"
 ```
 
@@ -528,8 +528,8 @@ git revert d4e5f6g
 
 # Solutions possibles :
 # 1. Résoudre le conflit manuellement
-nano fichier.txt  # résoudre
-git add fichier.txt
+nano fichier.txt  # résoudre  
+git add fichier.txt  
 git commit
 
 # 2. Abandonner le revert
@@ -585,15 +585,15 @@ git log --oneline --graph -20
 git show d4e5f6g
 
 # 3. Créer une branche pour tester (optionnel mais recommandé)
-git checkout -b test-revert
+git checkout -b test-revert  
 git revert d4e5f6g
 
 # 4. Tester que tout fonctionne
-npm test
+npm test  
 npm start
 
 # 5. Si OK, appliquer sur la branche principale
-git checkout main
+git checkout main  
 git revert d4e5f6g --no-edit
 
 # 6. Pousser
@@ -609,24 +609,24 @@ git branch -d test-revert
 
 ```bash
 # Revert basique
-git revert <commit>                    # Annuler un commit
-git revert HEAD                        # Annuler le dernier commit
+git revert <commit>                    # Annuler un commit  
+git revert HEAD                        # Annuler le dernier commit  
 git revert HEAD~2                      # Annuler l'avant-avant-dernier
 
 # Options utiles
-git revert <commit> --no-edit          # Sans ouvrir l'éditeur
-git revert <commit> -n                 # Sans commit automatique
+git revert <commit> --no-edit          # Sans ouvrir l'éditeur  
+git revert <commit> -n                 # Sans commit automatique  
 git revert <commit> -m "message"       # Avec message personnalisé
 
 # Plusieurs commits
-git revert -n commit1 commit2 commit3  # Revert multiple sans commits auto
+git revert -n commit1 commit2 commit3  # Revert multiple sans commits auto  
 git revert commit1..commit3            # Plage de commits (un revert par commit)
 
 # Merge commits
 git revert -m 1 <merge_commit>         # Revert un merge (garder 1er parent)
 
 # Gestion des conflits
-git revert --abort                     # Abandonner un revert en cours
+git revert --abort                     # Abandonner un revert en cours  
 git revert --continue                  # Continuer après résolution conflit
 
 # Revert d'un revert

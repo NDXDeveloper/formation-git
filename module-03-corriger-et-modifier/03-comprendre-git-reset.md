@@ -113,14 +113,14 @@ git commit -m "Ajout des features X, Y et Z"
 #### Schéma visuel :
 
 ```
-Avant git reset --soft HEAD~1 :
-Repository:    Commit A ← Commit B ← Commit C (HEAD)
-Staging:       [vide]
+Avant git reset --soft HEAD~1 :  
+Repository:    Commit A ← Commit B ← Commit C (HEAD)  
+Staging:       [vide]  
 Working:       [fichiers = Commit C]
 
-Après git reset --soft HEAD~1 :
-Repository:    Commit A ← Commit B (HEAD)
-Staging:       [modifications de Commit C]
+Après git reset --soft HEAD~1 :  
+Repository:    Commit A ← Commit B (HEAD)  
+Staging:       [modifications de Commit C]  
 Working:       [fichiers = Commit C]
 ```
 
@@ -161,27 +161,27 @@ git status
 #   modified: fichierC.txt
 
 # Vous pouvez reconstruire des commits propres
-git add fichierA.txt
+git add fichierA.txt  
 git commit -m "Modification de A"
 
-git add fichierB.txt
+git add fichierB.txt  
 git commit -m "Modification de B"
 
-git add fichierC.txt
+git add fichierC.txt  
 git commit -m "Modification de C"
 ```
 
 #### Schéma visuel :
 
 ```
-Avant git reset --mixed HEAD~1 :
-Repository:    Commit A ← Commit B (HEAD)
-Staging:       [vide]
+Avant git reset --mixed HEAD~1 :  
+Repository:    Commit A ← Commit B (HEAD)  
+Staging:       [vide]  
 Working:       [fichiers = Commit B]
 
-Après git reset --mixed HEAD~1 :
-Repository:    Commit A (HEAD)
-Staging:       [vide]
+Après git reset --mixed HEAD~1 :  
+Repository:    Commit A (HEAD)  
+Staging:       [vide]  
 Working:       [fichiers = Commit B] (modifications toujours là)
 ```
 
@@ -227,14 +227,14 @@ git reset --hard HEAD~2
 #### Schéma visuel :
 
 ```
-Avant git reset --hard HEAD~1 :
-Repository:    Commit A ← Commit B (HEAD)
-Staging:       [quelques modifications]
+Avant git reset --hard HEAD~1 :  
+Repository:    Commit A ← Commit B (HEAD)  
+Staging:       [quelques modifications]  
 Working:       [beaucoup de modifications]
 
-Après git reset --hard HEAD~1 :
-Repository:    Commit A (HEAD)
-Staging:       [vide]
+Après git reset --hard HEAD~1 :  
+Repository:    Commit A (HEAD)  
+Staging:       [vide]  
 Working:       [fichiers = Commit A] (tout le reste est PERDU)
 ```
 
@@ -270,14 +270,14 @@ git reset --soft HEAD~1
 git reset --soft HEAD~3
 
 # Équivalent avec ^
-git reset --soft HEAD^  # 1 commit en arrière
+git reset --soft HEAD^  # 1 commit en arrière  
 git reset --soft HEAD^^ # 2 commits en arrière
 ```
 
 #### Par nom de branche ou tag :
 
 ```bash
-git reset --mixed origin/main
+git reset --mixed origin/main  
 git reset --hard v1.0.0
 ```
 
@@ -317,10 +317,10 @@ git reset HEAD~1  # --mixed par défaut
 
 # Les modifications sont dans le Working Directory
 # Vous pouvez maintenant les commiter de façon organisée
-git add fichier1.txt
+git add fichier1.txt  
 git commit -m "Modification partie 1"
 
-git add fichier2.txt fichier3.txt
+git add fichier2.txt fichier3.txt  
 git commit -m "Modification partie 2"
 ```
 
@@ -365,11 +365,11 @@ Quand vous faites un reset, vous réécrivez l'historique. Si d'autres personnes
 
 ```bash
 # ❌ MAUVAIS : Reset après avoir pushé
-git push origin main
+git push origin main  
 git reset --hard HEAD~1  # Problème ! D'autres ont peut-être déjà pull
 
 # ✅ BON : Reset avant de push
-git reset --hard HEAD~1
+git reset --hard HEAD~1  
 git push origin main      # OK, l'historique n'était pas public
 ```
 
@@ -458,7 +458,7 @@ git reflog
 git reset --hard HEAD~2
 
 # Solution : Utiliser reflog
-git reflog
+git reflog  
 git reset --hard HEAD@{1}
 ```
 
@@ -469,7 +469,7 @@ git reset --hard HEAD@{1}
 git reset --hard HEAD~1  # Oups !
 
 # Solution immédiate avec reflog
-git reflog
+git reflog  
 git reset --hard HEAD@{1}
 ```
 
@@ -484,8 +484,8 @@ git reset --hard HEAD~1
 # Pas de solution si elles n'étaient pas commitées
 
 # PRÉVENTION : Toujours commit ou stash avant reset --hard
-git stash  # Met de côté vos modifications
-git reset --hard HEAD~1
+git stash  # Met de côté vos modifications  
+git reset --hard HEAD~1  
 git stash pop  # Récupère vos modifications
 ```
 
@@ -497,7 +497,7 @@ git stash pop  # Récupère vos modifications
 
 ```bash
 # Avant un reset, vérifiez où vous êtes
-git log --oneline -10
+git log --oneline -10  
 git status
 ```
 
@@ -544,7 +544,7 @@ git reset --soft HEAD~1
 Commit A ← Commit B ← [Commit C supprimé]
               ↑
             HEAD
-Staging Area: [contenu de Commit C]
+Staging Area: [contenu de Commit C]  
 Working Dir:  [contenu de Commit C]
 
 
@@ -553,7 +553,7 @@ git reset --mixed HEAD~1 (ou git reset HEAD~1)
 Commit A ← Commit B ← [Commit C supprimé]
               ↑
             HEAD
-Staging Area: [vide]
+Staging Area: [vide]  
 Working Dir:  [contenu de Commit C]
 
 
@@ -562,7 +562,7 @@ git reset --hard HEAD~1
 Commit A ← Commit B ← [Commit C supprimé]
               ↑
             HEAD
-Staging Area: [vide]
+Staging Area: [vide]  
 Working Dir:  [contenu de Commit B] ⚠️ perte de données
 ```
 
@@ -572,20 +572,20 @@ Working Dir:  [contenu de Commit B] ⚠️ perte de données
 
 ```bash
 # Reset --soft (garde tout)
-git reset --soft HEAD~1
+git reset --soft HEAD~1  
 git reset --soft a1b2c3d
 
 # Reset --mixed (vide staging)
-git reset HEAD~1         # mode par défaut
-git reset --mixed HEAD~1
+git reset HEAD~1         # mode par défaut  
+git reset --mixed HEAD~1  
 git reset a1b2c3d
 
 # Reset --hard (supprime tout)
-git reset --hard HEAD~1
+git reset --hard HEAD~1  
 git reset --hard a1b2c3d
 
 # Récupération d'urgence
-git reflog
+git reflog  
 git reset --hard HEAD@{1}
 ```
 
