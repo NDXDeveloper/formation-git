@@ -634,9 +634,9 @@ git reset --hard upstream/main
 
 Contribuer à l'open source peut sembler intimidant au début, mais :
 
-✅ C'est un processus structuré et répétable
-✅ La communauté est généralement bienveillante
-✅ Chaque petite contribution compte
+✅ C'est un processus structuré et répétable  
+✅ La communauté est généralement bienveillante  
+✅ Chaque petite contribution compte  
 ✅ Vous apprenez énormément
 
 **Votre première PR sera peut-être une simple correction de faute de frappe, et c'est parfait !** Tous les contributeurs expérimentés ont commencé ainsi.
