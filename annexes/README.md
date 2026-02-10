@@ -55,9 +55,9 @@ Cette section comprend **quatre annexes complémentaires** :
 
 ### 1. Aide-mémoire des commandes Git
 
-**Type :** Référence rapide
-**Utilisation :** Consultation quotidienne
-**Public :** Tous niveaux
+**Type :** Référence rapide  
+**Utilisation :** Consultation quotidienne  
+**Public :** Tous niveaux  
 
 L'aide-mémoire regroupe toutes les commandes Git essentielles, organisées par thématique. C'est votre **référence de premier niveau** quand vous cherchez une commande spécifique ou que vous voulez voir toutes les options disponibles.
 
@@ -80,9 +80,9 @@ L'aide-mémoire regroupe toutes les commandes Git essentielles, organisées par 
 
 ### 2. Glossaire Git
 
-**Type :** Dictionnaire
-**Utilisation :** Référence ponctuelle
-**Public :** Tous niveaux
+**Type :** Dictionnaire  
+**Utilisation :** Référence ponctuelle  
+**Public :** Tous niveaux  
 
 Le glossaire définit tous les termes techniques de Git de manière simple et accessible. C'est votre **dictionnaire Git personnel**.
 
@@ -105,9 +105,9 @@ Le glossaire définit tous les termes techniques de Git de manière simple et ac
 
 ### 3. Ressources complémentaires
 
-**Type :** Annuaire et guide
-**Utilisation :** Exploration et approfondissement
-**Public :** Tous niveaux
+**Type :** Annuaire et guide  
+**Utilisation :** Exploration et approfondissement  
+**Public :** Tous niveaux  
 
 Cette annexe liste toutes les ressources externes (livres, tutoriels, outils, communautés) pour continuer votre apprentissage de Git.
 
@@ -132,9 +132,9 @@ Cette annexe liste toutes les ressources externes (livres, tutoriels, outils, co
 
 ### 4. Configuration Git avancée
 
-**Type :** Guide technique
-**Utilisation :** Setup et optimisation
-**Public :** Intermédiaire à avancé
+**Type :** Guide technique  
+**Utilisation :** Setup et optimisation  
+**Public :** Intermédiaire à avancé  
 
 Cette annexe vous guide dans la configuration avancée de Git pour optimiser votre productivité et personnaliser votre environnement.
 
